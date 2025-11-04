@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  favicon: "assets/stat198-corner.png"
+  title: "dataviz-spring-2026"
+  page-footer:
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "License"
+        href: license.qmd
+  sidebar:
+    title: "Principles of Dataviz"
+    logo: "assets/stat198-logo.png"
+    style: "floating"
+    collapse-level: 1
+    contents: 
+      - text: Home
+        href: index.qmd
+      - href: syllabus.qmd
+      - href: about.qmd
+      - section: "Units"
+        contents:
+          - units/1-intro/unit01.qmd
+          - units/2-grammar-graphics/unit02.qmd
+          - units/3-data-types/unit03.qmd
+          - units/4-trichromatic/unit04.qmd
+          - units/5-opponent/unit05.qmd
+          - units/6-using-color/unit06.qmd
+          - units/7-design1/unit07.qmd
+          - units/8-design2/unit08.qmd
+          - units/9-maps1/unit09.qmd
+          - units/10-maps2/unit10.qmd
+
+format:
+  html:
+    theme: default
+    fontsize: 1.0em
+    css: styles.css
+    toc: true
+    link-external-newwindow: true # opens links in new tab
+
+
