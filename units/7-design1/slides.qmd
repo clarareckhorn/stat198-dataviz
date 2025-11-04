@@ -1,0 +1,34 @@
+---
+title: Lecture 7
+subtitle: Color Part 3 - Use of Color in Dataviz
+format: stat198slides-revealjs
+---
+
+## Icebreaker
+
+## Agenda
+
+1.  Discussion of Reading
+
+2.  Activity (Attention)
+
+3.  Visual Processing
+
+4.  Activity (Preattentive Attribute)
+
+5.  Gestalt Principles of Perception + Activity
+
+6. Explain Homework
+
+## Discussion of Reading
+
+## Spot the Difference
+
+
+Take advantage of preattentive features to make your audience not have to work too hard
+
+Bar chart democrats vs republicans 
+- What variables are behind this plot?
+V1 - Dem, Rep
+V2 - Religion
+V3 - Race
