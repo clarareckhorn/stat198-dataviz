@@ -69,12 +69,12 @@
   {
     "objectID": "units/3-data-types/unit03.html",
     "href": "units/3-data-types/unit03.html",
-    "title": "3) Data Types, Chart Selection, and ggplot2-Barcharts",
+    "title": "3) Data Types, Chart Selection",
     "section": "",
     "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
-      "3) Data Types, Chart Selection, and ggplot2-Barcharts"
+      "3) Data Types, Chart Selection"
     ]
   },
   {
@@ -594,12 +594,12 @@
   {
     "objectID": "units/3-data-types/unit03.html#this-week",
     "href": "units/3-data-types/unit03.html#this-week",
-    "title": "3) Data Types, Chart Selection, and ggplot2-Barcharts",
+    "title": "3) Data Types, Chart Selection",
     "section": "",
     "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
-      "3) Data Types, Chart Selection, and ggplot2-Barcharts"
+      "3) Data Types, Chart Selection"
     ]
   },
   {
