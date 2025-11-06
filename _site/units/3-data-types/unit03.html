@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3) Grammar of Graphics II – dataviz-spring-2026</title>
+<title>3) Data Types, Chart Selection, and ggplot2-Barcharts – dataviz-spring-2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/3-data-types/unit03.html">3) Grammar of Graphics II</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/3-data-types/unit03.html">3) Data Types, Chart Selection, and ggplot2-Barcharts</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -154,37 +154,37 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../units/3-data-types/unit03.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3) Grammar of Graphics II</span></a>
+ <span class="menu-text">3) Data Types, Chart Selection, and ggplot2-Barcharts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../units/4-trichromatic/unit04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4) Specifying Colors I</span></a>
+ <span class="menu-text">4) Color I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../units/5-opponent/unit05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5) Specifying Colors II</span></a>
+ <span class="menu-text">5) Color II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../units/6-using-color/unit06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6) Using Color</span></a>
+ <span class="menu-text">6) Color 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../units/7-design1/unit07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7) Design I</span></a>
+ <span class="menu-text">7) Design Considerations I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../units/8-design2/unit08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8) Design II</span></a>
+ <span class="menu-text">8) Design Considerations II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -211,20 +211,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">📋 About</a></li>
+  <li><a href="#this-week" id="toc-this-week" class="nav-link active" data-scroll-target="#this-week">This Week:</a>
+  <ul class="collapse">
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">🎯 Objectives</a></li>
   <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">🌠 Slides</a></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">💻 Code</a></li>
   <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">📖 Assignment</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/3-data-types/unit03.html">3) Grammar of Graphics II</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/3-data-types/unit03.html">3) Data Types, Chart Selection, and ggplot2-Barcharts</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">3) Grammar of Graphics II</h1>
+<h1 class="title">3) Data Types, Chart Selection, and ggplot2-Barcharts</h1>
 </div>
 
 
@@ -241,11 +243,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about" class="level3">
-<h3 class="anchored" data-anchor-id="about">📋 About</h3>
-<p>In this unit you’ll get introduced to the <code>"ggplot2"</code> system for making graphics.</p>
+<section id="this-week" class="level2">
+<h2 class="anchored" data-anchor-id="this-week">This Week:</h2>
+<p>In this week, we’ll get a further introduction to the <code>"ggplot2"</code> package for making graphics and you will turn in HW2 (Friday 11:59pm).</p>
 <p><br></p>
-</section>
 <section id="objectives" class="level3">
 <h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
 <p>At the end of this unit you will be able to:</p>
@@ -277,6 +278,7 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html" target="_blank">https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -699,7 +701,7 @@ ul.task-list li input[type="checkbox"] {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../license.html">
+    <a class="nav-link" href="../../license.qmd">
 <p>License</p>
 </a>
   </li>  

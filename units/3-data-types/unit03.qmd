@@ -1,5 +1,5 @@
 ---
-title: "3) Data Types, Chart Selection, and ggplot2-Barcharts"
+title: "3) Data Types, Chart Selection"
 ---
 
 ## This Week: 

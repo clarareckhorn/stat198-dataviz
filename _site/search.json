@@ -36,45 +36,45 @@
   {
     "objectID": "units/7-design1/unit07.html",
     "href": "units/7-design1/unit07.html",
-    "title": "7) Design I",
+    "title": "7) Design Considerations I",
     "section": "",
-    "text": "📖 About\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n🌠 Slides\nData-Ink Ratio (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
+    "text": "In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n\nData-Ink Ratio (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
     "crumbs": [
       "Units",
-      "7) Design I"
+      "7) Design Considerations I"
     ]
   },
   {
     "objectID": "units/8-design2/unit08.html",
     "href": "units/8-design2/unit08.html",
-    "title": "8) Design II",
+    "title": "8) Design Considerations II",
     "section": "",
-    "text": "📋 About\nTBD\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n🌠 Slides\nAnalytical Patterns (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
+    "text": "In this week, we’ll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).\nThis class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the core data visualization principles and know how they originated\nAnalyze how visualizations can mislead or “lie” by examining the lie factor\nRedesign a cluttered chart into a clear and efficient one.\n\n\n\n\n\nAnalytical Patterns (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
     "crumbs": [
       "Units",
-      "8) Design II"
+      "8) Design Considerations II"
     ]
   },
   {
     "objectID": "units/4-trichromatic/unit04.html",
     "href": "units/4-trichromatic/unit04.html",
-    "title": "4) Specifying Colors I",
+    "title": "4) Color I",
     "section": "",
-    "text": "📖 About\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n🌠 Slides\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
+    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
     "crumbs": [
       "Units",
-      "4) Specifying Colors I"
+      "4) Color I"
     ]
   },
   {
     "objectID": "units/3-data-types/unit03.html",
     "href": "units/3-data-types/unit03.html",
-    "title": "3) Grammar of Graphics II",
+    "title": "3) Data Types, Chart Selection, and ggplot2-Barcharts",
     "section": "",
-    "text": "📋 About\nIn this unit you’ll get introduced to the \"ggplot2\" system for making graphics.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n🌠 Slides\nA Grammar of Graphics (google slides)\n\n\n\n💻 Code\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n📖 Assignment\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
-      "3) Grammar of Graphics II"
+      "3) Data Types, Chart Selection, and ggplot2-Barcharts"
     ]
   },
   {
@@ -103,7 +103,7 @@
     "href": "units/9-maps1/unit09.html",
     "title": "9) Maps I",
     "section": "",
-    "text": "📋 About\nTBD\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n🌠 Slides\nTBA (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
+    "text": "In this week, we’ll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n\nTBA (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
     "crumbs": [
       "Units",
       "9) Maps I"
@@ -123,23 +123,23 @@
   {
     "objectID": "units/5-opponent/unit05.html",
     "href": "units/5-opponent/unit05.html",
-    "title": "5) Specifying Colors II",
+    "title": "5) Color II",
     "section": "",
-    "text": "📖 About\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n🌠 Slides\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
+    "text": "In this week, we’ll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
     "crumbs": [
       "Units",
-      "5) Specifying Colors II"
+      "5) Color II"
     ]
   },
   {
     "objectID": "units/6-using-color/unit06.html",
     "href": "units/6-using-color/unit06.html",
-    "title": "6) Using Color",
+    "title": "6) Color 3",
     "section": "",
-    "text": "📋 About\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n🌠 Slides\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
+    "text": "In this week, we’ll continue talking about color, specifically about the use of color in data viz, and you will turn in HW4 (Friday 11:59pm).\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
     "crumbs": [
       "Units",
-      "6) Using Color"
+      "6) Color 3"
     ]
   },
   {
@@ -147,7 +147,7 @@
     "href": "units/2-grammar-graphics/unit02.html",
     "title": "2) Grammar of Graphics I",
     "section": "",
-    "text": "📋 About\nIn this unit you’ll get introduced to the \"ggplot2\" system for making graphics.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n🌠 Slides\nA Grammar of Graphics (google slides)\n\n\n\n💻 Code\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n📖 Assignment\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
       "2) Grammar of Graphics I"
@@ -238,7 +238,7 @@
     "href": "syllabus.html#attendance",
     "title": "Syllabus",
     "section": "§ Attendance",
-    "text": "§ Attendance\nAttendance will be taken each lecture through a worksheet at the beginning of class, with one unexcused absence allowed.\nIn case of emergency, contact instructors for excused absences. You will still be expected to complete the class work from that date and email the instructors your work.",
+    "text": "§ Attendance\nAttendance will be taken each lecture, with one unexcused absence allowed.\nIn case of emergency, contact instructors for excused absences. You will still be expected to complete the class work from that date and email the instructors your work.",
     "crumbs": [
       "Syllabus"
     ]
@@ -298,7 +298,7 @@
     "href": "index.html#calendar",
     "title": "Principles of Data Visualization",
     "section": "Calendar",
-    "text": "Calendar\nTentative calendar subject to change.\n\n\n\nWeek\nContent\nHW\n\n\n\n\n1\n1) Welcome and Introduction\nnone\n\n\n2\n2) The Grammar of Graphics\nHW 1\n\n\n3\n3) Data Types and Chart Selection\nHW 2\n\n\n4\n4) Trichromatic Color Theory and RGB Model\nHW 3\n\n\n5\n5) Opponent Color Theory and Cylindrical Models\nHW 4\n\n\n6\n6) Use of Color in Data Visualization\nHW 5\n\n\n7\n7) Design Considerations I\nHW 6\n\n\n8\n8) Design Considerations II\nHW 7\n\n\n9\n9) Maps I\nHW 8\n\n\n10\n10) Maps II\nHW 9",
+    "text": "Calendar\nTentative calendar subject to change.\n\n\n\nWeek\nContent\nHW\n\n\n\n\n1\n1) Welcome and Introduction\nnone\n\n\n2\n2) The Grammar of Graphics\nHW 1\n\n\n3\n3) Data Types and Chart Selection\nHW 2\n\n\n4\n4) Color 1\nQuiz 1\n\n\n5\n5) Color 2\nHW 3\n\n\n6\n6) Color 3\nHW 4\n\n\n7\n7) Design Considerations I\nQuiz 2\n\n\n8\n8) Design Considerations II\nHW 5\n\n\n9\n9) Maps I\nHW 6\n\n\n10\n10) Maps II\nQuiz 3\n\n\n11\nFinal Project\nProject",
     "crumbs": [
       "Home"
     ]
@@ -318,7 +318,7 @@
     "href": "units/1-intro/unit01.html",
     "title": "1) Surrounded by Graphics",
     "section": "",
-    "text": "📋 About\nIn this unit, we review an assortment of data visualizations that we may get exposed to—almost—on a daily basis.\nWe’ll describe the type of graphics, introduce some basic vocabulary, talk about the types of variables visually encoded. Also, you’ll have the opportunity to look for a handful of data visualizations about your data.\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nFamiliarize yourself with the vocabulary of graphical elements (e.g. geoms, labels, annotations, grid lines, axes, tick marks, facets, etc).\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n🌠 Slides\nBasic examples, graphics vocabulary (google slides)\n\n\n\n💻 Code\nGetting started with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n📖 Assignment\nHW 1\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "text": "In this week, we review an assortment of data visualizations that we may get exposed to—almost—on a daily basis.\nWe’ll describe the type of graphics, introduce some basic vocabulary, talk about the types of variables visually encoded. Also, you’ll have the opportunity to look for a handful of data visualizations about your data.\n\n\n\nAt the end of this unit you will be able to:\n\nFamiliarize yourself with the vocabulary of graphical elements (e.g. geoms, labels, annotations, grid lines, axes, tick marks, facets, etc).\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n\nBasic examples, graphics vocabulary (google slides)\n\n\n\n\nGetting started with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nHW 1\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
       "1) Surrounded by Graphics"
@@ -427,21 +427,21 @@
     "href": "units/6-using-color/slides.html#demo-dataset",
     "title": "Lecture 6",
     "section": "Demo Dataset",
-    "text": "Demo Dataset\nLet’s create a small data frame with several variable types.\n\n\n\nCode\nlibrary(ggplot2)\nset.seed(123)\n\ndemo_df &lt;- data.frame(\n  x = rnorm(20),\n  y = rnorm(20),\n  logical_var = sample(c(TRUE, FALSE), 20, replace = TRUE),\n  integer_var = sample(1:5, 20, replace = TRUE),\n  double_var = runif(20, 0, 10),\n  factor_var = factor(sample(letters[1:3], 20, replace = TRUE)),\n  char_var = sample(c(\"cat\", \"dog\", \"bird\"), 20, replace = TRUE)\n)\n\nhead(demo_df)\n\n\n\n            x          y logical_var integer_var double_var factor_var char_var\n1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog\n2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog\n3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat\n4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird\n5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog\n6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat"
+    "text": "Demo Dataset\nLet’s create a small data frame with several variable types.\n\n\nCode\nlibrary(ggplot2)\nset.seed(123)\n\ndemo_df &lt;- data.frame(\n  x = rnorm(20),\n  y = rnorm(20),\n  logical_var = sample(c(TRUE, FALSE), 20, replace = TRUE),\n  integer_var = sample(1:5, 20, replace = TRUE),\n  double_var = runif(20, 0, 10),\n  factor_var = factor(sample(letters[1:3], 20, replace = TRUE)),\n  char_var = sample(c(\"cat\", \"dog\", \"bird\"), 20, replace = TRUE)\n)\n\nhead(demo_df)\n\n\n            x          y logical_var integer_var double_var factor_var char_var\n1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog\n2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog\n3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat\n4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird\n5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog\n6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat"
   },
   {
     "objectID": "units/6-using-color/slides.html#default-behavior-example",
     "href": "units/6-using-color/slides.html#default-behavior-example",
     "title": "Lecture 6",
     "section": "Default Behavior Example",
-    "text": "Default Behavior Example\nMapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")\n\n\n\n\n\n\n\n\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")\n\n\n\n\n\n\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
+    "text": "Default Behavior Example\nMapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")\n\n\n\n\n\n\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")\n\n\n\n\n\n\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
   },
   {
     "objectID": "units/6-using-color/slides.html#activity-customize-the-color-scales",
     "href": "units/6-using-color/slides.html#activity-customize-the-color-scales",
     "title": "Lecture 6",
     "section": "Activity: Customize the Color Scales",
-    "text": "Activity: Customize the Color Scales\nRecreate one of the above plots, but use a color scale function to control the palette.\nExperiment with both discrete and continuous color scales.\n\n# Discrete manual colors for factor or character variables\nggplot(demo_df, aes(x, y, color = char_var)) +\n  geom_point(size = 4) +\n  scale_color_manual(values = c(\"cat\" = \"orange\", \"dog\" = \"steelblue\", \"bird\" = \"forestgreen\")) +\n  labs(title = \"Custom Discrete Colors\")\n\n\n\n\n\n\n\n\n\n# Continuous gradient for numeric variable\nggplot(demo_df, aes(x, y, color = double_var)) +\n  geom_point(size = 4) +\n  scale_color_continuous(low = \"lightblue\", high = \"darkblue\") +\n  labs(title = \"Custom Continuous Scale\")\n\n\n\n\n\n\n\n# Using scale_fill_discrete() with filled geoms\nggplot(demo_df, aes(x = factor_var, fill = char_var)) +\n  geom_bar() +\n  scale_fill_discrete() +\n  labs(title = \"Bar Plot with Discrete Fill\")"
+    "text": "Activity: Customize the Color Scales\nRecreate one of the above plots, but use a color scale function to control the palette.\nExperiment with both discrete and continuous color scales.\n\n# Discrete manual colors for factor or character variables\nggplot(demo_df, aes(x, y, color = char_var)) +\n  geom_point(size = 4) +\n  scale_color_manual(values = c(\"cat\" = \"orange\", \"dog\" = \"steelblue\", \"bird\" = \"forestgreen\")) +\n  labs(title = \"Custom Discrete Colors\")\n\n\n\n\n\n\n\n# Continuous gradient for numeric variable\nggplot(demo_df, aes(x, y, color = double_var)) +\n  geom_point(size = 4) +\n  scale_color_continuous(low = \"lightblue\", high = \"darkblue\") +\n  labs(title = \"Custom Continuous Scale\")\n\n\n\n\n\n\n\n# Using scale_fill_discrete() with filled geoms\nggplot(demo_df, aes(x = factor_var, fill = char_var)) +\n  geom_bar() +\n  scale_fill_discrete() +\n  labs(title = \"Bar Plot with Discrete Fill\")"
   },
   {
     "objectID": "units/6-using-color/slides.html#discussion",
@@ -524,9 +524,115 @@
     "href": "syllabus.html#assignments---readings",
     "title": "Syllabus",
     "section": "§ Assignments - Readings",
-    "text": "§ Assignments - Readings\nThere will also be weekly readings, mostly consisting of articles from The New York Times to analyze them for data visualization techniques.",
+    "text": "§ Assignments - Readings\nThere will also be weekly readings, mostly consisting of articles from The New York Times to analyze them for data visualization techniques. These will be discussed at the beginning of class and worksheets will contain reading-related questions.",
     "crumbs": [
       "Syllabus"
+    ]
+  },
+  {
+    "objectID": "units/9-maps1/unit09.html#this-week",
+    "href": "units/9-maps1/unit09.html#this-week",
+    "title": "9) Maps I",
+    "section": "",
+    "text": "In this week, we’ll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n\nTBA (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
+    "crumbs": [
+      "Units",
+      "9) Maps I"
+    ]
+  },
+  {
+    "objectID": "units/2-grammar-graphics/unit02.html#this-week",
+    "href": "units/2-grammar-graphics/unit02.html#this-week",
+    "title": "2) Grammar of Graphics I",
+    "section": "",
+    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "crumbs": [
+      "Units",
+      "2) Grammar of Graphics I"
+    ]
+  },
+  {
+    "objectID": "units/8-design2/unit08.html#this-week",
+    "href": "units/8-design2/unit08.html#this-week",
+    "title": "8) Design Considerations II",
+    "section": "",
+    "text": "In this week, we’ll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).\nThis class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the core data visualization principles and know how they originated\nAnalyze how visualizations can mislead or “lie” by examining the lie factor\nRedesign a cluttered chart into a clear and efficient one.\n\n\n\n\n\nAnalytical Patterns (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
+    "crumbs": [
+      "Units",
+      "8) Design Considerations II"
+    ]
+  },
+  {
+    "objectID": "units/4-trichromatic/unit04.html#this-week",
+    "href": "units/4-trichromatic/unit04.html#this-week",
+    "title": "4) Color I",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
+    "crumbs": [
+      "Units",
+      "4) Color I"
+    ]
+  },
+  {
+    "objectID": "units/11-final-project/unit11.html",
+    "href": "units/11-final-project/unit11.html",
+    "title": "11) Final Project",
+    "section": "",
+    "text": "📋 About\nTBD"
+  },
+  {
+    "objectID": "units/1-intro/unit01.html#this-week",
+    "href": "units/1-intro/unit01.html#this-week",
+    "title": "1) Surrounded by Graphics",
+    "section": "",
+    "text": "In this week, we review an assortment of data visualizations that we may get exposed to—almost—on a daily basis.\nWe’ll describe the type of graphics, introduce some basic vocabulary, talk about the types of variables visually encoded. Also, you’ll have the opportunity to look for a handful of data visualizations about your data.\n\n\n\nAt the end of this unit you will be able to:\n\nFamiliarize yourself with the vocabulary of graphical elements (e.g. geoms, labels, annotations, grid lines, axes, tick marks, facets, etc).\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n\nBasic examples, graphics vocabulary (google slides)\n\n\n\n\nGetting started with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nHW 1\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "crumbs": [
+      "Units",
+      "1) Surrounded by Graphics"
+    ]
+  },
+  {
+    "objectID": "units/3-data-types/unit03.html#this-week",
+    "href": "units/3-data-types/unit03.html#this-week",
+    "title": "3) Data Types, Chart Selection, and ggplot2-Barcharts",
+    "section": "",
+    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "crumbs": [
+      "Units",
+      "3) Data Types, Chart Selection, and ggplot2-Barcharts"
+    ]
+  },
+  {
+    "objectID": "units/5-opponent/unit05.html#this-week",
+    "href": "units/5-opponent/unit05.html#this-week",
+    "title": "5) Color II",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
+    "crumbs": [
+      "Units",
+      "5) Color II"
+    ]
+  },
+  {
+    "objectID": "units/6-using-color/unit06.html#this-week",
+    "href": "units/6-using-color/unit06.html#this-week",
+    "title": "6) Color 3",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the use of color in data viz, and you will turn in HW4 (Friday 11:59pm).\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
+    "crumbs": [
+      "Units",
+      "6) Color 3"
+    ]
+  },
+  {
+    "objectID": "units/7-design1/unit07.html#this-week",
+    "href": "units/7-design1/unit07.html#this-week",
+    "title": "7) Design Considerations I",
+    "section": "",
+    "text": "In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n\nData-Ink Ratio (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
+    "crumbs": [
+      "Units",
+      "7) Design Considerations I"
     ]
   }
 ]
