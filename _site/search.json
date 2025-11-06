@@ -177,8 +177,8 @@
     "objectID": "syllabus.html#learning-outcomes",
     "href": "syllabus.html#learning-outcomes",
     "title": "Syllabus",
-    "section": "🎯 Learning Outcomes",
-    "text": "🎯 Learning Outcomes\nAt the end of the course students will be able to:\n\nExplain the importance/need of visualizing data.\nDescribe the framework of the grammar of graphics for creating plots.\nUse functions from ggplot2 and other packages for making graphics in R.\nSpecify colors through the use of a color model, and its hexadecimal syntax.\nDemonstrate an adequate encoding of data with color.\nRecognize color schemes when inspecting a graphic.\nList five or more of the analytical patterns/tasks (proposed by Stephen Few) for choosing the right graphic.\nApply and/or suggest changes that increase the data-to-ink ratio of a graphic.\nAssess the effectiveness of a graphic intended for reporting/communicating purposes.\nProduce animated charts as well as graphics with interactive elements.",
+    "section": "§ Learning Outcomes",
+    "text": "§ Learning Outcomes\nAt the end of the course students will be able to:\n\nExplain the importance/need of visualizing data.\nDescribe the framework of the grammar of graphics for creating plots.\nUse functions from ggplot2 and other packages for making graphics in R.\nSpecify colors through the use of a color model, and its hexadecimal syntax.\nDemonstrate an adequate encoding of data with color.\nRecognize color schemes when inspecting a graphic.\nList five or more of the analytical patterns/tasks (proposed by Stephen Few) for choosing the right graphic.\nApply and/or suggest changes that increase the data-to-ink ratio of a graphic.\nAssess the effectiveness of a graphic intended for reporting/communicating purposes.\nProduce animated charts as well as graphics with interactive elements.",
     "crumbs": [
       "Syllabus"
     ]
@@ -197,8 +197,8 @@
     "objectID": "syllabus.html#methods-of-instruction",
     "href": "syllabus.html#methods-of-instruction",
     "title": "Syllabus",
-    "section": "🎓 Methods of Instruction",
-    "text": "🎓 Methods of Instruction\nWe will be using a combination of materials such as slides, tutorials, sample scripts, reading assignments, live demos, and chalk-and-talk. In-class attendance is mandatory. The main computational tool will be the computing and programming environment R. The main workbench will be the IDE RStudio.",
+    "section": "§ Methods of Instruction",
+    "text": "§ Methods of Instruction\nWe will be using a combination of materials such as slides, tutorials, sample scripts, reading assignments, live demos, and chalk-and-talk. In-class attendance is mandatory. The main computational tool will be the computing and programming environment R. The main workbench will be the IDE RStudio.",
     "crumbs": [
       "Syllabus"
     ]
@@ -207,8 +207,8 @@
     "objectID": "syllabus.html#textbooks",
     "href": "syllabus.html#textbooks",
     "title": "Syllabus",
-    "section": "📚 Textbooks",
-    "text": "📚 Textbooks\nThe following books are not required, but will be referenced throughout the course for slides, assignments, and more. They can all be found online:\n\nData Visualization by K. Healy\nGeocomputation with R by Lovelace, J. Nowosad, and J. Muenchow.\nNow You See It: Simple Visualization Techniques for Quantitative Analysis by S. Few",
+    "section": "§ Textbooks",
+    "text": "§ Textbooks\nThe following books are not required, but will be referenced throughout the course for slides, assignments, and more. They can all be found online:\n\nData Visualization by K. Healy\nGeocomputation with R by Lovelace, J. Nowosad, and J. Muenchow.\nNow You See It: Simple Visualization Techniques for Quantitative Analysis by S. Few",
     "crumbs": [
       "Syllabus"
     ]
@@ -217,8 +217,8 @@
     "objectID": "syllabus.html#assignments---homeworks",
     "href": "syllabus.html#assignments---homeworks",
     "title": "Syllabus",
-    "section": "📁 Assignments - Homeworks",
-    "text": "📁 Assignments - Homeworks\nHomework assignments will give the students a platform to demonstrate and reinforce concepts covered during lectures.\nHWs will generally be assigned every week.\nYou will submit your homework to Gradescope: typically your source file (qmd file), and the produced output (html doc).\nYou must write your own answers (using your own words, and your coding style—see Academic Honesty policy below).",
+    "section": "§ Assignments - Homeworks",
+    "text": "§ Assignments - Homeworks\nHomework assignments will give the students a platform to demonstrate and reinforce concepts covered during lectures.\nHWs will generally be assigned every week (except quiz weeks).\nRefer to homework overviews for instructions on submitting.\nYou must write your own answers (using your own words, and your coding style—see Academic Honesty policy below).",
     "crumbs": [
       "Syllabus"
     ]
@@ -227,8 +227,8 @@
     "objectID": "syllabus.html#readings",
     "href": "syllabus.html#readings",
     "title": "Syllabus",
-    "section": "📖 Readings",
-    "text": "📖 Readings\nThere will also be weekly readings, mostly consisting of articles from The New York Times.",
+    "section": "§ Readings",
+    "text": "§ Readings\nThere will also be weekly readings, mostly consisting of articles from The New York Times to analyze them for data visualization techniques.",
     "crumbs": [
       "Syllabus"
     ]
@@ -237,8 +237,8 @@
     "objectID": "syllabus.html#attendance",
     "href": "syllabus.html#attendance",
     "title": "Syllabus",
-    "section": "📆 Attendance",
-    "text": "📆 Attendance\nAttendance will be taken daily. In case of emergency, contact instructors for excused absences. You will still be expected to complete the class work from that date and email the instructors your work.",
+    "section": "§ Attendance",
+    "text": "§ Attendance\nAttendance will be taken each lecture through a worksheet at the beginning of class, with one unexcused absence allowed.\nIn case of emergency, contact instructors for excused absences. You will still be expected to complete the class work from that date and email the instructors your work.",
     "crumbs": [
       "Syllabus"
     ]
@@ -247,8 +247,8 @@
     "objectID": "syllabus.html#learning-cooperatively",
     "href": "syllabus.html#learning-cooperatively",
     "title": "Syllabus",
-    "section": "🏫 Learning Cooperatively",
-    "text": "🏫 Learning Cooperatively\nWith the obvious exception of quizzes, we encourage you to discuss all of the course activities with your friends and classmates as you are working on them. You will definitely learn more in this class if you work with others than if you do not. Ask questions, answer questions, and share ideas liberally.",
+    "section": "§ Learning Cooperatively",
+    "text": "§ Learning Cooperatively\nWith the obvious exception of quizzes, we encourage you to discuss all of the course activities with your friends and classmates as you are working on them. You will definitely learn more in this class if you work with others than if you do not. Ask questions, answer questions, and share ideas liberally.",
     "crumbs": [
       "Syllabus"
     ]
@@ -257,8 +257,8 @@
     "objectID": "syllabus.html#academic-honesty",
     "href": "syllabus.html#academic-honesty",
     "title": "Syllabus",
-    "section": "☝️ Academic Honesty",
-    "text": "☝️ Academic Honesty\nCooperation has a limit, however. You should not share your code or answers directly with other students. Doing so doesn’t help them; it just sets them up for trouble. Feel free to discuss approaches to the problems with others, but you must write your own solutions. Please complete your own work and keep it to yourself. If you suspect other people may be plagiarizing you, let us know ASAP. For more information please read the Honor Code Guide for Syllabi.\nWe expect you to do your own work and to uphold the standards of intellectual integrity. Collaborating on homework is fine and I encourage you to work together—but copying is not, nor is having somebody else submit assignments for you. Cheating will not be tolerated. Anyone found cheating will receive an NP grade and will be reported to the Center for the Student Conduct).\nIf you are having trouble with an assignment or studying for an exam, or if you are uncertain about permissible and impermissible conduct or collaboration, please come see me with your questions. Rather than copying someone else’s work, ask for help. You are not alone in this course! If you invest the time to learn the material and complete the projects, you won’t need to copy any answers.",
+    "section": "§ Academic Honesty",
+    "text": "§ Academic Honesty\nCooperation has a limit, however. You should not share your code or answers directly with other students. Doing so doesn’t help them; it just sets them up for trouble. Feel free to discuss approaches to the problems with others, but you must write your own solutions. Please complete your own work and keep it to yourself. If you suspect other people may be plagiarizing you, let us know ASAP. For more information please read the Honor Code Guide for Syllabi.\nWe expect you to do your own work and to uphold the standards of intellectual integrity. Collaborating on homework is fine and I encourage you to work together—but copying is not, nor is having somebody else submit assignments for you. Cheating will not be tolerated. Anyone found cheating will receive an NP grade and will be reported to the Center for the Student Conduct).\nAs for AI, our policy is that it is acceptable to use as a tool and even encouraged occasionally, as long as it does not interfere with your learning of the materials. We encourage its use as a tutor or for small questions, but not for writing entire pieces of code. You will be quizzed in class and those quizzes will be a large portion of your grade, so understanding the material and being able to synthesize code on your own is essential.\nIf you are having trouble with an assignment or studying for an exam, or if you are uncertain about permissible and impermissible conduct or collaboration, please come see me with your questions. Rather than copying someone else’s work, ask for help. You are not alone in this course! If you invest the time to learn the material and complete the projects, you won’t need to copy any answers.",
     "crumbs": [
       "Syllabus"
     ]
@@ -267,8 +267,8 @@
     "objectID": "syllabus.html#special-accommodations",
     "href": "syllabus.html#special-accommodations",
     "title": "Syllabus",
-    "section": "🚸 Special Accommodations",
-    "text": "🚸 Special Accommodations\nStudents needing accommodations for any physical, psychological, or learning disability, should speak with me during the first two weeks of the semester, either after or during class and see http://dsp.berkeley.edu to learn about Berkeley’s policy.\nIf you are a DSP student, please contact me as soon as possible so that we can work out acceptable accommodations.\nFor relevant DSP accommodations that provide occasional extensions on assignments, we may provide a two-day extension as long as you contact us before the assignment is due. More details about these considerations may be discussed with the DSP staff.\nIf you are an athlete or Cal band member, please check your calendar. Do not take the class if you are not available to attend 90% of classes.",
+    "section": "§ Special Accommodations",
+    "text": "§ Special Accommodations\nStudents needing accommodations for any physical, psychological, or learning disability, should speak with me during the first two weeks of the semester, either after or during class and see http://dsp.berkeley.edu to learn about Berkeley’s policy.\nIf you are a DSP student, please contact me as soon as possible so that we can work out acceptable accommodations.\nFor relevant DSP accommodations that provide occasional extensions on assignments, we may provide a two-day extension as long as you contact us before the assignment is due. More details about these considerations may be discussed with the DSP staff.\nIf you are an athlete or Cal band member, please check your calendar. Do not take the class if you are not available to attend 90% of classes.",
     "crumbs": [
       "Syllabus"
     ]
@@ -277,8 +277,8 @@
     "objectID": "syllabus.html#safe-and-inclusive-environment",
     "href": "syllabus.html#safe-and-inclusive-environment",
     "title": "Syllabus",
-    "section": "🌻 Safe and Inclusive Environment",
-    "text": "🌻 Safe and Inclusive Environment\nWhenever a faculty member, staff member, post-doc, or instructor is responsible for the supervision of a student, a personal relationship between them of a romantic or sexual nature, even if consensual, is against university policy. Any such relationship jeopardizes the integrity of the educational process.\nAlthough faculty and staff can act as excellent resources for students, you should be aware that they are required to report any violations of this campus policy. If you wish to have a confidential discussion on matters related to this policy, you may contact the Confidential Care Advocates on campus for support related to counseling or sensitive issues. Appointments can be made by calling (510) 642-1988.\nThe classroom should be a safe and inclusive environment for everyone. The Office for the Prevention of Harassment and Discrimination (OPHD) is responsible for ensuring the University provides an environment for faculty, staff and students that is free from discrimination and harassment on the basis of categories including race, color, national origin, age, sex, gender, gender identity, and sexual orientation. Questions or concerns? Call (510) 643-7985, email ask_ophd@berkeley.edu, or go to http://survivorsupport.berkeley.edu.",
+    "section": "§ Safe and Inclusive Environment",
+    "text": "§ Safe and Inclusive Environment\nWhenever a faculty member, staff member, post-doc, or instructor is responsible for the supervision of a student, a personal relationship between them of a romantic or sexual nature, even if consensual, is against university policy. Any such relationship jeopardizes the integrity of the educational process.\nAlthough faculty and staff can act as excellent resources for students, you should be aware that they are required to report any violations of this campus policy. If you wish to have a confidential discussion on matters related to this policy, you may contact the Confidential Care Advocates on campus for support related to counseling or sensitive issues. Appointments can be made by calling (510) 642-1988.\nThe classroom should be a safe and inclusive environment for everyone. The Office for the Prevention of Harassment and Discrimination (OPHD) is responsible for ensuring the University provides an environment for faculty, staff and students that is free from discrimination and harassment on the basis of categories including race, color, national origin, age, sex, gender, gender identity, and sexual orientation. Questions or concerns? Call (510) 643-7985, email ask_ophd@berkeley.edu, or go to http://survivorsupport.berkeley.edu.",
     "crumbs": [
       "Syllabus"
     ]
@@ -470,5 +470,63 @@
     "title": "Lecture 6",
     "section": "HW 6 Assignment",
     "text": "HW 6 Assignment\n\nReading: How unusual has this hurricane season been?\nhttps://www.bbc.com/news/articles/cden551l7kko\n\nThe graphic of interest is the stacked bar chart of Named storms in the Atlantic by type and year, 1990-2024\nIt uses an analogous+neutral color scheme; we can also say that it uses a sequential color scale\nThis bar chart can be replicated in the next class “Use of Color”\nWe can use the “storms” data (from “dplyr”) although this only goes to year 2022\nThere are some data manipulation steps, but we can provide sample code or detailed instructions on how to get it\nThe interesting part is in the color specification, and the use of scale functions in ggplot2 such as scale_fill_manual()"
+  },
+  {
+    "objectID": "units/7-design1/slides.html#icebreaker",
+    "href": "units/7-design1/slides.html#icebreaker",
+    "title": "Lecture 7",
+    "section": "Icebreaker",
+    "text": "Icebreaker"
+  },
+  {
+    "objectID": "units/7-design1/slides.html#agenda",
+    "href": "units/7-design1/slides.html#agenda",
+    "title": "Lecture 7",
+    "section": "Agenda",
+    "text": "Agenda\n\nDiscussion of Reading\nActivity (Attention)\nVisual Processing\nActivity (Preattentive Attribute)\nGestalt Principles of Perception + Activity\nExplain Homework"
+  },
+  {
+    "objectID": "units/7-design1/slides.html#discussion-of-reading",
+    "href": "units/7-design1/slides.html#discussion-of-reading",
+    "title": "Lecture 7",
+    "section": "Discussion of Reading",
+    "text": "Discussion of Reading"
+  },
+  {
+    "objectID": "units/7-design1/slides.html#spot-the-difference",
+    "href": "units/7-design1/slides.html#spot-the-difference",
+    "title": "Lecture 7",
+    "section": "Spot the Difference",
+    "text": "Spot the Difference\nTake advantage of preattentive features to make your audience not have to work too hard\nBar chart democrats vs republicans - What variables are behind this plot? V1 - Dem, Rep V2 - Religion V3 - Race"
+  },
+  {
+    "objectID": "syllabus.html#prerequisites",
+    "href": "syllabus.html#prerequisites",
+    "title": "Syllabus",
+    "section": "§ Prerequisites",
+    "text": "§ Prerequisites\nBecause our main computational tool is R (and RStudio), it is desirable to have taken a course in which you got an introduction to R (e.g. STAT 20, 33A, 33B, 133; PB HLTH 142). It is also nice to have some previous experience analyzing data. Being concurrently enrolled in these classes is also acceptable.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grading",
+    "href": "syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "§ Grading",
+    "text": "§ Grading\n\nIn-Class Worksheets (40%) (1 drop)\nQuizzes (20%) (1 drop)\nHomeworks (20%)\nFinal Project (20%)\n\nQuizzes and the Final Project will be graded on accuracy. Homeworks and Worksheets are graded credit/no credit, where credit is given for a genuine attempt at the problems.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#assignments---readings",
+    "href": "syllabus.html#assignments---readings",
+    "title": "Syllabus",
+    "section": "§ Assignments - Readings",
+    "text": "§ Assignments - Readings\nThere will also be weekly readings, mostly consisting of articles from The New York Times to analyze them for data visualization techniques.",
+    "crumbs": [
+      "Syllabus"
+    ]
   }
 ]

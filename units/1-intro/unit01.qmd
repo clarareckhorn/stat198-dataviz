@@ -2,10 +2,9 @@
 title: "1) Surrounded by Graphics"
 ---
 
+## This Week: 
 
-### 📋 About
-
-In this unit, we review an assortment of data visualizations that we may
+In this week, we review an assortment of data visualizations that we may
 get exposed to---almost---on a daily basis.
 
 We'll describe the type of graphics, introduce some basic vocabulary, talk

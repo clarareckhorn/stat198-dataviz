@@ -1,9 +1,10 @@
 ---
-title: "4) Specifying Colors I"
+title: "4) Color I"
 ---
 
+## This Week: 
 
-### 📖 About
+In this week, we'll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.
 
 A big aspect of any visual display has to do with color, which involves two 
 major aspects: 

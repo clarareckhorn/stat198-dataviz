@@ -1,9 +1,11 @@
 ---
-title: "7) Design I"
+title: "7) Design Considerations I"
 ---
 
 
-### 📖 About
+## This Week: 
+
+In this week, we'll talk about good data viz practices and you will take a quiz during lecture.
 
 What things should you pay attention when looking at a graphic?
 

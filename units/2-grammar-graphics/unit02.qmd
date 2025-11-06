@@ -2,10 +2,9 @@
 title: "2) Grammar of Graphics I"
 ---
 
+## This Week: 
 
-### 📋 About
-
-In this unit you'll get introduced to the `"ggplot2"` system for making graphics.
+In this week, we'll get an introduction to the `"ggplot2"` package for making graphics and you will turn in HW1 (Friday 11:59pm).
 
 
 <br>

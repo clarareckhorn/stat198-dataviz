@@ -4,7 +4,7 @@ subtitle: "STAT 198, Fall 2024: Principles of Data Visualization"
 ---
 
 
-## 📊 Description
+## Description
 
 This is an introductory course to the principles of data visualization and their
 applications with R. Topics include: 
@@ -27,7 +27,7 @@ applications with R. Topics include:
 
 
 
-## 🎯 Learning Outcomes
+## § Learning Outcomes
 
 At the end of the course students will be able to:
 
@@ -53,7 +53,7 @@ At the end of the course students will be able to:
 
 
 
-## ℹ️ Prerequisites
+## § Prerequisites
 
 Because our main computational tool is R (and RStudio), it is desirable to 
 have taken a course in which you got an introduction to R (e.g. STAT 20, 33A, 
@@ -62,7 +62,7 @@ analyzing data. Being concurrently enrolled in these classes is also acceptable.
 
 
 
-## 🎓 Methods of Instruction
+## § Methods of Instruction
 
 We will be using a combination of materials such as slides, tutorials, sample 
 scripts, reading assignments, live demos, and chalk-and-talk. 
@@ -74,7 +74,7 @@ The main workbench will be the
 
 
 
-## 📚 Textbooks
+## § Textbooks
 
 The following books are not required, but will be referenced throughout the 
 course for slides, assignments, and more. They can all be found online:
@@ -83,40 +83,47 @@ course for slides, assignments, and more. They can all be found online:
 - _Geocomputation with R_ by Lovelace, J. Nowosad, and J. Muenchow.
 - _Now You See It: Simple Visualization Techniques for Quantitative Analysis_ by S. Few
 
+## § Grading 
+
+- In-Class Worksheets (40%) (1 drop)
+- Quizzes (20%) (1 drop)
+- Homeworks (20%)
+- Final Project (20%)
+
+Quizzes and the Final Project will be graded on accuracy. Homeworks and Worksheets are graded credit/no credit, where credit is given for a genuine attempt at the problems. 
 
 
-## 📁 Assignments - Homeworks
+
+## § Assignments - Homeworks
 
 Homework assignments will give the students a platform to demonstrate and 
 reinforce concepts covered during lectures.
 
-HWs will generally be assigned every week.
+HWs will generally be assigned every week (except quiz weeks).
 
-You will submit your homework to Gradescope: typically your source file 
-(qmd file), and the produced output (html doc).
+Refer to homework overviews for instructions on submitting.
 
-You must write your own answers (using your own words, and your coding style---see 
-Academic Honesty policy below). 
+You must write your own answers (using your own words, and your coding style---see Academic Honesty policy below). 
 
 
 
-## 📖 Readings
+## § Assignments - Readings
 
 There will also be weekly readings, mostly consisting of articles from 
-_The New York Times_.
+_The New York Times_ to analyze them for data visualization techniques. These will be discussed at the beginning of class and worksheets will contain reading-related questions. 
 
 
 
-## 📆 Attendance
+## § Attendance
 
-Attendance will be taken daily.
+Attendance will be taken each lecture, with one unexcused absence allowed. \
 In case of emergency, contact instructors for excused absences. You will still 
 be expected to complete the class work from that date and email the instructors 
 your work.
 
 
 
-## 🏫 Learning Cooperatively
+## § Learning Cooperatively
 
 With the obvious exception of quizzes, we encourage you to discuss all of the 
 course activities with your friends and classmates as you are working on them. 
@@ -125,7 +132,7 @@ you do not. Ask questions, answer questions, and share ideas liberally.
 
 
 
-## ☝️ Academic Honesty
+## § Academic Honesty
 
 Cooperation has a limit, however. You should not share your code or answers 
 directly with other students. Doing so doesn't help them; it just sets them up 
@@ -140,6 +147,8 @@ together---but copying is not, nor is having somebody else submit assignments
 for you. Cheating will not be tolerated. Anyone found cheating will receive an 
 NP grade and will be reported to the <a href="http://sa.berkeley.edu/conduct" target="_blank">Center for the Student Conduct</a>). 
 
+As for AI, our policy is that it is acceptable to use as a tool and even encouraged occasionally, as long as it does not interfere with your learning of the materials. We encourage its use as a tutor or for small questions, but not for writing entire pieces of code. You will be quizzed in class and those quizzes will be a large portion of your grade, so understanding the material and being able to synthesize code on your own is essential. 
+
 If you are having trouble with an assignment or studying for an exam, or if you 
 are uncertain about permissible and impermissible conduct or collaboration, 
 please come see me with your questions. Rather than copying someone else's work, 
@@ -148,7 +157,7 @@ the material and complete the projects, you won't need to copy any answers.
 
 
 
-## 🚸 Special Accommodations
+## § Special Accommodations
 
 Students needing accommodations for any physical, psychological, or learning 
 disability, should speak with me during the first two weeks of the semester, 
@@ -167,7 +176,7 @@ take the class if you are not available to attend 90% of classes.
 
 
 
-## 🌻 Safe and Inclusive Environment
+## § Safe and Inclusive Environment
 
 Whenever a faculty member, staff member, post-doc, or instructor is responsible for 
 the supervision of a student, a personal relationship between them of a romantic 

@@ -1,11 +1,12 @@
 ---
-title: "8) Design II"
+title: "8) Design Considerations II"
 ---
 
+## This Week: 
 
-### 📋 About
+In this week, we'll get a further introduction to color in computing and you will turn in HW5 (Friday 11:59pm).
 
-TBD
+This class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).
 
 
 <br>
@@ -15,9 +16,9 @@ TBD
 
 At the end of this unit you will be able to:
 
-- Goal 1.
-- Goal 2.
-- Goal 3.
+- Understand the core data visualization principles and know how they originated
+- Analyze how visualizations can mislead or “lie” by examining the lie factor
+- Redesign a cluttered chart into a clear and efficient one.
 
 
 <br>

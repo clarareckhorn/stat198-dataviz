@@ -1,6 +1,6 @@
 ---
 title: Lecture 6
-subtitle: Color Part 3 - Use of Color in Dataviz
+subtitle: Color 3 - Use of Color in Dataviz
 format: stat198slides-revealjs
 ---
 

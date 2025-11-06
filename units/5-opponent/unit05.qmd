@@ -2,8 +2,9 @@
 title: "5) Specifying Colors II"
 ---
 
+## This Week: 
 
-### 📖 About
+In this week, we'll get a further introduction to color in computing and you will turn in HW3 (Friday 11:59pm).
 
 Last time we learned about the Trichromatic theory for color vision, and the
 associated RGB color model and its cubic geometric representation. While the

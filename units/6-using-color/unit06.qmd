@@ -1,9 +1,10 @@
 ---
-title: "6) Using Color"
+title: "6) Color 3"
 ---
 
+## This Week: 
 
-### 📋 About
+In this week, we'll get a further introduction to color use in graphics and you will turn in HW4 (Friday 11:59pm).
 
 In addition to color models (and their spaces), another important aspect of 
 color has to do with its actual use when making graphics.

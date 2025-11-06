@@ -10,9 +10,9 @@ This is the website for the Spring-2026 DeCal course **Principles of Data Visual
 
 **Instructors**: 
 
-- Monserrat Ibarra
-- Jocelyne Perez
-- Clara Reckhorn
+- Monserrat Ibarra Reyes (montserrat_ibarra@berkeley.edu)
+- Jocelyne Perez (jocelyneperez@berkeley.edu)
+- Clara Reckhorn (clara_reckhorn@berkeley.edu)
 
 **Faculty Sponsor**: <a href="https://www.gastonsanchez.com" target="_blank">Gaston Sanchez</a>
 
