@@ -3,9 +3,9 @@ title: "9) Maps I"
 ---
 
 
-### 📋 About
+## This Week: 
 
-TBD
+In this week, we'll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).
 
 
 <br>

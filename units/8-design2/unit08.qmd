@@ -4,7 +4,7 @@ title: "8) Design Considerations II"
 
 ## This Week: 
 
-In this week, we'll get a further introduction to color in computing and you will turn in HW5 (Friday 11:59pm).
+In this week, we'll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).
 
 This class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).
 
