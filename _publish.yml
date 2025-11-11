@@ -1,0 +1,6 @@
+- source: project
+  quarto-pub:
+    - id: 15d23343-7007-459d-876f-c8dbe42b669a
+      url: https://dataviz.quarto.pub/dataviz-spring-2026
+    - id: 920194a1-e664-4348-be1c-bcddc1e0d606
+      url: https://dataviz.quarto.pub/spring-2026

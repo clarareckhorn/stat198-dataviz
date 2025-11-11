@@ -1,3 +1,4 @@
+
 /*-- scss:defaults --*/
 
 // fonts
@@ -13,16 +14,15 @@ $presentation-font-size-root: 46px;
   --red-100: #bf2642;
   --orange-100: #f2a03d;
   --green-100: #02733e;
-  --purple-100: #C600CE;
+  --purple-100: #73245e;
 }
 
 $red: #bf2642;
-$orange: #f2a03d;
-$green: #02733e;
-$magenta: #C600CE;
-$purple: #73245e;
+$orange: #1b385a;
+$green: #d9f6a4;
+$purple: #bbc1f8;
 $dark-purple: #39122f;
-$blue: #00817c;
+$blue: #6e92d8ff;
 $beige: #f8f5f0;
 $dark-beige: #9f8e71;
 $light-orange: lighten($orange, 60%);
@@ -82,6 +82,34 @@ details>summary {
   padding: 6px 9px;
   max-height: 600px;
   white-space: pre;
+}
+
+// Turn to neighbor class - increases all text and code font sizes
+.ttan {
+  font-size: 1.1em !important;
+  
+  // Ensure code blocks also get larger font size
+  pre code,
+  .sourceCode code,
+  code {
+    font-size: 1.1em !important;
+  }
+  
+  // Make sure headings scale proportionally
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.1em !important;
+  }
+  
+  // Scale callout boxes and other elements
+  .callout-tip,
+  .callout-note,
+  .callout-warning {
+    font-size: 1.1em !important;
+    
+    .callout-header {
+      font-size: 1.1em !important;
+    }
+  }
 }
 
 /*
@@ -193,7 +221,7 @@ div.meta-el {
 
 #title-slide h1 {
   font-family: 'Avenir', sans-serif;
-  color: $body-color;
+  color: $blue;
   font-weight: 400;
 }
 
@@ -251,13 +279,24 @@ div.meta-el {
   cursor: pointer;
 }
 
-
-.hilit {
-  color: $orange;
-  font-weight: bold;
+.definition {
+  background-color: #fdf6e3; /* Light gold background */
+  border-radius: 12px;
+  padding: 0;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.bold-hilit {
-  color: $magenta;
+.definition .definition-header {
+  background-color: #e6c28a; /* Darker gold banner */
+  color: #5d4037; /* Dark brown text for contrast */
   font-weight: bold;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.definition .definition-content {
+  padding: 1rem;
 }
