@@ -1,0 +1,63 @@
+---
+title: "Untitled"
+output:
+  pdf_document: default
+  html_document: default
+date: "2025-11-19"
+---
+
+Load Data
+```{r setup, include=FALSE}
+# Data
+isoflurane   <- c(.28, .51, 1.00, .39, .29, .36, .32, .69, .17, .33)
+halothane    <- c(.30, .39, .63, .68, .38, .21, .88, .39, .51, .32)
+cyclopropane <- c(1.07, 1.35, .69, .28, 1.24, 1.53, .49, .56, 1.02, .30)
+
+dog <- factor(1:10)
+
+df <- data.frame(
+  dog = dog,
+  isoflurane = isoflurane,
+  halothane = halothane,
+  cyclopropane = cyclopropane
+)
+
+df_long <- reshape(
+  df,
+  varying = list(names(df)[2:4]),
+  v.names = "concentration",
+  timevar = "treatment",
+  times = c("Isoflurane", "Halothane", "Cyclopropane"),
+  direction = "long"
+)
+
+df_long$treatment <- factor(df_long$treatment)
+```
+
+QQ Plots for each treatment 
+```{r}
+par(mfrow=c(1,3))
+qqnorm(isoflurane, main="Isoflurane QQ Plot"); qqline(isoflurane)
+qqnorm(halothane, main="Halothane QQ Plot"); qqline(halothane)
+qqnorm(cyclopropane, main="Cyclopropane QQ Plot"); qqline(cyclopropane)
+```
+
+Boxplots
+
+```{r}
+boxplot(concentration ~ treatment, data=df_long,
+        main="Boxplots of Epinephrine Levels by Treatment",
+        ylab="Concentration (ng/mL)")
+```
+
+Parametic analysis 
+```{r}
+aov_model <- aov(concentration ~ treatment + Error(dog/treatment), data=df_long)
+summary(aov_model)
+```
+
+```{r}
+friedman.test(as.matrix(df[,2:4]))
+```
+ANS:
+that at least one of the anesthetics has a significantly different effect on plasma epinephrine concentration.
