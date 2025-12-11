@@ -1,63 +1,147 @@
 ---
-title: "Quiz"
+title: "Week 1"
+subtitle: "Introduction"
 format:
   stat198slides-revealjs
 ---
 
-## Before the Quiz
+# Welcome!
 
-0.  Take a photo of your cheat sheet if you want it.
-1.  🧹 Clear your desk of everything except a pen/pencil and your cheat sheet.
-2.  🧢 Remove hats, hoods, and sunglasses.
-3.  📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period.
-4.  Spread out as much as possible.
+# About Us
 
-## Individual Quiz
+## Montse
 
-```{r}
-#| echo: false
-countdown::countdown(25, top = 0)
-```
+- Sophomore Stats Major
+- Hometown: Mexicali, Baja California + Calexico, California
+- Fun fact: I have a dog named Shakira! 
+- Course reader for Stat133, Stat 33B, now tutor for Stat133
 
-::::: columns
-::: {.column width="57%"}
-1.  When you get a quiz, cover it with your cheat sheet and do not begin.
-2.  Write your name on both pages.
-3.  ⌛If you finish early, cover it with your cheat sheet.
-4.  If you need to use the bathroom, bring phone and quiz to the front of the class.
-:::
+![Shakira](images/shakira.jpg)
 
-::: {.column width="43%"}
-5.  ⌛If you finish early, please hold on to your quiz and wait.
-6.  Keep your eyes on your own quiz.
-7.  ❗You must stop writing when time is called or risk a 0.
+Email me at montserrat_ibarra@berkeley.edu
 
-::: {.fragment}
-Good luck! 🍀
-:::
-:::
-:::::
+## Clara
 
-## Group Quiz
+- Senior Stats Major
+- Hometown: Palos Verdes, CA + Osnabrück, Germany
+- Fun fact: Pursuing masters in Europe!
+- GSI for Stat133 + led HelloWorld
+- Transfer student
 
-```{r}
-#| echo: false
-countdown::countdown(15, top = 0)
-```
+Email me at clara_reckhorn@berkeley.edu
 
-::::: columns
-::: {.column width="57%"}
-1.  Form groups of 3 people, then ONE person raise your hand (to get your quiz).
-2.  Be sure to write ALL group members names on the quiz on both pages.
-3.  If you find yourself without a group, come to the front of class and we'll help you form one.
-:::
+## Jocelyne 
 
-::: {.column width="43%"}
-4.  Your can start when you get your quiz.
-5.  When done, bring your quiz and everyone's cheat sheets to a tutor or me. Then please leave the room quietly.
+- Senior Stats Major
+- Hometown: San Mateo, CA
+- Fun fact: I did middle and high school in La Paz, Mexico!
+- Course reader for Stat133
+- Transfer student 
 
-::: {.fragment}
-Good luck! 🍀
-:::
-:::
-:::::
+Email me at jocelyneperez@berkeley.edu
+
+# Personal Data Viz
+
+## Monste 
+My Data Viz:
+
+## Clara
+My Data Viz:
+
+## Jocelyne
+My Data Viz:
+
+## We live surrounded by graphics! {.smaller}
+- This has not always been the case
+- Our parent's generation had no immediate access to graphics
+- Graphics we can easily get access to:
+  - Credit score (donut chart/timeline)
+  - Number of commits to a GH repo (tiles graph)
+  - Google maps timeline (map)
+  - Score distribution of an exam (histogram)
+  - ETC
+
+# Visual Literacy
+- Nowadays: very easy to access graphical displays of any kind of data
+- Consumers of data viz
+- We lack formal education in visual literacy 
+- This course: a solid foundation in visual literacy involving both the consumption and production of graphics
+
+# Why are we teaching this class?
+- Brainchild of Prof. Sanchez (Statistics Faculty Member) who is passionate about all things data viz
+- Stats dept has no dedicated data viz course, so Prof Sanchez decided to put together materials for 1 semester course
+- Offered: fall 2023, spring 2024, fall 2024... restructred for this semester!
+
+# Your introductions
+
+## Activity: Introduce yourself!
+Before course logistics, we would like to get to know a bit about you. 
+- Grab a "Hello My Name Is" sticker from the front table
+
+`{{< countdown "2:00" >}}`
+
+## Tell us: 
+- Your name
+- Your major/area of study
+- Why are you taking this class?
+- Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week 
+- Your favorite color 
+
+`{{< countdown "5:00" >}}`
+
+## Activity: Two truths and a lie
+- Think of two truths and one lie about yourself 
+- Share with a partner and have them guess which one is the lie
+
+`{{< countdown "5:00" >}}`
+
+## Activity: Repeating names
+- Take turns saying your names in order
+- Each person must repeat the names of everyone who came before them
+- If you mess up, start over!
+
+## Activity
+- Grab a piece of scratch paper and write something unique and interesting about yourself
+- This is private and only for us to get to know you better 
+
+`{{< countdown "3:00" >}}`
+
+## Activity: Gathering data {.smaller}
+
+(to be used in week 3 activity)
+
+- Transfer T/F
+- Favorite drink (water, tea, coffee, etc)
+- Major
+- Average amount of sleep on weekdays (Number)
+- Distance from where you grew up (in approx miles)
+- Units you are taking this semester
+- Number of siblings 
+
+`{{< countdown "3:00" >}}`
+
+## How would you portray this data? {.smaller}
+- Group activity (3-4 people)
+Each group will have to brainstorm on a paper for Graphs that students create/guess based on a primary variable “Hours of Sleep of a Berkeley student (Stereotype)” together with Secondary variables:
+- Year: Freshman, Sophomore, Junior, Senior (e.g. Bar chart, Pie)
+- Enrolled units: Unit counts (e.g. Scatter plot)
+- Sex or Gender: Female Vs. Male (e.g. Bar chart, Pie)
+- Months (e.g. Line graph)
+Combine all variables (e.g. or at least three in one graph)?
+
+{{< countdown "10:00" >}}`
+
+## How would you portray this data? (continued) {.smaller}
+On a poster, make 4 graphs to visualize your thoughts on these categories
+- Extra challenge: make a creative graph that will show 3 variables of the 4 that we gave them
+
+# Course Logistics
+- Syllabus overview
+- Grading
+- Course structure
+- Required software (R + RStudio or Positron)
+
+https://r.datahub.berkeley.edu
+
+## Install R and RStudio
+and subscribe to NYT!
