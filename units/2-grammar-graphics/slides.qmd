@@ -1,50 +1,38 @@
 ---
-title: Sample Class
-subtitle: Deck Showing Features
+title:  Week 2
+subtitle:  Introduction to the Grammar of Graphics
 format: stat198slides-revealjs
 ---
 
-# Introduction
+# Learning Goals
 
-This is a sample deck for DataViz DeCal Slides. The features include:
+-   Understand the theoretical framework of the Grammar of Graphics
+-   Break down key components of a graphic: data, aesthetics, geoms, stats, scales, facets, themes
+-   Learn how ggplot2 implements this grammar in practice
 
-1. Title slide with background image.
-2. A bunch of yaml defaults.
-3. Clickable logo in lower right that links to the previous page.
-4. No logo or slide number on title slide.
-5. Custom `:::poll` div for poll questions.
-6. A [countdown timer](https://github.com/gadenbuie/countdown/tree/main/quarto) accessible by adding
+# Agenda
 
-   `{{< countdown "01:30" >}}`
-   
-   on a new line.
+-   Discussion of Assigned Reading\
+-   Sketching Activity\
+-   Lecture\
+-   Code Example\
+-   Wrap-up\
 
+# Discussion
 
-## Agenda
+**Reading:** [The Age That Women Have Babies](https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html)
 
-- Introduction  
-- Example Poll  
-- Countdown  
-- Code Example  
-- Two-Column Layout  
-- Wrap-up  
+Get into groups of 2-3 people and discuss the following questions: 
+- What do you think of the use of color 
+-
 
-# Example poll
+# Sketching Activity
 
-You can provide set up for the code as if it is a normal slide.
-
-::: poll
-What is your favorite color?
-
-A. Red  
-B. Green  
-C. Blue  
-:::
-
-{{< countdown "01:30" >}}
+# Leture
+## What is grammar in graphics?
 
 
-## Code Example
+# Code Example
 
 Here’s an example of code and output using **ggplot2** in R.
 
@@ -64,24 +52,23 @@ ggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
 
 ## Two Columns {.smaller}
 
-::: columns
+::::: columns
 ::: column
-
 Explanation
 
 Columns are great for mixing code, plots, and text.\
 
-- Left and right content\
+-   Left and right content\
 
-- Works well for comparisons\
+-   Works well for comparisons\
 
-- Helps structure visual walkthroughs\
+-   Helps structure visual walkthroughs\
 :::
 
 ::: {.column .fragment}
 Example plot
 :::
-:::
+:::::
 
 # Wrap-Up
 
