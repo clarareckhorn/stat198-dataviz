@@ -78,7 +78,7 @@ You will be prompted with the following message:
 Hit return, and observe the build process. It usually takes a couple of 
 seconds for this to complete. 
 
-3. If there are no problems, your website will be publicly available at <https://dataviz.quarto.pub/fall-2024/>
+3. If there are no problems, your website will be publicly available at <https://dataviz.quarto.pub/spring-2026/>
 
 4. As you make changes, you can continue to run `quarto publish`.
 
