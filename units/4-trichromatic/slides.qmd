@@ -1,0 +1,96 @@
+---
+title: Week 4
+subtitle: Trichromatic Color Theory and RGB Model
+format: stat198slides-revealjs
+---
+
+# Introduction
+
+This is a sample deck for DataViz DeCal Slides. The features include:
+
+1. Title slide with background image.
+2. A bunch of yaml defaults.
+3. Clickable logo in lower right that links to the previous page.
+4. No logo or slide number on title slide.
+5. Custom `:::poll` div for poll questions.
+6. A [countdown timer](https://github.com/gadenbuie/countdown/tree/main/quarto) accessible by adding
+
+   `{{< countdown "01:30" >}}`
+   
+   on a new line.
+
+
+## Agenda
+
+- Quiz 1
+- Activity (RGB Lights)  
+- Introduction
+- Where does RGB Model come from? 
+
+---
+title: "Quiz"
+format:
+  stat198slides-revealjs
+---
+
+## Before the Quiz
+
+0.  Take a photo of your cheat sheet if you want it.
+1.  🧹 Clear your desk of everything except a pen/pencil and your cheat sheet.
+2.  🧢 Remove hats, hoods, and sunglasses.
+3.  📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period.
+4.  Spread out as much as possible.
+
+## Individual Quiz
+
+```{r}
+#| echo: false
+countdown::countdown(25, top = 0)
+```
+
+::::: columns
+::: {.column width="57%"}
+1.  When you get a quiz, cover it with your cheat sheet and do not begin.
+2.  Write your name on both pages.
+3.  ⌛If you finish early, cover it with your cheat sheet.
+4.  If you need to use the bathroom, bring phone and quiz to the front of the class.
+:::
+
+::: {.column width="43%"}
+5.  ⌛If you finish early, please hold on to your quiz and wait.
+6.  Keep your eyes on your own quiz.
+7.  ❗You must stop writing when time is called or risk a 0.
+
+::: {.fragment}
+Good luck! 🍀
+:::
+:::
+:::::
+
+## Group Quiz
+
+```{r}
+#| echo: false
+countdown::countdown(15, top = 0)
+```
+
+::::: columns
+::: {.column width="57%"}
+1.  Form groups of 3 people, then ONE person raise your hand (to get your quiz).
+2.  Be sure to write ALL group members names on the quiz on both pages.
+3.  If you find yourself without a group, come to the front of class and we'll help you form one.
+:::
+
+::: {.column width="43%"}
+4.  Your can start when you get your quiz.
+5.  When done, bring your quiz and everyone's cheat sheets to a tutor or me. Then please leave the room quietly.
+
+::: {.fragment}
+Good luck! 🍀
+:::
+:::
+:::::
+
+# Activity: RGB Lights
+
+## 
