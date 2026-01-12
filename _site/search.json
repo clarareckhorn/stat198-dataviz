@@ -600,5 +600,131 @@
     "crumbs": [
       "About"
     ]
+  },
+  {
+    "objectID": "units/1-intro/slides.html#montse",
+    "href": "units/1-intro/slides.html#montse",
+    "title": "Week 1",
+    "section": "Montse",
+    "text": "Montse\n\nSophomore Stats Major\nHometown: Mexicali, Baja California + Calexico, California\nFun fact: I have a dog named Shakira!\nCourse reader for Stat133, Stat 33B, now tutor for Stat133\n\n\n\n\n\n\n\nNote\n\n\nEmail me at montserrat_ibarra@berkeley.edu"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#clara",
+    "href": "units/1-intro/slides.html#clara",
+    "title": "Week 1",
+    "section": "Clara",
+    "text": "Clara\n\nSenior Stats Major\nHometown: Palos Verdes, CA + Osnabrück, Germany\nFun fact: Pursuing masters in Europe!\nGSI for Stat133 + led HelloWorld\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\nEmail me at clara_reckhorn@berkeley.edu"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#jocelyne",
+    "href": "units/1-intro/slides.html#jocelyne",
+    "title": "Week 1",
+    "section": "Jocelyne",
+    "text": "Jocelyne\n\nSenior Stats Major\nHometown: San Mateo, CA\nFun fact: I did middle and high school in La Paz, Mexico!\nCourse reader for Stat133\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\nEmail me at jocelyneperez@berkeley.edu"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#monste",
+    "href": "units/1-intro/slides.html#monste",
+    "title": "Week 1",
+    "section": "Monste",
+    "text": "Monste\nMy Data Viz:    ## Clara My Data Viz:"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#clara-1",
+    "href": "units/1-intro/slides.html#clara-1",
+    "title": "Week 1",
+    "section": "Clara",
+    "text": "Clara"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#jocelyne-1",
+    "href": "units/1-intro/slides.html#jocelyne-1",
+    "title": "Week 1",
+    "section": "Jocelyne",
+    "text": "Jocelyne"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#we-live-surrounded-by-graphics",
+    "href": "units/1-intro/slides.html#we-live-surrounded-by-graphics",
+    "title": "Week 1",
+    "section": "We live surrounded by graphics!",
+    "text": "We live surrounded by graphics!\n\nThis has not always been the case\nOur parent’s generation had no immediate access to graphics\nGraphics we can easily get access to:\n\nCredit score (donut chart/timeline)\nNumber of commits to a GH repo (tiles graph)\nGoogle maps timeline (map)\nScore distribution of an exam (histogram)\nETC"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#activity-introduce-yourself",
+    "href": "units/1-intro/slides.html#activity-introduce-yourself",
+    "title": "Week 1",
+    "section": "Activity: Introduce yourself!",
+    "text": "Activity: Introduce yourself!\nBefore course logistics, we would like to get to know a bit about you. - Grab a “Hello My Name Is” sticker from the front table"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#tell-us",
+    "href": "units/1-intro/slides.html#tell-us",
+    "title": "Week 1",
+    "section": "Tell us:",
+    "text": "Tell us:\n\nYour name\nYour major/area of study\nWhy are you taking this class?\nYour favorite data vizualization (if you have one!) or the last graphic you saw in the last week\nYour favorite color"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#activity-two-truths-and-a-lie",
+    "href": "units/1-intro/slides.html#activity-two-truths-and-a-lie",
+    "title": "Week 1",
+    "section": "Activity: Two truths and a lie",
+    "text": "Activity: Two truths and a lie\n\nThink of two truths and one lie about yourself\nShare with a partner and have them guess which one is the lie"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#activity-repeating-names",
+    "href": "units/1-intro/slides.html#activity-repeating-names",
+    "title": "Week 1",
+    "section": "Activity: Repeating names",
+    "text": "Activity: Repeating names\n\nTake turns saying your names in order\nEach person must repeat the names of everyone who came before them\nIf you mess up, start over!"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#activity",
+    "href": "units/1-intro/slides.html#activity",
+    "title": "Week 1",
+    "section": "Activity",
+    "text": "Activity\n\nGrab a piece of scratch paper and write something unique and interesting about yourself\nThis is private and only for us to get to know you better"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#activity-gathering-data",
+    "href": "units/1-intro/slides.html#activity-gathering-data",
+    "title": "Week 1",
+    "section": "Activity: Gathering data",
+    "text": "Activity: Gathering data\n(to be used in week 3 activity)\n\nTransfer T/F\nFavorite drink (water, tea, coffee, etc)\nMajor\nAverage amount of sleep on weekdays (Number)\nDistance from where you grew up (in approx miles)\nUnits you are taking this semester\nNumber of siblings"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#how-would-you-portray-this-data",
+    "href": "units/1-intro/slides.html#how-would-you-portray-this-data",
+    "title": "Week 1",
+    "section": "How would you portray this data?",
+    "text": "How would you portray this data?\n\nGroup activity (3-4 people) Each group will have to brainstorm on a paper for Graphs that students create/guess based on a primary variable “Hours of Sleep of a Berkeley student (Stereotype)” together with Secondary variables:\nYear: Freshman, Sophomore, Junior, Senior (e.g. Bar chart, Pie)\nEnrolled units: Unit counts (e.g. Scatter plot)\nSex or Gender: Female Vs. Male (e.g. Bar chart, Pie)\nMonths (e.g. Line graph) Combine all variables (e.g. or at least three in one graph)?\n\n\n  \n    −\n    +\n \n 10:00\n `"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#how-would-you-portray-this-data-continued",
+    "href": "units/1-intro/slides.html#how-would-you-portray-this-data-continued",
+    "title": "Week 1",
+    "section": "How would you portray this data? (continued)",
+    "text": "How would you portray this data? (continued)\nOn a poster, make 4 graphs to visualize your thoughts on these categories - Extra challenge: make a creative graph that will show 3 variables of the 4 that we gave them"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#install-r-and-rstudio",
+    "href": "units/1-intro/slides.html#install-r-and-rstudio",
+    "title": "Week 1",
+    "section": "Install R and RStudio",
+    "text": "Install R and RStudio\nand subscribe to NYT!"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#montse-1",
+    "href": "units/1-intro/slides.html#montse-1",
+    "title": "Week 1",
+    "section": "Montse",
+    "text": "Montse"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#attendance-form-thank-you",
+    "href": "units/1-intro/slides.html#attendance-form-thank-you",
+    "title": "Week 1",
+    "section": "Attendance form + thank you",
+    "text": "Attendance form + thank you\nPlease write your name on the sheet."
   }
 ]

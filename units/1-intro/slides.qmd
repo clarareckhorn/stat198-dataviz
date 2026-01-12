@@ -16,9 +16,11 @@ format:
 - Fun fact: I have a dog named Shakira! 
 - Course reader for Stat133, Stat 33B, now tutor for Stat133
 
-![Shakira](images/shakira.jpg)
 
+::: {.callout-note}
 Email me at montserrat_ibarra@berkeley.edu
+:::
+
 
 ## Clara
 
@@ -28,7 +30,9 @@ Email me at montserrat_ibarra@berkeley.edu
 - GSI for Stat133 + led HelloWorld
 - Transfer student
 
+::: {.callout-note}
 Email me at clara_reckhorn@berkeley.edu
+:::
 
 ## Jocelyne 
 
@@ -38,18 +42,58 @@ Email me at clara_reckhorn@berkeley.edu
 - Course reader for Stat133
 - Transfer student 
 
+::: {.callout-note}
 Email me at jocelyneperez@berkeley.edu
+:::
 
 # Personal Data Viz
 
-## Monste 
-My Data Viz:
+## Montse 
+::: {.columns}
+::: {.column width="33%"}
+![](images/monste_networth.PNG){width=100%}
+:::
 
+::: {.column width="33%"}
+![](images/monste_steps.PNG){width=100%}
+:::
+
+::: {.column width="33%"}
+![](images/montse_walking.PNG){width=100%}
+:::
+:::
 ## Clara
-My Data Viz:
+
+::: {.columns}
+::: {.column width="33%"}
+![](images/clara_headspace.jpg){width=100%}
+:::
+
+::: {.column width="33%"}
+![](images/clara_screen.jpg){width=100%}
+:::
+
+::: {.column width="33%"}
+![](images/clara_wrapped.jpg){width=100%}
+:::
+:::
 
 ## Jocelyne
-My Data Viz:
+
+::: {.columns}
+::: {.column width="33%"}
+![](images/jocy_bills.png){width=100%}
+:::
+
+::: {.column width="33%"}
+![](images/jocy_songs.png){width=100%}
+:::
+
+::: {.column width="33%"}
+![](images/jocy_steps.png){width=100%}
+:::
+:::
+
 
 ## We live surrounded by graphics! {.smaller}
 - This has not always been the case
@@ -137,7 +181,7 @@ On a poster, make 4 graphs to visualize your thoughts on these categories
 
 # Course Logistics
 - Syllabus overview
-- Grading
+- Grading + Attendance policy 
 - Course structure
 - Required software (R + RStudio or Positron)
 
@@ -145,3 +189,7 @@ https://r.datahub.berkeley.edu
 
 ## Install R and RStudio
 and subscribe to NYT!
+
+## Attendance form + thank you 
+Please write your name on the sheet. 
+
