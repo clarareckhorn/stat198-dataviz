@@ -27,6 +27,158 @@ This is a sample deck for DataViz DeCal Slides. The features include:
 - Learn how to match data structures to appropriate visial encodings
 - Acknowledge esistence of graphics all over the data analysis cycle, and how graphics can be broadly divided into "Exploration" and "Communication".
 
+# GGPlot syntax intro
+
+
+
+## {.smaller auto-animate=true}
+
+::: {.columns}
+::: {.column}
+```{r}
+#| label: "hi mom"
+penguins |>
+  select(bill_length_mm,
+         flipper_length_mm,
+         species)
+```
+:::
+::: {.column .fragment}
+```{r}
+#| echo: false
+#| fig-height: 9
+penguins |>
+  ggplot(aes(x = bill_length_mm,
+             y = flipper_length_mm,
+             color = species)) +
+  geom_point() +
+  theme_gray(base_size = 18)
+```
+:::
+:::
+
+::: notes
+Draw arrows mapping variables to visual cues
+:::
+
+## {.smaller auto-animate=true}
+
+::: {.columns}
+::: {.column}
+```{r}
+#| eval: false
+penguins |>
+  ggplot(aes(x = bill_length_mm,
+             y = flipper_length_mm,
+             color = species)) +
+  geom_point()
+```
+:::
+::: {.column}
+```{r}
+#| echo: false
+#| fig-height: 9
+penguins |>
+  ggplot(aes(x = bill_length_mm,
+             y = flipper_length_mm,
+             color = species)) +
+  geom_point() +
+  theme_gray(base_size = 18)
+```
+:::
+:::
+
+
+## `ggplot2()` syntax
+
+. . .
+
+`ggplot2()` builds a plot layer by layer, each one added on top of one another with `+` (not `|>`).
+
+. . .
+
+- `ggplot(df)` creates canvas
+- `aes()` creates mappings, called inside `ggplot()` or a `geom()`
+- `geom_()` puts down marks using declared geometry
+
+## Layer by layer
+
+```{r}
+#| eval: false
+penguins |>
+  ggplot(aes(x = bill_length_mm,
+             y = flipper_length_mm,
+             color = species)) +
+  geom_point() +
+  theme_gray(base_size = 18)
+```
+
+
+## Common `aes()`
+
+::: {.columns}
+::: {.column}
+- `x`
+- `y`
+- `color`
+- `fill`
+:::
+::: {.column}
+- `size`
+- `shape`
+- `alpha`
+:::
+:::
+
+## Common `geom_()`
+
+::: {.columns}
+::: {.column}
+- `geom_point()`
+- `geom_bar() / geom_col()`
+- `geom_line()`
+:::
+::: {.column}
+- `geom_histogram()`
+- `geom_boxplot()`
+- `geom_violin()`
+- `geom_density()`
+:::
+:::
+
+## Mapping vs Setting
+
+demo
+
+<!-- 
+## Two types of Viz
+
+::: {.columns}
+::: {.column}
+### Explanatory Data Analysis
+:::
+::: {.column}
+### Exploratory Data Analysis
+
+:::
+:::
+
+::: notes
+Add notes to each:
+
+Explanatory:
+- consumer: stakeholder
+- goal: tell a specific story
+- customized
+- polished aesthetic
+
+Exploratory:
+- consumer: the analyst
+- goal: uncover structure for further analysis
+- follow templates
+- prioritize quick and accurate interpretation
+::: -->
+
 # Discussion of Assigned Reading 
 
 - Reading: The Persistent Grip of Social Class on College Admissions 
