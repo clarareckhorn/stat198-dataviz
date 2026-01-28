@@ -10,36 +10,33 @@ format: stat198slides-revealjs
 -   Break down key components of a graphic: data, aesthetics, geoms, stats, scales, facets, themes
 -   Learn how ggplot2 implements this grammar in practice
 
-# Agenda
-
--   Discussion of Assigned Reading\
--   Sketching Activity\
--   Lecture\
--   Code Example\
--   Wrap-up\
-
 # Discussion
 
 **Reading:** [The Age That Women Have Babies](https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html)
 
-Get into groups of 2-3 people and discuss the following questions: 
-- What do you think of the use of color 
--
+Get into groups of 2-3 people and discuss the following questions:
 
-# Sketching Activity
+::::: {columns}
+::: {.column width="30%"}
+![](images/discussion_graph_1980.png)
+:::
 
-# Leture
-## What is grammar in graphics?
+::: {.column width="30%"}
+![](images/discussion_graph_2016.png)
+:::
+:::::
 
+1.  What is something you like about the way this data is portrayed?
+2.  
 
-## Meet the Palmer Penguins ![](images/penguins-hex.png){width=80} {.smaller}
+# Meet the Palmer Penguins
 
 ```{r}
 library(palmerpenguins)
 penguins
 ```
 
-## 
+# 
 
 **Question**: In terms of the way they are constructed...
 
@@ -74,8 +71,7 @@ What do these plots have in common? How do they differ?
 
 {{< countdown "1:20" >}}
 
-
-##
+## 
 
 **Question**: What do these plots have in common? How do they differ?
 
@@ -94,8 +90,24 @@ p5 <- penguins |>
 p4 + p5
 ```
 
-
 {{< countdown "1:20" >}}
+
+## 
+
+**Key idea:**\
+These plots use the **same data**, but different **grammars**.
+
+They share:
+
+-   the same dataset (`penguins`)
+
+-   a single mapped variable
+
+They differ by:
+
+-   geometry (histogram, density, boxplot)
+
+-   statistical transformation
 
 # The Grammar of Graphics
 
@@ -103,18 +115,18 @@ p4 + p5
 
 Leland Wilkinson (1999)
 
-::: {.columns}
-::: {.column}
-- A grammar to describes all statistical graphics.
-- Underlies most modern data visualization software.
+::::: columns
+::: column
+-   A grammar to describe all statistical graphics.
+-   Underlies most modern data visualization software.
 :::
+
 ::: {.column .fragment}
-![](images/grammar-of-graphics.png)
+![](images/Grammar_of_graphics.png)
 :::
-:::
+:::::
 
-
-## Aesthetic Mapping {auto-animate=true}
+## Aesthetic Mapping {auto-animate="true"}
 
 . . .
 
@@ -130,8 +142,7 @@ An *aesthetic mapping* links a variable in the data to a visual channel that can
 From "Data Visualization" by Kieran Healy.
 :::
 
-
-## Aesthetic Mapping {auto-animate=true}
+## Aesthetic Mapping {auto-animate="true"}
 
 An *aesthetic mapping* links a variable in the data to a visual channel that can encode its variation.
 
@@ -143,7 +154,6 @@ An *aesthetic mapping* links a variable in the data to a visual channel that can
 From "Data Visualization" by Kieran Healy.
 :::
 
-
 ## Geometry
 
 The *geometry* describes how to translate the observations into marks on the page.
@@ -152,10 +162,9 @@ The *geometry* describes how to translate the observations into marks on the pag
 
 ### Examples
 
-- Point
-- Line
-- Bar
-
+-   Point
+-   Line
+-   Bar
 
 ## Named plots
 
@@ -209,7 +218,7 @@ p5 <- penguins |>
 p4 + p5
 ```
 
-##
+## 
 
 **Question**: What are the aesthetic mappings and geometries used here?
 
@@ -229,40 +238,37 @@ penguins |>
 
 # ggplot2
 
-## {auto-animate=true}
+##  {auto-animate="true"}
 
-![](images/tidyverse-hex.svg){fig-align=center}
+![](images/tidyverse-hex.svg){fig-align="center"}
 
+##  {auto-animate="true"}
 
-## {auto-animate=true}
-
-:::{.columns}
-
-:::{.column width=50%}
+::::: columns
+::: {.column width="50%"}
 ![](images/tidyverse-hex.svg)
 :::
 
-:::{.column width=50%}
+::: {.column width="50%"}
 ![](images/dplyr-hex.svg)
 :::
-:::
+:::::
 
-## {auto-animate=true}
+##  {auto-animate="true"}
 
-:::{.columns}
-
-:::{.column width=33%}
+:::::: columns
+::: {.column width="33%"}
 ![](images/ggplot2-hex.svg)
 :::
 
-:::{.column width=33%}
+::: {.column width="33%"}
 ![](images/tidyverse-hex.svg)
 :::
 
-:::{.column width=33%}
+::: {.column width="33%"}
 ![](images/dplyr-hex.svg)
 :::
-:::
+::::::
 
 ## `ggplot2()`
 
@@ -270,11 +276,9 @@ penguins |>
 
 A plot can be decomposed into three primary elements:
 
-1. the **data**,
-2. the **aesthetic mapping** of the variables in the data to visual channels, and
-3. the **geometry** used to translate the observations into marks on the plot.
-
-
+1.  the **data**,
+2.  the **aesthetic mapping** of the variables in the data to visual channels, and
+3.  the **geometry** used to translate the observations into marks on the plot.
 
 # Code Example
 
@@ -322,4 +326,4 @@ Example plot
 
 {{< countdown >}} adds time control
 
-YAML controls defaults (logos, themes, layout)
+YAML controls defaults (logos, themes, layout) :::::::::::::::::::::

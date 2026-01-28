@@ -728,17 +728,101 @@
     "text": "Attendance form + thank you\nPlease write your name on the sheet."
   },
   {
-    "objectID": "units/3-data-types/slides.html#code-example",
-    "href": "units/3-data-types/slides.html#code-example",
-    "title": "Week 3",
-    "section": "Code Example",
-    "text": "Code Example\nHere’s an example of code and output using ggplot2 in R.\n\n\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  theme_minimal() +\n  labs(\n    title = \"Miles per Gallon vs. Weight\",\n    color = \"Cylinders\"\n  )"
+    "objectID": "units/2-grammar-graphics/slides.html#section",
+    "href": "units/2-grammar-graphics/slides.html#section",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
   },
   {
-    "objectID": "units/3-data-types/slides.html#two-columns",
-    "href": "units/3-data-types/slides.html#two-columns",
-    "title": "Week 3",
+    "objectID": "units/2-grammar-graphics/slides.html#section-1",
+    "href": "units/2-grammar-graphics/slides.html#section-1",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
+    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
+    "title": "Week 2",
+    "section": "“The Grammar of Graphics”",
+    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describe all statistical graphics.\nUnderlies most modern data visualization software."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#geometry",
+    "href": "units/2-grammar-graphics/slides.html#geometry",
+    "title": "Week 2",
+    "section": "Geometry",
+    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#named-plots",
+    "href": "units/2-grammar-graphics/slides.html#named-plots",
+    "title": "Week 2",
+    "section": "Named plots",
+    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1",
+    "href": "units/2-grammar-graphics/slides.html#redux-1",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1-1",
+    "href": "units/2-grammar-graphics/slides.html#redux-1-1",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-2",
+    "href": "units/2-grammar-graphics/slides.html#section-2",
+    "title": "Week 2",
+    "section": "",
+    "text": "Key idea:\nThese plots use the same data, but different grammars.\nThey share: - the same dataset (penguins) - a single mapped variable\nThey differ by: - geometry (histogram, density, boxplot) - statistical transformation"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#ggplot2-1",
+    "href": "units/2-grammar-graphics/slides.html#ggplot2-1",
+    "title": "Week 2",
+    "section": "ggplot2()",
+    "text": "ggplot2()\n\nA plot can be decomposed into three primary elements:\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#two-columns",
+    "href": "units/2-grammar-graphics/slides.html#two-columns",
+    "title": "Week 2",
     "section": "Two Columns",
     "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-3",
+    "href": "units/2-grammar-graphics/slides.html#section-3",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#sketching-activity",
+    "href": "units/2-grammar-graphics/slides.html#sketching-activity",
+    "title": "Week 2",
+    "section": "Sketching Activity",
+    "text": "Sketching Activity"
   }
 ]
