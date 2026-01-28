@@ -726,5 +726,19 @@
     "title": "Week 1",
     "section": "Attendance form + thank you",
     "text": "Attendance form + thank you\nPlease write your name on the sheet."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#code-example",
+    "href": "units/3-data-types/slides.html#code-example",
+    "title": "Week 3",
+    "section": "Code Example",
+    "text": "Code Example\nHere’s an example of code and output using ggplot2 in R.\n\n\nlibrary(ggplot2)\n\nggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +\n  geom_point(size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  theme_minimal() +\n  labs(\n    title = \"Miles per Gallon vs. Weight\",\n    color = \"Cylinders\"\n  )"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#two-columns",
+    "href": "units/3-data-types/slides.html#two-columns",
+    "title": "Week 3",
+    "section": "Two Columns",
+    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
   }
 ]

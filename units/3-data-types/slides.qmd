@@ -1,6 +1,6 @@
 ---
-title: Week 4
-subtitle: Data-types 
+title: Week 3
+subtitle: Data Types 
 format: stat198slides-revealjs
 ---
 
@@ -22,198 +22,78 @@ This is a sample deck for DataViz DeCal Slides. The features include:
 
 # Agenda
 
-- Understand different types of variables and how they influence chart selection.  
-- Understand how different purposes or ana;ytical tasks influence chart selection.
-- Learn how to match data structures to appropriate visial encodings
-- Acknowledge esistence of graphics all over the data analysis cycle, and how graphics can be broadly divided into "Exploration" and "Communication".
-
-# GGPlot syntax intro
-
-
-
-## {.smaller auto-animate=true}
-
-::: {.columns}
-::: {.column}
-```{r}
-#| label: "hi mom"
-penguins |>
-  select(bill_length_mm,
-         flipper_length_mm,
-         species)
-```
-:::
-::: {.column .fragment}
-```{r}
-#| echo: false
-#| fig-height: 9
-penguins |>
-  ggplot(aes(x = bill_length_mm,
-             y = flipper_length_mm,
-             color = species)) +
-  geom_point() +
-  theme_gray(base_size = 18)
-```
-:::
-:::
-
-::: notes
-Draw arrows mapping variables to visual cues
-:::
-
-## {.smaller auto-animate=true}
-
-::: {.columns}
-::: {.column}
-```{r}
-#| eval: false
-penguins |>
-  ggplot(aes(x = bill_length_mm,
-             y = flipper_length_mm,
-             color = species)) +
-  geom_point()
-```
-:::
-::: {.column}
-```{r}
-#| echo: false
-#| fig-height: 9
-penguins |>
-  ggplot(aes(x = bill_length_mm,
-             y = flipper_length_mm,
-             color = species)) +
-  geom_point() +
-  theme_gray(base_size = 18)
-```
-:::
-:::
-
-
-## `ggplot2()` syntax
-
-. . .
-
-`ggplot2()` builds a plot layer by layer, each one added on top of one another with `+` (not `|>`).
-
-. . .
-
-- `ggplot(df)` creates canvas
-- `aes()` creates mappings, called inside `ggplot()` or a `geom()`
-- `geom_()` puts down marks using declared geometry
-
-## Layer by layer
-
-```{r}
-#| eval: false
-penguins |>
-  ggplot(aes(x = bill_length_mm,
-             y = flipper_length_mm,
-             color = species)) +
-  geom_point() +
-  theme_gray(base_size = 18)
-```
-
-
-## Common `aes()`
-
-::: {.columns}
-::: {.column}
-- `x`
-- `y`
-- `color`
-- `fill`
-:::
-::: {.column}
-- `size`
-- `shape`
-- `alpha`
-:::
-:::
-
-## Common `geom_()`
-
-::: {.columns}
-::: {.column}
-- `geom_point()`
-- `geom_bar() / geom_col()`
-- `geom_line()`
-:::
-::: {.column}
-- `geom_histogram()`
-- `geom_boxplot()`
-- `geom_violin()`
-- `geom_density()`
-:::
-:::
-
-## Mapping vs Setting
-
-demo
-
-<!-- 
-## Two types of Viz
-
-::: {.columns}
-::: {.column}
-### Explanatory Data Analysis
-:::
-::: {.column}
-### Exploratory Data Analysis
-
-:::
-:::
-
-::: notes
-Add notes to each:
-
-Explanatory:
-- consumer: stakeholder
-- goal: tell a specific story
-- customized
-- polished aesthetic
-
-Exploratory:
-- consumer: the analyst
-- goal: uncover structure for further analysis
-- follow templates
-- prioritize quick and accurate interpretation
-::: -->
+- Discussion of Assigned Reading   
+- Lecture on understanding different types of variables and how they influence chart selection. 
+- Activity 
+- Attendence quiz 
 
 # Discussion of Assigned Reading 
 
-- Reading: The Persistent Grip of Social Class on College Admissions 
-- Warm up question: 
-- Follow up reading questions:
-- In what ways do the graphs differ?
-
-::: poll
-What is your favorite color?
-
-A. Red  
-B. Green  
-C. Blue  
-:::
-
-{{< countdown "01:30" >}}
+- **Reading:** [The Persistent Grip of Social Class on College Admissions](https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html)
+- What was the desing element you liked? 
+- How do you think grammar of graphics was portrayed in the graph?
 
 
-## Code Example
 
-Here’s an example of code and output using **ggplot2** in R.
-
+# Vectors in R {.smaller}
+A vector is like a single column of data in R, it’s a list of values that are all the same type (like all numbers or all words).
+Example: 
 ```{r}
 #| output-location: column-fragment
-library(ggplot2)
+# A vector of numbers
+numbers <- c(1, 2, 3, 4, 5)
 
-ggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
-  geom_point(size = 3) +
-  geom_smooth(method = "lm", se = FALSE) +
-  theme_minimal() +
-  labs(
-    title = "Miles per Gallon vs. Weight",
-    color = "Cylinders"
-  )
+# A vector of words
+fruits <- c("apple", "banana", "cherry")
+
+# A vector of TRUE/FALSE values
+logic <- c(TRUE, FALSE, TRUE)
 ```
+
+# Data Frames in R {.smaller}
+A data frame is like a table or spreadsheet — it has rows and columns, and each column can have its own type (numbers, words, etc.).
+```{r}
+#| output-location: column-fragment
+# Create a data frame
+students <- data.frame(
+  name = c("Alice", "Bob", "Charlie"),
+  age = c(20, 21, 19),
+  major = c("Math", "Physics", "Biology")
+)
+
+# Print the data frame
+print(students)
+```
+
+# Data types in R {.smaller}
+Data Types: A data type tells you what kind of data something is, like a number, a word (string), or a TRUE/FALSE value (logical).
+```{R}
+#| output-location: column-fragment
+# Numeric (numbers)
+num <- 42
+
+# Character (text)
+text <- "Hello, R!"
+
+# Logical (TRUE/FALSE)
+logic <- TRUE
+
+# Print the values and their types
+print(num)      # 42
+print(text)     # "Hello, R!"
+print(logic)    # TRUE
+
+# Check the data type using class()
+class(num)   # "numeric"
+class(text)  # "character"
+class(logic) # "logical"
+
+```
+
+## Code Example
+Here’s an example of code and output using **ggplot2** in R.
+
+
 
 ## Two Columns {.smaller}
 
