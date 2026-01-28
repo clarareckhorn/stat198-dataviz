@@ -31,11 +31,6 @@ Get into groups of 2-3 people and discuss the following questions:
 # Leture
 ## What is grammar in graphics?
 
----
-title: The Grammar of Graphics
-format:
-  stat133slides-revealjs
----
 
 ## Meet the Palmer Penguins ![](images/penguins-hex.png){width=80} {.smaller}
 
