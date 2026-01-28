@@ -81,9 +81,6 @@ Email me at jocelyneperez@berkeley.edu
 ## Jocelyne
 
 ::: {.columns}
-::: {.column width="33%"}
-![](images/jocy_bills.png){width=100%}
-:::
 
 ::: {.column width="33%"}
 ![](images/jocy_songs.png){width=100%}
@@ -93,6 +90,8 @@ Email me at jocelyneperez@berkeley.edu
 ![](images/jocy_steps.png){width=100%}
 :::
 :::
+
+## 
 
 
 ## We live surrounded by graphics! {.smaller}
@@ -139,16 +138,6 @@ Before course logistics, we would like to get to know a bit about you.
 
 `{{< countdown "5:00" >}}`
 
-## Activity: Repeating names
-- Take turns saying your names in order
-- Each person must repeat the names of everyone who came before them
-- If you mess up, start over!
-
-## Activity
-- Grab a piece of scratch paper and write something unique and interesting about yourself
-- This is private and only for us to get to know you better 
-
-`{{< countdown "3:00" >}}`
 
 ## Activity: Gathering data {.smaller}
 
