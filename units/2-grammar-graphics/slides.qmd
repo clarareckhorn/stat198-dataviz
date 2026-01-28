@@ -327,3 +327,235 @@ Example plot
 {{< countdown >}} adds time control
 
 YAML controls defaults (logos, themes, layout) :::::::::::::::::::::
+
+## Meet the Palmer Penguins ![](images/penguins-hex.png){width=80} {.smaller}
+
+```{r}
+library(palmerpenguins)
+penguins
+```
+
+## 
+
+**Question**: In terms of the way they are constructed...
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-align: center
+library(tidyverse)
+library(palmerpenguins)
+
+p1 <- penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram() +
+  theme_bw(base_size = 15)
+
+p2 <- penguins |>
+  ggplot(aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw(base_size = 15)
+
+p3 <- penguins |>
+  ggplot(aes(x = body_mass_g)) +
+  geom_boxplot() +
+  theme_bw(base_size = 15)
+
+library(patchwork)
+
+p1 + p2 + p3
+```
+
+What do these plots have in common? How do they differ?
+
+{{< countdown "1:20" >}}
+
+
+##
+
+**Question**: What do these plots have in common? How do they differ?
+
+```{r}
+#| echo: false
+
+p4 <- penguins |>
+  ggplot(aes(x = island,
+             fill = species)) +
+  geom_bar(position = "fill")
+
+p5 <- penguins |>
+  ggplot(aes(y = sex)) +
+  geom_bar()
+
+p4 + p5
+```
+
+
+{{< countdown "1:20" >}}
+
+# The Grammar of Graphics
+
+## "The Grammar of Graphics"
+
+Leland Wilkinson (1999)
+
+::: {.columns}
+::: {.column}
+- A grammar to describes all statistical graphics.
+- Underlies most modern data visualization software.
+:::
+::: {.column .fragment}
+![](images/grammar-of-graphics.png)
+:::
+:::
+
+
+## Aesthetic Mapping {auto-animate=true}
+
+. . .
+
+An *aesthetic mapping* links a variable in the data to a visual channel that can encode its variation.
+
+. . .
+
+### Channels for ordered variables
+
+![](images/channels-1.png)
+
+::: aside
+From "Data Visualization" by Kieran Healy.
+:::
+
+
+## Aesthetic Mapping {auto-animate=true}
+
+An *aesthetic mapping* links a variable in the data to a visual channel that can encode its variation.
+
+### Channels for unordered variables
+
+![](images/channels-2.png){fig-align="center"}
+
+::: aside
+From "Data Visualization" by Kieran Healy.
+:::
+
+
+## Geometry
+
+The *geometry* describes how to translate the observations into marks on the page.
+
+. . .
+
+### Examples
+
+- Point
+- Line
+- Bar
+
+
+## Named plots
+
+::: notes
+Draw "Scatterplot" and "barchart" along with their description in the g of g.
+:::
+
+## Redux 1
+
+```{r}
+#| echo: false
+#| fig-width: 16
+#| fig-align: center
+library(tidyverse)
+library(palmerpenguins)
+
+p1 <- penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram() +
+  theme_bw(base_size = 15)
+
+p2 <- penguins |>
+  ggplot(aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw(base_size = 15)
+
+p3 <- penguins |>
+  ggplot(aes(x = body_mass_g)) +
+  geom_boxplot() +
+  theme_bw(base_size = 15)
+
+library(patchwork)
+
+p1 + p2 + p3
+```
+
+## Redux 1
+
+```{r}
+#| echo: false
+
+p4 <- penguins |>
+  ggplot(aes(x = island,
+             fill = species)) +
+  geom_bar(position = "fill")
+
+p5 <- penguins |>
+  ggplot(aes(y = sex)) +
+  geom_bar()
+
+p4 + p5
+```
+
+##
+
+**Question**: What are the aesthetic mappings and geometries used here?
+
+```{r}
+#| echo: false
+#| fig-align: center
+penguins |>
+  ggplot(aes(x = bill_length_mm,
+             y = flipper_length_mm,
+             color = species,
+             shape = sex)) +
+  geom_point() +
+  theme_gray(base_size = 18)
+```
+
+{{< countdown "1:30" >}}
+
+# ggplot2
+
+## {auto-animate=true}
+
+![](images/tidyverse-hex.svg){fig-align=center}
+
+
+## {auto-animate=true}
+
+:::{.columns}
+
+:::{.column width=50%}
+![](images/tidyverse-hex.svg)
+:::
+
+:::{.column width=50%}
+![](images/dplyr-hex.svg)
+:::
+:::
+
+## {auto-animate=true}
+
+:::{.columns}
+
+:::{.column width=33%}
+![](images/ggplot2-hex.svg)
+:::
+
+:::{.column width=33%}
+![](images/tidyverse-hex.svg)
+:::
+
+:::{.column width=33%}
+![](images/dplyr-hex.svg)
+:::
+:::
