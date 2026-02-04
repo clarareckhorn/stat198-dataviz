@@ -1,7 +1,7 @@
 ---
 title: Data Wrangling I
 subtitle: "Manipulating data frames with `dplyr`"
-format: stat133slides-revealjs
+format: stat198slides-revealjs
 ---
 
 # Room for Improvement in Base R
