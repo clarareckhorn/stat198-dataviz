@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2f3081a84cd4859604ff54a50474bf31.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -152,10 +218,10 @@
 <section id="montse" class="slide level2">
 <h2>Montse</h2>
 <ul>
-<li class="fragment">Sophomore Stats Major</li>
-<li class="fragment">Hometown: Mexicali, Baja California + Calexico, California</li>
-<li class="fragment">Fun fact: I have a dog named Shakira!</li>
-<li class="fragment">Course reader for Stat133, Stat 33B, now tutor for Stat133</li>
+<li>Sophomore Stats Major</li>
+<li>Hometown: Mexicali, Baja California + Calexico, California</li>
+<li>Fun fact: I have a dog named Shakira!</li>
+<li>Course reader for Stat133, Stat 33B, now tutor for Stat133</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -174,11 +240,11 @@
 <section id="clara" class="slide level2">
 <h2>Clara</h2>
 <ul>
-<li class="fragment">Senior Stats Major</li>
-<li class="fragment">Hometown: Palos Verdes, CA + Osnabrück, Germany</li>
-<li class="fragment">Fun fact: Pursuing masters in Europe!</li>
-<li class="fragment">GSI for Stat133 + led HelloWorld</li>
-<li class="fragment">Transfer student</li>
+<li>Senior Stats Major</li>
+<li>Hometown: Palos Verdes, CA + Osnabrück, Germany</li>
+<li>Fun fact: Pursuing masters in Europe!</li>
+<li>GSI for Stat133 + led HelloWorld</li>
+<li>Transfer student</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -197,11 +263,11 @@
 <section id="jocelyne" class="slide level2">
 <h2>Jocelyne</h2>
 <ul>
-<li class="fragment">Senior Stats Major</li>
-<li class="fragment">Hometown: San Mateo, CA</li>
-<li class="fragment">Fun fact: I did middle and high school in La Paz, Mexico!</li>
-<li class="fragment">Course reader for Stat133</li>
-<li class="fragment">Transfer student</li>
+<li>Senior Stats Major</li>
+<li>Hometown: San Mateo, CA</li>
+<li>Fun fact: I did middle and high school in La Paz, Mexico!</li>
+<li>Course reader for Stat133</li>
+<li>Transfer student</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -228,8 +294,6 @@
 <div class="column" style="width:33%;">
 <p><img data-src="images/monste_networth.PNG" style="width:100.0%"></p>
 </div><div class="column" style="width:33%;">
-<p><img data-src="images/monste_steps.PNG" style="width:100.0%"></p>
-</div><div class="column" style="width:33%;">
 <p><img data-src="images/montse_walking.PNG" style="width:100.0%"></p>
 </div></div>
 </section>
@@ -240,8 +304,6 @@
 <p><img data-src="images/clara_headspace.jpg" style="width:100.0%"></p>
 </div><div class="column" style="width:33%;">
 <p><img data-src="images/clara_screen.jpg" style="width:100.0%"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="images/clara_wrapped.jpg" style="width:100.0%"></p>
 </div></div>
 </section>
 <section id="jocelyne-1" class="slide level2">
@@ -253,11 +315,21 @@
 <p><img data-src="images/jocy_steps.png" style="width:100.0%"></p>
 </div></div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="some-of-our-favorite-data-visualizations" class="slide level2">
+<h2>Some of our favorite Data Visualizations</h2>
+<ul>
+<li><a href="https://guns.periscopic.com/">Gun Deaths Viz</a><br>
+</li>
+<li><a href="http://hint.fm/wind/">Wind Map Viz</a><br>
+</li>
+<li><a href="https://en-roads.climateinteractive.org/scenario.html?v=26.1.0">En-ROADS Temperature Increase Dashboard</a></li>
+</ul>
+<h3 id="there-is-data-all-around-us-if-you-know-where-to-look">There is data all around us if you know where to look!</h3>
 </section>
-<section id="we-live-surrounded-by-graphics" class="slide level2 smaller">
-<h2>We live surrounded by graphics!</h2>
+<section id="surrounded-by-graphics" class="slide level2 smaller">
+<h2>Surrounded by graphics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li class="fragment">This has not always been the case</li>
 <li class="fragment">Our parent’s generation had no immediate access to graphics</li>
@@ -265,11 +337,13 @@
 <ul>
 <li class="fragment">Credit score (donut chart/timeline)</li>
 <li class="fragment">Number of commits to a GH repo (tiles graph)</li>
-<li class="fragment">Google maps timeline (map)</li>
 <li class="fragment">Score distribution of an exam (histogram)</li>
 <li class="fragment">ETC</li>
 </ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/gh-commits.png" alt="alt"> <img data-src="images/grade-dist.png" alt="alt"></p>
+</div></div>
 </section></section>
 <section id="visual-literacy" class="title-slide slide level1 center">
 <h1>Visual Literacy</h1>
@@ -286,7 +360,7 @@
 <ul>
 <li class="fragment">Brainchild of Prof.&nbsp;Sanchez (Statistics Faculty Member) who is passionate about all things data viz</li>
 <li class="fragment">Stats dept has no dedicated data viz course, so Prof Sanchez decided to put together materials for 1 semester course</li>
-<li class="fragment">Offered: fall 2023, spring 2024, fall 2024… restructred for this semester!</li>
+<li class="fragment">Offered: Fall 2023, Spring 2024, Fall 2024… restructured for this semester!</li>
 </ul>
 </section>
 
@@ -295,83 +369,321 @@
 <h1>Your introductions</h1>
 
 </section>
-<section id="activity-introduce-yourself" class="slide level2">
+<section id="activity-introduce-yourself" class="slide level2 smaller">
 <h2>Activity: Introduce yourself!</h2>
-<p>Before course logistics, we would like to get to know a bit about you. - Grab a “Hello My Name Is” sticker from the front table</p>
-<p><code></code></p>
-</section>
-<section id="tell-us" class="slide level2">
-<h2>Tell us:</h2>
+<p>Before course logistics, we would like to get to know a bit about you.<br>
+</p>
 <ul>
-<li class="fragment">Your name</li>
-<li class="fragment">Your major/area of study</li>
-<li class="fragment">Why are you taking this class?</li>
-<li class="fragment">Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week</li>
-<li class="fragment">Your favorite color</li>
+<li>Grab a “Hello My Name Is” sticker from the front table</li>
 </ul>
-<p><code></code></p>
+<h3 id="tell-us">Tell us:</h3>
+<ul>
+<li>Your name</li>
+<li>Your major/area of study</li>
+<li>Why are you taking this class?</li>
+<li>Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week</li>
+</ul>
+<div id="timer_875773e6fcf6c8549bbc2ee784b6b1e5635760e2" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
 </section>
 <section id="activity-two-truths-and-a-lie" class="slide level2">
 <h2>Activity: Two truths and a lie</h2>
 <ul>
-<li class="fragment">Think of two truths and one lie about yourself</li>
-<li class="fragment">Share with a partner and have them guess which one is the lie</li>
+<li>Think of two truths and one lie about yourself</li>
+<li>Share with a partner and have them guess which one is the lie</li>
 </ul>
-<p><code></code></p>
-</section>
-<section id="activity-gathering-data" class="slide level2 smaller">
-<h2>Activity: Gathering data</h2>
-<p>(to be used in week 3 activity)</p>
+<div id="timer_875773e6fcf6c8549bbc2ee784b6b1e5635760e2" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section></section>
+<section>
+<section id="what-is-dataviz" class="title-slide slide level1 center">
+<h1>What is DataViz?</h1>
 <ul>
-<li class="fragment">Transfer T/F</li>
-<li class="fragment">Favorite drink (water, tea, coffee, etc)</li>
-<li class="fragment">Major</li>
-<li class="fragment">Average amount of sleep on weekdays (Number)</li>
-<li class="fragment">Distance from where you grew up (in approx miles)</li>
-<li class="fragment">Units you are taking this semester</li>
-<li class="fragment">Number of siblings</li>
+<li class="fragment">The graphical representation of information and data</li>
+<li class="fragment">The goal is to communicate information clearly and effectively through graphical means</li>
+<li class="fragment">Good visualization helps users analyze and reason about data and evidence</li>
+<li class="fragment">Makes complex data more accessible, understandable, and usable</li>
 </ul>
-<p><code></code></p>
 </section>
-<section id="how-would-you-portray-this-data" class="slide level2 smaller">
-<h2>How would you portray this data?</h2>
+<section id="what-is-the-typical-dataviz-process" class="slide level2 smaller">
+<h2>What is the typical DataViz process?</h2>
+
+<img data-src="images/dataviz-process.png" class="r-stretch"></section></section>
+<section>
+<section id="lets-try-out-this-process-you-are-the-subjects" class="title-slide slide level1 center">
+<h1>Let’s try out this process! (You are the subjects)</h1>
+
+</section>
+<section id="define-the-goal" class="slide level2">
+<h2>1. Define the goal</h2>
+<h3 id="want-to-find-out">Want to find out:</h3>
+<p>What factors influence the amount of sleep a Berkeley student gets on weekdays?</p>
+</section>
+<section id="collect-the-data" class="slide level2">
+<h2>2. Collect the Data</h2>
 <ul>
-<li class="fragment">Group activity (3-4 people) Each group will have to brainstorm on a paper for Graphs that students create/guess based on a primary variable “Hours of Sleep of a Berkeley student (Stereotype)” together with Secondary variables:</li>
-<li class="fragment">Year: Freshman, Sophomore, Junior, Senior (e.g.&nbsp;Bar chart, Pie)</li>
-<li class="fragment">Enrolled units: Unit counts (e.g.&nbsp;Scatter plot)</li>
-<li class="fragment">Sex or Gender: Female Vs. Male (e.g.&nbsp;Bar chart, Pie)</li>
-<li class="fragment">Months (e.g.&nbsp;Line graph) Combine all variables (e.g.&nbsp;or at least three in one graph)?</li>
+<li>On a piece of paper:<br>
+
+<ul>
+<li>Average amount of sleep on weekdays (Number)<br>
+</li>
+<li>Transfer T/F<br>
+</li>
+<li>Grad student T/F<br>
+</li>
+<li>Commute to campus (in minutes)<br>
+</li>
+<li>Favorite drink (water, tea, coffee, etc)<br>
+</li>
+<li>Major<br>
+</li>
+<li>Number of enrolled units you are taking<br>
+</li>
+</ul></li>
 </ul>
-<p></p><div id="timer_bdfde0461cdd3ebf0b6196b810df54ac175937c8" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_875773e6fcf6c8549bbc2ee784b6b1e5635760e2" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+<section id="data-cleaning" class="slide level2">
+<h2>3. Data Cleaning</h2>
+<p>Assume our data is cleaned and ready to go… we will save the actual data cleaning for later units!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="co"># toy dataset</span></span>
+<span id="cb1-4"><a></a>sleep_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-5"><a></a>  <span class="at">student_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb1-6"><a></a>  <span class="at">sleep_hours =</span> <span class="fu">c</span>(<span class="fl">6.5</span>, <span class="dv">7</span>, <span class="fl">5.5</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="fl">7.5</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="fl">8.5</span>, <span class="dv">7</span>),</span>
+<span id="cb1-7"><a></a>  <span class="at">transfer =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>),</span>
+<span id="cb1-8"><a></a>  <span class="at">grad_student =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
+<span id="cb1-9"><a></a>  <span class="at">commute_min =</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">10</span>, <span class="dv">60</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">5</span>, <span class="dv">70</span>, <span class="dv">25</span>, <span class="dv">30</span>),</span>
+<span id="cb1-10"><a></a>  <span class="at">favorite_drink =</span> <span class="fu">c</span>(<span class="st">"Coffee"</span>, <span class="st">"Water"</span>, <span class="st">"Coffee"</span>, <span class="st">"Tea"</span>, <span class="st">"Tea"</span>,</span>
+<span id="cb1-11"><a></a>                     <span class="st">"Coffee"</span>, <span class="st">"Water"</span>, <span class="st">"Coffee"</span>, <span class="st">"Tea"</span>, <span class="st">"Water"</span>),</span>
+<span id="cb1-12"><a></a>  <span class="at">major =</span> <span class="fu">c</span>(<span class="st">"Econ"</span>, <span class="st">"Stats"</span>, <span class="st">"CS"</span>, <span class="st">"Psych"</span>, <span class="st">"Public Health"</span>,</span>
+<span id="cb1-13"><a></a>            <span class="st">"Econ"</span>, <span class="st">"Stats"</span>, <span class="st">"CS"</span>, <span class="st">"Bio"</span>, <span class="st">"Psych"</span>),</span>
+<span id="cb1-14"><a></a>  <span class="at">units =</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">13</span>, <span class="dv">18</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">17</span>, <span class="dv">15</span>, <span class="dv">19</span>, <span class="dv">11</span>, <span class="dv">16</span>)</span>
+<span id="cb1-15"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+
+</div>
+</section>
+<section id="data-cleaning-1" class="slide level2">
+<h2>3. Data Cleaning</h2>
+<p>That code will result in:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>sleep_data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 8
+   student_id sleep_hours transfer grad_student commute_min favorite_drink major
+        &lt;int&gt;       &lt;dbl&gt; &lt;lgl&gt;    &lt;lgl&gt;              &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;
+ 1          1         6.5 TRUE     FALSE                 45 Coffee         Econ 
+ 2          2         7   FALSE    FALSE                 10 Water          Stats
+ 3          3         5.5 TRUE     FALSE                 60 Coffee         CS   
+ 4          4         8   FALSE    FALSE                 15 Tea            Psych
+ 5          5         6   FALSE    TRUE                  20 Tea            Publ…
+ 6          6         7.5 TRUE     FALSE                 50 Coffee         Econ 
+ 7          7         6   FALSE    FALSE                  5 Water          Stats
+ 8          8         5   TRUE     FALSE                 70 Coffee         CS   
+ 9          9         8.5 FALSE    TRUE                  25 Tea            Bio  
+10         10         7   FALSE    FALSE                 30 Water          Psych
+# ℹ 1 more variable: units &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="select-the-data-visuals" class="slide level2">
+<h2>4. Select the data visuals</h2>
+<ul>
+<li>In a group (3-4 people):
+<ul>
+<li>Brainstorm how you could visualize a primary (hours of sleep) vs secondary variables (transfer, drink, major, commute, units)</li>
+<li>Choose a chart type, e.g.&nbsp;Bar chart, Pie chart, Scatter plot, Line graph, etc.</li>
+<li>How could you combine all variables (or at least three) in one graph?</li>
+</ul></li>
+</ul>
+<div id="timer_875773e6fcf6c8549bbc2ee784b6b1e5635760e2" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+<section id="create-the-data-visuals" class="slide level2">
+<h2>5. Create the data visuals</h2>
+<ul>
+<li>On a poster:<br>
+
+<ul>
+<li>Make 4 graphs to visualize your thoughts on these categories<br>
+</li>
+<li>One should use 3 of the variables in one graph</li>
+</ul></li>
+</ul>
+<div id="timer_875773e6fcf6c8549bbc2ee784b6b1e5635760e2" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
  </div>
  <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>`<p></p>
+ </div>
 </section>
-<section id="how-would-you-portray-this-data-continued" class="slide level2 smaller">
-<h2>How would you portray this data? (continued)</h2>
-<p>On a poster, make 4 graphs to visualize your thoughts on these categories - Extra challenge: make a creative graph that will show 3 variables of the 4 that we gave them</p>
+<section id="some-example-graphs" class="slide level2">
+<h2>Some example graphs</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># graph 1 - sleep vs commute time (scatter plot with regression line)</span></span>
+<span id="cb4-2"><a></a>graph1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sleep_data, <span class="fu">aes</span>(<span class="at">x =</span> commute_min, <span class="at">y =</span> sleep_hours)) <span class="sc">+</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-6"><a></a>    <span class="at">title =</span> <span class="st">"Sleep vs Commute Time"</span>,</span>
+<span id="cb4-7"><a></a>    <span class="at">x =</span> <span class="st">"Commute Time (minutes)"</span>,</span>
+<span id="cb4-8"><a></a>    <span class="at">y =</span> <span class="st">"Average Weekday Sleep (hours)"</span></span>
+<span id="cb4-9"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-10"><a></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb4-11"><a></a></span>
+<span id="cb4-12"><a></a><span class="co"># graph 2 - sleep vs favorite drink (bar chart)</span></span>
+<span id="cb4-13"><a></a>graph2 <span class="ot">&lt;-</span> sleep_data <span class="sc">%&gt;%</span></span>
+<span id="cb4-14"><a></a>  <span class="fu">group_by</span>(favorite_drink) <span class="sc">%&gt;%</span></span>
+<span id="cb4-15"><a></a>  <span class="fu">summarise</span>(<span class="at">avg_sleep =</span> <span class="fu">mean</span>(sleep_hours)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-16"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> favorite_drink, <span class="at">y =</span> avg_sleep)) <span class="sc">+</span></span>
+<span id="cb4-17"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb4-18"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-19"><a></a>    <span class="at">title =</span> <span class="st">"Average Sleep by Favorite Drink"</span>,</span>
+<span id="cb4-20"><a></a>    <span class="at">x =</span> <span class="st">"Favorite Drink"</span>,</span>
+<span id="cb4-21"><a></a>    <span class="at">y =</span> <span class="st">"Average Sleep (hours)"</span></span>
+<span id="cb4-22"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-23"><a></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb4-24"><a></a></span>
+<span id="cb4-25"><a></a><span class="co"># graph 3 - sleep vs units (scatter plot colored by transfer status)</span></span>
+<span id="cb4-26"><a></a>graph3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sleep_data, <span class="fu">aes</span>(<span class="at">x =</span> units, <span class="at">y =</span> sleep_hours, <span class="at">color =</span> transfer)) <span class="sc">+</span></span>
+<span id="cb4-27"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb4-28"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-29"><a></a>    <span class="at">title =</span> <span class="st">"Sleep vs Units by Transfer Status"</span>,</span>
+<span id="cb4-30"><a></a>    <span class="at">x =</span> <span class="st">"Units Enrolled"</span>,</span>
+<span id="cb4-31"><a></a>    <span class="at">y =</span> <span class="st">"Average Weekday Sleep (hours)"</span>,</span>
+<span id="cb4-32"><a></a>    <span class="at">color =</span> <span class="st">"Transfer Student"</span></span>
+<span id="cb4-33"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-34"><a></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb4-35"><a></a></span>
+<span id="cb4-36"><a></a><span class="co"># graph 4 - sleep vs major (boxplot colored by grad student status)</span></span>
+<span id="cb4-37"><a></a>graph4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sleep_data, <span class="fu">aes</span>(<span class="at">x =</span> major, <span class="at">y =</span> sleep_hours, <span class="at">fill =</span> grad_student)) <span class="sc">+</span></span>
+<span id="cb4-38"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb4-39"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-40"><a></a>    <span class="at">title =</span> <span class="st">"Distribution of Sleep Hours by Major"</span>,</span>
+<span id="cb4-41"><a></a>    <span class="at">x =</span> <span class="st">"Major"</span>,</span>
+<span id="cb4-42"><a></a>    <span class="at">y =</span> <span class="st">"Average Weekday Sleep (hours)"</span>,</span>
+<span id="cb4-43"><a></a>    <span class="at">fill =</span> <span class="st">"Grad Student"</span></span>
+<span id="cb4-44"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-45"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb4-46"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+
+</div>
+</section>
+<section id="some-example-graphs-contd" class="slide level2 smaller">
+<h2>Some example graphs (cont’d)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Print the graphs</span></span>
+<span id="cb5-2"><a></a>graph1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="some-example-graphs-contd-1" class="slide level2 smaller">
+<h2>Some example graphs (cont’d)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Print the graphs</span></span>
+<span id="cb6-2"><a></a>graph2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="some-example-graphs-contd-2" class="slide level2 smaller">
+<h2>Some example graphs (cont’d)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Print the graphs</span></span>
+<span id="cb7-2"><a></a>graph3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="some-example-graphs-contd-3" class="slide level2 smaller">
+<h2>Some example graphs (cont’d)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Print the graphs</span></span>
+<span id="cb8-2"><a></a>graph4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="course-logistics" class="title-slide slide level1 center">
 <h1>Course Logistics</h1>
+
+</section>
 <ul>
-<li class="fragment">Syllabus overview</li>
-<li class="fragment">Grading + Attendance policy</li>
-<li class="fragment">Course structure</li>
-<li class="fragment">Required software (R + RStudio or Positron)</li>
+<li>Syllabus overview</li>
+<li>Grading + Attendance policy</li>
+<li>Course structure</li>
+<li>Required software (RStudio/Positron and R)</li>
 </ul>
-<p>https://r.datahub.berkeley.edu</p>
-</section>
-<section id="install-r-and-rstudio" class="slide level2">
-<h2>Install R and RStudio</h2>
+<p><a href="https://r.datahub.berkeley.edu">Berkeley DataHub</a></p>
+<h3 id="install-r-and-rstudio">Install R and RStudio</h3>
 <p>and subscribe to NYT!</p>
-</section>
-<section id="attendance-form-thank-you" class="slide level2">
-<h2>Attendance form + thank you</h2>
-<p>Please write your name on the sheet.</p>
+<section id="attendance" class="slide level2">
+<h2>Attendance</h2>
+<p>On a piece of paper, please write your name and answer the following:<br>
+- One thing you are excited to learn in this course<br>
+- One thing you are nervous about in this course<br>
+- If you have any questions, feel free to ask them here</p>
+<h3 id="thank-you">Thank you!</h3>
 
 
 </section></section>
@@ -595,6 +907,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
