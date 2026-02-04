@@ -9,20 +9,22 @@ format:
 
 # About Us
 
-## Montse
+## Montse 
+::: {.nonincremental}
 
 - Sophomore Stats Major
 - Hometown: Mexicali, Baja California + Calexico, California
 - Fun fact: I have a dog named Shakira! 
 - Course reader for Stat133, Stat 33B, now tutor for Stat133
-
+:::
 
 ::: {.callout-note}
 Email me at montserrat_ibarra@berkeley.edu
 :::
 
 
-## Clara
+## Clara 
+::: {.nonincremental}
 
 - Senior Stats Major
 - Hometown: Palos Verdes, CA + Osnabrück, Germany
@@ -33,8 +35,10 @@ Email me at montserrat_ibarra@berkeley.edu
 ::: {.callout-note}
 Email me at clara_reckhorn@berkeley.edu
 :::
+:::
 
 ## Jocelyne 
+::: {.nonincremental}
 
 - Senior Stats Major
 - Hometown: San Mateo, CA
@@ -46,23 +50,22 @@ Email me at clara_reckhorn@berkeley.edu
 Email me at jocelyneperez@berkeley.edu
 :::
 
+:::
+
 # Personal Data Viz
 
-## Montse 
+## Montse
+
 ::: {.columns}
 ::: {.column width="33%"}
 ![](images/monste_networth.PNG){width=100%}
 :::
 
 ::: {.column width="33%"}
-![](images/monste_steps.PNG){width=100%}
-:::
-
-::: {.column width="33%"}
 ![](images/montse_walking.PNG){width=100%}
 :::
 :::
-## Clara
+## Clara 
 
 ::: {.columns}
 ::: {.column width="33%"}
@@ -72,13 +75,11 @@ Email me at jocelyneperez@berkeley.edu
 ::: {.column width="33%"}
 ![](images/clara_screen.jpg){width=100%}
 :::
-
-::: {.column width="33%"}
-![](images/clara_wrapped.jpg){width=100%}
-:::
 :::
 
-## Jocelyne
+## Jocelyne 
+
+::: {.nonincremental}
 
 ::: {.columns}
 
@@ -91,18 +92,41 @@ Email me at jocelyneperez@berkeley.edu
 :::
 :::
 
-## 
+:::
+
+## Some of our favorite Data Visualizations
+
+::: {.nonincremental}
+- [Gun Deaths Viz](https://guns.periscopic.com/) \
+- [Wind Map Viz](http://hint.fm/wind/) \
+- [En-ROADS Temperature Increase Dashboard](https://en-roads.climateinteractive.org/scenario.html?v=26.1.0)
+:::
+
+### There is data all around us if you know where to look!
 
 
-## We live surrounded by graphics! {.smaller}
+
+## Surrounded by graphics {.smaller}
+
+::: {.columns}
+
+::: {.column width="50%"}
 - This has not always been the case
 - Our parent's generation had no immediate access to graphics
 - Graphics we can easily get access to:
   - Credit score (donut chart/timeline)
   - Number of commits to a GH repo (tiles graph)
-  - Google maps timeline (map)
   - Score distribution of an exam (histogram)
   - ETC
+:::
+
+::: {.column width="50%"}
+![alt](images/gh-commits.png)
+![alt](images/grade-dist.png)
+:::
+
+:::
+
 
 # Visual Literacy
 - Nowadays: very easy to access graphical displays of any kind of data
@@ -113,72 +137,211 @@ Email me at jocelyneperez@berkeley.edu
 # Why are we teaching this class?
 - Brainchild of Prof. Sanchez (Statistics Faculty Member) who is passionate about all things data viz
 - Stats dept has no dedicated data viz course, so Prof Sanchez decided to put together materials for 1 semester course
-- Offered: fall 2023, spring 2024, fall 2024... restructred for this semester!
+- Offered: Fall 2023, Spring 2024, Fall 2024... restructured for this semester!
 
 # Your introductions
 
-## Activity: Introduce yourself!
-Before course logistics, we would like to get to know a bit about you. 
+## Activity: Introduce yourself! {.smaller}
+
+::: {.nonincremental}
+Before course logistics, we would like to get to know a bit about you. \
+
 - Grab a "Hello My Name Is" sticker from the front table
 
-`{{< countdown "2:00" >}}`
-
-## Tell us: 
+### Tell us: 
 - Your name
 - Your major/area of study
 - Why are you taking this class?
 - Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week 
-- Your favorite color 
 
-`{{< countdown "5:00" >}}`
+{{< countdown "5:00" >}}
+:::
 
 ## Activity: Two truths and a lie
+
+::: {.nonincremental}
 - Think of two truths and one lie about yourself 
 - Share with a partner and have them guess which one is the lie
 
-`{{< countdown "5:00" >}}`
+{{< countdown "5:00" >}}
+:::
 
 
-## Activity: Gathering data {.smaller}
+# What is DataViz? 
+- The graphical representation of information and data
+- The goal is to communicate information clearly and effectively through graphical means
+- Good visualization helps users analyze and reason about data and evidence
+- Makes complex data more accessible, understandable, and usable
 
-(to be used in week 3 activity)
+## What is the typical DataViz process? {.smaller}
+![](images/dataviz-process.png)
 
-- Transfer T/F
-- Favorite drink (water, tea, coffee, etc)
-- Major
-- Average amount of sleep on weekdays (Number)
-- Distance from where you grew up (in approx miles)
-- Units you are taking this semester
-- Number of siblings 
+# Let's try out this process! (You are the subjects)
 
-`{{< countdown "3:00" >}}`
+## 1. Define the goal
+### Want to find out: 
+What factors influence the amount of sleep a Berkeley student gets on weekdays?
 
-## How would you portray this data? {.smaller}
-- Group activity (3-4 people)
-Each group will have to brainstorm on a paper for Graphs that students create/guess based on a primary variable “Hours of Sleep of a Berkeley student (Stereotype)” together with Secondary variables:
-- Year: Freshman, Sophomore, Junior, Senior (e.g. Bar chart, Pie)
-- Enrolled units: Unit counts (e.g. Scatter plot)
-- Sex or Gender: Female Vs. Male (e.g. Bar chart, Pie)
-- Months (e.g. Line graph)
-Combine all variables (e.g. or at least three in one graph)?
+## 2. Collect the Data
 
-{{< countdown "10:00" >}}`
+::: {.nonincremental}
+- On a piece of paper:\
+  - Average amount of sleep on weekdays (Number) \
+  - Transfer T/F \
+  - Grad student T/F \
+  - Commute to campus (in minutes) \
+  - Favorite drink (water, tea, coffee, etc) \
+  - Major \
+  - Number of enrolled units you are taking \
 
-## How would you portray this data? (continued) {.smaller}
-On a poster, make 4 graphs to visualize your thoughts on these categories
-- Extra challenge: make a creative graph that will show 3 variables of the 4 that we gave them
+{{< countdown "3:00" >}}
+:::
+
+## 3. Data Cleaning
+Assume our data is cleaned and ready to go... we will save the actual data cleaning for later units!
+
+```{r}
+#| output-location: column-fragment
+library(tidyverse)
+
+# toy dataset
+sleep_data <- tibble(
+  student_id = 1:10,
+  sleep_hours = c(6.5, 7, 5.5, 8, 6, 7.5, 6, 5, 8.5, 7),
+  transfer = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),
+  grad_student = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE),
+  commute_min = c(45, 10, 60, 15, 20, 50, 5, 70, 25, 30),
+  favorite_drink = c("Coffee", "Water", "Coffee", "Tea", "Tea",
+                     "Coffee", "Water", "Coffee", "Tea", "Water"),
+  major = c("Econ", "Stats", "CS", "Psych", "Public Health",
+            "Econ", "Stats", "CS", "Bio", "Psych"),
+  units = c(16, 13, 18, 14, 12, 17, 15, 19, 11, 16)
+)
+```
+
+## 3. Data Cleaning
+That code will result in:
+
+```{r}
+sleep_data
+```
+
+## 4. Select the data visuals
+
+::: {.nonincremental}
+- In a group (3-4 people):
+  - Brainstorm how you could visualize a primary (hours of sleep) vs secondary variables (transfer, drink, major, commute, units)
+  - Choose a chart type, e.g. Bar chart, Pie chart, Scatter plot, Line graph, etc.
+  - How could you combine all variables (or at least three) in one graph?
+
+{{< countdown "5:00" >}}
+:::
+
+## 5. Create the data visuals
+
+::: {.nonincremental}
+- On a poster: \
+  - Make 4 graphs to visualize your thoughts on these categories \
+  - One should use 3 of the variables in one graph
+
+{{< countdown "10:00" >}}
+:::
+
+## Some example graphs
+
+```{r}
+# graph 1 - sleep vs commute time (scatter plot with regression line)
+graph1 <- ggplot(sleep_data, aes(x = commute_min, y = sleep_hours)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Sleep vs Commute Time",
+    x = "Commute Time (minutes)",
+    y = "Average Weekday Sleep (hours)"
+  ) +
+  theme_minimal()
+
+# graph 2 - sleep vs favorite drink (bar chart)
+graph2 <- sleep_data %>%
+  group_by(favorite_drink) %>%
+  summarise(avg_sleep = mean(sleep_hours)) %>%
+  ggplot(aes(x = favorite_drink, y = avg_sleep)) +
+  geom_col() +
+  labs(
+    title = "Average Sleep by Favorite Drink",
+    x = "Favorite Drink",
+    y = "Average Sleep (hours)"
+  ) +
+  theme_minimal()
+
+# graph 3 - sleep vs units (scatter plot colored by transfer status)
+graph3 <- ggplot(sleep_data, aes(x = units, y = sleep_hours, color = transfer)) +
+  geom_point(size = 3) +
+  labs(
+    title = "Sleep vs Units by Transfer Status",
+    x = "Units Enrolled",
+    y = "Average Weekday Sleep (hours)",
+    color = "Transfer Student"
+  ) +
+  theme_minimal()
+
+# graph 4 - sleep vs major (boxplot colored by grad student status)
+graph4 <- ggplot(sleep_data, aes(x = major, y = sleep_hours, fill = grad_student)) +
+  geom_boxplot() +
+  labs(
+    title = "Distribution of Sleep Hours by Major",
+    x = "Major",
+    y = "Average Weekday Sleep (hours)",
+    fill = "Grad Student"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Some example graphs (cont'd) {.smaller}
+```{r}
+# Print the graphs
+graph1
+```
+
+## Some example graphs (cont'd) {.smaller}
+```{r}
+# Print the graphs
+graph2
+```
+
+## Some example graphs (cont'd) {.smaller}
+```{r}
+# Print the graphs
+graph3
+```
+
+## Some example graphs (cont'd) {.smaller}
+```{r}
+# Print the graphs
+graph4
+```
+
+
 
 # Course Logistics
+
+::: {.nonincremental}
 - Syllabus overview
 - Grading + Attendance policy 
 - Course structure
-- Required software (R + RStudio or Positron)
+- Required software (RStudio/Positron and R)
 
-https://r.datahub.berkeley.edu
+[Berkeley DataHub](https://r.datahub.berkeley.edu)
 
-## Install R and RStudio
+### Install R and RStudio
 and subscribe to NYT!
+:::
 
-## Attendance form + thank you 
-Please write your name on the sheet. 
+## Attendance 
+On a piece of paper, please write your name and answer the following: \
+- One thing you are excited to learn in this course \
+- One thing you are nervous about in this course \
+- If you have any questions, feel free to ask them here
 
+### Thank you!
