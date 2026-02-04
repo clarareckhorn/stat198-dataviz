@@ -1,0 +1,428 @@
+---
+title: Data Wrangling II
+format: stat133slides-revealjs
+---
+
+## Agenda
+
+Two big ideas today:
+
+1. Data Pipelines
+2. Grouped Operations
+
+:::{.notes}
+Before class, sketch out the effect that the different dplyr verbs from last class have on the shape of a data frame.
+:::
+
+# Data pipelines
+
+##
+```{r}
+#| output-location: default
+
+library(dplyr)
+star_wars <- data.frame(
+    name = c("Anakin", "Padme", "Luke", "JarJar"),
+    homeworld = c("Tatooine", "Naboo", "Tatooine", "Naboo"),
+    height = c(1.8, 1.6, 1.7, 1.9),
+    weight = c(84, 45, 77, 90)
+)
+```
+
+Using base R data frame subsetting, create from `star_wars`...
+
+::: nonincremental
+4. [The average height of characters from Tatooine]{style="color: red;"}
+:::
+
+. . .
+
+> Let's look at three ways to solve this.
+
+
+## Nesting {auto-animate=true}
+
+```{r}
+summarize(filter(star_wars, homeworld == "Tatooine"), mean(height))
+```
+
+. . .
+
+::: {.columns}
+::: {.column}
+- Must be read from the inside out 👎
+- Hard to keep track of arguments 👎
+:::
+::: {.column}
+- All in one line of code 👍
+- Only refer to one data frame 👍
+:::
+:::
+
+## Step-by-step {auto-animate=true}
+
+```{r}
+star_wars2 <- filter(star_wars, homeworld == "Tatooine")
+summarize(star_wars2, mean(height))
+```
+
+. . .
+
+::: {.columns}
+::: {.column}
+- Have to repeaet data frame names 👎
+- Creates unnecessary objects 👎
+:::
+::: {.column}
+- Stores intermediate objects 👍
+- Can be read from top to bottom 👍
+:::
+:::
+
+## {background-image="images/pipeline.png" background-size="contain"}
+
+## Data Pipelines in R
+
+::: {.columns}
+::: {.column}
+![](images/magrittr-hex.png)
+
+2016: `magrittr` introduces `%>%` 
+:::
+::: {.column .fragment}
+[`|>`]{style="font-size:3em;"}
+
+2021:
+
+> *R now provides a simple native forward pipe syntax |>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.*
+:::
+:::
+
+
+## Using the Pipe Operator {auto-animate=true}
+
+```{r}
+#| output-location: default
+#| eval: false
+star_wars |>
+```
+
+
+## Using the Pipe Operator {auto-animate=true}
+
+```{r}
+#| output-location: default
+#| eval: false
+star_wars |>
+    filter(homeworld == "Tatooine") |>
+```
+
+
+## Using the Pipe Operator {auto-animate=true}
+
+```{r}
+star_wars |>
+    filter(homeworld == "Tatooine") |>
+    summarize(mean(height))
+```
+
+. . .
+
+::: {.columns}
+::: {.column}
+- 🤷‍♂️
+:::
+::: {.column}
+- Can be read like an english paragraph 👍
+- Only type the data once 👍
+- No leftover objects 👍
+:::
+:::
+
+
+## Understanding your pipeline
+
+It's good practice to understand the output of each line by *breaking the pipe*.
+
+. . .
+
+::: {.columns}
+::: {.column}
+
+```{r}
+#| error: true
+
+star_wars |>
+    select(homeworld) |>
+    filter(mean(height))
+```
+:::
+::: {.column .fragment}
+
+```{r}
+star_wars |>
+    select(homeworld)
+```
+:::
+:::
+
+
+## 
+
+```{r}
+#| eval: false
+star_wars |> # A #<<
+    filter(homeworld == "Naboo",
+           name %in% c("Padme", "JarJar")) |> # B #<<
+    select(height, weight) |> # C #<<
+    summarize(mean(height), sd(height),
+              mean(weight), sd(weight)) # D #<<
+```
+
+**Question:** What are the dimensions of the data frame at each stage of the pipe: A, B, C, and D?
+
+{{< countdown "2:00" >}}
+
+::: notes
+Show answer in drop by breaking the pipe
+:::
+
+## `|>` works everywhere
+
+> *R now provides a simple native forward pipe syntax |>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.*
+
+. . .
+
+```{r}
+factor(c("cat", "cat", "dog")) |> summary()
+```
+
+
+# Grouped Operations
+
+##
+
+##
+```{r}
+#| output-location: default
+
+library(dplyr)
+star_wars <- data.frame(
+    name = c("Anakin", "Padme", "Luke", "JarJar"),
+    homeworld = c("Tatooine", "Naboo", "Tatooine", "Naboo"),
+    height = c(1.8, 1.6, 1.7, 1.9),
+    weight = c(84, 45, 77, 90)
+)
+```
+
+Using base R data frame subsetting, create from `star_wars`...
+
+4. The average height of characters [from Tatooine]{.fragment .strike} [across each planet]{.fragment .fade-up}
+
+. . .
+
+> *You could set up two pipelines with different filters. But there's a better way.*
+
+## `group_by()` {auto-animate=true}
+
+Flag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.
+
+. . .
+
+```{r}
+star_wars |>
+    group_by(homeworld)
+```
+
+## `group_by()` {auto-animate=true}
+
+Flag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    summarize(mean(height))
+```
+
+
+## 
+
+Draw diagram
+
+
+## `group_by()` with `summarize()` {auto-animate=true}
+
+. . .
+
+```{r}
+star_wars |>
+    summarize(mean(height))
+```
+
+
+## `group_by()` with `summarize()` {auto-animate=true}
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    summarize(mean(height))
+```
+
+. . .
+
+> Makes a summary row for each group.
+
+
+## `group_by()` with `filter()` {auto-animate=true}
+
+. . .
+
+```{r}
+star_wars |>
+    filter(height == max(height))
+```
+
+
+## `group_by()` with `filter()` {auto-animate=true}
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    filter(height == max(height))
+```
+
+. . .
+
+> Changes the scope of functions inside `filter()` to operate within groups.
+
+::: notes
+Can bring up drop to demonstrate how a condition like height > 1.7 will operate the same with or without the grouping.
+:::
+
+
+## `group_by()` with `arrange()` {auto-animate=true}
+
+. . .
+
+```{r}
+star_wars |>
+    arrange(desc(height))
+```
+
+
+## `group_by()` with `arrange()` {auto-animate=true}
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    arrange(desc(height))
+```
+
+. . .
+
+> Arrange ignores `group_by()` and is always global
+
+Why???
+
+
+##
+
+```{r}
+star_wars |>
+    arrange(homeworld, height)
+```
+
+
+## `group_by()` with `mutate()` {auto-animate=true}
+
+. . .
+
+```{r}
+star_wars |>
+    mutate(height_z = (height - mean(height)) / sd(height))
+```
+
+
+## `group_by()` with `mutate()` {auto-animate=true}
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    mutate(height_z = (height - mean(height)) / sd(height))
+```
+
+. . .
+
+> Changes the scope of functions inside `mutate()` to operate within groups.
+
+
+## Statefulness
+
+What will this produce?
+
+. . .
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    mutate(height_z = (height - mean(height)) / sd(height)) |>
+    summarize(mean(height_z))
+```
+
+. . .
+
+> Once grouped, a data frame stays grouped until reduced to one-row-per group or it is ungrouped.
+
+::: notes
+can break the pipe after mutate to show it is still grouped
+:::
+
+## Statefulness
+
+What will this produce?
+
+```{r}
+star_wars |>
+    group_by(homeworld) |>
+    mutate(height_z = (height - mean(height)) / sd(height)) |>
+    ungroup() |>
+    summarize(mean(height_z))
+```
+
+
+## Shortcut: `.by`
+
+Most `dplyr` functions have a `.by` argument to apply the function to the groups of another variable.
+
+- Not stateful
+- Good for single line operations
+
+. . .
+
+```{r}
+star_wars |>
+    summarize(mean(height), .by = homeworld)
+```
+
+
+
+<!-- # Tidy Data
+
+## Tidy Data Frame as a Statistical Concept
+
+:::{.columns}
+
+:::{.column width=50%}
+![](images/tidy-data.png)
+:::
+
+:::{.column width=50%}
+In tidy data:
+
+1. Each *variable* forms a column.
+2. Each *observation* forms a row.
+3. Each type of *observational unit* forms a table.
+
+Note each *cell* contains a value.
+:::
+::: -->
