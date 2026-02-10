@@ -47,6 +47,8 @@ Basic graphics with `"ggplot2"`
 
 ### 📖 Assignment
 
-__Reading__: _The Age That Women Have Babies: How a Gap Divides America_ by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)
+__Reading__: _Price of Eggs_
 
-<a href="https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html" target="_blank">https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html</a>
+<a href="https://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html" target="_blank">https://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html</a>
+
+__Homework__: Homework #2 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.
