@@ -383,7 +383,7 @@
 <li>Why are you taking this class?</li>
 <li>Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week</li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dfe2252c6a20c2151de1765c272829aa89a278b0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -397,7 +397,7 @@
 <li>Think of two truths and one lie about yourself</li>
 <li>Share with a partner and have them guess which one is the lie</li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dfe2252c6a20c2151de1765c272829aa89a278b0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -451,7 +451,7 @@
 </li>
 </ul></li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dfe2252c6a20c2151de1765c272829aa89a278b0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -518,7 +518,7 @@
 <li>How could you combine all variables (or at least three) in one graph?</li>
 </ul></li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dfe2252c6a20c2151de1765c272829aa89a278b0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -537,7 +537,7 @@
 <li>One should use 3 of the variables in one graph</li>
 </ul></li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_dfe2252c6a20c2151de1765c272829aa89a278b0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -666,8 +666,6 @@
 <section>
 <section id="course-logistics" class="title-slide slide level1 center">
 <h1>Course Logistics</h1>
-
-</section>
 <ul>
 <li>Syllabus overview</li>
 <li>Grading + Attendance policy</li>
@@ -675,8 +673,11 @@
 <li>Required software (RStudio/Positron and R)</li>
 </ul>
 <p><a href="https://r.datahub.berkeley.edu">Berkeley DataHub</a></p>
-<h3 id="install-r-and-rstudio">Install R and RStudio</h3>
+</section>
+<section id="install-r-and-rstudio" class="slide level2">
+<h2>Install R and RStudio</h2>
 <p>and subscribe to NYT!</p>
+</section>
 <section id="attendance" class="slide level2">
 <h2>Attendance</h2>
 <p>On a piece of paper, please write your name and answer the following:<br>
@@ -1015,7 +1016,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

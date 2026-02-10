@@ -334,9 +334,12 @@ graph4
 
 [Berkeley DataHub](https://r.datahub.berkeley.edu)
 
-### Install R and RStudio
-and subscribe to NYT!
 :::
+
+
+## Install R and RStudio
+and subscribe to NYT!
+
 
 ## Attendance 
 On a piece of paper, please write your name and answer the following: \
