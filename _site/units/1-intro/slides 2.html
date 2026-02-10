@@ -383,7 +383,7 @@
 <li>Why are you taking this class?</li>
 <li>Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week</li>
 </ul>
-<div id="timer_9636259bf65037d65f77be2daed53e9b211de30d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_71e037d6655e4005e86c7dc0d5d8840bc88140b6" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -397,7 +397,7 @@
 <li>Think of two truths and one lie about yourself</li>
 <li>Share with a partner and have them guess which one is the lie</li>
 </ul>
-<div id="timer_9636259bf65037d65f77be2daed53e9b211de30d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_71e037d6655e4005e86c7dc0d5d8840bc88140b6" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -451,7 +451,7 @@
 </li>
 </ul></li>
 </ul>
-<div id="timer_9636259bf65037d65f77be2daed53e9b211de30d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_71e037d6655e4005e86c7dc0d5d8840bc88140b6" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -518,7 +518,7 @@
 <li>How could you combine all variables (or at least three) in one graph?</li>
 </ul></li>
 </ul>
-<div id="timer_9636259bf65037d65f77be2daed53e9b211de30d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_71e037d6655e4005e86c7dc0d5d8840bc88140b6" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -537,7 +537,7 @@
 <li>One should use 3 of the variables in one graph</li>
 </ul></li>
 </ul>
-<div id="timer_9636259bf65037d65f77be2daed53e9b211de30d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_71e037d6655e4005e86c7dc0d5d8840bc88140b6" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -1015,7 +1015,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

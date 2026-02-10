@@ -25,7 +25,7 @@ qualitative).
 
 ### 🌠 Slides
 
-Find today's slides [here.](units/1-intro/slides.html)
+Find today's slides [here.](slides.html)
 
 
 <br>

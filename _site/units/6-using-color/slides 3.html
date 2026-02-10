@@ -7,12 +7,10 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
-<link href="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.25">
 
-  <title>dataviz-spring-2026 – Week 1</title>
+  <title>dataviz-spring-2026 – Lecture 6</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -198,495 +196,310 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Week 1</h1>
-  <p class="subtitle">Introduction</p>
+  <h1 class="title">Lecture 6</h1>
+  <p class="subtitle">Color 3 - Use of Color in Dataviz</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="welcome" class="title-slide slide level1 center">
-<h1>Welcome!</h1>
-
+<section id="icebreaker" class="slide level2">
+<h2>Icebreaker</h2>
 </section>
-
-<section>
-<section id="about-us" class="title-slide slide level1 center">
-<h1>About Us</h1>
-
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<ol type="1">
+<li class="fragment"><p>Discussion of Reading</p></li>
+<li class="fragment"><p>Use of Colors</p></li>
+<li class="fragment"><p>Activity - Identify Color Scale</p></li>
+<li class="fragment"><p>Demo - Adelson checker shadow illusion</p></li>
+<li class="fragment"><p>Coding Activity + Homework Overview</p></li>
+</ol>
 </section>
-<section id="montse" class="slide level2">
-<h2>Montse</h2>
-<ul>
-<li>Sophomore Stats Major</li>
-<li>Hometown: Mexicali, Baja California + Calexico, California</li>
-<li>Fun fact: I have a dog named Shakira!</li>
-<li>Course reader for Stat133, Stat 33B, now tutor for Stat133</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Email me at montserrat_ibarra@berkeley.edu</p>
-</div>
-</div>
-</div>
-</section>
-<section id="clara" class="slide level2">
-<h2>Clara</h2>
-<ul>
-<li>Senior Stats Major</li>
-<li>Hometown: Palos Verdes, CA + Osnabrück, Germany</li>
-<li>Fun fact: Pursuing masters in Europe!</li>
-<li>GSI for Stat133 + led HelloWorld</li>
-<li>Transfer student</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Email me at clara_reckhorn@berkeley.edu</p>
-</div>
-</div>
-</div>
-</section>
-<section id="jocelyne" class="slide level2">
-<h2>Jocelyne</h2>
-<ul>
-<li>Senior Stats Major</li>
-<li>Hometown: San Mateo, CA</li>
-<li>Fun fact: I did middle and high school in La Paz, Mexico!</li>
-<li>Course reader for Stat133</li>
-<li>Transfer student</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Email me at jocelyneperez@berkeley.edu</p>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="personal-data-viz" class="title-slide slide level1 center">
-<h1>Personal Data Viz</h1>
-
-</section>
-<section id="montse-1" class="slide level2">
-<h2>Montse</h2>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><img data-src="images/monste_networth.PNG" style="width:100.0%"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="images/montse_walking.PNG" style="width:100.0%"></p>
-</div></div>
-</section>
-<section id="clara-1" class="slide level2">
-<h2>Clara</h2>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><img data-src="images/clara_headspace.jpg" style="width:100.0%"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="images/clara_screen.jpg" style="width:100.0%"></p>
-</div></div>
-</section>
-<section id="jocelyne-1" class="slide level2">
-<h2>Jocelyne</h2>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><img data-src="images/jocy_songs.png" style="width:100.0%"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="images/jocy_steps.png" style="width:100.0%"></p>
-</div></div>
-</section>
-<section id="some-of-our-favorite-data-visualizations" class="slide level2">
-<h2>Some of our favorite Data Visualizations</h2>
-<ul>
-<li><a href="https://guns.periscopic.com/">Gun Deaths Viz</a><br>
-</li>
-<li><a href="http://hint.fm/wind/">Wind Map Viz</a><br>
-</li>
-<li><a href="https://en-roads.climateinteractive.org/scenario.html?v=26.1.0">En-ROADS Temperature Increase Dashboard</a></li>
-</ul>
-<h3 id="there-is-data-all-around-us-if-you-know-where-to-look">There is data all around us if you know where to look!</h3>
-</section>
-<section id="surrounded-by-graphics" class="slide level2 smaller">
-<h2>Surrounded by graphics</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li class="fragment">This has not always been the case</li>
-<li class="fragment">Our parent’s generation had no immediate access to graphics</li>
-<li class="fragment">Graphics we can easily get access to:
-<ul>
-<li class="fragment">Credit score (donut chart/timeline)</li>
-<li class="fragment">Number of commits to a GH repo (tiles graph)</li>
-<li class="fragment">Score distribution of an exam (histogram)</li>
-<li class="fragment">ETC</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/gh-commits.png" alt="alt"> <img data-src="images/grade-dist.png" alt="alt"></p>
-</div></div>
-</section></section>
-<section id="visual-literacy" class="title-slide slide level1 center">
-<h1>Visual Literacy</h1>
-<ul>
-<li class="fragment">Nowadays: very easy to access graphical displays of any kind of data</li>
-<li class="fragment">Consumers of data viz</li>
-<li class="fragment">We lack formal education in visual literacy</li>
-<li class="fragment">This course: a solid foundation in visual literacy involving both the consumption and production of graphics</li>
-</ul>
-</section>
-
-<section id="why-are-we-teaching-this-class" class="title-slide slide level1 center">
-<h1>Why are we teaching this class?</h1>
-<ul>
-<li class="fragment">Brainchild of Prof.&nbsp;Sanchez (Statistics Faculty Member) who is passionate about all things data viz</li>
-<li class="fragment">Stats dept has no dedicated data viz course, so Prof Sanchez decided to put together materials for 1 semester course</li>
-<li class="fragment">Offered: Fall 2023, Spring 2024, Fall 2024… restructured for this semester!</li>
-</ul>
-</section>
-
-<section>
-<section id="your-introductions" class="title-slide slide level1 center">
-<h1>Your introductions</h1>
-
-</section>
-<section id="activity-introduce-yourself" class="slide level2 smaller">
-<h2>Activity: Introduce yourself!</h2>
-<p>Before course logistics, we would like to get to know a bit about you.<br>
+<section id="discussion-of-reading" class="slide level2">
+<h2>Discussion of Reading</h2>
+<p>Reading: What Data Shows About Vaccine Supply and Demand in the Most Vulnerable Places<br>
 </p>
-<ul>
-<li>Grab a “Hello My Name Is” sticker from the front table</li>
-</ul>
-<h3 id="tell-us">Tell us:</h3>
-<ul>
-<li>Your name</li>
-<li>Your major/area of study</li>
-<li>Why are you taking this class?</li>
-<li>Your favorite data vizualization (if you have one!) or the last graphic you saw in the last week</li>
-</ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
+<ol type="1">
+<li class="fragment">What role does the subtitle of the visuals play? What would you add/remove?<br>
+</li>
+<li class="fragment">How does the notes enhance your understanding of the visual?<br>
+</li>
+<li class="fragment">In what ways do the graphs differ? Consider the context, data, subtitles, description, etc.<br>
+</li>
+</ol>
 </section>
-<section id="activity-two-truths-and-a-lie" class="slide level2">
-<h2>Activity: Two truths and a lie</h2>
+<section id="brief-lecture-use-of-colors" class="slide level2">
+<h2>Brief Lecture: Use of Colors</h2>
+<p>In addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics. Recall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties.</p>
+</section>
+<section id="use-of-colors" class="slide level2">
+<h2>Use of Colors:</h2>
+<p>One important property is color. Consequently we need to spend time talking about encoding data with color. To be more precise, by “data” we refer to variables which can be divided into 2 major classes: 1) categorical (qualitative), and 2) quantitative.<br>
+Categorical variables, in turn, can be classified into<br>
+1. binary<br>
+2. nominal<br>
+3. ordinal<br>
+Quantitative variables can be classified into 1) discrete, and 2) continuous.</p>
+</section>
+<section id="lets-look-at-colorbrewer" class="slide level2">
+<h2>Let’s Look at ColorBrewer</h2>
+<p><a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">ColorBrewer Website</a></p>
 <ul>
-<li>Think of two truths and one lie about yourself</li>
-<li>Share with a partner and have them guess which one is the lie</li>
-</ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
-</section></section>
-<section>
-<section id="what-is-dataviz" class="title-slide slide level1 center">
-<h1>What is DataViz?</h1>
-<ul>
-<li class="fragment">The graphical representation of information and data</li>
-<li class="fragment">The goal is to communicate information clearly and effectively through graphical means</li>
-<li class="fragment">Good visualization helps users analyze and reason about data and evidence</li>
-<li class="fragment">Makes complex data more accessible, understandable, and usable</li>
+<li class="fragment"><p><strong>Qualitative</strong>: categorical variables (unordered)</p></li>
+<li class="fragment"><p><strong>Sequential</strong>: ordered categorical, numeric variables (single direction)</p></li>
+<li class="fragment"><p><strong>Diverging</strong>: numeric variables (numeric variables with meaningful midpoint)</p></li>
 </ul>
 </section>
-<section id="what-is-the-typical-dataviz-process" class="slide level2 smaller">
-<h2>What is the typical DataViz process?</h2>
-
-<img data-src="images/dataviz-process.png" class="r-stretch"></section></section>
-<section>
-<section id="lets-try-out-this-process-you-are-the-subjects" class="title-slide slide level1 center">
-<h1>Let’s try out this process! (You are the subjects)</h1>
-
+<section id="activity" class="slide level2">
+<h2>Activity</h2>
 </section>
-<section id="define-the-goal" class="slide level2">
-<h2>1. Define the goal</h2>
-<h3 id="want-to-find-out">Want to find out:</h3>
-<p>What factors influence the amount of sleep a Berkeley student gets on weekdays?</p>
-</section>
-<section id="collect-the-data" class="slide level2">
-<h2>2. Collect the Data</h2>
+<section id="some-r-packages-for-color-palettes" class="slide level2">
+<h2>Some R Packages for Color Palettes</h2>
+<p><a href="https://www.datanovia.com/en/blog/top-r-color-palettes-to-know-for-great-data-visualization/">Let’s look at the datanovia website!</a></p>
 <ul>
-<li>On a piece of paper:<br>
-
-<ul>
-<li>Average amount of sleep on weekdays (Number)<br>
-</li>
-<li>Transfer T/F<br>
-</li>
-<li>Grad student T/F<br>
-</li>
-<li>Commute to campus (in minutes)<br>
-</li>
-<li>Favorite drink (water, tea, coffee, etc)<br>
-</li>
-<li>Major<br>
-</li>
-<li>Number of enrolled units you are taking<br>
-</li>
-</ul></li>
+<li class="fragment"><p>Viridis color scales [viridis package]</p></li>
+<li class="fragment"><p>Colorbrewer palettes [RColorBrewer package]</p></li>
+<li class="fragment"><p>Grey color palettes [ggplot2 package]</p></li>
+<li class="fragment"><p>Scientific journal color palettes [ggsci package]</p></li>
+<li class="fragment"><p>Wes Anderson color palettes [wesanderson package]</p></li>
+<li class="fragment"><p>R base color palettes: rainbow, heat.colors, cm.colors.</p></li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
+<p><em>Warning: not all palettes are perceptually uniform!</em></p>
 </section>
-<section id="data-cleaning" class="slide level2">
-<h2>3. Data Cleaning</h2>
-<p>Assume our data is cleaned and ready to go… we will save the actual data cleaning for later units!</p>
+<section id="adelson-checker-shadow-illusion-demo" class="slide level2">
+<h2>Adelson Checker Shadow Illusion Demo</h2>
+<p>This is a famous illusion that showcases the relative and context-dependent nature of human color perception.</p>
+<p><a href="https://en.wikipedia.org/wiki/Checker_shadow_illusion">Demo</a></p>
+</section>
+<section id="perceptually-uniform-color-scale" class="slide level2">
+<h2>Perceptually Uniform Color Scale</h2>
+<p>Using perceptually uniform color scales in data visualization is important because it ensures that color differences in your data are interpreted consistently and accurately by viewers. A perceptually uniform color scale is one in which: Equal steps in data correspond to equal perceptual differences in color The progression of colors feels smooth and balanced to the human eye across the entire scale. Slide with comparison between “viridis” scale versus “rainbow” scale.</p>
+</section>
+<section id="why-it-matters" class="slide level2">
+<h2>Why It Matters:</h2>
+<p>Accurate Data Interpretation:<br>
+In non-uniform scales (like “rainbow”), some color transitions appear more dramatic than others, even when the underlying data changes linearly.<br>
+This can lead viewers to overestimate or underestimate the importance of certain regions in your plot. Example: a heatmap using the rainbow palette might make middle values seem more important simply because they transition through yellow–a perceptually “bright” color.</p>
+</section>
+<section id="why-it-matters-1" class="slide level2">
+<h2>Why It Matters:</h2>
+<p>Avoiding Visual Misrepresentation:<br>
+Color scales that are not perceptually uniform can distort patterns. Also, they introduce unintended emphasis and can mislead viewers.<br>
+Example: In a choropleth map, two regions with only a small difference in values might look drastically different if the color gradient is poorly designed.</p>
+</section>
+<section id="why-it-matters-2" class="slide level2">
+<h2>Why It Matters:</h2>
+<p>Inclusivity and Accessibility:<br>
+Many perceptually uniform color scales are also:<br>
+Colorblind-friendly<br>
+Greyscale-printable<br>
+Accessible to more viewers, including those with visual impairments<br>
+Example: Viridis scale is designed to be uniform, intuitive, and accessible<br>
+</p>
+</section>
+<section id="coding-activity-1---usetreatment-of-color-with-ggplot-functions" class="slide level2">
+<h2>Coding Activity 1 - Use/Treatment of color with ggplot functions</h2>
+<p>When you map a variable to the <strong>color aesthetic</strong>, ggplot automatically chooses colors depending on the <strong>data type</strong> of that variable:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Data Type</th>
+<th>Default Color Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logical (TRUE/FALSE)</td>
+<td>Two colors (discrete)</td>
+</tr>
+<tr class="even">
+<td>Integer / Double</td>
+<td>Gradient (continuous)</td>
+</tr>
+<tr class="odd">
+<td>Factor</td>
+<td>Discrete palette</td>
+</tr>
+<tr class="even">
+<td>Character</td>
+<td>Discrete palette</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="demo-dataset" class="slide level2">
+<h2>Demo Dataset</h2>
+<p>Let’s create a small data frame with several variable types.</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="co"># toy dataset</span></span>
-<span id="cb1-4"><a></a>sleep_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb1-5"><a></a>  <span class="at">student_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb1-6"><a></a>  <span class="at">sleep_hours =</span> <span class="fu">c</span>(<span class="fl">6.5</span>, <span class="dv">7</span>, <span class="fl">5.5</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="fl">7.5</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="fl">8.5</span>, <span class="dv">7</span>),</span>
-<span id="cb1-7"><a></a>  <span class="at">transfer =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb1-8"><a></a>  <span class="at">grad_student =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb1-9"><a></a>  <span class="at">commute_min =</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">10</span>, <span class="dv">60</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">5</span>, <span class="dv">70</span>, <span class="dv">25</span>, <span class="dv">30</span>),</span>
-<span id="cb1-10"><a></a>  <span class="at">favorite_drink =</span> <span class="fu">c</span>(<span class="st">"Coffee"</span>, <span class="st">"Water"</span>, <span class="st">"Coffee"</span>, <span class="st">"Tea"</span>, <span class="st">"Tea"</span>,</span>
-<span id="cb1-11"><a></a>                     <span class="st">"Coffee"</span>, <span class="st">"Water"</span>, <span class="st">"Coffee"</span>, <span class="st">"Tea"</span>, <span class="st">"Water"</span>),</span>
-<span id="cb1-12"><a></a>  <span class="at">major =</span> <span class="fu">c</span>(<span class="st">"Econ"</span>, <span class="st">"Stats"</span>, <span class="st">"CS"</span>, <span class="st">"Psych"</span>, <span class="st">"Public Health"</span>,</span>
-<span id="cb1-13"><a></a>            <span class="st">"Econ"</span>, <span class="st">"Stats"</span>, <span class="st">"CS"</span>, <span class="st">"Bio"</span>, <span class="st">"Psych"</span>),</span>
-<span id="cb1-14"><a></a>  <span class="at">units =</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">13</span>, <span class="dv">18</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">17</span>, <span class="dv">15</span>, <span class="dv">19</span>, <span class="dv">11</span>, <span class="dv">16</span>)</span>
-<span id="cb1-15"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a>demo_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-5"><a></a>  <span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">20</span>),</span>
+<span id="cb1-6"><a></a>  <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">20</span>),</span>
+<span id="cb1-7"><a></a>  <span class="at">logical_var =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-8"><a></a>  <span class="at">integer_var =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-9"><a></a>  <span class="at">double_var =</span> <span class="fu">runif</span>(<span class="dv">20</span>, <span class="dv">0</span>, <span class="dv">10</span>),</span>
+<span id="cb1-10"><a></a>  <span class="at">factor_var =</span> <span class="fu">factor</span>(<span class="fu">sample</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>], <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb1-11"><a></a>  <span class="at">char_var =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"bird"</span>), <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-12"><a></a>)</span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a><span class="fu">head</span>(demo_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div><div class="column fragment">
-
+<div class="cell-output cell-output-stdout">
+<pre><code>            x          y logical_var integer_var double_var factor_var char_var
+1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog
+2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog
+3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat
+4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird
+5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog
+6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat</code></pre>
+</div>
 </div></div>
 </section>
-<section id="data-cleaning-1" class="slide level2">
-<h2>3. Data Cleaning</h2>
-<p>That code will result in:</p>
+<section id="default-behavior-example" class="slide level2">
+<h2>Default Behavior Example</h2>
+<p>Mapping color to each variable:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>sleep_data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Logical (two-color discrete)</span></span>
+<span id="cb3-2"><a></a><span class="fu">ggplot</span>(demo_df, <span class="fu">aes</span>(x, y, <span class="at">color =</span> logical_var)) <span class="sc">+</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Logical Variable"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell fragment">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 8
-   student_id sleep_hours transfer grad_student commute_min favorite_drink major
-        &lt;int&gt;       &lt;dbl&gt; &lt;lgl&gt;    &lt;lgl&gt;              &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;
- 1          1         6.5 TRUE     FALSE                 45 Coffee         Econ 
- 2          2         7   FALSE    FALSE                 10 Water          Stats
- 3          3         5.5 TRUE     FALSE                 60 Coffee         CS   
- 4          4         8   FALSE    FALSE                 15 Tea            Psych
- 5          5         6   FALSE    TRUE                  20 Tea            Publ…
- 6          6         7.5 TRUE     FALSE                 50 Coffee         Econ 
- 7          7         6   FALSE    FALSE                  5 Water          Stats
- 8          8         5   TRUE     FALSE                 70 Coffee         CS   
- 9          9         8.5 FALSE    TRUE                  25 Tea            Bio  
-10         10         7   FALSE    FALSE                 30 Water          Psych
-# ℹ 1 more variable: units &lt;dbl&gt;</code></pre>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Integer (continuous gradient)</span></span>
+<span id="cb4-2"><a></a><span class="fu">ggplot</span>(demo_df, <span class="fu">aes</span>(x, y, <span class="at">color =</span> integer_var)) <span class="sc">+</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Integer Variable"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-2-2.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Factor (discrete palette)</span></span>
+<span id="cb5-2"><a></a><span class="fu">ggplot</span>(demo_df, <span class="fu">aes</span>(x, y, <span class="at">color =</span> factor_var)) <span class="sc">+</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Factor Variable"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-2-3.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="select-the-data-visuals" class="slide level2">
-<h2>4. Select the data visuals</h2>
+<section id="activity-customize-the-color-scales" class="slide level2">
+<h2>Activity: Customize the Color Scales</h2>
+<p>Recreate one of the above plots, but use a color scale function to control the palette.</p>
+<p>Experiment with both discrete and continuous color scales.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Discrete manual colors for factor or character variables</span></span>
+<span id="cb6-2"><a></a><span class="fu">ggplot</span>(demo_df, <span class="fu">aes</span>(x, y, <span class="at">color =</span> char_var)) <span class="sc">+</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"cat"</span> <span class="ot">=</span> <span class="st">"orange"</span>, <span class="st">"dog"</span> <span class="ot">=</span> <span class="st">"steelblue"</span>, <span class="st">"bird"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>)) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Custom Discrete Colors"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Continuous gradient for numeric variable</span></span>
+<span id="cb7-2"><a></a><span class="fu">ggplot</span>(demo_df, <span class="fu">aes</span>(x, y, <span class="at">color =</span> double_var)) <span class="sc">+</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb7-4"><a></a>  <span class="fu">scale_color_continuous</span>(<span class="at">low =</span> <span class="st">"lightblue"</span>, <span class="at">high =</span> <span class="st">"darkblue"</span>) <span class="sc">+</span></span>
+<span id="cb7-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Custom Continuous Scale"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-3-2.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Using scale_fill_discrete() with filled geoms</span></span>
+<span id="cb8-2"><a></a><span class="fu">ggplot</span>(demo_df, <span class="fu">aes</span>(<span class="at">x =</span> factor_var, <span class="at">fill =</span> char_var)) <span class="sc">+</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">scale_fill_discrete</span>() <span class="sc">+</span></span>
+<span id="cb8-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Bar Plot with Discrete Fill"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-3-3.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="discussion" class="slide level2">
+<h2>Discussion</h2>
+<p>What happens when you map a numeric variable to <strong>color</strong> vs.&nbsp;a <strong>factor variable</strong>?<br>
+</p>
+<p>How can you <strong>control or standardize</strong> color use across plots?<br>
+</p>
+<p>When should you <strong>manually define colors</strong> rather than relying on defaults?<br>
+</p>
+</section>
+<section id="best-practices" class="slide level2">
+<h2>Best Practices</h2>
 <ul>
-<li>In a group (3-4 people):
+<li class="fragment"><p>Use <strong>sequential</strong> color scales for ordered data (low to high values).</p></li>
+<li class="fragment"><p>Use <strong>diverging</strong> scales for data centered around a meaningful midpoint (e.g., zero).</p></li>
+<li class="fragment"><p>Always <strong>test color scales in grayscale</strong> and/or use simulators for color vision deficiencies.</p></li>
+<li class="fragment"><p>Prefer palettes like:</p>
 <ul>
-<li>Brainstorm how you could visualize a primary (hours of sleep) vs secondary variables (transfer, drink, major, commute, units)</li>
-<li>Choose a chart type, e.g.&nbsp;Bar chart, Pie chart, Scatter plot, Line graph, etc.</li>
-<li>How could you combine all variables (or at least three) in one graph?</li>
+<li class="fragment"><p>scale_fill_viridis_c() or scale_color-viridis() for continuous data.</p></li>
+<li class="fragment"><p>scale_fill_brewer() with perceptual schemes like “Blues”, “BuPu”, etc.</p></li>
 </ul></li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
 </section>
-<section id="create-the-data-visuals" class="slide level2">
-<h2>5. Create the data visuals</h2>
+<section id="activity---recreating" class="slide level2">
+<h2>Activity - Recreating</h2>
 <ul>
-<li>On a poster:<br>
-
+<li class="fragment"><p><strong>Article</strong>: Data About Covid Vaccine Supply and Demand (NYT)</p></li>
+<li class="fragment"><p><a href="https://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html" class="uri">https://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html</a></p>
 <ul>
-<li>Make 4 graphs to visualize your thoughts on these categories<br>
-</li>
-<li>One should use 3 of the variables in one graph</li>
+<li class="fragment"><p>The graphic of interest is the animated scatterplot</p></li>
+<li class="fragment"><p>This article involves the use of a complementary-and-adjacent color scheme, orange-teal</p></li>
+<li class="fragment"><p>We have the data to replicate this animation in the next lecture; this would require introducing a couple of functions from the package “gganimate”</p></li>
+<li class="fragment"><p>CSV data file: vaccination-gdp-countries-2021.csv</p></li>
 </ul></li>
 </ul>
-<div id="timer_69c03fe1e27900b6cdf5c77520a63c0e27a7c2b4" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
 </section>
-<section id="some-example-graphs" class="slide level2">
-<h2>Some example graphs</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># graph 1 - sleep vs commute time (scatter plot with regression line)</span></span>
-<span id="cb4-2"><a></a>graph1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sleep_data, <span class="fu">aes</span>(<span class="at">x =</span> commute_min, <span class="at">y =</span> sleep_hours)) <span class="sc">+</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb4-5"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-6"><a></a>    <span class="at">title =</span> <span class="st">"Sleep vs Commute Time"</span>,</span>
-<span id="cb4-7"><a></a>    <span class="at">x =</span> <span class="st">"Commute Time (minutes)"</span>,</span>
-<span id="cb4-8"><a></a>    <span class="at">y =</span> <span class="st">"Average Weekday Sleep (hours)"</span></span>
-<span id="cb4-9"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb4-10"><a></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-11"><a></a></span>
-<span id="cb4-12"><a></a><span class="co"># graph 2 - sleep vs favorite drink (bar chart)</span></span>
-<span id="cb4-13"><a></a>graph2 <span class="ot">&lt;-</span> sleep_data <span class="sc">%&gt;%</span></span>
-<span id="cb4-14"><a></a>  <span class="fu">group_by</span>(favorite_drink) <span class="sc">%&gt;%</span></span>
-<span id="cb4-15"><a></a>  <span class="fu">summarise</span>(<span class="at">avg_sleep =</span> <span class="fu">mean</span>(sleep_hours)) <span class="sc">%&gt;%</span></span>
-<span id="cb4-16"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> favorite_drink, <span class="at">y =</span> avg_sleep)) <span class="sc">+</span></span>
-<span id="cb4-17"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb4-18"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-19"><a></a>    <span class="at">title =</span> <span class="st">"Average Sleep by Favorite Drink"</span>,</span>
-<span id="cb4-20"><a></a>    <span class="at">x =</span> <span class="st">"Favorite Drink"</span>,</span>
-<span id="cb4-21"><a></a>    <span class="at">y =</span> <span class="st">"Average Sleep (hours)"</span></span>
-<span id="cb4-22"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb4-23"><a></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-24"><a></a></span>
-<span id="cb4-25"><a></a><span class="co"># graph 3 - sleep vs units (scatter plot colored by transfer status)</span></span>
-<span id="cb4-26"><a></a>graph3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sleep_data, <span class="fu">aes</span>(<span class="at">x =</span> units, <span class="at">y =</span> sleep_hours, <span class="at">color =</span> transfer)) <span class="sc">+</span></span>
-<span id="cb4-27"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb4-28"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-29"><a></a>    <span class="at">title =</span> <span class="st">"Sleep vs Units by Transfer Status"</span>,</span>
-<span id="cb4-30"><a></a>    <span class="at">x =</span> <span class="st">"Units Enrolled"</span>,</span>
-<span id="cb4-31"><a></a>    <span class="at">y =</span> <span class="st">"Average Weekday Sleep (hours)"</span>,</span>
-<span id="cb4-32"><a></a>    <span class="at">color =</span> <span class="st">"Transfer Student"</span></span>
-<span id="cb4-33"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb4-34"><a></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-35"><a></a></span>
-<span id="cb4-36"><a></a><span class="co"># graph 4 - sleep vs major (boxplot colored by grad student status)</span></span>
-<span id="cb4-37"><a></a>graph4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sleep_data, <span class="fu">aes</span>(<span class="at">x =</span> major, <span class="at">y =</span> sleep_hours, <span class="at">fill =</span> grad_student)) <span class="sc">+</span></span>
-<span id="cb4-38"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb4-39"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-40"><a></a>    <span class="at">title =</span> <span class="st">"Distribution of Sleep Hours by Major"</span>,</span>
-<span id="cb4-41"><a></a>    <span class="at">x =</span> <span class="st">"Major"</span>,</span>
-<span id="cb4-42"><a></a>    <span class="at">y =</span> <span class="st">"Average Weekday Sleep (hours)"</span>,</span>
-<span id="cb4-43"><a></a>    <span class="at">fill =</span> <span class="st">"Grad Student"</span></span>
-<span id="cb4-44"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb4-45"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb4-46"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-
-</div>
-</section>
-<section id="some-example-graphs-contd" class="slide level2 smaller">
-<h2>Some example graphs (cont’d)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Print the graphs</span></span>
-<span id="cb5-2"><a></a>graph1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="some-example-graphs-contd-1" class="slide level2 smaller">
-<h2>Some example graphs (cont’d)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Print the graphs</span></span>
-<span id="cb6-2"><a></a>graph2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="some-example-graphs-contd-2" class="slide level2 smaller">
-<h2>Some example graphs (cont’d)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Print the graphs</span></span>
-<span id="cb7-2"><a></a>graph3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="some-example-graphs-contd-3" class="slide level2 smaller">
-<h2>Some example graphs (cont’d)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Print the graphs</span></span>
-<span id="cb8-2"><a></a>graph4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="cell fragment">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="course-logistics" class="title-slide slide level1 center">
-<h1>Course Logistics</h1>
-
-</section>
+<section id="hw-6-assignment" class="slide level2">
+<h2>HW 6 Assignment</h2>
 <ul>
-<li>Syllabus overview</li>
-<li>Grading + Attendance policy</li>
-<li>Course structure</li>
-<li>Required software (RStudio/Positron and R)</li>
+<li class="fragment"><p><strong>Reading</strong>: How unusual has this hurricane season been?</p></li>
+<li class="fragment"><p><a href="https://www.bbc.com/news/articles/cden551l7kko" class="uri">https://www.bbc.com/news/articles/cden551l7kko</a></p>
+<ul>
+<li class="fragment"><p>The graphic of interest is the stacked bar chart of Named storms in the Atlantic by type and year, 1990-2024</p></li>
+<li class="fragment"><p>It uses an analogous+neutral color scheme; we can also say that it uses a sequential color scale</p></li>
+<li class="fragment"><p>This bar chart can be replicated in the next class “Use of Color”</p></li>
+<li class="fragment"><p>We can use the “storms” data (from “dplyr”) although this only goes to year 2022</p></li>
+<li class="fragment"><p>There are some data manipulation steps, but we can provide sample code or detailed instructions on how to get it</p></li>
+<li class="fragment"><p>The interesting part is in the color specification, and the use of scale functions in ggplot2 such as scale_fill_manual()</p></li>
+</ul></li>
 </ul>
-<p><a href="https://r.datahub.berkeley.edu">Berkeley DataHub</a></p>
-<h3 id="install-r-and-rstudio">Install R and RStudio</h3>
-<p>and subscribe to NYT!</p>
-<section id="attendance" class="slide level2">
-<h2>Attendance</h2>
-<p>On a piece of paper, please write your name and answer the following:<br>
-- One thing you are excited to learn in this course<br>
-- One thing you are nervous about in this course<br>
-- If you have any questions, feel free to ask them here</p>
-<h3 id="thank-you">Thank you!</h3>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-logo-vsmall.png" class="slide-logo"></p>

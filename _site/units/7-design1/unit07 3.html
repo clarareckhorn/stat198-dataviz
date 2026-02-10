@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1) Surrounded by Graphics – dataviz-spring-2026</title>
+<title>7) Design Considerations I – dataviz-spring-2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">1) Surrounded by Graphics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/7-design1/unit07.html">7) Design Considerations I</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../units/1-intro/unit01.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../units/1-intro/unit01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1) Surrounded by Graphics</span></a>
   </div>
 </li>
@@ -177,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../units/7-design1/unit07.html" class="sidebar-item-text sidebar-link">
+  <a href="../../units/7-design1/unit07.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">7) Design Considerations I</span></a>
   </div>
 </li>
@@ -215,6 +215,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">🎯 Objectives</a></li>
   <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">🌠 Slides</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">💻 Code</a></li>
   <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">📖 Assignment</a></li>
   </ul></li>
   </ul>
@@ -223,9 +224,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">1) Surrounded by Graphics</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../units/1-intro/unit01.html">Units</a></li><li class="breadcrumb-item"><a href="../../units/7-design1/unit07.html">7) Design Considerations I</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">1) Surrounded by Graphics</h1>
+<h1 class="title">7) Design Considerations I</h1>
 </div>
 
 
@@ -244,26 +245,33 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="this-week" class="level2">
 <h2 class="anchored" data-anchor-id="this-week">This Week:</h2>
-<p>We will have some time to introduce ourselves, familiarize ourselves with each other and the course, and discuss the reading for this week. We will also introduce some basic concepts of data visualization that will be useful for the rest of the course.</p>
+<p>In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.</p>
+<p>What things should you pay attention when looking at a graphic?</p>
+<p>How can you make a graphic less distracting from the data being represented?</p>
+<p>In this unit we talk about the so-called <strong>Data-Ink ratio</strong> (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.</p>
 <p><br></p>
 <section id="objectives" class="level3">
 <h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
 <p>At the end of this unit you will be able to:</p>
 <ul>
-<li><p>Think about the structure of a hypothetical data table behind a given graphic.</p></li>
-<li><p>Identify the type of variable(s) visually encoded in a graphic (e.g.&nbsp;quantitative, qualitative).</p></li>
+<li>Explain the concept of Data-to-Ink ratio</li>
+<li>Be able to suggest modifications for increasing the data-ink ratio in a graphic</li>
 </ul>
 <p><br></p>
 </section>
 <section id="slides" class="level3">
 <h3 class="anchored" data-anchor-id="slides">🌠 Slides</h3>
-<p>Find today’s slides <a href="slides.html">here.</a></p>
+<p><a href="https://docs.google.com/presentation/d/14kjCDK5e2dEYO7HT4eJy7f6CNXXlY43a3DMLopcqdzE/edit?usp=sharing" target="_blank">Data-Ink Ratio</a> <small>(google slides)</small></p>
+<p><br></p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">💻 Code</h3>
+<p>TBA</p>
 <p><br></p>
 </section>
 <section id="assignment" class="level3">
 <h3 class="anchored" data-anchor-id="assignment">📖 Assignment</h3>
-<p><strong>Reading</strong>: <em>The Age That Women Have Babies: How a Gap Divides America</em> by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)</p>
-<p><a href="https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html" target="_blank">https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html</a></p>
+<p>TBA</p>
 
 
 </section>
