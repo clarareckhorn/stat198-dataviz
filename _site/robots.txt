@@ -1,0 +1,1 @@
+Sitemap: https://dataviz.quarto.pub/spring-2026/sitemap.xml

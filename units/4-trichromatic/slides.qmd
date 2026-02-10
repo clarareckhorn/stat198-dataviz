@@ -63,6 +63,9 @@ A plot can be decomposed into three primary elements (according to grammar of gr
 ::: {.columns}
 ::: {.column}
 ```{r}
+library(tidyverse)
+library(dplyr)
+library(palmerpenguins)
 #| label: "hi mom"
 penguins |>
   select(bill_length_mm,

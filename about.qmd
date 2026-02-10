@@ -8,21 +8,20 @@ This is the website for the Spring-2026 DeCal course **Concepts of Data Visualiz
 ::: {.callout-warning icon="false"}
 ## Course Info
 
-**Instructors**: 
-
-- Monserrat Ibarra Reyes (montserrat_ibarra@berkeley.edu)
-- Jocelyne Perez (jocelyneperez@berkeley.edu)
-- Clara Reckhorn (clara_reckhorn@berkeley.edu)
+**Instructors**: \
+- Monserrat Ibarra Reyes [montserrat_ibarra@berkeley.edu](mailto:montserrat_ibarra@berkeley.edu) \
+- Jocelyne Perez [jocelyneperez@berkeley.edu](mailto:jocelyneperez@berkeley.edu) \
+- Clara Reckhorn [clara_reckhorn@berkeley.edu](mailto:clara_reckhorn@berkeley.edu) \
 
 **Faculty Sponsor**: <a href="https://www.gastonsanchez.com" target="_blank">Gaston Sanchez</a>
 
-**Class Time**: TBA
+**Class Time**: 5:30 -7:00 pm on Tuesdays
 
-**Code \#**: TBA
+**Room**: Evans 340
 
 **Units**: 2
 
-**Dates**: Tentative Feb-dd / Apr-dd
+**Dates**: Feb-10 to week before RRR
 :::
 
 ## Motivation
