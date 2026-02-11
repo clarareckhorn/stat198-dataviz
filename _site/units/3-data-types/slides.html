@@ -197,7 +197,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Week 3</h1>
   <p class="subtitle">Data Types</p>
 
@@ -234,30 +234,10 @@
 <section id="discussion-of-assigned-reading" class="title-slide slide level1 center">
 <h1>Discussion of Assigned Reading</h1>
 <ul>
-<li class="fragment">Reading: The Persistent Grip of Social Class on College Admissions</li>
-<li class="fragment">Warm up question:</li>
+<li class="fragment"><strong>Reading:</strong> <a href="https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html">The Persistent Grip of Social Class on College Admissions</a></li>
 <li class="fragment">What was the desing element you liked?</li>
-<li class="fragment">How do you think grammar of graphics</li>
-<li class="fragment">Follow up reading questions:</li>
-<li class="fragment">How do you think grammar of graphics</li>
+<li class="fragment">How do you think grammar of graphics was portrayed in the graph?</li>
 </ul>
-</section>
-
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-<div class="poll">
-<p>What is your favorite color?</p>
-<p>A. Red<br>
-B. Green<br>
-C. Blue</p>
-</div>
-<div id="timer_650f6dd70f2343d8425cc65c64fec0b0d5ad496b" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
- </div>
 </section>
 
 <section id="vectors-in-r" class="title-slide slide level1 smaller center">
@@ -278,7 +258,7 @@ C. Blue</p>
 </div></div>
 </section>
 
-<section id="data-frames-in-r" class="title-slide slide level1 center">
+<section id="data-frames-in-r" class="title-slide slide level1 smaller center">
 <h1>Data Frames in R</h1>
 <p>A data frame is like a table or spreadsheet — it has rows and columns, and each column can have its own type (numbers, words, etc.).</p>
 <div class="cell columns column-output-location">
@@ -303,7 +283,7 @@ C. Blue</p>
 </section>
 
 <section>
-<section id="data-types-in-r" class="title-slide slide level1 center">
+<section id="data-types-in-r" class="title-slide slide level1 smaller center">
 <h1>Data types in R</h1>
 <p>Data Types: A data type tells you what kind of data something is, like a number, a word (string), or a TRUE/FALSE value (logical).</p>
 <div class="cell columns column-output-location">
@@ -349,27 +329,6 @@ C. Blue</p>
 <section id="code-example" class="slide level2">
 <h2>Code Example</h2>
 <p>Here’s an example of code and output using <strong>ggplot2</strong> in R.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb16-2"><a></a></span>
-<span id="cb16-3"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
-<span id="cb16-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb16-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb16-7"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb16-8"><a></a>    <span class="at">title =</span> <span class="st">"Miles per Gallon vs. Weight"</span>,</span>
-<span id="cb16-9"><a></a>    <span class="at">color =</span> <span class="st">"Cylinders"</span></span>
-<span id="cb16-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div></div>
 </section>
 <section id="two-columns" class="slide level2 smaller">
 <h2>Two Columns</h2>
@@ -397,7 +356,7 @@ C. Blue</p>
 </section>
 <h3 id="quarto-slides-make-teaching-reproducible">Quarto slides make teaching reproducible</h3>
 <p>::: poll adds interactivity</p>
-<p></p><div id="timer_650f6dd70f2343d8425cc65c64fec0b0d5ad496b" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<p></p><div id="timer_8392ef4575e12f1268556b372651a0364caab057" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -409,7 +368,7 @@ C. Blue</p>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-logo-vsmall.png" class="slide-logo"></p>
+<p><img src="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-logo-vsmall.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -628,42 +587,80 @@ C. Blue</p>
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -24,6 +24,8 @@ At the end of this unit you will be able to:
 
 ### 🌠 Slides
 
+[Grammar of Graphics](slides.html)
+
 <a href="https://docs.google.com/presentation/d/1r8J3nngdsAtqbYsQkACcpGzwyaBTuuJg7em3whlo_Yc/edit?usp=sharing" target="_blank">A Grammar of Graphics</a> <small>(google slides)</small>
 
 <br>

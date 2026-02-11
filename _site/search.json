@@ -144,7 +144,7 @@
     "href": "units/2-grammar-graphics/unit02.html",
     "title": "2) Grammar of Graphics I",
     "section": "",
-    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nSlides\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
       "2) Grammar of Graphics I"
@@ -155,7 +155,7 @@
     "href": "units/2-grammar-graphics/unit02.html#this-week",
     "title": "2) Grammar of Graphics I",
     "section": "",
-    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nSlides\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
     "crumbs": [
       "Units",
       "2) Grammar of Graphics I"
@@ -746,7 +746,7 @@
     "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
     "title": "Week 2",
     "section": "“The Grammar of Graphics”",
-    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describe all statistical graphics.\nUnderlies most modern data visualization software."
+    "text": "“The Grammar of Graphics”\nFrom a conceptual perspective, making graphics involves mapping data to geometric objects and their visual properties."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
@@ -795,7 +795,7 @@
     "href": "units/2-grammar-graphics/slides.html#section-2",
     "title": "Week 2",
     "section": "",
-    "text": "Key idea:\nThese plots use the same data, but different grammars.\nThey share: - the same dataset (penguins) - a single mapped variable\nThey differ by: - geometry (histogram, density, boxplot) - statistical transformation"
+    "text": "Key idea:\nThese plots use the same data, but different grammars.\nThey share:\n\nthe same dataset (penguins)\na single mapped variable\n\nThey differ by:\n\ngeometry (histogram, density, boxplot)\nstatistical transformation"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#ggplot2-1",
@@ -816,7 +816,7 @@
     "href": "units/2-grammar-graphics/slides.html#section-3",
     "title": "Week 2",
     "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+    "text": "Formalized by Leland Wilkinson (1999)\n\n\n\nA formal set of rules to create any type of graphics\nUnderlies most modern data visualization software.\nImplemented as an R package (‘ggplot2’)"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#sketching-activity",
@@ -824,5 +824,110 @@
     "title": "Week 2",
     "section": "Sketching Activity",
     "text": "Sketching Activity"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
+    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
+    "title": "Week 2",
+    "section": "Meet the Palmer Penguins ",
+    "text": "Meet the Palmer Penguins \n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-7",
+    "href": "units/2-grammar-graphics/slides.html#section-7",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-8",
+    "href": "units/2-grammar-graphics/slides.html#section-8",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
+    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
+    "title": "Week 2",
+    "section": "“The Grammar of Graphics”",
+    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describes all statistical graphics.\nUnderlies most modern data visualization software."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#geometry-1",
+    "href": "units/2-grammar-graphics/slides.html#geometry-1",
+    "title": "Week 2",
+    "section": "Geometry",
+    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#named-plots-1",
+    "href": "units/2-grammar-graphics/slides.html#named-plots-1",
+    "title": "Week 2",
+    "section": "Named plots",
+    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1-2",
+    "href": "units/2-grammar-graphics/slides.html#redux-1-2",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1-3",
+    "href": "units/2-grammar-graphics/slides.html#redux-1-3",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-9",
+    "href": "units/2-grammar-graphics/slides.html#section-9",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
+    "href": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
+    "title": "Week 2",
+    "section": "Why do we need Grammar of Graphics (GG)?",
+    "text": "Why do we need Grammar of Graphics (GG)?\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable -\nmodular"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#key-concepts",
+    "href": "units/2-grammar-graphics/slides.html#key-concepts",
+    "title": "Week 2",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\nData: the data set being visualized (next week!)\nAesthetics (aes): how variables map to visual properties (x, y, color, size, etc)\nGeometric objects (geoms): what kind of mark to draw (points, bars, lines)\nStats: statistical transformations (e.g. binning for histograms, smoothing lines)\nScales: how data values are translated into visual values (e.g. color gradients)\nFacets: creating small multiples by splitting data into panels.\nThemes: controlling non-data elements (fonts, backgrounds, gridlines)"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-4",
+    "href": "units/2-grammar-graphics/slides.html#section-4",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-10",
+    "href": "units/2-grammar-graphics/slides.html#section-10",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
   }
 ]

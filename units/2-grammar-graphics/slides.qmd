@@ -17,19 +17,73 @@ format: stat198slides-revealjs
 Get into groups of 2-3 people and discuss the following questions:
 
 ::::: {columns}
-::: {.column width="30%"}
+::: {.column width="40%"}
 ![](images/discussion_graph_1980.png)
 :::
 
-::: {.column width="30%"}
+::: {.column width="40%"}
 ![](images/discussion_graph_2016.png)
 :::
 :::::
 
 1.  What is something you like about the way this data is portrayed?
-2.  
+2.  What is something you would change in these visualizations?
+3.  What data does the percentages on the vertical axis represent?
 
-# Meet the Palmer Penguins
+# Types of Graphs
+...
+
+...
+
+# The Grammar of Graphics
+
+## "The Grammar of Graphics"
+
+From a conceptual perspective, making graphics involves **mapping data** to *geometric objects* and their *visual properties*.
+
+## Why do we need Grammar of Graphics (GG)?
+
+We believe that the GG is a good starting point that gives us a **framework** (mental map) and a **vocabulary** to create graphics.
+
+This grammar allows creation of graphics to be:
+
+-   consistent
+
+-   reusable 
+
+-   modular
+
+## 
+
+Formalized by Leland Wilkinson (1999)
+
+::::: columns
+::: column
+-   A formal set of rules to create any type of graphics
+-   Underlies most modern data visualization software.
+-   Implemented as an R package ('ggplot2')
+:::
+
+::: {.column .fragment}
+![](images/Grammar_of_graphics.png)
+:::
+:::::
+
+# Key Concepts
+
+. . .
+
+-   **Data**: the data set being visualized (next week!)
+-   **Aesthetics (aes)**: how variables map to visual properties (x, y, color, size, etc)
+-   **Geometric objects (geoms)**: what kind of mark to draw (points, bars, lines)
+-   **Stats**: statistical transformations (e.g. binning for histograms, smoothing lines)
+-   **Scales**: how data values are translated into visual values (e.g. color gradients)
+-   **Facets**: creating small multiples by splitting data into panels.
+-   **Themes**: controlling non-data elements (fonts, backgrounds, gridlines)
+
+
+# Meet the palmers
+
 
 ```{r}
 library(palmerpenguins)
@@ -45,21 +99,25 @@ penguins
 #| fig-width: 16
 #| fig-align: center
 library(tidyverse)
+library(ggplot2)
 library(palmerpenguins)
 
 p1 <- penguins |>
   ggplot(aes(x = bill_length_mm)) +
   geom_histogram() +
-  theme_bw(base_size = 15)
+  theme_bw(base_size = 15) +
+  labs(x = "Length of Bill (milimeters)")
 
 p2 <- penguins |>
   ggplot(aes(x = bill_depth_mm)) +
   geom_density() +
+  labs(x = "Length of Bill (milimeters)") +
   theme_bw(base_size = 15)
 
 p3 <- penguins |>
   ggplot(aes(x = body_mass_g)) +
   geom_boxplot() +
+  labs(x = "Body Mass (grams)")
   theme_bw(base_size = 15)
 
 library(patchwork)
@@ -81,11 +139,15 @@ What do these plots have in common? How do they differ?
 p4 <- penguins |>
   ggplot(aes(x = island,
              fill = species)) +
-  geom_bar(position = "fill")
+  geom_bar(position = "fill") +
+  labs(x = "Islands",
+       y = "Count")
 
 p5 <- penguins |>
   ggplot(aes(y = sex)) +
-  geom_bar()
+  geom_bar() +
+  labs(x = "Sex",
+       y = "Count")
 
 p4 + p5
 ```
@@ -97,46 +159,39 @@ p4 + p5
 **Key idea:**\
 These plots use the **same data**, but different **grammars**.
 
+::: columns
+
+::: column
 They share:
 
 -   the same dataset (`penguins`)
 
 -   a single mapped variable
+:::
 
+::: column
 They differ by:
 
 -   geometry (histogram, density, boxplot)
 
 -   statistical transformation
 
-# The Grammar of Graphics
-
-## "The Grammar of Graphics"
-
-Leland Wilkinson (1999)
-
-::::: columns
-::: column
--   A grammar to describe all statistical graphics.
--   Underlies most modern data visualization software.
 :::
 
-::: {.column .fragment}
-![](images/Grammar_of_graphics.png)
 :::
-:::::
+. . .
 
 ## Aesthetic Mapping {auto-animate="true"}
 
 . . .
 
-An *aesthetic mapping* links a variable in the data to a visual channel that can encode its variation.
+An *aesthetic mapping* links a [variable]{.underline} in the data to a [visual channel]{.underline} that can encode its variation.
 
 . . .
 
 ### Channels for ordered variables
 
-![](images/channels-1.png)
+![](images/channels_unordered_variables1.png)
 
 ::: aside
 From "Data Visualization" by Kieran Healy.
@@ -148,7 +203,7 @@ An *aesthetic mapping* links a variable in the data to a visual channel that can
 
 ### Channels for unordered variables
 
-![](images/channels-2.png){fig-align="center"}
+![](images/channels_unordered_variables2.png){fig-align="center"}
 
 ::: aside
 From "Data Visualization" by Kieran Healy.
@@ -320,15 +375,7 @@ Example plot
 
 # Wrap-Up
 
-### Quarto slides make teaching reproducible
-
-::: poll adds interactivity
-
-{{< countdown >}} adds time control
-
-YAML controls defaults (logos, themes, layout) :::::::::::::::::::::
-
-## Meet the Palmer Penguins ![](images/penguins-hex.png){width=80} {.smaller}
+## Meet the Palmer Penguins ![](images/penguins-hex.png){width="80"} {.smaller}
 
 ```{r}
 library(palmerpenguins)
@@ -370,8 +417,7 @@ What do these plots have in common? How do they differ?
 
 {{< countdown "1:20" >}}
 
-
-##
+## 
 
 **Question**: What do these plots have in common? How do they differ?
 
@@ -390,7 +436,6 @@ p5 <- penguins |>
 p4 + p5
 ```
 
-
 {{< countdown "1:20" >}}
 
 # The Grammar of Graphics
@@ -399,18 +444,18 @@ p4 + p5
 
 Leland Wilkinson (1999)
 
-::: {.columns}
-::: {.column}
-- A grammar to describes all statistical graphics.
-- Underlies most modern data visualization software.
+::::: columns
+::: column
+-   A grammar to describes all statistical graphics.
+-   Underlies most modern data visualization software.
 :::
+
 ::: {.column .fragment}
-![](images/grammar-of-graphics.png)
+![](images/Grammar_of_graphics.png)
 :::
-:::
+:::::
 
-
-## Aesthetic Mapping {auto-animate=true}
+## Aesthetic Mapping {auto-animate="true"}
 
 . . .
 
@@ -420,25 +465,15 @@ An *aesthetic mapping* links a variable in the data to a visual channel that can
 
 ### Channels for ordered variables
 
-![](images/channels-1.png)
+![](images/channels_unordered_variables1.png)
 
-::: aside
-From "Data Visualization" by Kieran Healy.
-:::
-
-
-## Aesthetic Mapping {auto-animate=true}
+## Aesthetic Mapping {auto-animate="true"}
 
 An *aesthetic mapping* links a variable in the data to a visual channel that can encode its variation.
 
 ### Channels for unordered variables
 
-![](images/channels-2.png){fig-align="center"}
-
-::: aside
-From "Data Visualization" by Kieran Healy.
-:::
-
+![](images/channels_unordered_variables2.png){fig-align="center"}
 
 ## Geometry
 
@@ -448,10 +483,9 @@ The *geometry* describes how to translate the observations into marks on the pag
 
 ### Examples
 
-- Point
-- Line
-- Bar
-
+-   Point
+-   Line
+-   Bar
 
 ## Named plots
 
@@ -505,7 +539,7 @@ p5 <- penguins |>
 p4 + p5
 ```
 
-##
+## 
 
 **Question**: What are the aesthetic mappings and geometries used here?
 
@@ -525,37 +559,34 @@ penguins |>
 
 # ggplot2
 
-## {auto-animate=true}
+##  {auto-animate="true"}
 
-![](images/tidyverse-hex.svg){fig-align=center}
+![](images/tidyverse_hex.png){fig-align="center"}
 
+##  {auto-animate="true"}
 
-## {auto-animate=true}
-
-:::{.columns}
-
-:::{.column width=50%}
-![](images/tidyverse-hex.svg)
+::::: columns
+::: {.column width="50%"}
+![](images/tidyverse_hex.png)
 :::
 
-:::{.column width=50%}
-![](images/dplyr-hex.svg)
+::: {.column width="50%"}
+![](images/dplyr_hex.png)
 :::
+:::::
+
+##  {auto-animate="true"}
+
+:::::: columns
+::: {.column width="33%"}
+![](images/ggplot2_hex.png)
 :::
 
-## {auto-animate=true}
-
-:::{.columns}
-
-:::{.column width=33%}
-![](images/ggplot2-hex.svg)
+::: {.column width="33%"}
+![](images/tidyverse_hex.png)
 :::
 
-:::{.column width=33%}
-![](images/tidyverse-hex.svg)
+::: {.column width="33%"}
+![](images/dplyr_hex.png)
 :::
-
-:::{.column width=33%}
-![](images/dplyr-hex.svg)
-:::
-:::
+::::::
