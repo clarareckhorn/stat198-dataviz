@@ -144,7 +144,7 @@
     "href": "units/2-grammar-graphics/slides.html#section-1",
     "title": "Week 2",
     "section": "",
-    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+    "text": "Channels for unordered variables\n\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section-2",
@@ -158,7 +158,7 @@
     "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
     "title": "Week 2",
     "section": "“The Grammar of Graphics”",
-    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describe all statistical graphics.\nUnderlies most modern data visualization software."
+    "text": "“The Grammar of Graphics”\nFrom a conceptual perspective, making graphics involves mapping data to geometric objects and their visual properties."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
@@ -242,7 +242,7 @@
     "href": "units/2-grammar-graphics/slides.html#section-8",
     "title": "Week 2",
     "section": "",
-    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
@@ -298,7 +298,7 @@
     "href": "units/2-grammar-graphics/slides.html#section-9",
     "title": "Week 2",
     "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
   },
   {
     "objectID": "units/7-design1/slides.html#icebreaker",
@@ -1398,5 +1398,103 @@
     "crumbs": [
       "About"
     ]
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#categorical",
+    "href": "units/2-grammar-graphics/slides.html#categorical",
+    "title": "Week 2",
+    "section": "Categorical",
+    "text": "Categorical\nType of variable that represents categories or groups. It takes one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or nominal category on the basis of some qualitative property.\nExamples:\n\nBinary: Only takes two possible values, and are typically represented as 1 or 0.\nNominal: Categories have no clear order, and are mutually exclusive\nOrdinal: Have a clear ordering of the categories"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#quantitative",
+    "href": "units/2-grammar-graphics/slides.html#quantitative",
+    "title": "Week 2",
+    "section": "Quantitative",
+    "text": "Quantitative\nNumerical data point (AKA numerical variable) that can be measured or counted, allowing for mathematical operations to be applied.\nExamples:\n\nDiscrete: Can take any countable value represented as an integer (whole number),\nContinuous: Can take any measurable value within a given range, including fractions and decimals."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
+    "href": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
+    "title": "Week 2",
+    "section": "Right Graph for the Right Analytical Task",
+    "text": "Right Graph for the Right Analytical Task\n\nStephen Few: analytical tasks or analytical patterns\n\n\n\n\n\n\nPurpose\nExample Chart Types\n\n\n\n\nChange over time\nTimeline (line chart), area chart, slope chart\n\n\nShowing part-to-whole\nStacked bar, donut chart, treemap\n\n\nComparisons\nBar chart , column chart, dot plot\n\n\nDistributions (quantitative variable)\nHistogram, boxplot, violin plot, density\n\n\nRanking\nBar chart (sorted), lollipop chart\n\n\nRelationships\nScatter plot, bubble chart, connected scatter\n\n\nCorrelations\nScatter plot, matrix chart\n\n\nGeospatial\nChoropleth, symbol map\n\n\nFlow\nArrow charts, Sankey diagram\n\n\nText\nWord cloud"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#lollipop-chart",
+    "href": "units/2-grammar-graphics/slides.html#lollipop-chart",
+    "title": "Week 2",
+    "section": "Lollipop Chart",
+    "text": "Lollipop Chart\n ## Sorted Bar Chart"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#donut-chart",
+    "href": "units/2-grammar-graphics/slides.html#donut-chart",
+    "title": "Week 2",
+    "section": "Donut Chart",
+    "text": "Donut Chart"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#sankey-diagram",
+    "href": "units/2-grammar-graphics/slides.html#sankey-diagram",
+    "title": "Week 2",
+    "section": "Sankey Diagram",
+    "text": "Sankey Diagram"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
+    "href": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
+    "title": "Week 2",
+    "section": "Why do we need Grammar of Graphics (GG)?",
+    "text": "Why do we need Grammar of Graphics (GG)?\n\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable\nmodular"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section",
+    "href": "units/2-grammar-graphics/slides.html#section",
+    "title": "Week 2",
+    "section": "",
+    "text": "Formalized by Leland Wilkinson (1999)\n\n\n\nA formal set of rules to create any type of graphics\nUnderlies most modern data visualization software.\nImplemented as an R package (‘ggplot2’)"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#key-concepts",
+    "href": "units/2-grammar-graphics/slides.html#key-concepts",
+    "title": "Week 2",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\n\n\nData: the data set being visualized (next week!)\nAesthetics (aes): how variables map to visual properties (x, y, color, size, etc)\nGeometric objects (geoms): what kind of marks to draw (points, bars, lines)\nFacets: creating small multiples by splitting data into panels\nStats: statistical transformations (e.g. binning for histograms, smoothing lines)\nCoordinates: how data values are translated into visual values (e.g. color gradients)\nThemes: controlling non-data elements (fonts, backgrounds, gridlines)"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
+    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
+    "title": "Week 2",
+    "section": "Meet the Palmer Penguins",
+    "text": "Meet the Palmer Penguins\n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-10",
+    "href": "units/2-grammar-graphics/slides.html#section-10",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#summary",
+    "href": "units/2-grammar-graphics/slides.html#summary",
+    "title": "Week 2",
+    "section": "Summary",
+    "text": "Summary\nThis is the process of how data is encoded to a visual through the framework that grammar of graphics offers."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#attendance-worksheet",
+    "href": "units/2-grammar-graphics/slides.html#attendance-worksheet",
+    "title": "Week 2",
+    "section": "Attendance Worksheet",
+    "text": "Attendance Worksheet\nMake sure to turn in your worksheet before leaving with your name on it please!!"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#homework",
+    "href": "units/2-grammar-graphics/slides.html#homework",
+    "title": "Week 2",
+    "section": "Homework",
+    "text": "Homework\nRead The Persistent Grip of Social Class on College Admissions"
   }
 ]

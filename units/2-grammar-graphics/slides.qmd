@@ -97,7 +97,11 @@ For each graph, identify the type of variables used (i.e. quantitative or catego
 
 ## Lollipop Chart
 
-![](images/lollipop_chart_example.png) \## Sorted Bar Chart ![](images/sortedbarchart_example.png)
+![](images/lollipop_chart_example.png) 
+
+## Sorted Bar Chart
+
+![](images/sortedbarchart_example.png)
 
 ## Donut Chart
 
