@@ -281,7 +281,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="assignment" class="level3">
 <h3 class="anchored" data-anchor-id="assignment">📖 Assignment</h3>
-<p>TBA</p>
+<p><strong>Reading</strong>: <em>Age of US Presidents (Pew Research Center)</em></p>
+<p><a href="https://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/" target="_blank">https://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/</a></p>
+<p><strong>Homework</strong>: Homework #3 is due Monday, 3/16 at 11:59pm. You can find the assignment and turn in your work on BCourses.</p>
 
 
 </section>
@@ -361,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/920194a1-e664-4348-be1c-bcddc1e0d606\.netlify\.app\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

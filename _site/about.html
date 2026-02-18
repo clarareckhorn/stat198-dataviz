@@ -249,17 +249,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Instructors</strong>:</p>
-<ul>
-<li>Monserrat Ibarra Reyes (montserrat_ibarra@berkeley.edu)</li>
-<li>Jocelyne Perez (jocelyneperez@berkeley.edu)</li>
-<li>Clara Reckhorn (clara_reckhorn@berkeley.edu)</li>
-</ul>
+<p><strong>Instructors</strong>:<br>
+- Monserrat Ibarra Reyes <a href="mailto:montserrat_ibarra@berkeley.edu">montserrat_ibarra@berkeley.edu</a><br>
+- Jocelyne Perez <a href="mailto:jocelyneperez@berkeley.edu">jocelyneperez@berkeley.edu</a><br>
+- Clara Reckhorn <a href="mailto:clara_reckhorn@berkeley.edu">clara_reckhorn@berkeley.edu</a><br>
+</p>
 <p><strong>Faculty Sponsor</strong>: <a href="https://www.gastonsanchez.com" target="_blank">Gaston Sanchez</a></p>
-<p><strong>Class Time</strong>: TBA</p>
-<p><strong>Code #</strong>: TBA</p>
+<p><strong>Class Time</strong>: 5:30 -7:00 pm on Tuesdays</p>
+<p><strong>Room</strong>: Evans 340</p>
 <p><strong>Units</strong>: 2</p>
-<p><strong>Dates</strong>: Tentative Feb-dd / Apr-dd</p>
+<p><strong>Dates</strong>: Feb-10 to week before RRR</p>
 </div>
 </div>
 <section id="motivation" class="level2">
@@ -358,7 +357,11 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
+<<<<<<< HEAD
         var filterRegex = new RegExp('/' + window.location.host + '/');
+=======
+        var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
+>>>>>>> f3cb972554ae56b8d3638635a3b1bc93abfc9ff4
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -279,7 +279,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="assignment" class="level3">
 <h3 class="anchored" data-anchor-id="assignment">📖 Assignment</h3>
-<p>TBA</p>
+<p><strong>Reading</strong>: No reading this week!</p>
+<p><strong>Homework</strong>: No HW this week! Study for Quiz 1.</p>
 
 
 </section>
@@ -359,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/920194a1-e664-4348-be1c-bcddc1e0d606\.netlify\.app\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -140,271 +140,193 @@
     ]
   },
   {
-    "objectID": "units/2-grammar-graphics/unit02.html",
-    "href": "units/2-grammar-graphics/unit02.html",
-    "title": "2) Grammar of Graphics I",
+    "objectID": "units/2-grammar-graphics/slides.html#section-1",
+    "href": "units/2-grammar-graphics/slides.html#section-1",
+    "title": "Week 2",
     "section": "",
-    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nSlides\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
-    "crumbs": [
-      "Units",
-      "2) Grammar of Graphics I"
-    ]
+    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
   },
   {
-    "objectID": "units/2-grammar-graphics/unit02.html#this-week",
-    "href": "units/2-grammar-graphics/unit02.html#this-week",
-    "title": "2) Grammar of Graphics I",
+    "objectID": "units/2-grammar-graphics/slides.html#section-2",
+    "href": "units/2-grammar-graphics/slides.html#section-2",
+    "title": "Week 2",
     "section": "",
-    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nSlides\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
-    "crumbs": [
-      "Units",
-      "2) Grammar of Graphics I"
-    ]
+    "text": "Key idea:\nThese plots use the same data, but different grammars.\nThey share:\n\nthe same dataset (penguins)\na single mapped variable\n\nThey differ by:\n\ngeometry (histogram, density, boxplot)\nstatistical transformation"
   },
   {
-    "objectID": "units/7-design1/unit07.html",
-    "href": "units/7-design1/unit07.html",
-    "title": "7) Design Considerations I",
+    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
+    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
+    "title": "Week 2",
+    "section": "“The Grammar of Graphics”",
+    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describe all statistical graphics.\nUnderlies most modern data visualization software."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#geometry",
+    "href": "units/2-grammar-graphics/slides.html#geometry",
+    "title": "Week 2",
+    "section": "Geometry",
+    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#named-plots",
+    "href": "units/2-grammar-graphics/slides.html#named-plots",
+    "title": "Week 2",
+    "section": "Named plots",
+    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1",
+    "href": "units/2-grammar-graphics/slides.html#redux-1",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1-1",
+    "href": "units/2-grammar-graphics/slides.html#redux-1-1",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-3",
+    "href": "units/2-grammar-graphics/slides.html#section-3",
+    "title": "Week 2",
     "section": "",
-    "text": "In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n\nData-Ink Ratio (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "7) Design Considerations I"
-    ]
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
   },
   {
-    "objectID": "units/7-design1/unit07.html#this-week",
-    "href": "units/7-design1/unit07.html#this-week",
-    "title": "7) Design Considerations I",
+    "objectID": "units/2-grammar-graphics/slides.html#ggplot2-1",
+    "href": "units/2-grammar-graphics/slides.html#ggplot2-1",
+    "title": "Week 2",
+    "section": "ggplot2()",
+    "text": "ggplot2()\n\nA plot can be decomposed into three primary elements:\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#two-columns",
+    "href": "units/2-grammar-graphics/slides.html#two-columns",
+    "title": "Week 2",
+    "section": "Two Columns",
+    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
+    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
+    "title": "Week 2",
+    "section": "Meet the Palmer Penguins ",
+    "text": "Meet the Palmer Penguins \n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-7",
+    "href": "units/2-grammar-graphics/slides.html#section-7",
+    "title": "Week 2",
     "section": "",
-    "text": "In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n\nData-Ink Ratio (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "7) Design Considerations I"
-    ]
+    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
   },
   {
-    "objectID": "units/6-using-color/unit06.html",
-    "href": "units/6-using-color/unit06.html",
-    "title": "6) Color 3",
+    "objectID": "units/2-grammar-graphics/slides.html#section-8",
+    "href": "units/2-grammar-graphics/slides.html#section-8",
+    "title": "Week 2",
     "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the use of color in data viz, and you will turn in HW4 (Friday 11:59pm).\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "6) Color 3"
-    ]
+    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
   },
   {
-    "objectID": "units/6-using-color/unit06.html#this-week",
-    "href": "units/6-using-color/unit06.html#this-week",
-    "title": "6) Color 3",
+    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
+    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
+    "title": "Week 2",
+    "section": "“The Grammar of Graphics”",
+    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describes all statistical graphics.\nUnderlies most modern data visualization software."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
+    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
+    "title": "Week 2",
+    "section": "Aesthetic Mapping",
+    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#geometry-1",
+    "href": "units/2-grammar-graphics/slides.html#geometry-1",
+    "title": "Week 2",
+    "section": "Geometry",
+    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#named-plots-1",
+    "href": "units/2-grammar-graphics/slides.html#named-plots-1",
+    "title": "Week 2",
+    "section": "Named plots",
+    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1-2",
+    "href": "units/2-grammar-graphics/slides.html#redux-1-2",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#redux-1-3",
+    "href": "units/2-grammar-graphics/slides.html#redux-1-3",
+    "title": "Week 2",
+    "section": "Redux 1",
+    "text": "Redux 1"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-9",
+    "href": "units/2-grammar-graphics/slides.html#section-9",
+    "title": "Week 2",
     "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the use of color in data viz, and you will turn in HW4 (Friday 11:59pm).\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "6) Color 3"
-    ]
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
   },
   {
-    "objectID": "units/5-opponent/unit05.html",
-    "href": "units/5-opponent/unit05.html",
-    "title": "5) Color II",
-    "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "5) Color II"
-    ]
+    "objectID": "units/7-design1/slides.html#icebreaker",
+    "href": "units/7-design1/slides.html#icebreaker",
+    "title": "Lecture 7",
+    "section": "Icebreaker",
+    "text": "Icebreaker"
   },
   {
-    "objectID": "units/5-opponent/unit05.html#this-week",
-    "href": "units/5-opponent/unit05.html#this-week",
-    "title": "5) Color II",
-    "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "5) Color II"
-    ]
+    "objectID": "units/7-design1/slides.html#agenda",
+    "href": "units/7-design1/slides.html#agenda",
+    "title": "Lecture 7",
+    "section": "Agenda",
+    "text": "Agenda\n\nDiscussion of Reading\nActivity (Attention)\nVisual Processing\nActivity (Preattentive Attribute)\nGestalt Principles of Perception + Activity\nExplain Homework"
   },
   {
-    "objectID": "units/10-maps2/unit10.html",
-    "href": "units/10-maps2/unit10.html",
-    "title": "10) Maps II",
-    "section": "",
-    "text": "📋 About\nTBD\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n🌠 Slides\nTBA (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nTBA",
-    "crumbs": [
-      "Units",
-      "10) Maps II"
-    ]
+    "objectID": "units/7-design1/slides.html#discussion-of-reading",
+    "href": "units/7-design1/slides.html#discussion-of-reading",
+    "title": "Lecture 7",
+    "section": "Discussion of Reading",
+    "text": "Discussion of Reading"
   },
   {
-    "objectID": "units/9-maps1/unit09.html",
-    "href": "units/9-maps1/unit09.html",
-    "title": "9) Maps I",
-    "section": "",
-    "text": "In this week, we’ll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n\nTBA (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "9) Maps I"
-    ]
-  },
-  {
-    "objectID": "units/9-maps1/unit09.html#this-week",
-    "href": "units/9-maps1/unit09.html#this-week",
-    "title": "9) Maps I",
-    "section": "",
-    "text": "In this week, we’ll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n\nTBA (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "9) Maps I"
-    ]
-  },
-  {
-    "objectID": "units/1-intro/slides.html#before-the-quiz",
-    "href": "units/1-intro/slides.html#before-the-quiz",
-    "title": "Quiz",
-    "section": "Before the Quiz",
-    "text": "Before the Quiz\n\nTake a photo of your cheat sheet if you want it.\n🧹 Clear your desk of everything except a pen/pencil and your cheat sheet.\n🧢 Remove hats, hoods, and sunglasses.\n📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period.\nSpread out as much as possible."
-  },
-  {
-    "objectID": "units/1-intro/slides.html#individual-quiz",
-    "href": "units/1-intro/slides.html#individual-quiz",
-    "title": "Quiz",
-    "section": "Individual Quiz",
-    "text": "Individual Quiz\n\n\n\n−+\n25:00\n\n\n\n\n\n\nWhen you get a quiz, cover it with your cheat sheet and do not begin.\nWrite your name on both pages.\n⌛If you finish early, cover it with your cheat sheet.\nIf you need to use the bathroom, bring phone and quiz to the front of the class.\n\n\n\n⌛If you finish early, please hold on to your quiz and wait.\nKeep your eyes on your own quiz.\n❗You must stop writing when time is called or risk a 0.\n\n\nGood luck! 🍀"
-  },
-  {
-    "objectID": "units/1-intro/slides.html#group-quiz",
-    "href": "units/1-intro/slides.html#group-quiz",
-    "title": "Quiz",
-    "section": "Group Quiz",
-    "text": "Group Quiz\n\n\n\n−+\n15:00\n\n\n\n\n\n\nForm groups of 3 people, then ONE person raise your hand (to get your quiz).\nBe sure to write ALL group members names on the quiz on both pages.\nIf you find yourself without a group, come to the front of class and we’ll help you form one.\n\n\n\nYour can start when you get your quiz.\nWhen done, bring your quiz and everyone’s cheat sheets to a tutor or me. Then please leave the room quietly.\n\n\nGood luck! 🍀"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Principles of Data Visualization",
-    "section": "",
-    "text": "This is the website for the Spring-2026 DeCal course Principles of Data Visualization at UC Berkeley.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#calendar",
-    "href": "index.html#calendar",
-    "title": "Principles of Data Visualization",
-    "section": "Calendar",
-    "text": "Calendar\nTentative calendar subject to change.\n\n\n\nWeek\nContent\nHW\n\n\n\n\n1\n1) Welcome and Introduction\nnone\n\n\n2\n2) The Grammar of Graphics\nHW 1\n\n\n3\n3) Data Types and Chart Selection\nHW 2\n\n\n4\n4) Color 1\nQuiz 1\n\n\n5\n5) Color 2\nHW 3\n\n\n6\n6) Color 3\nHW 4\n\n\n7\n7) Design Considerations I\nQuiz 2\n\n\n8\n8) Design Considerations II\nHW 5\n\n\n9\n9) Maps I\nHW 6\n\n\n10\n10) Maps II\nQuiz 3\n\n\n11\nFinal Project\nProject",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#demo-slides",
-    "href": "index.html#demo-slides",
-    "title": "Principles of Data Visualization",
-    "section": "Demo Slides",
-    "text": "Demo Slides\n\nQuiz slides",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "units/1-intro/unit01.html",
-    "href": "units/1-intro/unit01.html",
-    "title": "1) Surrounded by Graphics",
-    "section": "",
-    "text": "In this week, we review an assortment of data visualizations that we may get exposed to—almost—on a daily basis.\nWe’ll describe the type of graphics, introduce some basic vocabulary, talk about the types of variables visually encoded. Also, you’ll have the opportunity to look for a handful of data visualizations about your data.\n\n\n\nAt the end of this unit you will be able to:\n\nFamiliarize yourself with the vocabulary of graphical elements (e.g. geoms, labels, annotations, grid lines, axes, tick marks, facets, etc).\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n\nBasic examples, graphics vocabulary (google slides)\n\n\n\n\nGetting started with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nHW 1\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
-    "crumbs": [
-      "Units",
-      "1) Surrounded by Graphics"
-    ]
-  },
-  {
-    "objectID": "units/1-intro/unit01.html#this-week",
-    "href": "units/1-intro/unit01.html#this-week",
-    "title": "1) Surrounded by Graphics",
-    "section": "",
-    "text": "In this week, we review an assortment of data visualizations that we may get exposed to—almost—on a daily basis.\nWe’ll describe the type of graphics, introduce some basic vocabulary, talk about the types of variables visually encoded. Also, you’ll have the opportunity to look for a handful of data visualizations about your data.\n\n\n\nAt the end of this unit you will be able to:\n\nFamiliarize yourself with the vocabulary of graphical elements (e.g. geoms, labels, annotations, grid lines, axes, tick marks, facets, etc).\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n\nBasic examples, graphics vocabulary (google slides)\n\n\n\n\nGetting started with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nHW 1\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
-    "crumbs": [
-      "Units",
-      "1) Surrounded by Graphics"
-    ]
-  },
-  {
-    "objectID": "units/11-final-project/unit11.html",
-    "href": "units/11-final-project/unit11.html",
-    "title": "11) Final Project",
-    "section": "",
-    "text": "📋 About\nTBD"
-  },
-  {
-    "objectID": "units/3-data-types/unit03.html",
-    "href": "units/3-data-types/unit03.html",
-    "title": "3) Data Types, Chart Selection",
-    "section": "",
-    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
-    "crumbs": [
-      "Units",
-      "3) Data Types, Chart Selection"
-    ]
-  },
-  {
-    "objectID": "units/3-data-types/unit03.html#this-week",
-    "href": "units/3-data-types/unit03.html#this-week",
-    "title": "3) Data Types, Chart Selection",
-    "section": "",
-    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
-    "crumbs": [
-      "Units",
-      "3) Data Types, Chart Selection"
-    ]
-  },
-  {
-    "objectID": "units/4-trichromatic/unit04.html",
-    "href": "units/4-trichromatic/unit04.html",
-    "title": "4) Color I",
-    "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "4) Color I"
-    ]
-  },
-  {
-    "objectID": "units/4-trichromatic/unit04.html#this-week",
-    "href": "units/4-trichromatic/unit04.html#this-week",
-    "title": "4) Color I",
-    "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "4) Color I"
-    ]
-  },
-  {
-    "objectID": "units/8-design2/unit08.html",
-    "href": "units/8-design2/unit08.html",
-    "title": "8) Design Considerations II",
-    "section": "",
-    "text": "In this week, we’ll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).\nThis class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the core data visualization principles and know how they originated\nAnalyze how visualizations can mislead or “lie” by examining the lie factor\nRedesign a cluttered chart into a clear and efficient one.\n\n\n\n\n\nAnalytical Patterns (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "8) Design Considerations II"
-    ]
-  },
-  {
-    "objectID": "units/8-design2/unit08.html#this-week",
-    "href": "units/8-design2/unit08.html#this-week",
-    "title": "8) Design Considerations II",
-    "section": "",
-    "text": "In this week, we’ll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).\nThis class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the core data visualization principles and know how they originated\nAnalyze how visualizations can mislead or “lie” by examining the lie factor\nRedesign a cluttered chart into a clear and efficient one.\n\n\n\n\n\nAnalytical Patterns (google slides)\n\n\n\n\nTBA\n\n\n\n\nTBA",
-    "crumbs": [
-      "Units",
-      "8) Design Considerations II"
-    ]
+    "objectID": "units/7-design1/slides.html#spot-the-difference",
+    "href": "units/7-design1/slides.html#spot-the-difference",
+    "title": "Lecture 7",
+    "section": "Spot the Difference",
+    "text": "Spot the Difference\nTake advantage of preattentive features to make your audience not have to work too hard\nBar chart democrats vs republicans - What variables are behind this plot? V1 - Dem, Rep V2 - Religion V3 - Race"
   },
   {
     "objectID": "units/6-using-color/slides.html#icebreaker",
@@ -554,51 +476,376 @@
     "text": "HW 6 Assignment\n\nReading: How unusual has this hurricane season been?\nhttps://www.bbc.com/news/articles/cden551l7kko\n\nThe graphic of interest is the stacked bar chart of Named storms in the Atlantic by type and year, 1990-2024\nIt uses an analogous+neutral color scheme; we can also say that it uses a sequential color scale\nThis bar chart can be replicated in the next class “Use of Color”\nWe can use the “storms” data (from “dplyr”) although this only goes to year 2022\nThere are some data manipulation steps, but we can provide sample code or detailed instructions on how to get it\nThe interesting part is in the color specification, and the use of scale functions in ggplot2 such as scale_fill_manual()"
   },
   {
-    "objectID": "units/7-design1/slides.html#icebreaker",
-    "href": "units/7-design1/slides.html#icebreaker",
-    "title": "Lecture 7",
-    "section": "Icebreaker",
-    "text": "Icebreaker"
-  },
-  {
-    "objectID": "units/7-design1/slides.html#agenda",
-    "href": "units/7-design1/slides.html#agenda",
-    "title": "Lecture 7",
-    "section": "Agenda",
-    "text": "Agenda\n\nDiscussion of Reading\nActivity (Attention)\nVisual Processing\nActivity (Preattentive Attribute)\nGestalt Principles of Perception + Activity\nExplain Homework"
-  },
-  {
-    "objectID": "units/7-design1/slides.html#discussion-of-reading",
-    "href": "units/7-design1/slides.html#discussion-of-reading",
-    "title": "Lecture 7",
-    "section": "Discussion of Reading",
-    "text": "Discussion of Reading"
-  },
-  {
-    "objectID": "units/7-design1/slides.html#spot-the-difference",
-    "href": "units/7-design1/slides.html#spot-the-difference",
-    "title": "Lecture 7",
-    "section": "Spot the Difference",
-    "text": "Spot the Difference\nTake advantage of preattentive features to make your audience not have to work too hard\nBar chart democrats vs republicans - What variables are behind this plot? V1 - Dem, Rep V2 - Religion V3 - Race"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "units/8-design2/unit08.html",
+    "href": "units/8-design2/unit08.html",
+    "title": "8) Design Considerations II",
     "section": "",
-    "text": "This is the website for the Spring-2026 DeCal course Concepts of Data Visualization in R.",
+    "text": "In this week, we’ll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).\nThis class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the core data visualization principles and know how they originated\nAnalyze how visualizations can mislead or “lie” by examining the lie factor\nRedesign a cluttered chart into a clear and efficient one.\n\n\n\n\n\nAnalytical Patterns (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: No reading assigned!\nHomework: No HW assigned! Study for Quiz 2.",
     "crumbs": [
-      "About"
+      "Units",
+      "8) Design Considerations II"
     ]
   },
   {
-    "objectID": "about.html#motivation",
-    "href": "about.html#motivation",
-    "title": "About",
-    "section": "Motivation",
-    "text": "Motivation\nData visualization is an ever-present element for anyone who works with data, whether in business, science, education, politics, or any other field.\nAs data visualization expert Donna Wong says:\n\n“The ability to create effective charts and graphs has become almost as indispensable as good writing.”\n\nThe good news is that, nowadays, making graphics, plots, diagrams, charts, etc has become incredibly easy. However, data visualization is not just about knowing how to use tools or software to produce a graphic. Quoting Donna Wong again:\n\n“With computer technology, anyone can create graphics, but few of us know how to do it well.”\n\nData visualization is also about having a critical mindset, and acquiring the training not just to produce effective graphics, but also to learn how to assess a visual display of data.\nTo us, data visualization entails both the production as well as the consumption of graphics. Those of us who deal with data, sooner or later have to produce charts and graphs, and we have to be prepared to do this task effectively. Likewise, some of us will have to create graphics on a constant basis, some periodically, and some very rarely. However, all of us will be consuming visual displays of data. Therefore, we also need to be able to critically assess a graphic, and also know how to do it well.\nIn summary, our aim is to provide students the fundamental principles to:\n\nProduce effective graphics, and\nAssess the effectiveness of a visual display of data.",
+    "objectID": "units/8-design2/unit08.html#this-week",
+    "href": "units/8-design2/unit08.html#this-week",
+    "title": "8) Design Considerations II",
+    "section": "",
+    "text": "In this week, we’ll get a further introduction to design considerations in data viz and you will turn in HW5 (Friday 11:59pm).\nThis class condenses some of the core data visualization principles proposed by the main gurus (Colin Ware, Stephen Few, Edward Tufte, Alberto Cairo, etc). In no particular order, we present the principles, providing examples for each of them. Overall, today’s slides are a bunch of “Do’s and Don’ts”. Likewise, we briefly introduce the profiles of the gurus behind the core principles, and the associated literature (just for reference purposes for the interested reader).\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the core data visualization principles and know how they originated\nAnalyze how visualizations can mislead or “lie” by examining the lie factor\nRedesign a cluttered chart into a clear and efficient one.\n\n\n\n\n\nAnalytical Patterns (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: No reading assigned!\nHomework: No HW assigned! Study for Quiz 2.",
     "crumbs": [
-      "About"
+      "Units",
+      "8) Design Considerations II"
+    ]
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#agenda",
+    "href": "units/4-trichromatic/slides.html#agenda",
+    "title": "Week 4",
+    "section": "Agenda",
+    "text": "Agenda\n\nReading discussion\n\nggplot2: why do we use it?\nActivity: coding practice"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#examples-of-graphs-we-can-make-with-ggplot2",
+    "href": "units/4-trichromatic/slides.html#examples-of-graphs-we-can-make-with-ggplot2",
+    "title": "Week 4",
+    "section": "Examples of graphs we can make with ggplot2",
+    "text": "Examples of graphs we can make with ggplot2"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#ggplot2",
+    "href": "units/4-trichromatic/slides.html#ggplot2",
+    "title": "Week 4",
+    "section": "ggplot2()",
+    "text": "ggplot2()\n\nA plot can be decomposed into three primary elements (according to grammar of graphics):\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#section",
+    "href": "units/4-trichromatic/slides.html#section",
+    "title": "Week 4",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(dplyr)\nlibrary(palmerpenguins)\n#| label: \"hi mom\"\npenguins |&gt;\n  select(bill_length_mm,\n         flipper_length_mm,\n         species)\n\n\n\n# A tibble: 344 × 3\n   bill_length_mm flipper_length_mm species\n            &lt;dbl&gt;             &lt;int&gt; &lt;fct&gt;  \n 1           39.1               181 Adelie \n 2           39.5               186 Adelie \n 3           40.3               195 Adelie \n 4           NA                  NA Adelie \n 5           36.7               193 Adelie \n 6           39.3               190 Adelie \n 7           38.9               181 Adelie \n 8           39.2               195 Adelie \n 9           34.1               193 Adelie \n10           42                 190 Adelie \n# ℹ 334 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDraw arrows mapping variables to visual cues"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#section-1",
+    "href": "units/4-trichromatic/slides.html#section-1",
+    "title": "Week 4",
+    "section": "",
+    "text": "penguins |&gt;\n  ggplot(aes(x = bill_length_mm,\n             y = flipper_length_mm,\n             color = species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#ggplot2-syntax",
+    "href": "units/4-trichromatic/slides.html#ggplot2-syntax",
+    "title": "Week 4",
+    "section": "ggplot2() syntax",
+    "text": "ggplot2() syntax\n\nggplot2() builds a plot layer by layer, each one added on top of one another with + (not |&gt;).\n\n\n\nggplot(df) creates canvas\naes() creates mappings, called inside ggplot() or a geom()\ngeom_() puts down marks using declared geometry"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#layer-by-layer",
+    "href": "units/4-trichromatic/slides.html#layer-by-layer",
+    "title": "Week 4",
+    "section": "Layer by layer",
+    "text": "Layer by layer\n\npenguins |&gt;\n  ggplot(aes(x = bill_length_mm,\n             y = flipper_length_mm,\n             color = species)) +\n  geom_point() +\n  theme_gray(base_size = 18)"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#common-aes",
+    "href": "units/4-trichromatic/slides.html#common-aes",
+    "title": "Week 4",
+    "section": "Common aes()",
+    "text": "Common aes()\n\n\n\nx\ny\ncolor\nfill\n\n\n\nsize\nshape\nalpha"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#common-geom_",
+    "href": "units/4-trichromatic/slides.html#common-geom_",
+    "title": "Week 4",
+    "section": "Common geom_()",
+    "text": "Common geom_()\n\n\n\ngeom_point()\ngeom_bar() / geom_col()\ngeom_line()\n\n\n\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()"
+  },
+  {
+    "objectID": "units/10-maps2/unit10.html",
+    "href": "units/10-maps2/unit10.html",
+    "title": "10) Maps II",
+    "section": "",
+    "text": "📋 About\nTBD\n\n\n\n🎯 Objectives\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n🌠 Slides\nTBA (google slides)\n\n\n\n💻 Code\nTBA\n\n\n\n📖 Assignment\nReading: Sea Surface Temperature Anomaly on July 31, 2023\nhttps://www.nytimes.com/interactive/2023/08/03/climate/ocean-temperatures-heat-earth.html\nHomework: No HW this week. Work on your final project!",
+    "crumbs": [
+      "Units",
+      "10) Maps II"
+    ]
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#agenda",
+    "href": "units/3-data-types/data2.html#agenda",
+    "title": "Data Wrangling II",
+    "section": "Agenda",
+    "text": "Agenda\nTwo big ideas today:\n\nData Pipelines\nGrouped Operations\n\n\nBefore class, sketch out the effect that the different dplyr verbs from last class have on the shape of a data frame."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#section",
+    "href": "units/3-data-types/data2.html#section",
+    "title": "Data Wrangling II",
+    "section": "",
+    "text": "library(dplyr)\nstar_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe average height of characters from Tatooine\n\n\n\nLet’s look at three ways to solve this."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#nesting",
+    "href": "units/3-data-types/data2.html#nesting",
+    "title": "Data Wrangling II",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(filter(star_wars, homeworld == \"Tatooine\"), mean(height))\n\n\n\n  mean(height)\n1         1.75\n\n\n\n\n\n\nMust be read from the inside out 👎\nHard to keep track of arguments 👎\n\n\n\nAll in one line of code 👍\nOnly refer to one data frame 👍"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#step-by-step",
+    "href": "units/3-data-types/data2.html#step-by-step",
+    "title": "Data Wrangling II",
+    "section": "Step-by-step",
+    "text": "Step-by-step\n\nstar_wars2 &lt;- filter(star_wars, homeworld == \"Tatooine\")\nsummarize(star_wars2, mean(height))\n\n\n\n  mean(height)\n1         1.75\n\n\n\n\n\n\nHave to repeaet data frame names 👎\nCreates unnecessary objects 👎\n\n\n\nStores intermediate objects 👍\nCan be read from top to bottom 👍"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#data-pipelines-in-r",
+    "href": "units/3-data-types/data2.html#data-pipelines-in-r",
+    "title": "Data Wrangling II",
+    "section": "Data Pipelines in R",
+    "text": "Data Pipelines in R\n\n\n\n2016: magrittr introduces %&gt;%\n\n|&gt;\n2021:\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#using-the-pipe-operator",
+    "href": "units/3-data-types/data2.html#using-the-pipe-operator",
+    "title": "Data Wrangling II",
+    "section": "Using the Pipe Operator",
+    "text": "Using the Pipe Operator\n\nstar_wars |&gt;"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#using-the-pipe-operator-1",
+    "href": "units/3-data-types/data2.html#using-the-pipe-operator-1",
+    "title": "Data Wrangling II",
+    "section": "Using the Pipe Operator",
+    "text": "Using the Pipe Operator\n\nstar_wars |&gt;\n    filter(homeworld == \"Tatooine\") |&gt;"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#using-the-pipe-operator-2",
+    "href": "units/3-data-types/data2.html#using-the-pipe-operator-2",
+    "title": "Data Wrangling II",
+    "section": "Using the Pipe Operator",
+    "text": "Using the Pipe Operator\n\nstar_wars |&gt;\n    filter(homeworld == \"Tatooine\") |&gt;\n    summarize(mean(height))\n\n\n\n  mean(height)\n1         1.75\n\n\n\n\n\n\n🤷‍♂️\n\n\n\nCan be read like an english paragraph 👍\nOnly type the data once 👍\nNo leftover objects 👍"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#understanding-your-pipeline",
+    "href": "units/3-data-types/data2.html#understanding-your-pipeline",
+    "title": "Data Wrangling II",
+    "section": "Understanding your pipeline",
+    "text": "Understanding your pipeline\nIt’s good practice to understand the output of each line by breaking the pipe.\n\n\n\n\nstar_wars |&gt;\n    select(homeworld) |&gt;\n    filter(mean(height))\n\n\n\nError in `filter()`:\nℹ In argument: `mean(height)`.\nCaused by error:\n! object 'height' not found\n\n\n\n\nstar_wars |&gt;\n    select(homeworld)\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#section-2",
+    "href": "units/3-data-types/data2.html#section-2",
+    "title": "Data Wrangling II",
+    "section": "",
+    "text": "star_wars |&gt; # A #&lt;&lt;\n    filter(homeworld == \"Naboo\",\n           name %in% c(\"Padme\", \"JarJar\")) |&gt; # B #&lt;&lt;\n    select(height, weight) |&gt; # C #&lt;&lt;\n    summarize(mean(height), sd(height),\n              mean(weight), sd(weight)) # D #&lt;&lt;\n\n\n\n\nQuestion: What are the dimensions of the data frame at each stage of the pipe: A, B, C, and D?\n\n  \n    −\n    +\n \n 02:00\n \n\nShow answer in drop by breaking the pipe"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#works-everywhere",
+    "href": "units/3-data-types/data2.html#works-everywhere",
+    "title": "Data Wrangling II",
+    "section": "|> works everywhere",
+    "text": "|&gt; works everywhere\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.\n\n\n\nfactor(c(\"cat\", \"cat\", \"dog\")) |&gt; summary()\n\n\n\ncat dog \n  2   1"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#section-4",
+    "href": "units/3-data-types/data2.html#section-4",
+    "title": "Data Wrangling II",
+    "section": "",
+    "text": "library(dplyr)\nstar_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe average height of characters from Tatooine across each planet\n\n\n\nYou could set up two pipelines with different filters. But there’s a better way."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by",
+    "href": "units/3-data-types/data2.html#group_by",
+    "title": "Data Wrangling II",
+    "section": "group_by()",
+    "text": "group_by()\nFlag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.\n\n\nstar_wars |&gt;\n    group_by(homeworld)\n\n\n\n# A tibble: 4 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84\n2 Padme  Naboo        1.6     45\n3 Luke   Tatooine     1.7     77\n4 JarJar Naboo        1.9     90"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-1",
+    "href": "units/3-data-types/data2.html#group_by-1",
+    "title": "Data Wrangling II",
+    "section": "group_by()",
+    "text": "group_by()\nFlag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    summarize(mean(height))\n\n\n\n# A tibble: 2 × 2\n  homeworld `mean(height)`\n  &lt;chr&gt;              &lt;dbl&gt;\n1 Naboo               1.75\n2 Tatooine            1.75"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#section-5",
+    "href": "units/3-data-types/data2.html#section-5",
+    "title": "Data Wrangling II",
+    "section": "",
+    "text": "Draw diagram"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-summarize",
+    "href": "units/3-data-types/data2.html#group_by-with-summarize",
+    "title": "Data Wrangling II",
+    "section": "group_by() with summarize()",
+    "text": "group_by() with summarize()\n\n\nstar_wars |&gt;\n    summarize(mean(height))\n\n\n\n  mean(height)\n1         1.75"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-summarize-1",
+    "href": "units/3-data-types/data2.html#group_by-with-summarize-1",
+    "title": "Data Wrangling II",
+    "section": "group_by() with summarize()",
+    "text": "group_by() with summarize()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    summarize(mean(height))\n\n\n\n# A tibble: 2 × 2\n  homeworld `mean(height)`\n  &lt;chr&gt;              &lt;dbl&gt;\n1 Naboo               1.75\n2 Tatooine            1.75\n\n\n\n\nMakes a summary row for each group."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-filter",
+    "href": "units/3-data-types/data2.html#group_by-with-filter",
+    "title": "Data Wrangling II",
+    "section": "group_by() with filter()",
+    "text": "group_by() with filter()\n\n\nstar_wars |&gt;\n    filter(height == max(height))\n\n\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-filter-1",
+    "href": "units/3-data-types/data2.html#group_by-with-filter-1",
+    "title": "Data Wrangling II",
+    "section": "group_by() with filter()",
+    "text": "group_by() with filter()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    filter(height == max(height))\n\n\n\n# A tibble: 2 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84\n2 JarJar Naboo        1.9     90\n\n\n\n\nChanges the scope of functions inside filter() to operate within groups.\n\n\nCan bring up drop to demonstrate how a condition like height &gt; 1.7 will operate the same with or without the grouping."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-arrange",
+    "href": "units/3-data-types/data2.html#group_by-with-arrange",
+    "title": "Data Wrangling II",
+    "section": "group_by() with arrange()",
+    "text": "group_by() with arrange()\n\n\nstar_wars |&gt;\n    arrange(desc(height))\n\n\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90\n2 Anakin  Tatooine    1.8     84\n3   Luke  Tatooine    1.7     77\n4  Padme     Naboo    1.6     45"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-arrange-1",
+    "href": "units/3-data-types/data2.html#group_by-with-arrange-1",
+    "title": "Data Wrangling II",
+    "section": "group_by() with arrange()",
+    "text": "group_by() with arrange()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    arrange(desc(height))\n\n\n\n# A tibble: 4 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 JarJar Naboo        1.9     90\n2 Anakin Tatooine     1.8     84\n3 Luke   Tatooine     1.7     77\n4 Padme  Naboo        1.6     45\n\n\n\n\nArrange ignores group_by() and is always global\n\nWhy???"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#section-6",
+    "href": "units/3-data-types/data2.html#section-6",
+    "title": "Data Wrangling II",
+    "section": "",
+    "text": "star_wars |&gt;\n    arrange(homeworld, height)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3   Luke  Tatooine    1.7     77\n4 Anakin  Tatooine    1.8     84"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-mutate",
+    "href": "units/3-data-types/data2.html#group_by-with-mutate",
+    "title": "Data Wrangling II",
+    "section": "group_by() with mutate()",
+    "text": "group_by() with mutate()\n\n\nstar_wars |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height))\n\n\n\n    name homeworld height weight   height_z\n1 Anakin  Tatooine    1.8     84  0.3872983\n2  Padme     Naboo    1.6     45 -1.1618950\n3   Luke  Tatooine    1.7     77 -0.3872983\n4 JarJar     Naboo    1.9     90  1.1618950"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#group_by-with-mutate-1",
+    "href": "units/3-data-types/data2.html#group_by-with-mutate-1",
+    "title": "Data Wrangling II",
+    "section": "group_by() with mutate()",
+    "text": "group_by() with mutate()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height))\n\n\n\n# A tibble: 4 × 5\n# Groups:   homeworld [2]\n  name   homeworld height weight height_z\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84    0.707\n2 Padme  Naboo        1.6     45   -0.707\n3 Luke   Tatooine     1.7     77   -0.707\n4 JarJar Naboo        1.9     90    0.707\n\n\n\n\nChanges the scope of functions inside mutate() to operate within groups."
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#statefulness",
+    "href": "units/3-data-types/data2.html#statefulness",
+    "title": "Data Wrangling II",
+    "section": "Statefulness",
+    "text": "Statefulness\nWhat will this produce?\n\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height)) |&gt;\n    summarize(mean(height_z))\n\n\n\n# A tibble: 2 × 2\n  homeworld `mean(height_z)`\n  &lt;chr&gt;                &lt;dbl&gt;\n1 Naboo                    0\n2 Tatooine                 0\n\n\n\n\n\nOnce grouped, a data frame stays grouped until reduced to one-row-per group or it is ungrouped.\n\n\ncan break the pipe after mutate to show it is still grouped"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#statefulness-1",
+    "href": "units/3-data-types/data2.html#statefulness-1",
+    "title": "Data Wrangling II",
+    "section": "Statefulness",
+    "text": "Statefulness\nWhat will this produce?\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height)) |&gt;\n    ungroup() |&gt;\n    summarize(mean(height_z))\n\n\n\n# A tibble: 1 × 1\n  `mean(height_z)`\n             &lt;dbl&gt;\n1                0"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html#shortcut-.by",
+    "href": "units/3-data-types/data2.html#shortcut-.by",
+    "title": "Data Wrangling II",
+    "section": "Shortcut: .by",
+    "text": "Shortcut: .by\nMost dplyr functions have a .by argument to apply the function to the groups of another variable.\n\nNot stateful\nGood for single line operations\n\n\n\nstar_wars |&gt;\n    summarize(mean(height), .by = homeworld)\n\n\n\n  homeworld mean(height)\n1  Tatooine         1.75\n2     Naboo         1.75"
+  },
+  {
+    "objectID": "units/3-data-types/unit03.html",
+    "href": "units/3-data-types/unit03.html",
+    "title": "3) Data Types, Chart Selection",
+    "section": "",
+    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #2 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "3) Data Types, Chart Selection"
+    ]
+  },
+  {
+    "objectID": "units/3-data-types/unit03.html#this-week",
+    "href": "units/3-data-types/unit03.html#this-week",
+    "title": "3) Data Types, Chart Selection",
+    "section": "",
+    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #2 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "3) Data Types, Chart Selection"
+    ]
+  },
+  {
+    "objectID": "units/11-final-project/unit11.html",
+    "href": "units/11-final-project/unit11.html",
+    "title": "11) Final Project",
+    "section": "",
+    "text": "📋 About\nTBD\n\n\n\n📖 Assignment\nReading: No reading assigned!\nHomework: No HW this week. Work on your final project!"
+  },
+  {
+    "objectID": "units/1-intro/unit01.html",
+    "href": "units/1-intro/unit01.html",
+    "title": "1) Surrounded by Graphics",
+    "section": "",
+    "text": "We will have some time to introduce ourselves, familiarize ourselves with each other and the course, and discuss the reading for this week. We will also introduce some basic concepts of data visualization that will be useful for the rest of the course.\n\n\n\nAt the end of this unit you will be able to:\n\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "crumbs": [
+      "Units",
+      "1) Surrounded by Graphics"
+    ]
+  },
+  {
+    "objectID": "units/1-intro/unit01.html#this-week",
+    "href": "units/1-intro/unit01.html#this-week",
+    "title": "1) Surrounded by Graphics",
+    "section": "",
+    "text": "We will have some time to introduce ourselves, familiarize ourselves with each other and the course, and discuss the reading for this week. We will also introduce some basic concepts of data visualization that will be useful for the rest of the course.\n\n\n\nAt the end of this unit you will be able to:\n\nThink about the structure of a hypothetical data table behind a given graphic.\nIdentify the type of variable(s) visually encoded in a graphic (e.g. quantitative, qualitative).\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nReading: The Age That Women Have Babies: How a Gap Divides America by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)\nhttps://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html",
+    "crumbs": [
+      "Units",
+      "1) Surrounded by Graphics"
+    ]
+  },
+  {
+    "objectID": "hwnov19.html",
+    "href": "hwnov19.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Load Data\nQQ Plots for each treatment\n\npar(mfrow=c(1,3))\nqqnorm(isoflurane, main=\"Isoflurane QQ Plot\"); qqline(isoflurane)\nqqnorm(halothane, main=\"Halothane QQ Plot\"); qqline(halothane)\nqqnorm(cyclopropane, main=\"Cyclopropane QQ Plot\"); qqline(cyclopropane)\n\n\n\n\n\n\n\n\nBoxplots\n\nboxplot(concentration ~ treatment, data=df_long,\n        main=\"Boxplots of Epinephrine Levels by Treatment\",\n        ylab=\"Concentration (ng/mL)\")\n\n\n\n\n\n\n\n\nParametic analysis\n\naov_model &lt;- aov(concentration ~ treatment + Error(dog/treatment), data=df_long)\nsummary(aov_model)\n\n\nError: dog\n          Df Sum Sq Mean Sq F value Pr(&gt;F)\nResiduals  9 0.5169 0.05744               \n\nError: dog:treatment\n          Df Sum Sq Mean Sq F value Pr(&gt;F)  \ntreatment  2  1.081  0.5404   4.406 0.0277 *\nResiduals 18  2.208  0.1227                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nfriedman.test(as.matrix(df[,2:4]))\n\n\n    Friedman rank sum test\n\ndata:  as.matrix(df[, 2:4])\nFriedman chi-squared = 1.4, df = 2, p-value = 0.4966\n\n\nANS: that at least one of the anesthetics has a significantly different effect on plasma epinephrine concentration."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Principles of Data Visualization",
+    "section": "",
+    "text": "This is the website for the Spring-2026 DeCal course Principles of Data Visualization at UC Berkeley.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#calendar",
+    "href": "index.html#calendar",
+    "title": "Principles of Data Visualization",
+    "section": "Calendar",
+    "text": "Calendar\nTentative calendar subject to change.\n\n\n\nWeek\nContent\nHW\n\n\n\n\n1\n1) Welcome and Introduction\nnone\n\n\n2\n2) The Grammar of Graphics\nHW 1\n\n\n3\n3) Data Types and Chart Selection\nHW 2\n\n\n4\n4) Color 1\nQuiz 1\n\n\n5\n5) Color 2\nHW 3\n\n\n6\n6) Color 3\nHW 4\n\n\n7\n7) Design Considerations I\nQuiz 2\n\n\n8\n8) Design Considerations II\nHW 5\n\n\n9\n9) Maps I\nHW 6\n\n\n10\n10) Maps II\nQuiz 3\n\n\n11\nFinal Project\nProject",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#demo-slides",
+    "href": "index.html#demo-slides",
+    "title": "Principles of Data Visualization",
+    "section": "Demo Slides",
+    "text": "Demo Slides\n\nQuiz slides",
+    "crumbs": [
+      "Home"
     ]
   },
   {
@@ -623,11 +870,11 @@
     "text": "Jocelyne\n\nSenior Stats Major\nHometown: San Mateo, CA\nFun fact: I did middle and high school in La Paz, Mexico!\nCourse reader for Stat133\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\nEmail me at jocelyneperez@berkeley.edu"
   },
   {
-    "objectID": "units/1-intro/slides.html#monste",
-    "href": "units/1-intro/slides.html#monste",
+    "objectID": "units/1-intro/slides.html#montse-1",
+    "href": "units/1-intro/slides.html#montse-1",
     "title": "Week 1",
-    "section": "Monste",
-    "text": "Monste\nMy Data Viz:    ## Clara My Data Viz:"
+    "section": "Montse",
+    "text": "Montse"
   },
   {
     "objectID": "units/1-intro/slides.html#clara-1",
@@ -644,67 +891,116 @@
     "text": "Jocelyne"
   },
   {
-    "objectID": "units/1-intro/slides.html#we-live-surrounded-by-graphics",
-    "href": "units/1-intro/slides.html#we-live-surrounded-by-graphics",
+    "objectID": "units/1-intro/slides.html#some-of-our-favorite-data-visualizations",
+    "href": "units/1-intro/slides.html#some-of-our-favorite-data-visualizations",
     "title": "Week 1",
-    "section": "We live surrounded by graphics!",
-    "text": "We live surrounded by graphics!\n\nThis has not always been the case\nOur parent’s generation had no immediate access to graphics\nGraphics we can easily get access to:\n\nCredit score (donut chart/timeline)\nNumber of commits to a GH repo (tiles graph)\nGoogle maps timeline (map)\nScore distribution of an exam (histogram)\nETC"
+    "section": "Some of our favorite Data Visualizations",
+    "text": "Some of our favorite Data Visualizations\n\nGun Deaths Viz\n\nWind Map Viz\n\nEn-ROADS Temperature Increase Dashboard\n\nThere is data all around us if you know where to look!"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#surrounded-by-graphics",
+    "href": "units/1-intro/slides.html#surrounded-by-graphics",
+    "title": "Week 1",
+    "section": "Surrounded by graphics",
+    "text": "Surrounded by graphics\n\n\n\nThis has not always been the case\nOur parent’s generation had no immediate access to graphics\nGraphics we can easily get access to:\n\nCredit score (donut chart/timeline)\nNumber of commits to a GH repo (tiles graph)\nScore distribution of an exam (histogram)\nETC"
   },
   {
     "objectID": "units/1-intro/slides.html#activity-introduce-yourself",
     "href": "units/1-intro/slides.html#activity-introduce-yourself",
     "title": "Week 1",
     "section": "Activity: Introduce yourself!",
-    "text": "Activity: Introduce yourself!\nBefore course logistics, we would like to get to know a bit about you. - Grab a “Hello My Name Is” sticker from the front table"
-  },
-  {
-    "objectID": "units/1-intro/slides.html#tell-us",
-    "href": "units/1-intro/slides.html#tell-us",
-    "title": "Week 1",
-    "section": "Tell us:",
-    "text": "Tell us:\n\nYour name\nYour major/area of study\nWhy are you taking this class?\nYour favorite data vizualization (if you have one!) or the last graphic you saw in the last week\nYour favorite color"
+    "text": "Activity: Introduce yourself!\nBefore course logistics, we would like to get to know a bit about you.\n\n\nGrab a “Hello My Name Is” sticker from the front table\n\nTell us:\n\nYour name\nYour major/area of study\nWhy are you taking this class?\nYour favorite data vizualization (if you have one!) or the last graphic you saw in the last week\n\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "units/1-intro/slides.html#activity-two-truths-and-a-lie",
     "href": "units/1-intro/slides.html#activity-two-truths-and-a-lie",
     "title": "Week 1",
     "section": "Activity: Two truths and a lie",
-    "text": "Activity: Two truths and a lie\n\nThink of two truths and one lie about yourself\nShare with a partner and have them guess which one is the lie"
+    "text": "Activity: Two truths and a lie\n\nThink of two truths and one lie about yourself\nShare with a partner and have them guess which one is the lie\n\n\n  \n    −\n    +\n \n 05:00"
   },
   {
-    "objectID": "units/1-intro/slides.html#activity-repeating-names",
-    "href": "units/1-intro/slides.html#activity-repeating-names",
+    "objectID": "units/1-intro/slides.html#what-is-the-typical-dataviz-process",
+    "href": "units/1-intro/slides.html#what-is-the-typical-dataviz-process",
     "title": "Week 1",
-    "section": "Activity: Repeating names",
-    "text": "Activity: Repeating names\n\nTake turns saying your names in order\nEach person must repeat the names of everyone who came before them\nIf you mess up, start over!"
+    "section": "What is the typical DataViz process?",
+    "text": "What is the typical DataViz process?"
   },
   {
-    "objectID": "units/1-intro/slides.html#activity",
-    "href": "units/1-intro/slides.html#activity",
+    "objectID": "units/1-intro/slides.html#define-the-goal",
+    "href": "units/1-intro/slides.html#define-the-goal",
     "title": "Week 1",
-    "section": "Activity",
-    "text": "Activity\n\nGrab a piece of scratch paper and write something unique and interesting about yourself\nThis is private and only for us to get to know you better"
+    "section": "1. Define the goal",
+    "text": "1. Define the goal\nWant to find out:\nWhat factors influence the amount of sleep a Berkeley student gets on weekdays?"
   },
   {
-    "objectID": "units/1-intro/slides.html#activity-gathering-data",
-    "href": "units/1-intro/slides.html#activity-gathering-data",
+    "objectID": "units/1-intro/slides.html#collect-the-data",
+    "href": "units/1-intro/slides.html#collect-the-data",
     "title": "Week 1",
-    "section": "Activity: Gathering data",
-    "text": "Activity: Gathering data\n(to be used in week 3 activity)\n\nTransfer T/F\nFavorite drink (water, tea, coffee, etc)\nMajor\nAverage amount of sleep on weekdays (Number)\nDistance from where you grew up (in approx miles)\nUnits you are taking this semester\nNumber of siblings"
+    "section": "2. Collect the Data",
+    "text": "2. Collect the Data\n\nOn a piece of paper:\n\n\nAverage amount of sleep on weekdays (Number)\n\nTransfer T/F\n\nGrad student T/F\n\nCommute to campus (in minutes)\n\nFavorite drink (water, tea, coffee, etc)\n\nMajor\n\nNumber of enrolled units you are taking\n\n\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
-    "objectID": "units/1-intro/slides.html#how-would-you-portray-this-data",
-    "href": "units/1-intro/slides.html#how-would-you-portray-this-data",
+    "objectID": "units/1-intro/slides.html#data-cleaning",
+    "href": "units/1-intro/slides.html#data-cleaning",
     "title": "Week 1",
-    "section": "How would you portray this data?",
-    "text": "How would you portray this data?\n\nGroup activity (3-4 people) Each group will have to brainstorm on a paper for Graphs that students create/guess based on a primary variable “Hours of Sleep of a Berkeley student (Stereotype)” together with Secondary variables:\nYear: Freshman, Sophomore, Junior, Senior (e.g. Bar chart, Pie)\nEnrolled units: Unit counts (e.g. Scatter plot)\nSex or Gender: Female Vs. Male (e.g. Bar chart, Pie)\nMonths (e.g. Line graph) Combine all variables (e.g. or at least three in one graph)?\n\n\n  \n    −\n    +\n \n 10:00\n `"
+    "section": "3. Data Cleaning",
+    "text": "3. Data Cleaning\nAssume our data is cleaned and ready to go… we will save the actual data cleaning for later units!\n\n\nlibrary(tidyverse)\n\n# toy dataset\nsleep_data &lt;- tibble(\n  student_id = 1:10,\n  sleep_hours = c(6.5, 7, 5.5, 8, 6, 7.5, 6, 5, 8.5, 7),\n  transfer = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),\n  grad_student = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE),\n  commute_min = c(45, 10, 60, 15, 20, 50, 5, 70, 25, 30),\n  favorite_drink = c(\"Coffee\", \"Water\", \"Coffee\", \"Tea\", \"Tea\",\n                     \"Coffee\", \"Water\", \"Coffee\", \"Tea\", \"Water\"),\n  major = c(\"Econ\", \"Stats\", \"CS\", \"Psych\", \"Public Health\",\n            \"Econ\", \"Stats\", \"CS\", \"Bio\", \"Psych\"),\n  units = c(16, 13, 18, 14, 12, 17, 15, 19, 11, 16)\n)"
   },
   {
-    "objectID": "units/1-intro/slides.html#how-would-you-portray-this-data-continued",
-    "href": "units/1-intro/slides.html#how-would-you-portray-this-data-continued",
+    "objectID": "units/1-intro/slides.html#data-cleaning-1",
+    "href": "units/1-intro/slides.html#data-cleaning-1",
     "title": "Week 1",
-    "section": "How would you portray this data? (continued)",
-    "text": "How would you portray this data? (continued)\nOn a poster, make 4 graphs to visualize your thoughts on these categories - Extra challenge: make a creative graph that will show 3 variables of the 4 that we gave them"
+    "section": "3. Data Cleaning",
+    "text": "3. Data Cleaning\nThat code will result in:\n\nsleep_data\n\n\n\n# A tibble: 10 × 8\n   student_id sleep_hours transfer grad_student commute_min favorite_drink major\n        &lt;int&gt;       &lt;dbl&gt; &lt;lgl&gt;    &lt;lgl&gt;              &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;\n 1          1         6.5 TRUE     FALSE                 45 Coffee         Econ \n 2          2         7   FALSE    FALSE                 10 Water          Stats\n 3          3         5.5 TRUE     FALSE                 60 Coffee         CS   \n 4          4         8   FALSE    FALSE                 15 Tea            Psych\n 5          5         6   FALSE    TRUE                  20 Tea            Publ…\n 6          6         7.5 TRUE     FALSE                 50 Coffee         Econ \n 7          7         6   FALSE    FALSE                  5 Water          Stats\n 8          8         5   TRUE     FALSE                 70 Coffee         CS   \n 9          9         8.5 FALSE    TRUE                  25 Tea            Bio  \n10         10         7   FALSE    FALSE                 30 Water          Psych\n# ℹ 1 more variable: units &lt;dbl&gt;"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#select-the-data-visuals",
+    "href": "units/1-intro/slides.html#select-the-data-visuals",
+    "title": "Week 1",
+    "section": "4. Select the data visuals",
+    "text": "4. Select the data visuals\n\nIn a group (3-4 people):\n\nBrainstorm how you could visualize a primary (hours of sleep) vs secondary variables (transfer, drink, major, commute, units)\nChoose a chart type, e.g. Bar chart, Pie chart, Scatter plot, Line graph, etc.\nHow could you combine all variables (or at least three) in one graph?\n\n\n\n  \n    −\n    +\n \n 05:00"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#create-the-data-visuals",
+    "href": "units/1-intro/slides.html#create-the-data-visuals",
+    "title": "Week 1",
+    "section": "5. Create the data visuals",
+    "text": "5. Create the data visuals\n\nOn a poster:\n\n\nMake 4 graphs to visualize your thoughts on these categories\n\nOne should use 3 of the variables in one graph\n\n\n\n  \n    −\n    +\n \n 10:00"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#some-example-graphs",
+    "href": "units/1-intro/slides.html#some-example-graphs",
+    "title": "Week 1",
+    "section": "Some example graphs",
+    "text": "Some example graphs\n\n# graph 1 - sleep vs commute time (scatter plot with regression line)\ngraph1 &lt;- ggplot(sleep_data, aes(x = commute_min, y = sleep_hours)) +\n  geom_point(size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    title = \"Sleep vs Commute Time\",\n    x = \"Commute Time (minutes)\",\n    y = \"Average Weekday Sleep (hours)\"\n  ) +\n  theme_minimal()\n\n# graph 2 - sleep vs favorite drink (bar chart)\ngraph2 &lt;- sleep_data %&gt;%\n  group_by(favorite_drink) %&gt;%\n  summarise(avg_sleep = mean(sleep_hours)) %&gt;%\n  ggplot(aes(x = favorite_drink, y = avg_sleep)) +\n  geom_col() +\n  labs(\n    title = \"Average Sleep by Favorite Drink\",\n    x = \"Favorite Drink\",\n    y = \"Average Sleep (hours)\"\n  ) +\n  theme_minimal()\n\n# graph 3 - sleep vs units (scatter plot colored by transfer status)\ngraph3 &lt;- ggplot(sleep_data, aes(x = units, y = sleep_hours, color = transfer)) +\n  geom_point(size = 3) +\n  labs(\n    title = \"Sleep vs Units by Transfer Status\",\n    x = \"Units Enrolled\",\n    y = \"Average Weekday Sleep (hours)\",\n    color = \"Transfer Student\"\n  ) +\n  theme_minimal()\n\n# graph 4 - sleep vs major (boxplot colored by grad student status)\ngraph4 &lt;- ggplot(sleep_data, aes(x = major, y = sleep_hours, fill = grad_student)) +\n  geom_boxplot() +\n  labs(\n    title = \"Distribution of Sleep Hours by Major\",\n    x = \"Major\",\n    y = \"Average Weekday Sleep (hours)\",\n    fill = \"Grad Student\"\n  ) +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#some-example-graphs-contd",
+    "href": "units/1-intro/slides.html#some-example-graphs-contd",
+    "title": "Week 1",
+    "section": "Some example graphs (cont’d)",
+    "text": "Some example graphs (cont’d)\n\n# Print the graphs\ngraph1"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#some-example-graphs-contd-1",
+    "href": "units/1-intro/slides.html#some-example-graphs-contd-1",
+    "title": "Week 1",
+    "section": "Some example graphs (cont’d)",
+    "text": "Some example graphs (cont’d)\n\n# Print the graphs\ngraph2"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#some-example-graphs-contd-2",
+    "href": "units/1-intro/slides.html#some-example-graphs-contd-2",
+    "title": "Week 1",
+    "section": "Some example graphs (cont’d)",
+    "text": "Some example graphs (cont’d)\n\n# Print the graphs\ngraph3"
+  },
+  {
+    "objectID": "units/1-intro/slides.html#some-example-graphs-contd-3",
+    "href": "units/1-intro/slides.html#some-example-graphs-contd-3",
+    "title": "Week 1",
+    "section": "Some example graphs (cont’d)",
+    "text": "Some example graphs (cont’d)\n\n# Print the graphs\ngraph4"
   },
   {
     "objectID": "units/1-intro/slides.html#install-r-and-rstudio",
@@ -714,220 +1010,393 @@
     "text": "Install R and RStudio\nand subscribe to NYT!"
   },
   {
-    "objectID": "units/1-intro/slides.html#montse-1",
-    "href": "units/1-intro/slides.html#montse-1",
+    "objectID": "units/1-intro/slides.html#attendance",
+    "href": "units/1-intro/slides.html#attendance",
     "title": "Week 1",
-    "section": "Montse",
-    "text": "Montse"
+    "section": "Attendance",
+    "text": "Attendance\nOn a piece of paper, please write your name and answer the following:\n- One thing you are excited to learn in this course\n- One thing you are nervous about in this course\n- If you have any questions, feel free to ask them here\nThank you!"
   },
   {
-    "objectID": "units/1-intro/slides.html#attendance-form-thank-you",
-    "href": "units/1-intro/slides.html#attendance-form-thank-you",
-    "title": "Week 1",
-    "section": "Attendance form + thank you",
-    "text": "Attendance form + thank you\nPlease write your name on the sheet."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#section",
-    "href": "units/2-grammar-graphics/slides.html#section",
-    "title": "Week 2",
+    "objectID": "units/9-maps1/unit09.html",
+    "href": "units/9-maps1/unit09.html",
+    "title": "9) Maps I",
     "section": "",
-    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+    "text": "In this week, we’ll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n\nTBA (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: These Maps Tell the Story of Two Americas: One Parched, One Soaked\nhttps://www.nytimes.com/interactive/2021/08/24/climate/warmer-wetter-world.html\nHomework: Homework #6 is due Monday, 4/13 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "9) Maps I"
+    ]
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-1",
-    "href": "units/2-grammar-graphics/slides.html#section-1",
-    "title": "Week 2",
+    "objectID": "units/9-maps1/unit09.html#this-week",
+    "href": "units/9-maps1/unit09.html#this-week",
+    "title": "9) Maps I",
     "section": "",
-    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+    "text": "In this week, we’ll get a further introduction to color in computing and you will turn in HW6 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nGoal 1.\nGoal 2.\nGoal 3.\n\n\n\n\n\nTBA (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: These Maps Tell the Story of Two Americas: One Parched, One Soaked\nhttps://www.nytimes.com/interactive/2021/08/24/climate/warmer-wetter-world.html\nHomework: Homework #6 is due Monday, 4/13 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "9) Maps I"
+    ]
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
-    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
-    "title": "Week 2",
-    "section": "“The Grammar of Graphics”",
-    "text": "“The Grammar of Graphics”\nFrom a conceptual perspective, making graphics involves mapping data to geometric objects and their visual properties."
+    "objectID": "units/3-data-types/slides.html#code-example",
+    "href": "units/3-data-types/slides.html#code-example",
+    "title": "Week 3",
+    "section": "Code Example",
+    "text": "Code Example\nHere’s an example of code and output using ggplot2 in R."
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
-    "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
-    "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#geometry",
-    "href": "units/2-grammar-graphics/slides.html#geometry",
-    "title": "Week 2",
-    "section": "Geometry",
-    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#named-plots",
-    "href": "units/2-grammar-graphics/slides.html#named-plots",
-    "title": "Week 2",
-    "section": "Named plots",
-    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1",
-    "href": "units/2-grammar-graphics/slides.html#redux-1",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1-1",
-    "href": "units/2-grammar-graphics/slides.html#redux-1-1",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#section-2",
-    "href": "units/2-grammar-graphics/slides.html#section-2",
-    "title": "Week 2",
-    "section": "",
-    "text": "Key idea:\nThese plots use the same data, but different grammars.\nThey share:\n\nthe same dataset (penguins)\na single mapped variable\n\nThey differ by:\n\ngeometry (histogram, density, boxplot)\nstatistical transformation"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#ggplot2-1",
-    "href": "units/2-grammar-graphics/slides.html#ggplot2-1",
-    "title": "Week 2",
-    "section": "ggplot2()",
-    "text": "ggplot2()\n\nA plot can be decomposed into three primary elements:\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#two-columns",
-    "href": "units/2-grammar-graphics/slides.html#two-columns",
-    "title": "Week 2",
+    "objectID": "units/3-data-types/slides.html#two-columns",
+    "href": "units/3-data-types/slides.html#two-columns",
+    "title": "Week 3",
     "section": "Two Columns",
     "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-3",
-    "href": "units/2-grammar-graphics/slides.html#section-3",
-    "title": "Week 2",
+    "objectID": "units/3-data-types/data1.html#section",
+    "href": "units/3-data-types/data1.html#section",
+    "title": "Data Wrangling I",
     "section": "",
-    "text": "Formalized by Leland Wilkinson (1999)\n\n\n\nA formal set of rules to create any type of graphics\nUnderlies most modern data visualization software.\nImplemented as an R package (‘ggplot2’)"
+    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n\n  \n    −\n    +\n \n 02:30"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#sketching-activity",
-    "href": "units/2-grammar-graphics/slides.html#sketching-activity",
-    "title": "Week 2",
-    "section": "Sketching Activity",
-    "text": "Sketching Activity"
+    "objectID": "units/3-data-types/data1.html#whats-going-on-here",
+    "href": "units/3-data-types/data1.html#whats-going-on-here",
+    "title": "Data Wrangling I",
+    "section": "What’s going on here?",
+    "text": "What’s going on here?\n\nstar_wars[star_wars$height &lt; 1.75, ]\n\n\n\n   name homeworld height weight\n2 Padme     Naboo    1.6     45\n3  Luke  Tatooine    1.7     77\n\n\n\n\nstar_wars$height\n\n\n\n[1] 1.8 1.6 1.7 1.9\n\n\n\n\n\nstar_wars$height &lt; 1.75\n\n\n\n[1] FALSE  TRUE  TRUE FALSE"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
-    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
-    "title": "Week 2",
-    "section": "Meet the Palmer Penguins ",
-    "text": "Meet the Palmer Penguins \n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+    "objectID": "units/3-data-types/data1.html#comparison-operators",
+    "href": "units/3-data-types/data1.html#comparison-operators",
+    "title": "Data Wrangling I",
+    "section": "Comparison operators",
+    "text": "Comparison operators\nYou can form a logical vector through a logical comparison:\n\n\n\n&lt;\n&gt;\n&lt;=\n&gt;=\n\n\n==\n!=\n%in%"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-7",
-    "href": "units/2-grammar-graphics/slides.html#section-7",
-    "title": "Week 2",
+    "objectID": "units/3-data-types/data1.html#examples",
+    "href": "units/3-data-types/data1.html#examples",
+    "title": "Data Wrangling I",
+    "section": "Examples",
+    "text": "Examples\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") == \"apple\"\n\n\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n\n\n\"apple\" == c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n\n\n\n\"apple\" %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n\n\n[1] TRUE\n\n\n\n\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% \"apple\"\n\n\n\n[1]  TRUE FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#examples-1",
+    "href": "units/3-data-types/data1.html#examples-1",
+    "title": "Data Wrangling I",
+    "section": "Examples",
+    "text": "Examples\n\nc(\"apple\", \"kiwi\") %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n\n\n[1] TRUE TRUE\n\n\n\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% c(\"apple\", \"kiwi\")\n\n\n\n[1]  TRUE FALSE  TRUE  TRUE"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#lets-make-this-better",
+    "href": "units/3-data-types/data1.html#lets-make-this-better",
+    "title": "Data Wrangling I",
+    "section": "Let’s make this better",
+    "text": "Let’s make this better\n\n\nstar_wars[star_wars$height &lt; 1.75, ]\n\n\n\n\n\n\n\n\nstar_wars$height_in &lt;- star_wars$height * 39.3701\n\n\n\n\n\n\n\n\n\nmean(star_wars$height[star_wars$homeworld == \"Tatooine\"])"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#section-1",
+    "href": "units/3-data-types/data1.html#section-1",
+    "title": "Data Wrangling I",
     "section": "",
-    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+    "text": "Four Principles:\n\nReuse existing data structures.\n\nThe Data Frame\n\nCompose simple functions with the pipe.\n\n|&gt;\n\nEmbrace functional programming.\n\nClear separate of data structure and functions.\n\nDesign for humans.\n\nIt should be readable!"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-8",
-    "href": "units/2-grammar-graphics/slides.html#section-8",
-    "title": "Week 2",
+    "objectID": "units/3-data-types/data1.html#dplyr-verbs",
+    "href": "units/3-data-types/data1.html#dplyr-verbs",
+    "title": "Data Wrangling I",
+    "section": "dplyr verbs",
+    "text": "dplyr verbs\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#section-4",
+    "href": "units/3-data-types/data1.html#section-4",
+    "title": "Data Wrangling I",
     "section": "",
-    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+    "text": "Load the package.\n\nlibrary(dplyr)\n\n\n\n\n\nOur example data set.\n\nstar_wars\n\n\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
-    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
-    "title": "Week 2",
-    "section": "“The Grammar of Graphics”",
-    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describes all statistical graphics.\nUnderlies most modern data visualization software."
+    "objectID": "units/3-data-types/data1.html#slice",
+    "href": "units/3-data-types/data1.html#slice",
+    "title": "Data Wrangling I",
+    "section": "slice()",
+    "text": "slice()\n\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, 2)\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
-    "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables"
+    "objectID": "units/3-data-types/data1.html#slice-1",
+    "href": "units/3-data-types/data1.html#slice-1",
+    "title": "Data Wrangling I",
+    "section": "slice()",
+    "text": "slice()\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, 2:4)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2   Luke  Tatooine    1.7     77\n3 JarJar     Naboo    1.9     90"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
-    "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables"
+    "objectID": "units/3-data-types/data1.html#slice-2",
+    "href": "units/3-data-types/data1.html#slice-2",
+    "title": "Data Wrangling I",
+    "section": "slice()",
+    "text": "slice()\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, -3)\n\n\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3 JarJar     Naboo    1.9     90"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#geometry-1",
-    "href": "units/2-grammar-graphics/slides.html#geometry-1",
-    "title": "Week 2",
-    "section": "Geometry",
-    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
+    "objectID": "units/3-data-types/data1.html#select",
+    "href": "units/3-data-types/data1.html#select",
+    "title": "Data Wrangling I",
+    "section": "select()",
+    "text": "select()\n\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\n\nselect(star_wars, homeworld)\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#named-plots-1",
-    "href": "units/2-grammar-graphics/slides.html#named-plots-1",
-    "title": "Week 2",
-    "section": "Named plots",
-    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
+    "objectID": "units/3-data-types/data1.html#select-1",
+    "href": "units/3-data-types/data1.html#select-1",
+    "title": "Data Wrangling I",
+    "section": "select()",
+    "text": "select()\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nselect(star_wars, 2)\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1-2",
-    "href": "units/2-grammar-graphics/slides.html#redux-1-2",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
+    "objectID": "units/3-data-types/data1.html#select-2",
+    "href": "units/3-data-types/data1.html#select-2",
+    "title": "Data Wrangling I",
+    "section": "select()",
+    "text": "select()\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nselect(star_wars, homeworld, name)\n\n\n\n  homeworld   name\n1  Tatooine Anakin\n2     Naboo  Padme\n3  Tatooine   Luke\n4     Naboo JarJar"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1-3",
-    "href": "units/2-grammar-graphics/slides.html#redux-1-3",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
+    "objectID": "units/3-data-types/data1.html#filter",
+    "href": "units/3-data-types/data1.html#filter",
+    "title": "Data Wrangling I",
+    "section": "filter()",
+    "text": "filter()\n\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, homeworld == \"Naboo\")\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-9",
-    "href": "units/2-grammar-graphics/slides.html#section-9",
-    "title": "Week 2",
+    "objectID": "units/3-data-types/data1.html#filter-1",
+    "href": "units/3-data-types/data1.html#filter-1",
+    "title": "Data Wrangling I",
+    "section": "filter()",
+    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, weight &lt; 50)\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#filter-2",
+    "href": "units/3-data-types/data1.html#filter-2",
+    "title": "Data Wrangling I",
+    "section": "filter()",
+    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, name %in% c(\"Padme\", \"Luke\"))\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45\n2  Luke  Tatooine    1.7     77"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#filter-3",
+    "href": "units/3-data-types/data1.html#filter-3",
+    "title": "Data Wrangling I",
+    "section": "filter()",
+    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars,\n       name %in% c(\"Padme\", \"Luke\"),\n       weight &lt; 50)\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45\n\n\n\n\n\nYou can add multiple conditions separated by ,"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#mutate",
+    "href": "units/3-data-types/data1.html#mutate",
+    "title": "Data Wrangling I",
+    "section": "mutate()",
+    "text": "mutate()\n\nAdds a new variable that can be a function of previous variables.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\n\nmutate(star_wars, weight_g = weight * 1000)\n\n\n\n    name homeworld height weight weight_g\n1 Anakin  Tatooine    1.8     84    84000\n2  Padme     Naboo    1.6     45    45000\n3   Luke  Tatooine    1.7     77    77000\n4 JarJar     Naboo    1.9     90    90000"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#arrange",
+    "href": "units/3-data-types/data1.html#arrange",
+    "title": "Data Wrangling I",
+    "section": "arrange()",
+    "text": "arrange()\n\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, height)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2   Luke  Tatooine    1.7     77\n3 Anakin  Tatooine    1.8     84\n4 JarJar     Naboo    1.9     90"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#arrange-1",
+    "href": "units/3-data-types/data1.html#arrange-1",
+    "title": "Data Wrangling I",
+    "section": "arrange()",
+    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, desc(height))\n\n\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90\n2 Anakin  Tatooine    1.8     84\n3   Luke  Tatooine    1.7     77\n4  Padme     Naboo    1.6     45"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#arrange-2",
+    "href": "units/3-data-types/data1.html#arrange-2",
+    "title": "Data Wrangling I",
+    "section": "arrange()",
+    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, homeworld)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3 Anakin  Tatooine    1.8     84\n4   Luke  Tatooine    1.7     77"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#arrange-3",
+    "href": "units/3-data-types/data1.html#arrange-3",
+    "title": "Data Wrangling I",
+    "section": "arrange()",
+    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, homeworld, height)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3   Luke  Tatooine    1.7     77\n4 Anakin  Tatooine    1.8     84"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#summarize",
+    "href": "units/3-data-types/data1.html#summarize",
+    "title": "Data Wrangling I",
+    "section": "summarize()",
+    "text": "summarize()\n\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\n\nsummarize(star_wars,\n          mean(height))\n\n\n\n  mean(height)\n1         1.75"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#summarize-1",
+    "href": "units/3-data-types/data1.html#summarize-1",
+    "title": "Data Wrangling I",
+    "section": "summarize()",
+    "text": "summarize()\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nsummarize(star_wars,\n          avg_height = mean(height))\n\n\n\n  avg_height\n1       1.75"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#summarize-2",
+    "href": "units/3-data-types/data1.html#summarize-2",
+    "title": "Data Wrangling I",
+    "section": "summarize()",
+    "text": "summarize()\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nsummarize(star_wars,\n          avg_height = mean(height),\n          sd_height  = sd(height))\n\n\n\n  avg_height sd_height\n1       1.75 0.1290994\n\n\n\n\nCan calculate multiple statistics separated by ,"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html#section-5",
+    "href": "units/3-data-types/data1.html#section-5",
+    "title": "Data Wrangling I",
     "section": "",
-    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing dplyr, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
-    "href": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
-    "title": "Week 2",
-    "section": "Why do we need Grammar of Graphics (GG)?",
-    "text": "Why do we need Grammar of Graphics (GG)?\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable -\nmodular"
+    "objectID": "units/3-data-types/data1.html#select-3",
+    "href": "units/3-data-types/data1.html#select-3",
+    "title": "Data Wrangling I",
+    "section": "select()",
+    "text": "select()\nSelects variables by name or number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nselect(star_wars, name:height)\n\n\n\n    name homeworld height\n1 Anakin  Tatooine    1.8\n2  Padme     Naboo    1.6\n3   Luke  Tatooine    1.7\n4 JarJar     Naboo    1.9"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#key-concepts",
-    "href": "units/2-grammar-graphics/slides.html#key-concepts",
-    "title": "Week 2",
-    "section": "Key Concepts",
-    "text": "Key Concepts\n\nData: the data set being visualized (next week!)\nAesthetics (aes): how variables map to visual properties (x, y, color, size, etc)\nGeometric objects (geoms): what kind of mark to draw (points, bars, lines)\nStats: statistical transformations (e.g. binning for histograms, smoothing lines)\nScales: how data values are translated into visual values (e.g. color gradients)\nFacets: creating small multiples by splitting data into panels.\nThemes: controlling non-data elements (fonts, backgrounds, gridlines)"
+    "objectID": "units/3-data-types/data1.html#select-4",
+    "href": "units/3-data-types/data1.html#select-4",
+    "title": "Data Wrangling I",
+    "section": "select()",
+    "text": "select()\nSelects variables by name or number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nselect(star_wars, contains(\"world\"))\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-4",
-    "href": "units/2-grammar-graphics/slides.html#section-4",
-    "title": "Week 2",
+    "objectID": "units/3-data-types/data1.html#practice-data-frame",
+    "href": "units/3-data-types/data1.html#practice-data-frame",
+    "title": "Data Wrangling I",
+    "section": "Practice Data Frame",
+    "text": "Practice Data Frame\n\nlibrary(tibble)\n\nday_at_cal &lt;- tibble(\n  weekday    = factor(c(\"Mon\",\"Mon\",\"Tue\",\"Tue\",\"Wed\",\"Wed\"),\n                      levels = c(\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\"), ordered = TRUE),\n  study_spot = factor(c(\"Moffitt\",\"Doe\",\"Cory\",\"MLK\",\"CITRIS\",\"Soda\")),\n  ai_hours   = c(1.2, 0.4, 2.1, 1.0, 0.8, 1.6),\n  steps_k    = c(8.5, 6.2, 9.1, 7.0, 5.8, 10.3))"
+  },
+  {
+    "objectID": "units/4-trichromatic/unit04.html",
+    "href": "units/4-trichromatic/unit04.html",
+    "title": "4) Color I",
     "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
+    "crumbs": [
+      "Units",
+      "4) Color I"
+    ]
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-10",
-    "href": "units/2-grammar-graphics/slides.html#section-10",
-    "title": "Week 2",
+    "objectID": "units/4-trichromatic/unit04.html#this-week",
+    "href": "units/4-trichromatic/unit04.html#this-week",
+    "title": "4) Color I",
     "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
+    "crumbs": [
+      "Units",
+      "4) Color I"
+    ]
+  },
+  {
+    "objectID": "units/5-opponent/unit05.html",
+    "href": "units/5-opponent/unit05.html",
+    "title": "5) Color II",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: Age of US Presidents (Pew Research Center)\nhttps://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/\nHomework: Homework #3 is due Monday, 3/16 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "5) Color II"
+    ]
+  },
+  {
+    "objectID": "units/5-opponent/unit05.html#this-week",
+    "href": "units/5-opponent/unit05.html#this-week",
+    "title": "5) Color II",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).\nLast time we learned about the Trichromatic theory for color vision, and the associated RGB color model and its cubic geometric representation. While the RGB model has very interesting mathematical properties, it does not provide a natural/intuitive way to think about color.\nIn this unit, we discuss another theory for color vision: the so-called Color-Opponent theory. This alternative framework was originally proposed by Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments and the linguistic observation of certain color names.\nThe opponent-color theory suggests that the way we perceive color is controlled by 3 opposing systems (or channels) in our vision:\n\nRed-Green\nBlue-Yellow\nBlack-White\n\nInterestingly, the color models associated with the opponent-color theory have a cylindrical geometry instead of the cubic space of RGB.\nMore important, the main practical tools that emanate from this color theory are 1) the famous color wheel, and 2) the color-picker devices.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Color-Opponent theory of color vision.\nDescribe what color models are typically used in color-picker tools.\nExplain the color wheel.\nName at least three different color schemes derived from the color wheel, and what characterizes them.\n\n\n\n\n\nOpponent-Color Theory (google slides)\nCylindric Color Modelx (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: Age of US Presidents (Pew Research Center)\nhttps://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/\nHomework: Homework #3 is due Monday, 3/16 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "5) Color II"
+    ]
+  },
+  {
+    "objectID": "units/6-using-color/unit06.html",
+    "href": "units/6-using-color/unit06.html",
+    "title": "6) Color 3",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the use of color in data viz, and you will turn in HW4 (Friday 11:59pm).\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: Data About Covid Vaccine Supply and Demand\nhttps://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html\nHomework: Homework #4 is due Monday, 3/23 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "6) Color 3"
+    ]
+  },
+  {
+    "objectID": "units/6-using-color/unit06.html#this-week",
+    "href": "units/6-using-color/unit06.html#this-week",
+    "title": "6) Color 3",
+    "section": "",
+    "text": "In this week, we’ll continue talking about color, specifically about the use of color in data viz, and you will turn in HW4 (Friday 11:59pm).\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics.\nRecall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties. One important property is color. Consequently we need to spend time talking about encoding data with color. Depending on the type of variables we are wroking with, and their associated measurement scales, colors can be used to encode such values. Therefore, we need to discuss which kinds of colors are more appropriate for encoding which types of variables.\n\n\n\nAt the end of this unit you will be able to:\n\nUnderstand the default behavior of ggplot when a variable is mapped to a color attribute.\nIndicate what color scale ggplot uses when you map a logical variable.\nIndicate what color scale ggplot uses when you map an integer variable.\nIndicate what color scale ggplot uses when you map a factor variable.\nIndicate what color scale ggplot uses when you map a double variable.\n\n\n\n\n\nColor Pickers, Color Wheel, and Color Schemes (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: Data About Covid Vaccine Supply and Demand\nhttps://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html\nHomework: Homework #4 is due Monday, 3/23 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "6) Color 3"
+    ]
+  },
+  {
+    "objectID": "units/7-design1/unit07.html",
+    "href": "units/7-design1/unit07.html",
+    "title": "7) Design Considerations I",
+    "section": "",
+    "text": "In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n\nData-Ink Ratio (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: How unusual has this hurricane season been? (BBC)\nhttps://www.bbc.com/news/articles/cden551l7kko\nHomework: Homework #5 is due Monday, 3/30 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "7) Design Considerations I"
+    ]
+  },
+  {
+    "objectID": "units/7-design1/unit07.html#this-week",
+    "href": "units/7-design1/unit07.html#this-week",
+    "title": "7) Design Considerations I",
+    "section": "",
+    "text": "In this week, we’ll talk about good data viz practices and you will take a quiz during lecture.\nWhat things should you pay attention when looking at a graphic?\nHow can you make a graphic less distracting from the data being represented?\nIn this unit we talk about the so-called Data-Ink ratio (proposed by Edward Tufte) which is the proportion of ink (or pixels) that is used to present actual data compared to the total amount of ink (or pixels) used in the entire display.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the concept of Data-to-Ink ratio\nBe able to suggest modifications for increasing the data-ink ratio in a graphic\n\n\n\n\n\nData-Ink Ratio (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: How unusual has this hurricane season been? (BBC)\nhttps://www.bbc.com/news/articles/cden551l7kko\nHomework: Homework #5 is due Monday, 3/30 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "7) Design Considerations I"
+    ]
+  },
+  {
+    "objectID": "units/2-grammar-graphics/unit02.html",
+    "href": "units/2-grammar-graphics/unit02.html",
+    "title": "2) Grammar of Graphics I",
+    "section": "",
+    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 2/23 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "2) Grammar of Graphics I"
+    ]
+  },
+  {
+    "objectID": "units/2-grammar-graphics/unit02.html#this-week",
+    "href": "units/2-grammar-graphics/unit02.html#this-week",
+    "title": "2) Grammar of Graphics I",
+    "section": "",
+    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 2/23 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "crumbs": [
+      "Units",
+      "2) Grammar of Graphics I"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is the website for the Spring-2026 DeCal course Concepts of Data Visualization in R.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#motivation",
+    "href": "about.html#motivation",
+    "title": "About",
+    "section": "Motivation",
+    "text": "Motivation\nData visualization is an ever-present element for anyone who works with data, whether in business, science, education, politics, or any other field.\nAs data visualization expert Donna Wong says:\n\n“The ability to create effective charts and graphs has become almost as indispensable as good writing.”\n\nThe good news is that, nowadays, making graphics, plots, diagrams, charts, etc has become incredibly easy. However, data visualization is not just about knowing how to use tools or software to produce a graphic. Quoting Donna Wong again:\n\n“With computer technology, anyone can create graphics, but few of us know how to do it well.”\n\nData visualization is also about having a critical mindset, and acquiring the training not just to produce effective graphics, but also to learn how to assess a visual display of data.\nTo us, data visualization entails both the production as well as the consumption of graphics. Those of us who deal with data, sooner or later have to produce charts and graphs, and we have to be prepared to do this task effectively. Likewise, some of us will have to create graphics on a constant basis, some periodically, and some very rarely. However, all of us will be consuming visual displays of data. Therefore, we also need to be able to critically assess a graphic, and also know how to do it well.\nIn summary, our aim is to provide students the fundamental principles to:\n\nProduce effective graphics, and\nAssess the effectiveness of a visual display of data.",
+    "crumbs": [
+      "About"
+    ]
   }
 ]

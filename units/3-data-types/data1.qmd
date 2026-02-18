@@ -1,0 +1,653 @@
+---
+title: Data Wrangling I
+subtitle: "Manipulating data frames with `dplyr`"
+format: stat198slides-revealjs
+---
+
+# Room for Improvement in Base R
+
+##
+
+```{r}
+#| output-location: default
+star_wars <- data.frame(
+    name = c("Anakin", "Padme", "Luke", "JarJar"),
+    homeworld = c("Tatooine", "Naboo", "Tatooine", "Naboo"),
+    height = c(1.8, 1.6, 1.7, 1.9),
+    weight = c(84, 45, 77, 90)
+)
+```
+
+Using base R data frame subsetting, create from `star_wars`...
+
+1. The vector of heights.
+1. A data frame that contains only the characters shorter than 1.75.
+1. A data frame that contains the four original cols plus the one with the height in inches.
+1. The average height of characters from Tatooine
+
+{{< countdown "2:30" >}}
+
+## What's going on here?
+
+```{r}
+star_wars[star_wars$height < 1.75, ]
+```
+
+. . .
+
+
+```{r}
+star_wars$height
+```
+
+. . .
+
+```{r}
+star_wars$height < 1.75
+```
+
+## Comparison operators
+
+You can form a logical vector through a logical comparison:
+
+:::{.notes}
+:::{.columns}
+
+:::{.column width=50%}
+`<`\
+`>`\
+`<=`\
+`>=`\
+:::
+
+:::{.column width=50%}
+`==`\
+`!=`\
+`%in%`\
+:::
+
+:::
+
+:::
+
+## Examples
+
+```{r}
+c("apple", "orange", "apple", "kiwi") == "apple"
+```
+
+. . .
+
+```{r}
+"apple" == c("apple", "orange", "apple", "kiwi")
+```
+
+. . .
+```{r}
+"apple" %in% c("apple", "orange", "apple", "kiwi")
+```
+
+. . .
+
+```{r}
+c("apple", "orange", "apple", "kiwi") %in% "apple"
+```
+
+## Examples
+
+```{r}
+c("apple", "kiwi") %in% c("apple", "orange", "apple", "kiwi")
+```
+
+. . .
+
+```{r}
+c("apple", "orange", "apple", "kiwi") %in% c("apple", "kiwi")
+```
+
+
+## Let's make this better
+
+:::{style="font-size:1.3em"}
+```{r}
+#| eval: false
+#| output-location: default
+
+star_wars[star_wars$height < 1.75, ]
+```
+:::
+
+. . .
+
+\
+\
+
+
+:::{style="font-size:1.3em"}
+```{r}
+#| eval: false
+#| output-location: default
+
+star_wars$height_in <- star_wars$height * 39.3701
+```
+:::
+
+. . .
+
+\
+\
+
+:::{style="font-size:1.3em"}
+```{r}
+#| eval: false
+#| output-location: default
+
+mean(star_wars$height[star_wars$homeworld == "Tatooine"])
+```
+:::
+
+
+##
+
+:::{.columns}
+
+:::{.column width=50%}
+![](images/tidy-manifesto.png)
+:::
+
+:::{.column width=50%}
+Four Principles:
+
+1. Reuse existing data structures.
+   - The Data Frame
+1. Compose simple functions with the pipe.
+   - `|>`
+1. Embrace functional programming.
+   - Clear separate of data structure and functions.
+1. Design for humans.
+   - It should be readable!
+
+:::
+
+:::
+
+
+## {auto-animate=true}
+
+![](images/tidyverse-hex.svg){fig-align=center}
+
+
+## {auto-animate=true}
+
+:::{.columns}
+
+:::{.column width=50%}
+![](images/tidyverse-hex.svg)
+:::
+
+:::{.column width=50%}
+![](images/dplyr-hex.svg)
+:::
+:::
+
+# dplyr
+
+## dplyr verbs
+
+:::{.columns}
+:::{.column width="50%"}
+- `slice()`
+- `select()`
+- `filter()`
+- `mutate()`
+- `arrange()`
+- `summarize()`
+- `group_by()`
+:::
+:::{.column .fragment width="50%"}
+1. All of these have a data frame as the first argument.
+1. All of these produce a data frame as output.
+1. Within the function, you can simply refer to column names unquoted.
+:::
+
+:::
+
+
+## 
+
+Load the package.
+
+```{r}
+library(dplyr)
+```
+
+. . .
+
+Our example data set.
+
+```{r}
+star_wars
+```
+
+
+## `slice()` {auto-animate=true}
+
+. . .
+
+Isolates particular rows of a data frame by row number.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column .fragment width=50%}
+```{r}
+slice(star_wars, 2)
+```
+:::
+:::
+
+## `slice()` {auto-animate=true}
+
+Isolates particular rows of a data frame by row number.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+slice(star_wars, 2:4)
+```
+:::
+:::
+
+
+## `slice()` {auto-animate=true}
+
+Isolates particular rows of a data frame by row number.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+slice(star_wars, -3)
+```
+:::
+:::
+
+
+## `select()` {auto-animate=true}
+
+. . .
+
+Selects variables by name or number.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+. . .
+
+```{r}
+select(star_wars, homeworld)
+```
+
+
+## `select()` {auto-animate=true}
+
+Selects variables by name or number.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+```{r}
+select(star_wars, 2)
+```
+
+
+## `select()` {auto-animate=true}
+
+Selects variables by name or number.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+```{r}
+select(star_wars, homeworld, name)
+```
+
+
+## `filter()` {auto-animate=true}
+
+. . .
+
+Returns rows that meet certain criteria.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column .fragment width=50%}
+```{r}
+filter(star_wars, homeworld == "Naboo")
+```
+:::
+:::
+
+## `filter()` {auto-animate=true}
+
+Returns rows that meet certain criteria.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+filter(star_wars, weight < 50)
+```
+:::
+:::
+
+## `filter()` {auto-animate=true}
+
+Returns rows that meet certain criteria.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+filter(star_wars, name %in% c("Padme", "Luke"))
+```
+:::
+:::
+
+## `filter()` {auto-animate=true}
+
+Returns rows that meet certain criteria.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+filter(star_wars,
+       name %in% c("Padme", "Luke"),
+       weight < 50)
+```
+:::
+:::
+
+. . .
+
+> You can add multiple conditions separated by `,`
+
+## `mutate()` {auto-animate=true}
+
+. . .
+
+Adds a new variable that can be a function of previous variables.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+. . .
+
+```{r}
+mutate(star_wars, weight_g = weight * 1000)
+```
+
+
+
+## `arrange()` {auto-animate=true}
+
+. . .
+
+Sort the rows of a data frame by the values of variables.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column .fragment width=50%}
+```{r}
+arrange(star_wars, height)
+```
+:::
+:::
+
+## `arrange()` {auto-animate=true}
+
+Sort the rows of a data frame by the values of variables.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+arrange(star_wars, desc(height))
+```
+:::
+:::
+
+## `arrange()` {auto-animate=true}
+
+Sort the rows of a data frame by the values of variables.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+arrange(star_wars, homeworld)
+```
+:::
+:::
+
+## `arrange()` {auto-animate=true}
+
+Sort the rows of a data frame by the values of variables.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column width=50%}
+```{r}
+arrange(star_wars, homeworld, height)
+```
+:::
+:::
+
+
+## `summarize()` {auto-animate=true}
+
+. . .
+
+Summarize a variable with a statistic.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+. . .
+
+```{r}
+summarize(star_wars,
+          mean(height))
+```
+
+
+## `summarize()` {auto-animate=true}
+
+Summarize a variable with a statistic.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+```{r}
+summarize(star_wars,
+          avg_height = mean(height))
+```
+
+
+## `summarize()` {auto-animate=true}
+
+Summarize a variable with a statistic.
+
+```{r}
+#| output-location: default
+star_wars
+```
+
+```{r}
+summarize(star_wars,
+          avg_height = mean(height),
+          sd_height  = sd(height))
+```
+
+. . .
+
+> Can calculate multiple statistics separated by `,`
+
+##
+
+```{r}
+#| output-location: default
+star_wars <- data.frame(
+    name = c("Anakin", "Padme", "Luke", "JarJar"),
+    homeworld = c("Tatooine", "Naboo", "Tatooine", "Naboo"),
+    height = c(1.8, 1.6, 1.7, 1.9),
+    weight = c(84, 45, 77, 90)
+)
+```
+
+Using **`dplyr`**, create from `star_wars`...
+
+1. The vector of heights.
+1. A data frame that contains only the characters shorter than 1.75.
+1. A data frame that contains the four original cols plus the one with the height in inches.
+1. The average height of characters from Tatooine
+
+{{< countdown "3:00" >}}
+
+
+# Data Wrangling Made Even Easier
+
+## `select()` {auto-animate=true}
+
+Selects variables by name or number.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column .fragment width=50%}
+```{r}
+select(star_wars, name:height)
+```
+:::
+:::
+
+## `select()` {auto-animate=true}
+
+Selects variables by name or number.
+
+:::{.columns}
+:::{.column width=50%}
+```{r}
+#| output-location: default
+star_wars
+```
+:::
+
+:::{.column .fragment width=50%}
+```{r}
+select(star_wars, contains("world"))
+```
+:::
+:::
+
+![](images/selection-helpers.png){.fragment .fade-in .absolute left=150 top=500}
+
+
+## Practice Data Frame
+
+```{r}
+#| output-location: default
+
+library(tibble)
+
+day_at_cal <- tibble(
+  weekday    = factor(c("Mon","Mon","Tue","Tue","Wed","Wed"),
+                      levels = c("Mon","Tue","Wed","Thu","Fri"), ordered = TRUE),
+  study_spot = factor(c("Moffitt","Doe","Cory","MLK","CITRIS","Soda")),
+  ai_hours   = c(1.2, 0.4, 2.1, 1.0, 0.8, 1.6),
+  steps_k    = c(8.5, 6.2, 9.1, 7.0, 5.8, 10.3))
+```
