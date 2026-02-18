@@ -197,7 +197,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Week 2</h1>
   <p class="subtitle">Introduction to the Grammar of Graphics</p>
 
@@ -226,8 +226,7 @@
 </div></div>
 <ol type="1">
 <li class="fragment">What is something you like about the way this data is portrayed?</li>
-<li class="fragment">What is something you would change in these visualizations?</li>
-<li class="fragment">What data does the percentages on the vertical axis represent?</li>
+<li class="fragment"></li>
 </ol>
 </section>
 
@@ -264,7 +263,7 @@
 <p><strong>Question</strong>: In terms of the way they are constructed…</p>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><p>What do these plots have in common? How do they differ?</p>
-<div id="timer_a079df673b2dcdea356c6d55ad4626267450982d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -276,7 +275,7 @@
 <h2></h2>
 <p><strong>Question</strong>: What do these plots have in common? How do they differ?</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div id="timer_a079df673b2dcdea356c6d55ad4626267450982d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -306,55 +305,25 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 </section>
 <section id="the-grammar-of-graphics-1" class="slide level2">
 <h2>“The Grammar of Graphics”</h2>
-<p>From a conceptual perspective, making graphics involves <strong>mapping data</strong> to <em>geometric objects</em> and their <em>visual properties</em>.</p>
-</section>
-<section id="why-do-we-need-grammar-of-graphics-gg" class="slide level2">
-<h2>Why do we need Grammar of Graphics (GG)?</h2>
-<p>We believe that the GG is a good starting point that gives us a <strong>framework</strong> (mental map) and a <strong>vocabulary</strong> to create graphics.</p>
-<p>This grammar allows creation of graphics to be:</p>
-<ul>
-<li class="fragment"><p>consistent</p></li>
-<li class="fragment"><p>reusable -</p></li>
-<li class="fragment"><p>modular</p></li>
-</ul>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p>Formalized by Leland Wilkinson (1999)</p>
+<p>Leland Wilkinson (1999)</p>
 <div class="columns">
 <div class="column">
 <ul>
-<li class="fragment">A formal set of rules to create any type of graphics</li>
+<li class="fragment">A grammar to describe all statistical graphics.</li>
 <li class="fragment">Underlies most modern data visualization software.</li>
-<li class="fragment">Implemented as an R package (‘ggplot2’)</li>
 </ul>
 </div><div class="column fragment">
 <p><img data-src="images/Grammar_of_graphics.png"></p>
 </div></div>
-</section></section>
-<section>
-<section id="key-concepts" class="title-slide slide level1 center">
-<h1>Key Concepts</h1>
-<div class="fragment">
-<ul>
-<li class="fragment"><strong>Data</strong>: the data set being visualized (next week!)</li>
-<li class="fragment"><strong>Aesthetics (aes)</strong>: how variables map to visual properties (x, y, color, size, etc)</li>
-<li class="fragment"><strong>Geometric objects (geoms)</strong>: what kind of mark to draw (points, bars, lines)</li>
-<li class="fragment"><strong>Stats</strong>: statistical transformations (e.g.&nbsp;binning for histograms, smoothing lines)</li>
-<li class="fragment"><strong>Scales</strong>: how data values are translated into visual values (e.g.&nbsp;color gradients)</li>
-<li class="fragment"><strong>Facets</strong>: creating small multiples by splitting data into panels.</li>
-<li class="fragment"><strong>Themes</strong>: controlling non-data elements (fonts, backgrounds, gridlines)</li>
-</ul>
-</div>
 </section>
 <section id="aesthetic-mapping" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Aesthetic Mapping</h2>
 <div class="fragment">
-<p>An <em>aesthetic mapping</em> links a <u>variable</u> in the data to a <u>visual channel</u> that can encode its variation.</p>
+<p>An <em>aesthetic mapping</em> links a variable in the data to a visual channel that can encode its variation.</p>
 </div>
 <div class="fragment">
 <h3 id="channels-for-ordered-variables">Channels for ordered variables</h3>
-<p><img data-src="images/channels_unordered_variables1.png"></p>
+<p><img data-src="images/channels-1.png"></p>
 
 </div>
 <aside><div>
@@ -366,7 +335,7 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <h3 id="channels-for-unordered-variables">Channels for unordered variables</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/channels_unordered_variables2.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/channels-2.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 
@@ -409,11 +378,11 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <h2>Redux 1</h2>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="section-4" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <p><strong>Question</strong>: What are the aesthetic mappings and geometries used here?</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div id="timer_a079df673b2dcdea356c6d55ad4626267450982d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -426,11 +395,11 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <h1>ggplot2</h1>
 
 </section>
-<section id="section-5" class="slide level2" data-auto-animate="true">
+<section id="section-4" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 
 <img data-src="images/tidyverse-hex.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-6" class="slide level2" data-auto-animate="true">
+<section id="section-5" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -439,7 +408,7 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <p><img data-src="images/dplyr-hex.svg"></p>
 </div></div>
 </section>
-<section id="section-7" class="slide level2" data-auto-animate="true">
+<section id="section-6" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
 <div class="column" style="width:33%;">
@@ -511,6 +480,16 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <h1>Wrap-Up</h1>
 
 </section>
+<h3 id="quarto-slides-make-teaching-reproducible">Quarto slides make teaching reproducible</h3>
+<p>::: poll adds interactivity</p>
+<p></p><div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div> adds time control<p></p>
+<p>YAML controls defaults (logos, themes, layout) :::::::::::::::::::::</p>
 <section id="meet-the-palmer-penguins-1" class="slide level2 smaller">
 <h2>Meet the Palmer Penguins <img data-src="images/penguins-hex.png" width="80"></h2>
 <div class="cell">
@@ -537,12 +516,12 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p><strong>Question</strong>: In terms of the way they are constructed…</p>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><p>What do these plots have in common? How do they differ?</p>
-<div id="timer_a079df673b2dcdea356c6d55ad4626267450982d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -550,11 +529,11 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
  <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">20</span></code>
  </div>
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p><strong>Question</strong>: What do these plots have in common? How do they differ?</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"><div id="timer_a079df673b2dcdea356c6d55ad4626267450982d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"><div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -577,7 +556,7 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <li class="fragment">Underlies most modern data visualization software.</li>
 </ul>
 </div><div class="column fragment">
-<p><img data-src="images/Grammar_of_graphics.png"></p>
+<p><img data-src="images/grammar-of-graphics.png"></p>
 </div></div>
 </section>
 <section id="aesthetic-mapping-2" class="slide level2" data-auto-animate="true">
@@ -587,15 +566,25 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 </div>
 <div class="fragment">
 <h3 id="channels-for-ordered-variables-1">Channels for ordered variables</h3>
-<p><img data-src="images/channels_unordered_variables1.png"></p>
+<p><img data-src="images/channels-1.png"></p>
+
 </div>
-</section>
+<aside><div>
+<p>From “Data Visualization” by Kieran Healy.</p>
+</div></aside></section>
 <section id="aesthetic-mapping-3" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Aesthetic Mapping</h2>
 <p>An <em>aesthetic mapping</em> links a variable in the data to a visual channel that can encode its variation.</p>
 <h3 id="channels-for-unordered-variables-1">Channels for unordered variables</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/channels-2.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 
-<img data-src="images/channels_unordered_variables2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<aside><div>
+<p>From “Data Visualization” by Kieran Healy.</p>
+</div></aside></section>
 <section id="geometry-1" class="slide level2">
 <h2>Geometry</h2>
 <p>The <em>geometry</em> describes how to translate the observations into marks on the page.</p>
@@ -632,11 +621,11 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <h2>Redux 1</h2>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<section id="section-10" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p><strong>Question</strong>: What are the aesthetic mappings and geometries used here?</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div id="timer_a079df673b2dcdea356c6d55ad4626267450982d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div id="timer_64e9a8a9af3201230bd062f4d6c62dcc6ff23915" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -649,35 +638,35 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
 <h1>ggplot2</h1>
 
 </section>
-<section id="section-11" class="slide level2" data-auto-animate="true">
+<section id="section-10" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 
-<img data-src="images/tidyverse_hex.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-12" class="slide level2" data-auto-animate="true">
+<img data-src="images/tidyverse-hex.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-11" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/tidyverse_hex.png"></p>
+<p><img data-src="images/tidyverse-hex.svg"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/dplyr_hex.png"></p>
+<p><img data-src="images/dplyr-hex.svg"></p>
 </div></div>
 </section>
-<section id="section-13" class="slide level2" data-auto-animate="true">
+<section id="section-12" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
 <div class="columns">
 <div class="column" style="width:33%;">
-<p><img data-src="images/ggplot2_hex.png"></p>
+<p><img data-src="images/ggplot2-hex.svg"></p>
 </div><div class="column" style="width:33%;">
-<p><img data-src="images/tidyverse_hex.png"></p>
+<p><img data-src="images/tidyverse-hex.svg"></p>
 </div><div class="column" style="width:33%;">
-<p><img data-src="images/dplyr_hex.png"></p>
+<p><img data-src="images/dplyr-hex.svg"></p>
 </div></div>
 
 
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-logo-vsmall.png" class="slide-logo"></p>
+<p><img src="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-logo-vsmall.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -896,80 +885,42 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1041,7 +992,7 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
