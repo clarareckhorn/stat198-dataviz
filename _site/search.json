@@ -1480,6 +1480,31 @@
     "objectID": "units/2-grammar-graphics/slides.html#summary",
     "href": "units/2-grammar-graphics/slides.html#summary",
     "title": "Week 2",
+<<<<<<< HEAD
+    "section": "Sketching Activity",
+    "text": "Sketching Activity"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#two-columns",
+    "href": "units/3-data-types/slides.html#two-columns",
+    "title": "Week 3",
+    "section": "Two Columns",
+    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#dplyr-verbs",
+    "href": "units/3-data-types/slides.html#dplyr-verbs",
+    "title": "Week 3",
+    "section": "dplyr verbs",
+    "text": "dplyr verbs\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#data-pipelines-in-r",
+    "href": "units/3-data-types/slides.html#data-pipelines-in-r",
+    "title": "Week 3",
+    "section": "Data Pipelines in R",
+    "text": "Data Pipelines in R\n\n\n\n2016: magrittr introduces %&gt;%\n\n|&gt;\n2021:\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call."
+=======
     "section": "Summary",
     "text": "Summary\nThis is the process of how data is encoded to a visual through the framework that grammar of graphics offers."
   },
@@ -1496,5 +1521,6 @@
     "title": "Week 2",
     "section": "Homework",
     "text": "Homework\nRead The Persistent Grip of Social Class on College Admissions"
+>>>>>>> 16e16e1e4549645f60b1af695460513cfcdaeeb0
   }
 ]
