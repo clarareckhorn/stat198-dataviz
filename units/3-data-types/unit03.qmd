@@ -28,7 +28,7 @@ with `"ggplot2"`.
 
 ### 🌠 Slides
 
-<a href="https://docs.google.com/presentation/d/1r8J3nngdsAtqbYsQkACcpGzwyaBTuuJg7em3whlo_Yc/edit?usp=sharing" target="_blank">A Grammar of Graphics</a> <small>(google slides)</small>
+Find today's slides [here.](slides.html)
 
 
 <br>
