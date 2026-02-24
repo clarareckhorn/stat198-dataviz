@@ -208,34 +208,324 @@
 <section id="learning-goals" class="title-slide slide level1 center">
 <h1>Learning Goals</h1>
 <ul>
-<li class="fragment">Understand the theoretical framework of the Grammar of Graphics</li>
-<li class="fragment">Break down key components of a graphic: data, aesthetics, geoms, stats, scales, facets, themes</li>
-<li class="fragment">Learn how ggplot2 implements this grammar in practice</li>
+<li>Understand different types of variables and how they influence chart selection.</li>
+<li>Understand how different purposes or analytical tasks influence chart selection</li>
+<li>Understand the theoretical framework of the Grammar of Graphics</li>
+<li>Break down key components of a graphic: data, aesthetics, geoms, stats, scales, facets, themes</li>
+<li>Learn how ggplot2 implements this grammar in practice</li>
 </ul>
 </section>
 
-<section id="discussion" class="title-slide slide level1 center">
+<section id="discussion" class="title-slide slide level1 smaller center">
 <h1>Discussion</h1>
 <p><strong>Reading:</strong> <a href="https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html">The Age That Women Have Babies</a></p>
 <p>Get into groups of 2-3 people and discuss the following questions:</p>
 <div class="{columns}">
-<div class="column" style="width:30%;">
+<div class="column" style="width:40%;">
 <p><img data-src="images/discussion_graph_1980.png"></p>
-</div><div class="column" style="width:30%;">
+</div><div class="column" style="width:40%;">
 <p><img data-src="images/discussion_graph_2016.png"></p>
 </div></div>
-<ul>
-<li class="fragment">What does the percentage on the vertical axis stand for?</li>
-<li class="fragment">What role does the colors play in these graphs?</li>
-<li class="fragment">How would you describe the change from 1980 to 2016?</li>
-</ul>
+<ol type="1">
+<li class="fragment">What is something you like about the way this data is portrayed?</li>
+<li class="fragment">What is something you would change in these visualizations?</li>
+<li class="fragment">What data does the percentages on the vertical axis represent?</li>
+</ol>
 </section>
 
-<section id="meet-the-palmer-penguins" class="title-slide slide level1 center">
-<h1>Meet the Palmer Penguins</h1>
+<section>
+<section id="classification-of-variables" class="title-slide slide level1 center">
+<h1>Classification of Variables</h1>
+<div class="fragment">
+<p>A <strong>variable</strong> is a data item that can vary or change, and it can take on different values.</p>
+<p>There are two types of scales a variable could be:</p>
+<ul>
+<li class="fragment"><p>Categorical Variable</p></li>
+<li class="fragment"><p>Quantitative Variable</p></li>
+</ul>
+</div>
+</section>
+<section id="categorical" class="slide level2">
+<h2>Categorical</h2>
+<p>Type of variable that <strong>represents categories</strong> or groups. It takes one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or nominal category on the basis of some qualitative property.</p>
+<h3 id="examples">Examples:</h3>
+<ul>
+<li class="fragment"><p><u>Binary</u>: Only <strong>takes two</strong> possible values, and are typically represented as 1 or 0.</p></li>
+<li class="fragment"><p><u>Nominal</u>: Categories have <strong>no clear</strong> <strong>order</strong>, and are mutually exclusive</p></li>
+<li class="fragment"><p><u>Ordinal</u>: Have a <strong>clear ordering</strong> of the categories</p></li>
+</ul>
+</section>
+<section id="quantitative" class="slide level2">
+<h2>Quantitative</h2>
+<p>Numerical data point (AKA numerical variable) that can be <em>measured</em> or <em>counted</em>, allowing for mathematical operations to be applied.</p>
+<h3 id="examples-1">Examples:</h3>
+<ul>
+<li class="fragment"><p><u>Discrete</u>: Can take any <strong>countable</strong> value represented as an integer (whole number),</p></li>
+<li class="fragment"><p><u>Continuous</u>: Can take any <strong>measurable</strong> value within a given range, including fractions and decimals.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="chart-selection" class="title-slide slide level1 center">
+<h1>Chart Selection</h1>
+<p>While the grammar of graphics is an excellent tool that lets us specify and construct a visual display of data, it does not tell us what graphic to use.</p>
+</section>
+<section id="right-graph-for-the-right-analytical-task" class="slide level2 smaller">
+<h2>Right Graph for the Right Analytical Task</h2>
+<table class="caption-top">
+<caption>Stephen Few: analytical tasks or analytical patterns</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>Example Chart Types</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Change over time</td>
+<td>Timeline (line chart), area chart, slope chart</td>
+</tr>
+<tr class="even">
+<td>Showing part-to-whole</td>
+<td>Stacked bar, donut chart, treemap</td>
+</tr>
+<tr class="odd">
+<td>Comparisons</td>
+<td>Bar chart , column chart, dot plot</td>
+</tr>
+<tr class="even">
+<td>Distributions (quantitative variable)</td>
+<td>Histogram, boxplot, violin plot, density</td>
+</tr>
+<tr class="odd">
+<td>Ranking</td>
+<td>Bar chart (sorted), lollipop chart</td>
+</tr>
+<tr class="even">
+<td>Relationships</td>
+<td>Scatter plot, bubble chart, connected scatter</td>
+</tr>
+<tr class="odd">
+<td>Correlations</td>
+<td>Scatter plot, matrix chart</td>
+</tr>
+<tr class="even">
+<td>Geospatial</td>
+<td>Choropleth, symbol map</td>
+</tr>
+<tr class="odd">
+<td>Flow</td>
+<td>Arrow charts, Sankey diagram</td>
+</tr>
+<tr class="even">
+<td>Text</td>
+<td>Word cloud</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="activity-1-variables-and-graphs" class="title-slide slide level1 center">
+<h1>Activity 1: Variables and Graphs</h1>
+<div class="fragment">
+<p>For each graph, identify the type of variables used (i.e.&nbsp;quantitative or categorical), and the analytical task that can be done with such graph.</p>
+</div>
+</section>
+<section id="lollipop-chart" class="slide level2">
+<h2>Lollipop Chart</h2>
+<p><img data-src="images/lollipop_chart_example.png"> ## Sorted Bar Chart <img data-src="images/sortedbarchart_example.png"></p>
+</section>
+<section id="donut-chart" class="slide level2">
+<h2>Donut Chart</h2>
+
+<img data-src="images/donut_chart_example.png" class="r-stretch"></section>
+<section id="sankey-diagram" class="slide level2">
+<h2>Sankey Diagram</h2>
+
+<img data-src="images/sankey_diagram_example.png" class="r-stretch"></section></section>
+<section>
+<section id="the-grammar-of-graphics" class="title-slide slide level1 center">
+<h1>The Grammar of Graphics</h1>
+
+</section>
+<section id="the-grammar-of-graphics-1" class="slide level2">
+<h2>“The Grammar of Graphics”</h2>
+<p>From a conceptual perspective, making graphics involves <strong>mapping data</strong> to <em>geometric objects</em> and their <em>visual properties</em>.</p>
+</section>
+<section id="why-do-we-need-grammar-of-graphics-gg" class="slide level2">
+<h2>Why do we need Grammar of Graphics (GG)?</h2>
+<div class="fragment">
+<p>We believe that the GG is a good starting point that gives us a <strong>framework</strong> (mental map) and a <strong>vocabulary</strong> to create graphics.</p>
+<p>This grammar allows creation of graphics to be:</p>
+<ul>
+<li class="fragment"><p>consistent</p></li>
+<li class="fragment"><p>reusable</p></li>
+<li class="fragment"><p>modular</p></li>
+</ul>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Formalized by Leland Wilkinson (1999)</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li class="fragment">A formal set of rules to create any type of graphics</li>
+<li class="fragment">Underlies most modern data visualization software.</li>
+<li class="fragment">Implemented as an R package (‘ggplot2’)</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/leland_book.png"></p>
+</div></div>
+</section>
+<section id="key-concepts" class="slide level2 smaller">
+<h2>Key Concepts</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li class="fragment"><strong>Data</strong>: the data set being visualized (next week!)</li>
+<li class="fragment"><strong>Aesthetics (aes)</strong>: how variables map to visual properties (x, y, color, size, etc)</li>
+<li class="fragment"><strong>Geometric objects (geoms)</strong>: what kind of marks to draw (points, bars, lines)</li>
+<li class="fragment"><strong>Facets</strong>: creating small multiples by splitting data into panels</li>
+<li class="fragment"><strong>Stats</strong>: statistical transformations (e.g.&nbsp;binning for histograms, smoothing lines)</li>
+<li class="fragment"><strong>Coordinates</strong>: how data values are translated into visual values (e.g.&nbsp;color gradients)</li>
+<li class="fragment"><strong>Themes</strong>: controlling non-data elements (fonts, backgrounds, gridlines)</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/gg_elements.png"></p>
+</div></div>
+</section>
+<section id="aesthetic-mapping" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Aesthetic Mapping</h2>
+<div class="fragment">
+<p>An <em>aesthetic mapping</em> links a <u>variable</u> in the data to a <u>visual channel</u> that can encode its variation.</p>
+</div>
+<div class="fragment">
+<h3 id="channels-for-ordered-variables">Channels for ordered variables</h3>
+<p><img data-src="images/channels_unordered_variables1.png"></p>
+
+</div>
+<aside><div>
+<p>From “Data Visualization” by Kieran Healy.</p>
+</div></aside></section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="fragment">
+<h3 id="channels-for-unordered-variables">Channels for unordered variables</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/channels_unordered_variables2.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+
+</div>
+<aside><div>
+<p>From “Data Visualization” by Kieran Healy.</p>
+</div></aside></section>
+<section id="geometry" class="slide level2">
+<h2>Geometry</h2>
+<p>The <em>geometry</em> describes how to translate the observations into marks on the page.</p>
+<div class="fragment">
+<h3 id="examples-2">Examples</h3>
+<ul>
+<li class="fragment">Point</li>
+<li class="fragment">Line</li>
+<li class="fragment">Bar</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="activity-2-incorrect-or-correct-use-of-gg" class="title-slide slide level1 center">
+<h1>Activity 2: Incorrect or Correct use of GG</h1>
+<div class="fragment">
+<p>Explain why the following graphs do not implement grammar of graphics correctly.</p>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="images/bad_graph_example1.png" class="r-stretch"></section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="images/bad_graph_example2.jpg" class="r-stretch"></section></section>
+<section>
+<section id="ggplot2" class="title-slide slide level1 center">
+<h1>ggplot2</h1>
+
+</section>
+<section id="section-4" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+
+<img data-src="images/tidyverse_hex.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-5" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/tidyverse_hex.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/dplyr_hex.png"></p>
+</div></div>
+</section>
+<section id="section-6" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="images/ggplot2_hex.png"></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/tidyverse_hex.png"></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/dplyr_hex.png"></p>
+</div></div>
+</section>
+<section id="ggplot2-1" class="slide level2">
+<h2><code>ggplot2()</code></h2>
+<div class="fragment">
+<p>A plot can be decomposed into three primary elements:</p>
+<ol type="1">
+<li class="fragment">the <strong>data</strong>,</li>
+<li class="fragment">the <strong>aesthetic mapping</strong> of the variables in the data to visual channels, and</li>
+<li class="fragment">the <strong>geometry</strong> used to translate the observations into marks on the plot.</li>
+</ol>
+</div>
+</section></section>
+<section>
+<section id="code-example" class="title-slide slide level1 center">
+<h1>Code Example</h1>
+<p>Here’s an example of code and output using <strong>ggplot2</strong> in R.</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
+<span id="cb1-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-5"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-7"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-8"><a></a>    <span class="at">title =</span> <span class="st">"Miles per Gallon vs. Weight"</span>,</span>
+<span id="cb1-9"><a></a>    <span class="at">color =</span> <span class="st">"Cylinders"</span></span>
+<span id="cb1-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column fragment">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-7" class="slide level2 smaller">
+<h2></h2>
+</section>
+<section id="meet-the-palmer-penguins" class="slide level2">
+<h2>Meet the Palmer Penguins</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-2"><a></a>penguins</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb2-2"><a></a>penguins</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -257,14 +547,12 @@
 </div>
 </div>
 </section>
-
-<section>
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
+<section id="section-8" class="slide level2">
+<h2></h2>
 <p><strong>Question</strong>: In terms of the way they are constructed…</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><p>What do these plots have in common? How do they differ?</p>
-<div id="timer_43e3ea7f48e044358859e8e99d4cbb34100d6dda" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"><p>What do these plots have in common? How do they differ?</p>
+<div id="timer_037b1d0f3420318c5613efe6c67a310794cc9071" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -272,11 +560,11 @@
  <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">20</span></code>
  </div>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p><strong>Question</strong>: What do these plots have in common? How do they differ?</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div id="timer_43e3ea7f48e044358859e8e99d4cbb34100d6dda" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><div id="timer_037b1d0f3420318c5613efe6c67a310794cc9071" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -284,98 +572,11 @@
  <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">20</span></code>
  </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<p><strong>Key idea:</strong><br>
-These plots use the <strong>same data</strong>, but different <strong>grammars</strong>.</p>
-<p>They share: - the same dataset (<code>penguins</code>) - a single mapped variable</p>
-<p>They differ by: - geometry (histogram, density, boxplot) - statistical transformation</p>
-</section></section>
-<section>
-<section id="the-grammar-of-graphics" class="title-slide slide level1 center">
-<h1>The Grammar of Graphics</h1>
-
-</section>
-<section id="the-grammar-of-graphics-1" class="slide level2">
-<h2>“The Grammar of Graphics”</h2>
-<p>Leland Wilkinson (1999)</p>
-<div class="columns">
-<div class="column">
-<ul>
-<li class="fragment">A grammar to describe all statistical graphics.</li>
-<li class="fragment">Underlies most modern data visualization software.</li>
-</ul>
-</div><div class="column fragment">
-<p><img data-src="images/Grammar_of_graphics.png"></p>
-</div></div>
-</section>
-<section id="aesthetic-mapping" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Aesthetic Mapping</h2>
-<div class="fragment">
-<p>An <em>aesthetic mapping</em> links a variable in the data to a visual channel that can encode its variation.</p>
-</div>
-<div class="fragment">
-<h3 id="channels-for-ordered-variables">Channels for ordered variables</h3>
-<p><img data-src="images/channels-1.png"></p>
-
-</div>
-<aside><div>
-<p>From “Data Visualization” by Kieran Healy.</p>
-</div></aside></section>
-<section id="aesthetic-mapping-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Aesthetic Mapping</h2>
-<p>An <em>aesthetic mapping</em> links a variable in the data to a visual channel that can encode its variation.</p>
-<h3 id="channels-for-unordered-variables">Channels for unordered variables</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/channels-2.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-
-<aside><div>
-<p>From “Data Visualization” by Kieran Healy.</p>
-</div></aside></section>
-<section id="geometry" class="slide level2">
-<h2>Geometry</h2>
-<p>The <em>geometry</em> describes how to translate the observations into marks on the page.</p>
-<div class="fragment">
-<h3 id="examples">Examples</h3>
-<ul>
-<li class="fragment">Point</li>
-<li class="fragment">Line</li>
-<li class="fragment">Bar</li>
-</ul>
-</div>
-</section>
-<section id="named-plots" class="slide level2">
-<h2>Named plots</h2>
-<aside class="notes">
-<p>Draw “Scatterplot” and “barchart” along with their description in the g of g.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="redux-1" class="slide level2">
-<h2>Redux 1</h2>
-
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1536"></section>
-<section id="redux-1-1" class="slide level2">
-<h2>Redux 1</h2>
-
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="section-3" class="slide level2">
+<section id="section-10" class="slide level2">
 <h2></h2>
 <p><strong>Question</strong>: What are the aesthetic mappings and geometries used here?</p>
 
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div id="timer_43e3ea7f48e044358859e8e99d4cbb34100d6dda" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div id="timer_037b1d0f3420318c5613efe6c67a310794cc9071" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -384,107 +585,24 @@ These plots use the <strong>same data</strong>, but different <strong>grammars</
  </div>
 </section></section>
 <section>
-<section id="ggplot2" class="title-slide slide level1 center">
-<h1>ggplot2</h1>
-
-</section>
-<section id="section-4" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-
-<img data-src="images/tidyverse-hex.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-5" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/tidyverse-hex.svg"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/dplyr-hex.svg"></p>
-</div></div>
-</section>
-<section id="section-6" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><img data-src="images/ggplot2-hex.svg"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="images/tidyverse-hex.svg"></p>
-</div><div class="column" style="width:33%;">
-<p><img data-src="images/dplyr-hex.svg"></p>
-</div></div>
-</section>
-<section id="ggplot2-1" class="slide level2">
-<h2><code>ggplot2()</code></h2>
-<div class="fragment">
-<p>A plot can be decomposed into three primary elements:</p>
-<ol type="1">
-<li class="fragment">the <strong>data</strong>,</li>
-<li class="fragment">the <strong>aesthetic mapping</strong> of the variables in the data to visual channels, and</li>
-<li class="fragment">the <strong>geometry</strong> used to translate the observations into marks on the plot.</li>
-</ol>
-</div>
-</section></section>
-<section>
-<section id="code-example" class="title-slide slide level1 center">
-<h1>Code Example</h1>
-<p>Here’s an example of code and output using <strong>ggplot2</strong> in R.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-5"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb3-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb3-7"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-8"><a></a>    <span class="at">title =</span> <span class="st">"Miles per Gallon vs. Weight"</span>,</span>
-<span id="cb3-9"><a></a>    <span class="at">color =</span> <span class="st">"Cylinders"</span></span>
-<span id="cb3-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column fragment">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div></div>
-</section>
-<section id="two-columns" class="slide level2 smaller">
-<h2>Two Columns</h2>
-<div class="columns">
-<div class="column">
-<p>Explanation</p>
-<p>Columns are great for mixing code, plots, and text.<br>
-</p>
-<ul>
-<li class="fragment"><p>Left and right content<br>
-</p></li>
-<li class="fragment"><p>Works well for comparisons<br>
-</p></li>
-<li class="fragment"><p>Helps structure visual walkthroughs<br>
-</p></li>
-</ul>
-</div><div class="column fragment">
-<p>Example plot</p>
-</div></div>
-</section></section>
-<section>
 <section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap-Up</h1>
+<h1>Wrap up</h1>
 
 </section>
-<h3 id="quarto-slides-make-teaching-reproducible">Quarto slides make teaching reproducible</h3>
-<p>::: poll adds interactivity</p>
-<p></p><div id="timer_43e3ea7f48e044358859e8e99d4cbb34100d6dda" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div> adds time control<p></p>
-<p>YAML controls defaults (logos, themes, layout) :::::::::::::::::::::</p>
-
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<p>This is the process of how data is encoded to a visual through the framework that grammar of graphics offers.</p>
 </section>
+<section id="attendance-worksheet" class="slide level2">
+<h2>Attendance Worksheet</h2>
+<p>Make sure to turn in your worksheet before leaving with your name on it please!!</p>
+</section>
+<section id="homework" class="slide level2">
+<h2>Homework</h2>
+<p>Read <a href="https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html">The Persistent Grip of Social Class on College Admissions</a></p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-logo-vsmall.png" class="slide-logo"></p>

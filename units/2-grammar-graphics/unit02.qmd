@@ -4,7 +4,7 @@ title: "2) Grammar of Graphics I"
 
 ## This Week:
 
-In this week, we'll get an introduction to the `"ggplot2"` package for making graphics and you will turn in HW1 (Friday 11:59pm).
+In this week, we'll get an introduction to the Grammar of Graphics and R's `"ggplot2"` package for making graphics.
 
 <br>
 
@@ -24,21 +24,14 @@ At the end of this unit you will be able to:
 
 ### 🌠 Slides
 
-<a href="https://docs.google.com/presentation/d/1r8J3nngdsAtqbYsQkACcpGzwyaBTuuJg7em3whlo_Yc/edit?usp=sharing" target="_blank">A Grammar of Graphics</a> <small>(google slides)</small>
-
-<br>
-
-### 💻 Code
-
-Basic graphics with `"ggplot2"`
-
--   qmd notebook file
--   html file
+Find today's slides [here.](slides.html)
 
 <br>
 
 ### 📖 Assignment
 
-**Reading**: *The Age That Women Have Babies: How a Gap Divides America* by Quoctrung Bui and Claire Cain Miller (Aug-4, 2018, New York Times)
+**Reading**: *The Persistent Grip of Social Class on College Admissions* 
 
-<a href="https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html" target="_blank">https://www.nytimes.com/interactive/2018/08/04/upshot/up-birth-age-gap.html</a>
+<a href="https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html" target="_blank">https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html</a>
+
+__Homework__: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.  

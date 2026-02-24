@@ -10,7 +10,7 @@ This is the website for the Spring-2026 <a href="https://decal.studentorg.berkel
 
 Welcome to **STAT 198 Principles of Data Visualization**!
 
-Our first meeting will be on Mon-day, @hr pm in room TBA.
+Our first meeting will be on Tuesday, Feb. 10 @5-7:30 pm in room Evans 340.
 
 No HW assigned during the first week of class.
 :::
