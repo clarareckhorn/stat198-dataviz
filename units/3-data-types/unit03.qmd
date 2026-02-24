@@ -4,7 +4,7 @@ title: "3) Data Types, Chart Selection"
 
 ## This Week: 
 
-In this week, we'll get a further introduction to the `"ggplot2"` package for making graphics and you will turn in HW2 (Friday 11:59pm).
+In this week, we'll get a further introduction to the `"ggplot2"` package for making graphics and you will turn in HW2 (Friday 11:59pm). 
 
 <br>
 
