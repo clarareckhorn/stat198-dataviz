@@ -211,61 +211,58 @@ data |>
 #| output-location: column-fragment
 library(tidyverse)
 
-# toy dataset
-sleep_data <- tibble(
-  student_id = 1:10,
-  sleep_hours = c(6.5, 7, 5.5, 8, 6, 7.5, 6, 5, 8.5, 7),
-  transfer = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),
-  grad_student = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE),
-  commute_min = c(45, 10, 60, 15, 20, 50, 5, 70, 25, 30),
-  favorite_drink = c("Coffee", "Water", "Coffee", "Tea", "Tea",
-                     "Coffee", "Water", "Coffee", "Tea", "Water"),
-  major = c("Econ", "Stats", "CS", "Psych", "Public Health",
-            "Econ", "Stats", "CS", "Bio", "Psych"),
-  units = c(16, 13, 18, 14, 12, 17, 15, 19, 11, 16)
+farm_data <- tibble(
+  employee_id = 1:10,
+  hours_worked = c(40, 55, 38, 60, 45, 50, 42, 65, 37, 48),
+  seasonal_worker = c(TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),
+  supervisor = c(FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE, FALSE),
+  commute_min = c(15, 35, 20, 50, 10, 40, 25, 60, 12, 30),
+  primary_crop = c("Corn", "Wheat", "Corn", "Soy",
+                   "Soy", "Wheat", "Corn", "Soy",
+                   "Corn", "Wheat"),
+  years_experience = c(2, 5, 10, 3, 12, 4, 8, 1, 15, 6),
+  hourly_wage = c(18, 20, 25, 19, 28, 21, 24, 17, 30, 23)
 )
 
-sleep_data
+farm_data
 ```
 
 
 # Reality with data 
 ```{r}
-sleep_raw <- tibble(
-  student_id = 1:10,
-  sleep_hours = c("6.5", "7", "five", "8", "6", "7.5", "6", "-1", "8.5", ""),
-  transfer = c("T", "False", "TRUE", "F", "no", "yes", "FALSE", "T", "FALSE", "F"),
-  grad_student = c("no", "no", "no", "no", "yes", "no", "no", "no", "TRUE", "FALSE"),
-  commute_min = c("45", "10", "60", "15", "20", "50", "5", "70", "25", "thirty"),
-  favorite_drink = c("Coffee", " water", "COFFEE", "Tea", "",
-                     "coffee", "Water", "Coffee ", "Tea", "Water"),
-  major = c("econ", "Stats", "CS", "psych", "Public Health",
-            "Econ", "statistics", "cs", "Bio", "Psych"),
-  units = c("16", "13", "18", "14", "12", "17", "15", "19", "11", "40")
+farm_raw <- tibble(
+  employee_id = 1:6,
+  hours_worked = c("40", "55", "38", "60", "45", "50"),
+  seasonal_worker = c("yes", "TRUE", "no", "Yes", "false", "TRUE"),
+  supervisor = c("no", "no", "TRUE", "no", "TRUE", "no"),
+  commute_min = c("15", "35", "20", "50", "10", "40"),
+  primary_crop = c(" Corn", "wheat ", "CORN", "Soy", " soy ", "WHEAT"),
+  years_experience = c("2", "5", "10", "3", "12", "4"),
+  hourly_wage = c("18", "20", "25", "19", "28", "21")
 )
-
-sleep_raw
 ```
 
 # Data Cleaned Example:
 ```{r}
-sleep_clean <- sleep_raw |>
-  mutate( 
-    sleep_hours = as.numeric(sleep_hours),
+farm_clean <- farm_raw |>
+  mutate(
+    hours_worked = as.numeric(hours_worked),
     commute_min = as.numeric(commute_min),
-    units = as.numeric(units),
+    years_experience = as.numeric(years_experience),
+    hourly_wage = as.numeric(hourly_wage),
 
-    transfer = transfer %in% c("T","TRUE","yes"),
-    grad_student = grad_student %in% c("TRUE","yes"),
+    seasonal_worker = seasonal_worker %in% c("yes", "TRUE", "Yes"),
+    supervisor = supervisor %in% c("TRUE", "yes"),
 
-    favorite_drink = str_trim(str_to_lower(favorite_drink)),
-    major = str_to_lower(major)
+    primary_crop = str_trim(str_to_lower(primary_crop))
   )
+
+farm_clean
 ```
 
 
 # Activity:
 - Download your data 
 - Clean all columns to respective datatype 
-- Remove spaces 
+
 
