@@ -4,39 +4,28 @@ subtitle: Data Types
 format: stat198slides-revealjs
 ---
 
-# Introduction
 
-This is a sample deck for DataViz DeCal Slides. The features include:
-
-1. Title slide with background image.
-2. A bunch of yaml defaults.
-3. Clickable logo in lower right that links to the previous page.
-4. No logo or slide number on title slide.
-5. Custom `:::poll` div for poll questions.
-6. A [countdown timer](https://github.com/gadenbuie/countdown/tree/main/quarto) accessible by adding
-
-   `{{< countdown "01:30" >}}`
-   
-   on a new line.
-
-
-# Agenda
+# Agenda 
+::: {.nonincremental}
 
 - Discussion of Assigned Reading   
 - Lecture on understanding different types of variables and how they influence chart selection. 
+- Introduction to Data Cleaning 
 - Activity 
-- Attendence quiz 
+- Attendance quiz 
+
+:::
 
 # Discussion of Assigned Reading 
 
 - **Reading:** [The Persistent Grip of Social Class on College Admissions](https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html)
-- What was the desing element you liked? 
+- What was the design element you liked? 
 - How do you think grammar of graphics was portrayed in the graph?
 
 
 
 # Vectors in R {.smaller}
-A vector is like a single column of data in R, it’s a list of values that are all the same type (like all numbers or all words).
+A vector is like a single column of data in R, it’s a list of values that are all the same type (like all numbers or all words). \
 Example: 
 ```{r}
 #| output-location: column-fragment
@@ -90,38 +79,193 @@ class(logic) # "logical"
 
 ```
 
-## Code Example
-Here’s an example of code and output using **ggplot2** in R.
+# Data Cleaning
+::: {.nonincremental}
+Real data has:
 
+- inconsistent labels
+- missing values
+- mixed units
+- impossible numbers
 
-
-## Two Columns {.smaller}
-
-::: columns
-::: column
-
-Explanation
-
-Columns are great for mixing code, plots, and text.\
-
-- Left and right content\
-
-- Works well for comparisons\
-
-- Helps structure visual walkthroughs\
+`dplyr` and `tidyr` are part of the `tidyverse` (package) and help you clean data using readable, step-by-step pipelines. Together, they make it easy to standardize values, reshape tables, handle missing data, and prepare datasets for analysis. 
 :::
 
+# Functions we use to clean data 
+| Function         | What it does              | Example                   |
+| ---------------- | ------------------------- | ------------------------- |
+| `str_trim()`     | Remove extra spaces       | `" Coffee "` → `"Coffee"` |
+| `str_to_lower()` | Convert text to lowercase | `"Tea"` → `"tea"`         |
+| `str_to_upper()` | Convert text to uppercase | `"Water"` → `"WATER"`     |
+
+# Functions we use to clean data (Continued)
+parse_number() extracts the first number it finds in a string.
+```{r}
+#| eval: false
+library(tidyverse)
+
+df <- df |>
+  mutate(
+    hours = parse_number(hours),
+    commute = parse_number(commute),
+    units = parse_number(units)
+  )
+```
+
+# Functions we use to clean data (Continued)
+case_when() Creates a new variable using multiple conditions.
+```{r}
+#| eval: false
+df <- df |>
+  mutate(
+    drink_clean = case_when(
+      #logical condition, condition ~ value_if_true “is in”
+      #If condition is TRUE, then assign "water"
+      #drink == "water" checks ONE VALUE 
+      drink %in% c("water", "sparkling water") ~ "water",
+      drink %in% c("tea", "peach iced tea") ~ "tea",
+      drink %in% c("coffee", "coffee/liquid") ~ "coffee",
+      TRUE ~ "other"
+    )
+  )
+```
+
+
+# Data Cleaning (Continued)
+
+```{r}
+#| eval: false
+#Load required packages
+library(tidyverse)
+library(dplyr)
+
+#Read the CSV file and store it as a data frame
+data <- read_csv("week1_survey.csv")
+
+#Preview the first few rows of the dataset
+head(data)
+```
+
+# Core dplyr functions
+::: {.nonincremental}
+
+- `slice()`      # Pick rows by position (e.g., first 5 rows)
+- `select()`     # Choose specific columns
+- `filter()`     # Keep rows that meet a condition
+- `mutate()`     # Create or modify columns
+- `arrange()`    # Sort rows by one or more variables
+- `summarize()`  # Compute summary statistics (mean, count, etc.)
+- `group_by()`   # Group data so summaries are done per category
+:::
+
+## dplyr verbs
+::: {.nonincremental}
+
+:::{.columns}
+:::{.column width="50%"}
+- `slice()`
+- `select()`
+- `filter()`
+- `mutate()`
+- `arrange()`
+- `summarize()`
+- `group_by()`
+:::
+:::{.column .fragment width="50%"}
+1. All of these have a data frame as the first argument.
+1. All of these produce a data frame as output.
+1. Within the function, you can simply refer to column names unquoted.
+:::
+
+:::
+
+:::
+
+## Data Pipelines in R
+
+::: {.columns}
+::: {.column}
+![](images/oldpipeline.png)
+
+2016: `magrittr` introduces `%>%` 
+:::
 ::: {.column .fragment}
-Example plot
+[`|>`]{style="font-size:3em;"}
+
+2021:
+
+> *R now provides a simple native forward pipe syntax |>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.*
 :::
 :::
 
-# Wrap-Up
+# Using pipeline with our data 
+```{r}
+#| eval: false
+data |>
+  filter(major == "statistics") |>
+  summarize(mean(sleep_hours, na.rm = TRUE))
+```
 
-### Quarto slides make teaching reproducible
+# what we want: 
+```{r}
+#| output-location: column-fragment
+library(tidyverse)
 
-::: poll adds interactivity
+# toy dataset
+sleep_data <- tibble(
+  student_id = 1:10,
+  sleep_hours = c(6.5, 7, 5.5, 8, 6, 7.5, 6, 5, 8.5, 7),
+  transfer = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),
+  grad_student = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE),
+  commute_min = c(45, 10, 60, 15, 20, 50, 5, 70, 25, 30),
+  favorite_drink = c("Coffee", "Water", "Coffee", "Tea", "Tea",
+                     "Coffee", "Water", "Coffee", "Tea", "Water"),
+  major = c("Econ", "Stats", "CS", "Psych", "Public Health",
+            "Econ", "Stats", "CS", "Bio", "Psych"),
+  units = c(16, 13, 18, 14, 12, 17, 15, 19, 11, 16)
+)
 
-{{< countdown >}} adds time control
+sleep_data
+```
 
-YAML controls defaults (logos, themes, layout)
+
+# Reality with data 
+```{r}
+sleep_raw <- tibble(
+  student_id = 1:10,
+  sleep_hours = c("6.5", "7", "five", "8", "6", "7.5", "6", "-1", "8.5", ""),
+  transfer = c("T", "False", "TRUE", "F", "no", "yes", "FALSE", "T", "FALSE", "F"),
+  grad_student = c("no", "no", "no", "no", "yes", "no", "no", "no", "TRUE", "FALSE"),
+  commute_min = c("45", "10", "60", "15", "20", "50", "5", "70", "25", "thirty"),
+  favorite_drink = c("Coffee", " water", "COFFEE", "Tea", "",
+                     "coffee", "Water", "Coffee ", "Tea", "Water"),
+  major = c("econ", "Stats", "CS", "psych", "Public Health",
+            "Econ", "statistics", "cs", "Bio", "Psych"),
+  units = c("16", "13", "18", "14", "12", "17", "15", "19", "11", "40")
+)
+
+sleep_raw
+```
+
+# Data Cleaned Example:
+```{r}
+sleep_clean <- sleep_raw |>
+  mutate( 
+    sleep_hours = as.numeric(sleep_hours),
+    commute_min = as.numeric(commute_min),
+    units = as.numeric(units),
+
+    transfer = transfer %in% c("T","TRUE","yes"),
+    grad_student = grad_student %in% c("TRUE","yes"),
+
+    favorite_drink = str_trim(str_to_lower(favorite_drink)),
+    major = str_to_lower(major)
+  )
+```
+
+
+# Activity:
+- Download your data 
+- Clean all columns to respective datatype 
+- Remove spaces 
+

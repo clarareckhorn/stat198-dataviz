@@ -824,5 +824,26 @@
     "title": "Week 2",
     "section": "Sketching Activity",
     "text": "Sketching Activity"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#two-columns",
+    "href": "units/3-data-types/slides.html#two-columns",
+    "title": "Week 3",
+    "section": "Two Columns",
+    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#dplyr-verbs",
+    "href": "units/3-data-types/slides.html#dplyr-verbs",
+    "title": "Week 3",
+    "section": "dplyr verbs",
+    "text": "dplyr verbs\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#data-pipelines-in-r",
+    "href": "units/3-data-types/slides.html#data-pipelines-in-r",
+    "title": "Week 3",
+    "section": "Data Pipelines in R",
+    "text": "Data Pipelines in R\n\n\n\n2016: magrittr introduces %&gt;%\n\n|&gt;\n2021:\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call."
   }
 ]
