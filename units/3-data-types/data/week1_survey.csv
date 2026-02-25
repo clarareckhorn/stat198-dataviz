@@ -1,0 +1,20 @@
+hours,transfer,gradstudent,commute,drink,major,units
+7,FALSE,FALSE,20,water,Rhetoric,6
+8,FALSE,FALSE,10 min,water,Env.Econ,15
+7 hours,T,T,20 mins,coffee,Business management,13
+6 hrs,T,F,5 min,champagne ,applied math,13 units
+4 hours/5 hours,F,F,10 min,sprite,Economics,16
+9hrs,TRUE,FALSE,45 min,coffee,DATA SCIENCE,13 units
+7 hours,F,F,7 mins,water,Data science + Math,14
+6 hrs,F,F,~10,Peach Iced tea,CB,18
+8h,T,F,5m,water,Data Science,14
+7h30,F,F,20 min,water,Molecular & cell Bio,15
+8h,T,F,60,tea,statistics,20
+8hours/wd,F,F,2 minutes,coffee/liquid ,legal studies,17 units
+7.5h,F,F,30 min,tea,poli.Econ,20u
+7h avg,NA,T,20 minute ,sparkling water,Buisiness,15
+7.5h ,F,T,35 min,gin and tonic,statistics ,13
+6,T,F,10,Tea,computer science,11
+8 hours,T,F,45 min,water,Data Science,17 units
+6,F,F,20,tea,math ,20
+6,F,F,10 min ,Iced Matcha Latte,Sociology,12

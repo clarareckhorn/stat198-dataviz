@@ -4,31 +4,29 @@ subtitle: Data Types
 format: stat198slides-revealjs
 ---
 
+# Agenda
 
-# Agenda 
-::: {.nonincremental}
-
-- Discussion of Assigned Reading   
-- Lecture on understanding different types of variables and how they influence chart selection. 
-- Introduction to Data Cleaning 
-- Activity 
-- Attendance quiz 
-
+::: nonincremental
+-   Discussion of Assigned Reading\
+-   Intro to R and Data Cleaning
+-   Activity
+-   Exploratory Data Analysis
 :::
 
-# Discussion of Assigned Reading 
+# Discussion of Assigned Reading
 
-- **Reading:** [The Persistent Grip of Social Class on College Admissions](https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html)
-- What was the design element you liked? 
-- How do you think grammar of graphics was portrayed in the graph?
+-   **Reading:** [The Persistent Grip of Social Class on College Admissions](https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html)
+-   What was the design element you liked?
+-   How do you think grammar of graphics was portrayed in the graph?
 
-
+{{< countdown "3:00" >}}
 
 # Vectors in R {.smaller}
-A vector is like a single column of data in R, it’s a list of values that are all the same type (like all numbers or all words). \
-Example: 
+
+A vector is like a single column of data in R, it’s a list of values that are all the same type (like all numbers or all words).\
+Example:
+
 ```{r}
-#| output-location: column-fragment
 # A vector of numbers
 numbers <- c(1, 2, 3, 4, 5)
 
@@ -39,8 +37,10 @@ fruits <- c("apple", "banana", "cherry")
 logic <- c(TRUE, FALSE, TRUE)
 ```
 
-# Data Frames in R {.smaller}
+## Data Frames in R {.smaller}
+
 A data frame is like a table or spreadsheet — it has rows and columns, and each column can have its own type (numbers, words, etc.).
+
 ```{r}
 #| output-location: column-fragment
 # Create a data frame
@@ -54,8 +54,10 @@ students <- data.frame(
 print(students)
 ```
 
-# Data types in R {.smaller}
+## Data types in R {.smaller}
+
 Data Types: A data type tells you what kind of data something is, like a number, a word (string), or a TRUE/FALSE value (logical).
+
 ```{R}
 #| output-location: column-fragment
 # Numeric (numbers)
@@ -80,26 +82,30 @@ class(logic) # "logical"
 ```
 
 # Data Cleaning
-::: {.nonincremental}
+
+::: nonincremental
 Real data has:
 
-- inconsistent labels
-- missing values
-- mixed units
-- impossible numbers
+-   inconsistent labels
+-   missing values
+-   mixed units
+-   impossible numbers
 
-`dplyr` and `tidyr` are part of the `tidyverse` (package) and help you clean data using readable, step-by-step pipelines. Together, they make it easy to standardize values, reshape tables, handle missing data, and prepare datasets for analysis. 
+`dplyr` and `tidyr` are part of the `tidyverse` (package) and help you clean data using readable, step-by-step pipelines. Together, they make it easy to standardize values, reshape tables, handle missing data, and prepare datasets for analysis.
 :::
 
-# Functions we use to clean data 
+## Functions we use to clean data
+
 | Function         | What it does              | Example                   |
-| ---------------- | ------------------------- | ------------------------- |
+|------------------|---------------------------|---------------------------|
 | `str_trim()`     | Remove extra spaces       | `" Coffee "` → `"Coffee"` |
 | `str_to_lower()` | Convert text to lowercase | `"Tea"` → `"tea"`         |
 | `str_to_upper()` | Convert text to uppercase | `"Water"` → `"WATER"`     |
 
-# Functions we use to clean data (Continued)
+## Functions we use to clean data (Continued)
+
 parse_number() extracts the first number it finds in a string.
+
 ```{r}
 #| eval: false
 library(tidyverse)
@@ -112,8 +118,10 @@ df <- df |>
   )
 ```
 
-# Functions we use to clean data (Continued)
+## Functions we use to clean data (Continued)
+
 case_when() Creates a new variable using multiple conditions.
+
 ```{r}
 #| eval: false
 df <- df |>
@@ -130,83 +138,125 @@ df <- df |>
   )
 ```
 
+## Data Cleaning
 
-# Data Cleaning (Continued)
+Before we can clean data, we first need to load it into our R session.
+
+## CSVs {auto-animate="true"}
+
+A *comma separate value (CSV)* file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.
+
+. . .
+
+\
+
+#### Reading into R (base R)
 
 ```{r}
 #| eval: false
-#Load required packages
-library(tidyverse)
-library(dplyr)
+data <- read.csv("data/week1_survey.csv")
+data
+```
 
-#Read the CSV file and store it as a data frame
-data <- read_csv("week1_survey.csv")
+## CSVs {auto-animate="true"}
 
+A *comma separate value (CSV)* file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.
+
+\
+
+#### Reading into R (`readr`)
+
+```{r}
+library(readr)
+# library(tidyverse) # easy alternative
+# read_csv: modern tidyverse approach, faster, safer, more predictable
+data <- read_csv("data/week1_survey.csv")
+data
+```
+
+## Data Cleaning (Continued)
+
+```{r}
 #Preview the first few rows of the dataset
 head(data)
 ```
 
 # Core dplyr functions
-::: {.nonincremental}
 
-- `slice()`      # Pick rows by position (e.g., first 5 rows)
-- `select()`     # Choose specific columns
-- `filter()`     # Keep rows that meet a condition
-- `mutate()`     # Create or modify columns
-- `arrange()`    # Sort rows by one or more variables
-- `summarize()`  # Compute summary statistics (mean, count, etc.)
-- `group_by()`   # Group data so summaries are done per category
+::: nonincremental
+-   `slice()` \# Pick rows by position (e.g., first 5 rows)
+-   `select()` \# Choose specific columns
+-   `filter()` \# Keep rows that meet a condition
+-   `mutate()` \# Create or modify columns
+-   `arrange()` \# Sort rows by one or more variables
+-   `summarize()` \# Compute summary statistics (mean, count, etc.)
+-   `group_by()` \# Group data so summaries are done per category
 :::
 
 ## dplyr verbs
-::: {.nonincremental}
 
-:::{.columns}
-:::{.column width="50%"}
-- `slice()`
-- `select()`
-- `filter()`
-- `mutate()`
-- `arrange()`
-- `summarize()`
-- `group_by()`
-:::
-:::{.column .fragment width="50%"}
-1. All of these have a data frame as the first argument.
-1. All of these produce a data frame as output.
-1. Within the function, you can simply refer to column names unquoted.
+:::::: nonincremental
+::::: columns
+::: {.column width="50%"}
+-   `slice()`
+-   `select()`
+-   `filter()`
+-   `mutate()`
+-   `arrange()`
+-   `summarize()`
+-   `group_by()`
 :::
 
+::: {.column .fragment width="50%"}
+1.  All of these have a data frame as the first argument.
+2.  All of these produce a data frame as output.
+3.  Within the function, you can simply refer to column names unquoted.
 :::
-
-:::
+:::::
+::::::
 
 ## Data Pipelines in R
 
-::: {.columns}
-::: {.column}
+::::: columns
+::: column
 ![](images/oldpipeline.png)
 
-2016: `magrittr` introduces `%>%` 
+2016: `magrittr` introduces `%>%`
 :::
+
 ::: {.column .fragment}
 [`|>`]{style="font-size:3em;"}
 
 2021:
 
-> *R now provides a simple native forward pipe syntax |>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.*
+> *R now provides a simple native forward pipe syntax \|\>. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.*
 :::
-:::
+:::::
 
-# Using pipeline with our data 
+## Using pipeline with our data
+
+Without the pipeline, we would have to apply each function one at a time:
+
+```{r}
+#| eval: false
+summarize(
+  filter(data, major == "statistics"),
+  mean(sleep_hours, na.rm = TRUE)
+)
+# results in nested function which can be very messy
+```
+
+Using the pipeline, this becomes very clean:
+
 ```{r}
 #| eval: false
 data |>
   filter(major == "statistics") |>
-  summarize(mean(sleep_hours, na.rm = TRUE))
+  summarise(mean(sleep_hours, na.rm = TRUE))
 ```
 
-# what we want: 
+# What we want:
+
 ```{r}
 #| output-location: column-fragment
 library(tidyverse)
@@ -227,42 +277,201 @@ farm_data <- tibble(
 farm_data
 ```
 
+## Reality with data
 
-# Reality with data 
 ```{r}
 farm_raw <- tibble(
   employee_id = 1:6,
-  hours_worked = c("40", "55", "38", "60", "45", "50"),
+  hours_worked = c("40 hours", "55 hrs", "38 hrs", "60 hours", "45hrs", "50hours"),
   seasonal_worker = c("yes", "TRUE", "no", "Yes", "false", "TRUE"),
   supervisor = c("no", "no", "TRUE", "no", "TRUE", "no"),
-  commute_min = c("15", "35", "20", "50", "10", "40"),
+  commute_min = c("15 minutes", "35 mins", "20min", "50 minute", "10minutes", "40mins"),
   primary_crop = c(" Corn", "wheat ", "CORN", "Soy", " soy ", "WHEAT"),
-  years_experience = c("2", "5", "10", "3", "12", "4"),
-  hourly_wage = c("18", "20", "25", "19", "28", "21")
+  years_experience = c("2 years", "5rs", "10 yrs", "3 yr", "12 years", "4yr"),
+  hourly_wage = c("18 dollars", "20/hr", "25 per hour", "19 dollars", "28 usd", "21 /day")
 )
 ```
 
-# Data Cleaned Example:
+## Data Cleaning Example:
+
 ```{r}
+library(tidyverse)
+
 farm_clean <- farm_raw |>
   mutate(
-    hours_worked = as.numeric(hours_worked),
-    commute_min = as.numeric(commute_min),
-    years_experience = as.numeric(years_experience),
-    hourly_wage = as.numeric(hourly_wage),
+    # numeric columns
+    hours_worked = parse_number(hours_worked),
+    commute_min = parse_number(commute_min),
+    years_experience = parse_number(years_experience),
+    hourly_wage = parse_number(hourly_wage),
 
-    seasonal_worker = seasonal_worker %in% c("yes", "TRUE", "Yes"),
-    supervisor = supervisor %in% c("TRUE", "yes"),
+    # yes/no variables
+    seasonal_worker = case_when(
+      str_to_lower(str_trim(seasonal_worker)) %in% c("yes", "true") ~ TRUE,
+      str_to_lower(str_trim(seasonal_worker)) %in% c("no", "false") ~ FALSE,
+      TRUE ~ NA
+    ),
 
-    primary_crop = str_trim(str_to_lower(primary_crop))
+    supervisor = case_when(
+      str_to_lower(str_trim(supervisor)) %in% c("yes", "true") ~ TRUE,
+      str_to_lower(str_trim(supervisor)) %in% c("no", "false") ~ FALSE,
+      TRUE ~ NA
+    ),
+
+    # categorical cleanup
+    primary_crop =
+      primary_crop |>
+      str_trim() |>
+      str_to_lower()
   )
 
 farm_clean
 ```
 
-
 # Activity:
-- Download your data 
-- Clean all columns to respective datatype 
 
+-   Download your data from the CSV in BCourses
+-   Download the `.qmd` file which has the instructions
+-   Open the `.qmd` file in Positron or RStudio
+-   Clean all columns to respective datatype
 
+{{< countdown "20:00" >}}
+
+## Exploratory Data Analysis
+
+After having cleaned the data, we want to get a sense of what we are looking at.\
+\
+Let's use our `farm_data` data as an example.
+
+## Q1: What are the cols and rows?
+
+. . .
+
+```{r}
+dim(farm_data)
+```
+
+. . .
+
+```{r}
+sapply(farm_data, class)
+```
+
+## Q1: What are the cols and rows?
+
+```{r}
+farm_data
+```
+
+## Q1: What are the cols and rows?
+
+-   Unit of observation: an individual farm worker
+-   Variables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)
+
+. . .
+
+> A description of the variables is often stored in a separate file called a *data dictionary*.
+
+## Q2: Is there any missing data?
+
+. . .
+
+**Option 1**: Total missing values
+
+```{r}
+library(dplyr)
+sum(is.na(farm_data))
+```
+
+. . .
+
+**Option 2**: Proportion missing counts
+
+```{r}
+farm_data |>
+  summarize(across(everything(), ~ mean(is.na(.))))
+```
+
+## Q3: What is the distribution of `years_experience`? {auto-animate="true"}
+
+. . .
+
+```{r}
+library(ggplot2)
+farm_data |>
+  ggplot(aes(x = years_experience)) +
+  geom_bar()
+```
+
+## Q3: What is the distribution of `years_experience`? {auto-animate="true"}
+
+```{r}
+farm_data |>
+  ggplot(aes(y = years_experience)) +
+  geom_bar()
+```
+
+## `geom_bar()` {auto-animate="true"}
+
+. . .
+
+`geom_bar()` counts up the number of observations in each level of a single variable, then draws bars up to that height.
+
+## Summarizing with counts {auto-animate="true"}
+
+. . .
+
+```{r}
+farm_data |>
+  group_by(primary_crop) |>
+  summarize(count = n())
+```
+
+## `geom_col()`
+
+. . .
+
+`geom_col()` takes one column of categories and draws a bar for each up to the height of a second column of counts.
+
+. . .
+
+```{r}
+farm_data |>
+  count(primary_crop) |>
+  ggplot(aes(y = primary_crop, x = n)) +
+  geom_col()
+```
+
+## Two types of Viz
+
+::::: columns
+::: column
+### Exploratory Data Analysis (EDA)
+:::
+
+::: column
+### Explanatory Data Analysis
+:::
+:::::
+
+::: notes
+Add notes to each:
+
+Exploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation
+
+Explanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic
+:::
+
+# Let us know if you have any questions!
+
+:::{.nonincremental}
+
+Homework 1 is posted to BCourses
+
+-   Due Monday, March 2nd at 11:59PM
+
+Reading for next week: *Price of Eggs*
+
+-   <https://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html>
+
+:::
