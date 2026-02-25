@@ -36,7 +36,7 @@ Find today's slides [here.](slides.html)
 
 ### 💻 Code
 
-Basic graphics with `"ggplot2"`
+Basic data cleaning with `dplyr` and exploratory data analysis.
 
 - qmd notebook file
 - html file
