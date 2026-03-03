@@ -140,18 +140,53 @@
     ]
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-1",
-    "href": "units/2-grammar-graphics/slides.html#section-1",
+    "objectID": "units/2-grammar-graphics/slides.html#categorical",
+    "href": "units/2-grammar-graphics/slides.html#categorical",
     "title": "Week 2",
-    "section": "",
-    "text": "Channels for unordered variables\n\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+    "section": "Categorical",
+    "text": "Categorical\nType of variable that represents categories or groups. It takes one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or nominal category on the basis of some qualitative property.\nExamples:\n\nBinary: Only takes two possible values, and are typically represented as 1 or 0.\nNominal: Categories have no clear order, and are mutually exclusive\nOrdinal: Have a clear ordering of the categories"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section-2",
-    "href": "units/2-grammar-graphics/slides.html#section-2",
+    "objectID": "units/2-grammar-graphics/slides.html#quantitative",
+    "href": "units/2-grammar-graphics/slides.html#quantitative",
     "title": "Week 2",
-    "section": "",
-    "text": "Key idea:\nThese plots use the same data, but different grammars.\nThey share:\n\nthe same dataset (penguins)\na single mapped variable\n\nThey differ by:\n\ngeometry (histogram, density, boxplot)\nstatistical transformation"
+    "section": "Quantitative",
+    "text": "Quantitative\nNumerical data point (AKA numerical variable) that can be measured or counted, allowing for mathematical operations to be applied.\nExamples:\n\nDiscrete: Can take any countable value represented as an integer (whole number),\nContinuous: Can take any measurable value within a given range, including fractions and decimals."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
+    "href": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
+    "title": "Week 2",
+    "section": "Right Graph for the Right Analytical Task",
+    "text": "Right Graph for the Right Analytical Task\n\nStephen Few: analytical tasks or analytical patterns\n\n\n\n\n\n\nPurpose\nExample Chart Types\n\n\n\n\nChange over time\nTimeline (line chart), area chart, slope chart\n\n\nShowing part-to-whole\nStacked bar, donut chart, treemap\n\n\nComparisons\nBar chart , column chart, dot plot\n\n\nDistributions (quantitative variable)\nHistogram, boxplot, violin plot, density\n\n\nRanking\nBar chart (sorted), lollipop chart\n\n\nRelationships\nScatter plot, bubble chart, connected scatter\n\n\nCorrelations\nScatter plot, matrix chart\n\n\nGeospatial\nChoropleth, symbol map\n\n\nFlow\nArrow charts, Sankey diagram\n\n\nText\nWord cloud"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#lollipop-chart",
+    "href": "units/2-grammar-graphics/slides.html#lollipop-chart",
+    "title": "Week 2",
+    "section": "Lollipop Chart",
+    "text": "Lollipop Chart"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#sorted-bar-chart",
+    "href": "units/2-grammar-graphics/slides.html#sorted-bar-chart",
+    "title": "Week 2",
+    "section": "Sorted Bar Chart",
+    "text": "Sorted Bar Chart"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#donut-chart",
+    "href": "units/2-grammar-graphics/slides.html#donut-chart",
+    "title": "Week 2",
+    "section": "Donut Chart",
+    "text": "Donut Chart"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#sankey-diagram",
+    "href": "units/2-grammar-graphics/slides.html#sankey-diagram",
+    "title": "Week 2",
+    "section": "Sankey Diagram",
+    "text": "Sankey Diagram"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-1",
@@ -161,6 +196,27 @@
     "text": "“The Grammar of Graphics”\nFrom a conceptual perspective, making graphics involves mapping data to geometric objects and their visual properties."
   },
   {
+    "objectID": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
+    "href": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
+    "title": "Week 2",
+    "section": "Why do we need Grammar of Graphics (GG)?",
+    "text": "Why do we need Grammar of Graphics (GG)?\n\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable\nmodular"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section",
+    "href": "units/2-grammar-graphics/slides.html#section",
+    "title": "Week 2",
+    "section": "",
+    "text": "Formalized by Leland Wilkinson (1999)\n\n\n\nA formal set of rules to create any type of graphics\nUnderlies most modern data visualization software.\nImplemented as an R package (‘ggplot2’)"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#key-concepts",
+    "href": "units/2-grammar-graphics/slides.html#key-concepts",
+    "title": "Week 2",
+    "section": "Key Concepts",
+    "text": "Key Concepts\n\n\n\nData: the data set being visualized (next week!)\nAesthetics (aes): how variables map to visual properties (x, y, color, size, etc)\nGeometric objects (geoms): what kind of marks to draw (points, bars, lines)\nFacets: creating small multiples by splitting data into panels\nStats: statistical transformations (e.g. binning for histograms, smoothing lines)\nCoordinates: how data values are translated into visual values (e.g. color gradients)\nThemes: controlling non-data elements (fonts, backgrounds, gridlines)"
+  },
+  {
     "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
     "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
     "title": "Week 2",
@@ -168,11 +224,11 @@
     "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-1",
+    "objectID": "units/2-grammar-graphics/slides.html#section-1",
+    "href": "units/2-grammar-graphics/slides.html#section-1",
     "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+    "section": "",
+    "text": "Channels for unordered variables\n\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#geometry",
@@ -182,34 +238,6 @@
     "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#named-plots",
-    "href": "units/2-grammar-graphics/slides.html#named-plots",
-    "title": "Week 2",
-    "section": "Named plots",
-    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1",
-    "href": "units/2-grammar-graphics/slides.html#redux-1",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1-1",
-    "href": "units/2-grammar-graphics/slides.html#redux-1-1",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#section-3",
-    "href": "units/2-grammar-graphics/slides.html#section-3",
-    "title": "Week 2",
-    "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
-  },
-  {
     "objectID": "units/2-grammar-graphics/slides.html#ggplot2-1",
     "href": "units/2-grammar-graphics/slides.html#ggplot2-1",
     "title": "Week 2",
@@ -217,25 +245,11 @@
     "text": "ggplot2()\n\nA plot can be decomposed into three primary elements:\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#two-columns",
-    "href": "units/2-grammar-graphics/slides.html#two-columns",
+    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
+    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
     "title": "Week 2",
-    "section": "Two Columns",
-    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
-    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins-1",
-    "title": "Week 2",
-    "section": "Meet the Palmer Penguins ",
-    "text": "Meet the Palmer Penguins \n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#section-7",
-    "href": "units/2-grammar-graphics/slides.html#section-7",
-    "title": "Week 2",
-    "section": "",
-    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+    "section": "Meet the Palmer Penguins",
+    "text": "Meet the Palmer Penguins\n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section-8",
@@ -245,60 +259,39 @@
     "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
-    "href": "units/2-grammar-graphics/slides.html#the-grammar-of-graphics-3",
-    "title": "Week 2",
-    "section": "“The Grammar of Graphics”",
-    "text": "“The Grammar of Graphics”\nLeland Wilkinson (1999)\n\n\n\nA grammar to describes all statistical graphics.\nUnderlies most modern data visualization software."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-2",
-    "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
-    "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping-3",
-    "title": "Week 2",
-    "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#geometry-1",
-    "href": "units/2-grammar-graphics/slides.html#geometry-1",
-    "title": "Week 2",
-    "section": "Geometry",
-    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#named-plots-1",
-    "href": "units/2-grammar-graphics/slides.html#named-plots-1",
-    "title": "Week 2",
-    "section": "Named plots",
-    "text": "Named plots\n\nDraw “Scatterplot” and “barchart” along with their description in the g of g."
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1-2",
-    "href": "units/2-grammar-graphics/slides.html#redux-1-2",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#redux-1-3",
-    "href": "units/2-grammar-graphics/slides.html#redux-1-3",
-    "title": "Week 2",
-    "section": "Redux 1",
-    "text": "Redux 1"
-  },
-  {
     "objectID": "units/2-grammar-graphics/slides.html#section-9",
     "href": "units/2-grammar-graphics/slides.html#section-9",
     "title": "Week 2",
     "section": "",
     "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#section-10",
+    "href": "units/2-grammar-graphics/slides.html#section-10",
+    "title": "Week 2",
+    "section": "",
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#summary",
+    "href": "units/2-grammar-graphics/slides.html#summary",
+    "title": "Week 2",
+    "section": "Summary",
+    "text": "Summary\nThis is the process of how data is encoded to a visual through the framework that grammar of graphics offers."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#attendance-worksheet",
+    "href": "units/2-grammar-graphics/slides.html#attendance-worksheet",
+    "title": "Week 2",
+    "section": "Attendance Worksheet",
+    "text": "Attendance Worksheet\nMake sure to turn in your worksheet before leaving with your name on it please!!"
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html#homework",
+    "href": "units/2-grammar-graphics/slides.html#homework",
+    "title": "Week 2",
+    "section": "Homework",
+    "text": "Homework\nRead The Persistent Grip of Social Class on College Admissions"
   },
   {
     "objectID": "units/7-design1/slides.html#icebreaker",
@@ -502,7 +495,7 @@
     "href": "units/4-trichromatic/slides.html#agenda",
     "title": "Week 4",
     "section": "Agenda",
-    "text": "Agenda\n\nReading discussion\n\nggplot2: why do we use it?\nActivity: coding practice"
+    "text": "Agenda\n\nReading discussion\n\nEDA: preparing data for graphics\nggplot2: why do we use it?\nActivity: coding practice"
   },
   {
     "objectID": "units/4-trichromatic/slides.html#examples-of-graphs-we-can-make-with-ggplot2",
@@ -530,7 +523,7 @@
     "href": "units/4-trichromatic/slides.html#section-1",
     "title": "Week 4",
     "section": "",
-    "text": "penguins |&gt;\n  ggplot(aes(x = bill_length_mm,\n             y = flipper_length_mm,\n             color = species)) +\n  geom_point()"
+    "text": "library(tidyverse)\nlibrary(dplyr)\nlibrary(palmerpenguins)\n#| label: \"hi mom\"\npenguins |&gt;\n  select(bill_length_mm,\n         flipper_length_mm,\n         species)\n\n\n\n# A tibble: 344 × 3\n   bill_length_mm flipper_length_mm species\n            &lt;dbl&gt;             &lt;int&gt; &lt;fct&gt;  \n 1           39.1               181 Adelie \n 2           39.5               186 Adelie \n 3           40.3               195 Adelie \n 4           NA                  NA Adelie \n 5           36.7               193 Adelie \n 6           39.3               190 Adelie \n 7           38.9               181 Adelie \n 8           39.2               195 Adelie \n 9           34.1               193 Adelie \n10           42                 190 Adelie \n# ℹ 334 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDraw arrows mapping variables to visual cues"
   },
   {
     "objectID": "units/4-trichromatic/slides.html#ggplot2-syntax",
@@ -765,7 +758,7 @@
     "href": "units/3-data-types/unit03.html",
     "title": "3) Data Types, Chart Selection",
     "section": "",
-    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #2 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nBasic data cleaning with dplyr and exploratory data analysis.\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
       "3) Data Types, Chart Selection"
@@ -776,7 +769,7 @@
     "href": "units/3-data-types/unit03.html#this-week",
     "title": "3) Data Types, Chart Selection",
     "section": "",
-    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #2 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nBasic data cleaning with dplyr and exploratory data analysis.\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
       "3) Data Types, Chart Selection"
@@ -1039,18 +1032,179 @@
     ]
   },
   {
-    "objectID": "units/3-data-types/slides.html#code-example",
-    "href": "units/3-data-types/slides.html#code-example",
+    "objectID": "units/3-data-types/slides.html#data-frames-in-r",
+    "href": "units/3-data-types/slides.html#data-frames-in-r",
     "title": "Week 3",
-    "section": "Code Example",
-    "text": "Code Example\nHere’s an example of code and output using ggplot2 in R."
+    "section": "Data Frames in R",
+    "text": "Data Frames in R\nA data frame is like a table or spreadsheet — it has rows and columns, and each column can have its own type (numbers, words, etc.).\n\n\n# Create a data frame\nstudents &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Charlie\"),\n  age = c(20, 21, 19),\n  major = c(\"Math\", \"Physics\", \"Biology\")\n)\n\n# Print the data frame\nprint(students)\n\n\n     name age   major\n1   Alice  20    Math\n2     Bob  21 Physics\n3 Charlie  19 Biology"
   },
   {
-    "objectID": "units/3-data-types/slides.html#two-columns",
-    "href": "units/3-data-types/slides.html#two-columns",
+    "objectID": "units/3-data-types/slides.html#data-types-in-r",
+    "href": "units/3-data-types/slides.html#data-types-in-r",
     "title": "Week 3",
-    "section": "Two Columns",
-    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
+    "section": "Data types in R",
+    "text": "Data types in R\nData Types: A data type tells you what kind of data something is, like a number, a word (string), or a TRUE/FALSE value (logical).\n\n\n# Numeric (numbers)\nnum &lt;- 42\n\n# Character (text)\ntext &lt;- \"Hello, R!\"\n\n# Logical (TRUE/FALSE)\nlogic &lt;- TRUE\n\n# Print the values and their types\nprint(num)      # 42\n\n\n[1] 42\n\nprint(text)     # \"Hello, R!\"\n\n[1] \"Hello, R!\"\n\nprint(logic)    # TRUE\n\n[1] TRUE\n\n# Check the data type using class()\nclass(num)   # \"numeric\"\n\n[1] \"numeric\"\n\nclass(text)  # \"character\"\n\n[1] \"character\"\n\nclass(logic) # \"logical\"\n\n[1] \"logical\""
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#functions-we-use-to-clean-data",
+    "href": "units/3-data-types/slides.html#functions-we-use-to-clean-data",
+    "title": "Week 3",
+    "section": "Functions we use to clean data",
+    "text": "Functions we use to clean data\n\n\n\n\n\n\n\n\nFunction\nWhat it does\nExample\n\n\n\n\nstr_trim()\nRemove extra spaces\n\" Coffee \" → \"Coffee\"\n\n\nstr_to_lower()\nConvert text to lowercase\n\"Tea\" → \"tea\"\n\n\nstr_to_upper()\nConvert text to uppercase\n\"Water\" → \"WATER\""
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#functions-we-use-to-clean-data-continued",
+    "href": "units/3-data-types/slides.html#functions-we-use-to-clean-data-continued",
+    "title": "Week 3",
+    "section": "Functions we use to clean data (Continued)",
+    "text": "Functions we use to clean data (Continued)\nparse_number() extracts the first number it finds in a string.\n\nlibrary(tidyverse)\n\ndf &lt;- df |&gt;\n  mutate(\n    hours = parse_number(hours),\n    commute = parse_number(commute),\n    units = parse_number(units)\n  )"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#functions-we-use-to-clean-data-continued-1",
+    "href": "units/3-data-types/slides.html#functions-we-use-to-clean-data-continued-1",
+    "title": "Week 3",
+    "section": "Functions we use to clean data (Continued)",
+    "text": "Functions we use to clean data (Continued)\ncase_when() Creates a new variable using multiple conditions.\n\ndf &lt;- df |&gt;\n  mutate(\n    drink_clean = case_when(\n      #logical condition, condition ~ value_if_true “is in”\n      #If condition is TRUE, then assign \"water\"\n      #drink == \"water\" checks ONE VALUE \n      drink %in% c(\"water\", \"sparkling water\") ~ \"water\",\n      drink %in% c(\"tea\", \"peach iced tea\") ~ \"tea\",\n      drink %in% c(\"coffee\", \"coffee/liquid\") ~ \"coffee\",\n      TRUE ~ \"other\"\n    )\n  )"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#data-cleaning-1",
+    "href": "units/3-data-types/slides.html#data-cleaning-1",
+    "title": "Week 3",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\nBefore we can clean data, we first need to load it into our R session."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#csvs",
+    "href": "units/3-data-types/slides.html#csvs",
+    "title": "Week 3",
+    "section": "CSVs",
+    "text": "CSVs\nA comma separate value (CSV) file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.\n\n\n\nReading into R (base R)\n\ndata &lt;- read.csv(\"data/week1_survey.csv\")\ndata"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#csvs-1",
+    "href": "units/3-data-types/slides.html#csvs-1",
+    "title": "Week 3",
+    "section": "CSVs",
+    "text": "CSVs\nA comma separate value (CSV) file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.\n\n\nReading into R (readr)\n\nlibrary(readr)\n# library(tidyverse) # easy alternative\n# read_csv: modern tidyverse approach, faster, safer, more predictable\ndata &lt;- read_csv(\"data/week1_survey.csv\")\ndata\n\n\n\n# A tibble: 19 × 7\n   hours           transfer gradstudent commute   drink             major  units\n   &lt;chr&gt;           &lt;lgl&gt;    &lt;lgl&gt;       &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;  &lt;chr&gt;\n 1 7               FALSE    FALSE       20        water             Rheto… 6    \n 2 8               FALSE    FALSE       10 min    water             Env.E… 15   \n 3 7 hours         TRUE     TRUE        20 mins   coffee            Busin… 13   \n 4 6 hrs           TRUE     FALSE       5 min     champagne         appli… 13 u…\n 5 4 hours/5 hours FALSE    FALSE       10 min    sprite            Econo… 16   \n 6 9hrs            TRUE     FALSE       45 min    coffee            DATA … 13 u…\n 7 7 hours         FALSE    FALSE       7 mins    water             Data … 14   \n 8 6 hrs           FALSE    FALSE       ~10       Peach Iced tea    CB     18   \n 9 8h              TRUE     FALSE       5m        water             Data … 14   \n10 7h30            FALSE    FALSE       20 min    water             Molec… 15   \n11 8h              TRUE     FALSE       60        tea               stati… 20   \n12 8hours/wd       FALSE    FALSE       2 minutes coffee/liquid     legal… 17 u…\n13 7.5h            FALSE    FALSE       30 min    tea               poli.… 20u  \n14 7h avg          NA       TRUE        20 minute sparkling water   Buisi… 15   \n15 7.5h            FALSE    TRUE        35 min    gin and tonic     stati… 13   \n16 6               TRUE     FALSE       10        Tea               compu… 11   \n17 8 hours         TRUE     FALSE       45 min    water             Data … 17 u…\n18 6               FALSE    FALSE       20        tea               math   20   \n19 6               FALSE    FALSE       10 min    Iced Matcha Latte Socio… 12"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#data-cleaning-continued",
+    "href": "units/3-data-types/slides.html#data-cleaning-continued",
+    "title": "Week 3",
+    "section": "Data Cleaning (Continued)",
+    "text": "Data Cleaning (Continued)\n\n#Preview the first few rows of the dataset\nhead(data)\n\n\n\n# A tibble: 6 × 7\n  hours           transfer gradstudent commute drink     major             units\n  &lt;chr&gt;           &lt;lgl&gt;    &lt;lgl&gt;       &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;\n1 7               FALSE    FALSE       20      water     Rhetoric          6    \n2 8               FALSE    FALSE       10 min  water     Env.Econ          15   \n3 7 hours         TRUE     TRUE        20 mins coffee    Business managem… 13   \n4 6 hrs           TRUE     FALSE       5 min   champagne applied math      13 u…\n5 4 hours/5 hours FALSE    FALSE       10 min  sprite    Economics         16   \n6 9hrs            TRUE     FALSE       45 min  coffee    DATA SCIENCE      13 u…"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#dplyr-verbs",
+    "href": "units/3-data-types/slides.html#dplyr-verbs",
+    "title": "Week 3",
+    "section": "dplyr verbs",
+    "text": "dplyr verbs\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#data-pipelines-in-r",
+    "href": "units/3-data-types/slides.html#data-pipelines-in-r",
+    "title": "Week 3",
+    "section": "Data Pipelines in R",
+    "text": "Data Pipelines in R\n\n\n\n2016: magrittr introduces %&gt;%\n\n|&gt;\n2021:\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#using-pipeline-with-our-data",
+    "href": "units/3-data-types/slides.html#using-pipeline-with-our-data",
+    "title": "Week 3",
+    "section": "Using pipeline with our data",
+    "text": "Using pipeline with our data\nWithout the pipeline, we would have to apply each function one at a time:\n\nsummarize(\n  filter(data, major == \"statistics\"),\n  mean(sleep_hours, na.rm = TRUE)\n)\n# results in nested function which can be very messy\n\n\n\n\nUsing the pipeline, this becomes very clean:\n\ndata |&gt;\n  filter(major == \"statistics\") |&gt;\n  summarise(mean(sleep_hours, na.rm = TRUE))"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#reality-with-data",
+    "href": "units/3-data-types/slides.html#reality-with-data",
+    "title": "Week 3",
+    "section": "Reality with data",
+    "text": "Reality with data\n\nfarm_raw &lt;- tibble(\n  employee_id = 1:6,\n  hours_worked = c(\"40 hours\", \"55 hrs\", \"38 hrs\", \"60 hours\", \"45hrs\", \"50hours\"),\n  seasonal_worker = c(\"yes\", \"TRUE\", \"no\", \"Yes\", \"false\", \"TRUE\"),\n  supervisor = c(\"no\", \"no\", \"TRUE\", \"no\", \"TRUE\", \"no\"),\n  commute_min = c(\"15 minutes\", \"35 mins\", \"20min\", \"50 minute\", \"10minutes\", \"40mins\"),\n  primary_crop = c(\" Corn\", \"wheat \", \"CORN\", \"Soy\", \" soy \", \"WHEAT\"),\n  years_experience = c(\"2 years\", \"5rs\", \"10 yrs\", \"3 yr\", \"12 years\", \"4yr\"),\n  hourly_wage = c(\"18 dollars\", \"20/hr\", \"25 per hour\", \"19 dollars\", \"28 usd\", \"21 /day\")\n)"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#data-cleaning-example",
+    "href": "units/3-data-types/slides.html#data-cleaning-example",
+    "title": "Week 3",
+    "section": "Data Cleaning Example:",
+    "text": "Data Cleaning Example:\n\nlibrary(tidyverse)\n\nfarm_clean &lt;- farm_raw |&gt;\n  mutate(\n    # numeric columns\n    hours_worked = parse_number(hours_worked),\n    commute_min = parse_number(commute_min),\n    years_experience = parse_number(years_experience),\n    hourly_wage = parse_number(hourly_wage),\n\n    # yes/no variables\n    seasonal_worker = case_when(\n      str_to_lower(str_trim(seasonal_worker)) %in% c(\"yes\", \"true\") ~ TRUE,\n      str_to_lower(str_trim(seasonal_worker)) %in% c(\"no\", \"false\") ~ FALSE,\n      TRUE ~ NA\n    ),\n\n    supervisor = case_when(\n      str_to_lower(str_trim(supervisor)) %in% c(\"yes\", \"true\") ~ TRUE,\n      str_to_lower(str_trim(supervisor)) %in% c(\"no\", \"false\") ~ FALSE,\n      TRUE ~ NA\n    ),\n\n    # categorical cleanup\n    primary_crop =\n      primary_crop |&gt;\n      str_trim() |&gt;\n      str_to_lower()\n  )\n\nfarm_clean\n\n\n\n# A tibble: 6 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n1           1           40 TRUE            FALSE               15 corn        \n2           2           55 TRUE            FALSE               35 wheat       \n3           3           38 FALSE           TRUE                20 corn        \n4           4           60 TRUE            FALSE               50 soy         \n5           5           45 FALSE           TRUE                10 soy         \n6           6           50 TRUE            FALSE               40 wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#exploratory-data-analysis",
+    "href": "units/3-data-types/slides.html#exploratory-data-analysis",
+    "title": "Week 3",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\nAfter having cleaned the data, we want to get a sense of what we are looking at.\n\nLet’s use our farm_data data as an example."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows",
+    "href": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows",
+    "title": "Week 3",
+    "section": "Q1: What are the cols and rows?",
+    "text": "Q1: What are the cols and rows?\n\n\ndim(farm_data)\n\n\n\n[1] 10  8\n\n\n\n\n\nsapply(farm_data, class)\n\n\n\n     employee_id     hours_worked  seasonal_worker       supervisor \n       \"integer\"        \"numeric\"        \"logical\"        \"logical\" \n     commute_min     primary_crop years_experience      hourly_wage \n       \"numeric\"      \"character\"        \"numeric\"        \"numeric\""
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-1",
+    "href": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-1",
+    "title": "Week 3",
+    "section": "Q1: What are the cols and rows?",
+    "text": "Q1: What are the cols and rows?\n\nfarm_data\n\n\n\n# A tibble: 10 × 8\n   employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n         &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n 1           1           40 TRUE            FALSE               15 Corn        \n 2           2           55 TRUE            FALSE               35 Wheat       \n 3           3           38 FALSE           TRUE                20 Corn        \n 4           4           60 TRUE            FALSE               50 Soy         \n 5           5           45 FALSE           TRUE                10 Soy         \n 6           6           50 TRUE            FALSE               40 Wheat       \n 7           7           42 FALSE           TRUE                25 Corn        \n 8           8           65 TRUE            FALSE               60 Soy         \n 9           9           37 FALSE           TRUE                12 Corn        \n10          10           48 FALSE           FALSE               30 Wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-2",
+    "href": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-2",
+    "title": "Week 3",
+    "section": "Q1: What are the cols and rows?",
+    "text": "Q1: What are the cols and rows?\n\nUnit of observation: an individual farm worker\nVariables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)\n\n\n\nA description of the variables is often stored in a separate file called a data dictionary."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#q2-is-there-any-missing-data",
+    "href": "units/3-data-types/slides.html#q2-is-there-any-missing-data",
+    "title": "Week 3",
+    "section": "Q2: Is there any missing data?",
+    "text": "Q2: Is there any missing data?\n\nOption 1: Total missing values\n\nlibrary(dplyr)\nsum(is.na(farm_data))\n\n\n\n[1] 0\n\n\n\n\nOption 2: Proportion missing counts\n\nfarm_data |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n\n\n# A tibble: 1 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1           0            0               0          0           0            0\n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience",
+    "href": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience",
+    "title": "Week 3",
+    "section": "Q3: What is the distribution of years_experience?",
+    "text": "Q3: What is the distribution of years_experience?\n\n\nlibrary(ggplot2)\nfarm_data |&gt;\n  ggplot(aes(x = years_experience)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience-1",
+    "href": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience-1",
+    "title": "Week 3",
+    "section": "Q3: What is the distribution of years_experience?",
+    "text": "Q3: What is the distribution of years_experience?\n\nfarm_data |&gt;\n  ggplot(aes(y = years_experience)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#geom_bar",
+    "href": "units/3-data-types/slides.html#geom_bar",
+    "title": "Week 3",
+    "section": "geom_bar()",
+    "text": "geom_bar()\n\ngeom_bar() counts up the number of observations in each level of a single variable, then draws bars up to that height."
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#summarizing-with-counts",
+    "href": "units/3-data-types/slides.html#summarizing-with-counts",
+    "title": "Week 3",
+    "section": "Summarizing with counts",
+    "text": "Summarizing with counts\n\n\nfarm_data |&gt;\n  group_by(primary_crop) |&gt;\n  summarize(count = n())\n\n\n\n# A tibble: 3 × 2\n  primary_crop count\n  &lt;chr&gt;        &lt;int&gt;\n1 Corn             4\n2 Soy              3\n3 Wheat            3"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#geom_col",
+    "href": "units/3-data-types/slides.html#geom_col",
+    "title": "Week 3",
+    "section": "geom_col()",
+    "text": "geom_col()\n\ngeom_col() takes one column of categories and draws a bar for each up to the height of a second column of counts.\n\n\n\nfarm_data |&gt;\n  count(primary_crop) |&gt;\n  ggplot(aes(y = primary_crop, x = n)) +\n  geom_col()"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html#two-types-of-viz",
+    "href": "units/3-data-types/slides.html#two-types-of-viz",
+    "title": "Week 3",
+    "section": "Two types of Viz",
+    "text": "Two types of Viz\n\n\nExploratory Data Analysis (EDA)\n\nExplanatory Data Analysis\n\n\nAdd notes to each:\nExploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation\nExplanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic"
   },
   {
     "objectID": "units/3-data-types/data1.html#section",
@@ -1274,7 +1428,7 @@
     "href": "units/4-trichromatic/unit04.html",
     "title": "4) Color I",
     "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
+    "text": "In this week, we’ll continue talking about coding in R, using the grammar of graphics framework and ggplot2 to create high quality graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain how ggplot2 relates to the tidyverse\nExplain how ggplot2 utilizes the grammar of graphics to create visuals\nCreate a basic data graphic\nAccess and use datasets from baseR\n\n\n\n\n\nFind today’s slides here.\n\n\n\nFind today’s activity here.\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
     "crumbs": [
       "Units",
       "4) Color I"
@@ -1285,7 +1439,7 @@
     "href": "units/4-trichromatic/unit04.html#this-week",
     "title": "4) Color I",
     "section": "",
-    "text": "In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.\nA big aspect of any visual display has to do with color, which involves two major aspects:\n\nSpecification of colors, and\nUse of colors (encoding data with color).\n\nIn this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).\nThe topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain the Trichromatic theory of color vision.\nExplain how to specify colors under the RGB color model.\nDescribe the geometric space associated to the RGB model.\nIndicate how to use hexadecimal notation to express RGB values.\nDescribe what the alpha value (or alpha channel) is used for.\n\n\n\n\n\nTrichromatic Theory (google slides)\nRGB Color Model (google slides)\n\n\n\n\nTBA\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
+    "text": "In this week, we’ll continue talking about coding in R, using the grammar of graphics framework and ggplot2 to create high quality graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain how ggplot2 relates to the tidyverse\nExplain how ggplot2 utilizes the grammar of graphics to create visuals\nCreate a basic data graphic\nAccess and use datasets from baseR\n\n\n\n\n\nFind today’s slides here.\n\n\n\nFind today’s activity here.\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
     "crumbs": [
       "Units",
       "4) Color I"
@@ -1362,7 +1516,7 @@
     "href": "units/2-grammar-graphics/unit02.html",
     "title": "2) Grammar of Graphics I",
     "section": "",
-    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 2/23 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "text": "In this week, we’ll get an introduction to the Grammar of Graphics and R’s \"ggplot2\" package for making graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
       "2) Grammar of Graphics I"
@@ -1373,7 +1527,7 @@
     "href": "units/2-grammar-graphics/unit02.html#this-week",
     "title": "2) Grammar of Graphics I",
     "section": "",
-    "text": "In this week, we’ll get an introduction to the \"ggplot2\" package for making graphics and you will turn in HW1 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nA Grammar of Graphics (google slides)\n\n\n\n\nBasic graphics with \"ggplot2\"\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 2/23 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
+    "text": "In this week, we’ll get an introduction to the Grammar of Graphics and R’s \"ggplot2\" package for making graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
       "2) Grammar of Graphics I"
@@ -1400,127 +1554,150 @@
     ]
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#categorical",
-    "href": "units/2-grammar-graphics/slides.html#categorical",
-    "title": "Week 2",
-    "section": "Categorical",
-    "text": "Categorical\nType of variable that represents categories or groups. It takes one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or nominal category on the basis of some qualitative property.\nExamples:\n\nBinary: Only takes two possible values, and are typically represented as 1 or 0.\nNominal: Categories have no clear order, and are mutually exclusive\nOrdinal: Have a clear ordering of the categories"
+    "objectID": "units/4-trichromatic/slides.html#reminder-of-dataviz-workflow-1",
+    "href": "units/4-trichromatic/slides.html#reminder-of-dataviz-workflow-1",
+    "title": "Week 4",
+    "section": "Reminder of DataViz Workflow",
+    "text": "Reminder of DataViz Workflow"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#quantitative",
-    "href": "units/2-grammar-graphics/slides.html#quantitative",
-    "title": "Week 2",
-    "section": "Quantitative",
-    "text": "Quantitative\nNumerical data point (AKA numerical variable) that can be measured or counted, allowing for mathematical operations to be applied.\nExamples:\n\nDiscrete: Can take any countable value represented as an integer (whole number),\nContinuous: Can take any measurable value within a given range, including fractions and decimals."
+    "objectID": "units/4-trichromatic/slides.html#q1-what-are-the-cols-and-rows",
+    "href": "units/4-trichromatic/slides.html#q1-what-are-the-cols-and-rows",
+    "title": "Week 4",
+    "section": "Q1: What are the cols and rows?",
+    "text": "Q1: What are the cols and rows?\n\n\ndim(farm_data)\n\n\n\n[1] 10  8\n\n\n\n\n\nsapply(farm_data, class)\n\n\n\n     employee_id     hours_worked  seasonal_worker       supervisor \n       \"integer\"        \"numeric\"        \"logical\"        \"logical\" \n     commute_min     primary_crop years_experience      hourly_wage \n       \"numeric\"      \"character\"        \"numeric\"        \"numeric\""
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
-    "href": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
-    "title": "Week 2",
-    "section": "Right Graph for the Right Analytical Task",
-    "text": "Right Graph for the Right Analytical Task\n\nStephen Few: analytical tasks or analytical patterns\n\n\n\n\n\n\nPurpose\nExample Chart Types\n\n\n\n\nChange over time\nTimeline (line chart), area chart, slope chart\n\n\nShowing part-to-whole\nStacked bar, donut chart, treemap\n\n\nComparisons\nBar chart , column chart, dot plot\n\n\nDistributions (quantitative variable)\nHistogram, boxplot, violin plot, density\n\n\nRanking\nBar chart (sorted), lollipop chart\n\n\nRelationships\nScatter plot, bubble chart, connected scatter\n\n\nCorrelations\nScatter plot, matrix chart\n\n\nGeospatial\nChoropleth, symbol map\n\n\nFlow\nArrow charts, Sankey diagram\n\n\nText\nWord cloud"
+    "objectID": "units/4-trichromatic/slides.html#q1-what-are-the-cols-and-rows-1",
+    "href": "units/4-trichromatic/slides.html#q1-what-are-the-cols-and-rows-1",
+    "title": "Week 4",
+    "section": "Q1: What are the cols and rows?",
+    "text": "Q1: What are the cols and rows?\n\nfarm_data\n\n\n\n# A tibble: 10 × 8\n   employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n         &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n 1           1           40 TRUE            FALSE               15 Corn        \n 2           2           55 TRUE            FALSE               35 Wheat       \n 3           3           38 FALSE           TRUE                20 Corn        \n 4           4           60 TRUE            FALSE               50 Soy         \n 5           5           45 FALSE           TRUE                10 Soy         \n 6           6           50 TRUE            FALSE               40 Wheat       \n 7           7           42 FALSE           TRUE                25 Corn        \n 8           8           65 TRUE            FALSE               60 Soy         \n 9           9           37 FALSE           TRUE                12 Corn        \n10          10           48 FALSE           FALSE               30 Wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#lollipop-chart",
-    "href": "units/2-grammar-graphics/slides.html#lollipop-chart",
-    "title": "Week 2",
-    "section": "Lollipop Chart",
-    "text": "Lollipop Chart\n ## Sorted Bar Chart"
+    "objectID": "units/4-trichromatic/slides.html#q1-what-are-the-cols-and-rows-2",
+    "href": "units/4-trichromatic/slides.html#q1-what-are-the-cols-and-rows-2",
+    "title": "Week 4",
+    "section": "Q1: What are the cols and rows?",
+    "text": "Q1: What are the cols and rows?\n\nUnit of observation: an individual farm worker\nVariables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)\n\n\n\nA description of the variables is often stored in a separate file called a data dictionary."
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#donut-chart",
-    "href": "units/2-grammar-graphics/slides.html#donut-chart",
-    "title": "Week 2",
-    "section": "Donut Chart",
-    "text": "Donut Chart"
+    "objectID": "units/4-trichromatic/slides.html#q2-is-there-any-missing-data",
+    "href": "units/4-trichromatic/slides.html#q2-is-there-any-missing-data",
+    "title": "Week 4",
+    "section": "Q2: Is there any missing data?",
+    "text": "Q2: Is there any missing data?\n\nOption 1: Total missing values\n\nlibrary(dplyr)\nsum(is.na(farm_data))\n\n\n\n[1] 0\n\n\n\n\nOption 2: Proportion missing counts\n\nfarm_data |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n\n\n# A tibble: 1 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1           0            0               0          0           0            0\n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#sankey-diagram",
-    "href": "units/2-grammar-graphics/slides.html#sankey-diagram",
-    "title": "Week 2",
-    "section": "Sankey Diagram",
-    "text": "Sankey Diagram"
+    "objectID": "units/4-trichromatic/slides.html#q3-what-is-the-distribution-of-years_experience",
+    "href": "units/4-trichromatic/slides.html#q3-what-is-the-distribution-of-years_experience",
+    "title": "Week 4",
+    "section": "Q3: What is the distribution of years_experience?",
+    "text": "Q3: What is the distribution of years_experience?\n\n\nlibrary(ggplot2)\nfarm_data |&gt;\n  ggplot(aes(x = years_experience)) +\n  geom_bar()"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
-    "href": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
-    "title": "Week 2",
-    "section": "Why do we need Grammar of Graphics (GG)?",
-    "text": "Why do we need Grammar of Graphics (GG)?\n\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable\nmodular"
+    "objectID": "units/4-trichromatic/slides.html#q3-what-is-the-distribution-of-years_experience-1",
+    "href": "units/4-trichromatic/slides.html#q3-what-is-the-distribution-of-years_experience-1",
+    "title": "Week 4",
+    "section": "Q3: What is the distribution of years_experience?",
+    "text": "Q3: What is the distribution of years_experience?\n\nfarm_data |&gt;\n  ggplot(aes(y = years_experience)) +\n  geom_bar()"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#section",
-    "href": "units/2-grammar-graphics/slides.html#section",
-    "title": "Week 2",
+    "objectID": "units/4-trichromatic/slides.html#geom_bar",
+    "href": "units/4-trichromatic/slides.html#geom_bar",
+    "title": "Week 4",
+    "section": "geom_bar()",
+    "text": "geom_bar()\n\ngeom_bar() counts up the number of observations in each level of a single variable, then draws bars up to that height."
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#summarizing-with-counts",
+    "href": "units/4-trichromatic/slides.html#summarizing-with-counts",
+    "title": "Week 4",
+    "section": "Summarizing with counts",
+    "text": "Summarizing with counts\n\n\nfarm_data |&gt;\n  group_by(primary_crop) |&gt;\n  summarize(count = n())\n\n\n\n# A tibble: 3 × 2\n  primary_crop count\n  &lt;chr&gt;        &lt;int&gt;\n1 Corn             4\n2 Soy              3\n3 Wheat            3"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#geom_col",
+    "href": "units/4-trichromatic/slides.html#geom_col",
+    "title": "Week 4",
+    "section": "geom_col()",
+    "text": "geom_col()\n\ngeom_col() takes one column of categories and draws a bar for each up to the height of a second column of counts.\n\n\n\nfarm_data |&gt;\n  count(primary_crop) |&gt;\n  ggplot(aes(y = primary_crop, x = n)) +\n  geom_col()"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#two-types-of-viz",
+    "href": "units/4-trichromatic/slides.html#two-types-of-viz",
+    "title": "Week 4",
+    "section": "Two types of Viz",
+    "text": "Two types of Viz\n\n\nExploratory Data Analysis (EDA)\n\nExplanatory Data Analysis\n\n\nAdd notes to each:\nExploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation\nExplanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#reminder-of-dataviz-workflow-2",
+    "href": "units/4-trichromatic/slides.html#reminder-of-dataviz-workflow-2",
+    "title": "Week 4",
+    "section": "Reminder of DataViz Workflow",
+    "text": "Reminder of DataViz Workflow"
+  },
+  {
+    "objectID": "units/4-trichromatic/slides.html#section-2",
+    "href": "units/4-trichromatic/slides.html#section-2",
+    "title": "Week 4",
     "section": "",
-    "text": "Formalized by Leland Wilkinson (1999)\n\n\n\nA formal set of rules to create any type of graphics\nUnderlies most modern data visualization software.\nImplemented as an R package (‘ggplot2’)"
+    "text": "library(tidyverse)\nlibrary(dplyr)\nlibrary(palmerpenguins)\n#| label: \"hi mom\"\npenguins |&gt;\n  select(bill_length_mm,\n         flipper_length_mm,\n         species)\n\n\n\n# A tibble: 344 × 3\n   bill_length_mm flipper_length_mm species\n            &lt;dbl&gt;             &lt;int&gt; &lt;fct&gt;  \n 1           39.1               181 Adelie \n 2           39.5               186 Adelie \n 3           40.3               195 Adelie \n 4           NA                  NA Adelie \n 5           36.7               193 Adelie \n 6           39.3               190 Adelie \n 7           38.9               181 Adelie \n 8           39.2               195 Adelie \n 9           34.1               193 Adelie \n10           42                 190 Adelie \n# ℹ 334 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDraw arrows mapping variables to visual cues"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#key-concepts",
-    "href": "units/2-grammar-graphics/slides.html#key-concepts",
-    "title": "Week 2",
-    "section": "Key Concepts",
-    "text": "Key Concepts\n\n\n\nData: the data set being visualized (next week!)\nAesthetics (aes): how variables map to visual properties (x, y, color, size, etc)\nGeometric objects (geoms): what kind of marks to draw (points, bars, lines)\nFacets: creating small multiples by splitting data into panels\nStats: statistical transformations (e.g. binning for histograms, smoothing lines)\nCoordinates: how data values are translated into visual values (e.g. color gradients)\nThemes: controlling non-data elements (fonts, backgrounds, gridlines)"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
-    "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
-    "title": "Week 2",
-    "section": "Meet the Palmer Penguins",
-    "text": "Meet the Palmer Penguins\n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
-  },
-  {
-    "objectID": "units/2-grammar-graphics/slides.html#section-10",
-    "href": "units/2-grammar-graphics/slides.html#section-10",
-    "title": "Week 2",
+    "objectID": "units/4-trichromatic/slides.html#section-3",
+    "href": "units/4-trichromatic/slides.html#section-3",
+    "title": "Week 4",
     "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+    "text": "penguins |&gt;\n  ggplot(aes(x = bill_length_mm,\n             y = flipper_length_mm,\n             color = species)) +\n  geom_point()"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#summary",
-    "href": "units/2-grammar-graphics/slides.html#summary",
-    "title": "Week 2",
-<<<<<<< HEAD
-    "section": "Sketching Activity",
-    "text": "Sketching Activity"
+    "objectID": "units/4-trichromatic/week4-activity.html",
+    "href": "units/4-trichromatic/week4-activity.html",
+    "title": "Week 4 Activity",
+    "section": "",
+    "text": "This activity puts to practice the concepts introduced in lecture today, including functions like:\n\n\n\ndim()\nsapply()\nis.na()\nsum()\nsummarize()\nacross()\ngroup_by()\ncount()\ntheme_*()\n\n\n\nggplot()\naes()\ngeom_point()\ngeom_bar()\ngeom_col()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\n\n\nThis activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses,\n\n\nRender your QMD (Render button in RStudio and Preview button in Positron)  \nYour HTML file will be created and can be found in the same folder on your computer that the QMD is stored in.  \nSubmit both the HTML and QMD files to the ‘Week 4 Activity’ assignment in BCourses.\n\n\nIf any of these functions are unfamiliar to you, you can access the help documentation by typing ?function_name into your R console. Alternatively, you can review R basics in the following textbook.\n1. Load the required packages.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nHint: if you have not yet installed one of these packages, you must first run install.packages(\"package_name\") in your R console.\nWe will use the penguins dataset from the palmerpenguins package for most questions and mtcars at the end."
   },
   {
-    "objectID": "units/3-data-types/slides.html#two-columns",
-    "href": "units/3-data-types/slides.html#two-columns",
-    "title": "Week 3",
-    "section": "Two Columns",
-    "text": "Two Columns\n\n\nExplanation\nColumns are great for mixing code, plots, and text.\n\n\nLeft and right content\n\nWorks well for comparisons\n\nHelps structure visual walkthroughs\n\n\n\nExample plot"
+    "objectID": "units/4-trichromatic/week4-activity.html#introduction",
+    "href": "units/4-trichromatic/week4-activity.html#introduction",
+    "title": "Week 4 Activity",
+    "section": "",
+    "text": "This activity puts to practice the concepts introduced in lecture today, including functions like:\n\n\n\ndim()\nsapply()\nis.na()\nsum()\nsummarize()\nacross()\ngroup_by()\ncount()\ntheme_*()\n\n\n\nggplot()\naes()\ngeom_point()\ngeom_bar()\ngeom_col()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\n\n\nThis activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses,\n\n\nRender your QMD (Render button in RStudio and Preview button in Positron)  \nYour HTML file will be created and can be found in the same folder on your computer that the QMD is stored in.  \nSubmit both the HTML and QMD files to the ‘Week 4 Activity’ assignment in BCourses.\n\n\nIf any of these functions are unfamiliar to you, you can access the help documentation by typing ?function_name into your R console. Alternatively, you can review R basics in the following textbook.\n1. Load the required packages.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nHint: if you have not yet installed one of these packages, you must first run install.packages(\"package_name\") in your R console.\nWe will use the penguins dataset from the palmerpenguins package for most questions and mtcars at the end."
   },
   {
-    "objectID": "units/3-data-types/slides.html#dplyr-verbs",
-    "href": "units/3-data-types/slides.html#dplyr-verbs",
-    "title": "Week 3",
-    "section": "dplyr verbs",
-    "text": "dplyr verbs\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
+    "objectID": "units/4-trichromatic/week4-activity.html#part-1-understanding-the-data-eda-basics",
+    "href": "units/4-trichromatic/week4-activity.html#part-1-understanding-the-data-eda-basics",
+    "title": "Week 4 Activity",
+    "section": "Part 1: Understanding the Data (EDA Basics)",
+    "text": "Part 1: Understanding the Data (EDA Basics)\n2. What are the dimensions of penguins? How many rows? How many columns?\n\nHint: Use dim().\n3. What are the data types of each column?\n4. How many total missing values are in the dataset?\n5. What proportion of missing values are in each column? Which variable has the most missingness?"
   },
   {
-    "objectID": "units/3-data-types/slides.html#data-pipelines-in-r",
-    "href": "units/3-data-types/slides.html#data-pipelines-in-r",
-    "title": "Week 3",
-    "section": "Data Pipelines in R",
-    "text": "Data Pipelines in R\n\n\n\n2016: magrittr introduces %&gt;%\n\n|&gt;\n2021:\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call."
-=======
-    "section": "Summary",
-    "text": "Summary\nThis is the process of how data is encoded to a visual through the framework that grammar of graphics offers."
+    "objectID": "units/4-trichromatic/week4-activity.html#part-2-single-variable-distributions",
+    "href": "units/4-trichromatic/week4-activity.html#part-2-single-variable-distributions",
+    "title": "Week 4 Activity",
+    "section": "Part 2: Single Variable Distributions",
+    "text": "Part 2: Single Variable Distributions\n6. Create a bar plot of species.\n\n\nUse geom_bar().\n\nDoes this geom require you to count manually?\n\n\nWritten answer here:\n7. Create a bar plot of island.\n\n\nWhich island appears most common?\n\nWritten answer here:\n8. Create a histogram of bill_length_mm.\n\n\nDoes the distribution look symmetric, skewed left, or skewed right?\n\nWritten answer here:\n9. Create a density plot of bill_length_mm.\n\n\nUse geom_density().\n\nHow does it compare to the histogram?\n\n\nWritten answer here:\n10. Create a boxplot of body_mass_g.\n\n\nAre there potential outliers?\n\nWritten answer here:"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#attendance-worksheet",
-    "href": "units/2-grammar-graphics/slides.html#attendance-worksheet",
-    "title": "Week 2",
-    "section": "Attendance Worksheet",
-    "text": "Attendance Worksheet\nMake sure to turn in your worksheet before leaving with your name on it please!!"
+    "objectID": "units/4-trichromatic/week4-activity.html#part-3-grouped-summaries-geom_col",
+    "href": "units/4-trichromatic/week4-activity.html#part-3-grouped-summaries-geom_col",
+    "title": "Week 4 Activity",
+    "section": "Part 3: Grouped Summaries + geom_col()",
+    "text": "Part 3: Grouped Summaries + geom_col()\n11. Count the number of penguins in each species using count(). Store the result.\n12. Use geom_col() to recreate the species counts.\n\n\nWhy must we use geom_col() instead of geom_bar() here?\n\n\nWritten answer here:\n13. Count the number of penguins by species and island.\n\n\nWhich combination is most common?\n\n\nWritten answer here:"
   },
   {
-    "objectID": "units/2-grammar-graphics/slides.html#homework",
-    "href": "units/2-grammar-graphics/slides.html#homework",
-    "title": "Week 2",
-    "section": "Homework",
-    "text": "Homework\nRead The Persistent Grip of Social Class on College Admissions"
->>>>>>> 16e16e1e4549645f60b1af695460513cfcdaeeb0
+    "objectID": "units/4-trichromatic/week4-activity.html#part-4-two-variable-relationships",
+    "href": "units/4-trichromatic/week4-activity.html#part-4-two-variable-relationships",
+    "title": "Week 4 Activity",
+    "section": "Part 4: Two Variable Relationships",
+    "text": "Part 4: Two Variable Relationships\n14. Create a scatterplot of:\n\n\nbill_length_mm (x)\nflipper_length_mm (y)\nWhat kind of relationship do you see?\n\nWritten answer here:\n15. Modify the scatterplot:\n\n\nAdd color = species.\n\nDoes separating by species clarify the relationship?\n\nWritten answer here:\n16. Change the same scatterplot to: \n\nshape = species instead of color.\n\nWhen might shape be preferable to color?\n\nWritten answer here:\n17. Create a boxplot of: body_mass_g by species. \n\nWhich species tends to be heaviest?\n\nWritten answer here:"
+  },
+  {
+    "objectID": "units/4-trichromatic/week4-activity.html#part-5-reflection-short-discussion",
+    "href": "units/4-trichromatic/week4-activity.html#part-5-reflection-short-discussion",
+    "title": "Week 4 Activity",
+    "section": "Part 5: Reflection (Short Discussion)",
+    "text": "Part 5: Reflection (Short Discussion)\n18. What is the difference between geom_bar() and geom_col()?\n\nWritten answer here:\n19. What is the unit of observation in:\n\n\npenguins?\nmtcars?\n\nWritten answer here:\n20. Which plots felt more exploratory vs explanatory?\nWritten answer here:"
   }
 ]

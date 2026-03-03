@@ -1,0 +1,233 @@
+---
+title: Week 4 Activity
+subtitle: R Basics (3) - EDA and ggplot2
+format: html
+---
+
+## Introduction
+
+This activity puts to practice the concepts introduced in lecture today, including functions like:
+
+:::::: columns
+::: column
+-   `dim()`
+-   `sapply()`
+-   `is.na()`
+-   `sum()`
+-   `summarize()`
+-   `across()`
+-   `group_by()`
+-   `count()`
+-   `theme_*()`
+:::
+
+::: column
+-   `ggplot()`
+-   `aes()`
+-   `geom_point()`
+-   `geom_bar()`
+-   `geom_col()`
+-   `geom_histogram()`
+-   `geom_boxplot()`
+-   `geom_violin()`
+-   `geom_density()`
+:::
+::::::
+
+This activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses, \
+
+- *Render your QMD* (Render button in RStudio and Preview button in Positron) \ 
+
+- Your HTML file will be created and can be found in the same folder on your computer that the QMD is stored in. \ 
+
+- Submit both the HTML and QMD files to the 'Week 4 Activity' assignment in BCourses. \
+
+*If any of these functions are unfamiliar to you, you can access the help documentation by typing `?function_name` into your R console. Alternatively, you can review R basics in the following [textbook](https://www.gastonsanchez.com/R-coding-basics/).*
+
+**1.  Load the required packages.**
+
+```{r}
+#| output: false
+library(tidyverse)
+library(palmerpenguins)
+```
+
+*Hint: if you have not yet installed one of these packages, you must first run `install.packages("package_name")` in your R console.*
+
+We will use the `penguins` dataset from the `palmerpenguins` package for most questions and `mtcars` at the end.
+
+## Part 1: Understanding the Data (EDA Basics)
+
+**2.  What are the dimensions of `penguins`? How many rows? How many columns?**\
+
+*Hint: Use `dim()`.*
+
+```{r}
+
+```
+
+**3.  What are the data types of each column?**
+
+```{r}
+
+```
+
+**4.  How many total missing values are in the dataset?**
+
+```{r}
+
+```
+
+**5.  What proportion of missing values are in each column? Which variable has the most missingness?**
+
+```{r}
+
+```
+
+## Part 2: Single Variable Distributions
+
+**6.  Create a bar plot of `species`.**\
+
+-   Use `geom_bar()`.\
+
+-   Does this geom require you to count manually?\
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**7.  Create a bar plot of `island`.**\
+
+-   Which island appears most common?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**8.  Create a histogram of `bill_length_mm`.**\
+
+-   Does the distribution look symmetric, skewed left, or skewed right?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**9.  Create a density plot of `bill_length_mm`.**\
+
+-   Use `geom_density()`.\
+
+-   How does it compare to the histogram?\
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**10. Create a boxplot of `body_mass_g`.**\
+
+-   Are there potential outliers?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+## Part 3: Grouped Summaries + `geom_col()`
+
+**11. Count the number of penguins in each species using `count()`. Store the result.**
+
+```{r}
+
+```
+
+**12. Use `geom_col()` to recreate the species counts.**\
+
+-   Why must we use `geom_col()` instead of `geom_bar()` here?\
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**13. Count the number of penguins by `species` and `island`.**\
+
+-   Which combination is most common?\
+
+```{r}
+
+```
+
+*Written answer here:*
+
+## Part 4: Two Variable Relationships
+
+**14. Create a scatterplot of:**\
+
+-   `bill_length_mm` (x)
+-   `flipper_length_mm` (y)
+-   What kind of relationship do you see?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**15. Modify the scatterplot:**\
+
+-   Add `color = species`.\
+-   Does separating by species clarify the relationship?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**16. Change the same scatterplot to:** 
+
+-   `shape = species` instead of color.\
+-   When might shape be preferable to color?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+**17. Create a boxplot of: `body_mass_g` by species.** 
+
+-   Which species tends to be heaviest?
+
+```{r}
+
+```
+
+*Written answer here:*
+
+## Part 5: Reflection (Short Discussion)
+
+**18. What is the difference between geom_bar() and geom_col()?**\
+
+*Written answer here:*
+
+**19. What is the unit of observation in:**\
+
+-   penguins?
+
+-   mtcars?
+
+*Written answer here:*
+
+**20. Which plots felt more exploratory vs explanatory?**
+
+*Written answer here:*

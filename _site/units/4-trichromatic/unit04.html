@@ -245,36 +245,26 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="this-week" class="level2">
 <h2 class="anchored" data-anchor-id="this-week">This Week:</h2>
-<p>In this week, we’ll continue talking about color, specifically about the Trichromatic Color Theory and RGB Model, and you will take a quiz during class.</p>
-<p>A big aspect of any visual display has to do with color, which involves two major aspects:</p>
-<ol type="1">
-<li><p>Specification of colors, and</p></li>
-<li><p>Use of colors (encoding data with color).</p></li>
-</ol>
-<p>In this unit and the next one, we’ll talk about how can we specify—in a computational sense—a certain color. In other words: <strong>How do we tell a computer program what kind of color we want to use?</strong> The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).</p>
-<p>The topic of this unit is the so-called RGB (Red-Green-Blue) Color Model. Also, we describe the geometric space of such color model, as well as the use of hexadecimal notation for expressing RGB values.</p>
+<p>In this week, we’ll continue talking about coding in R, using the grammar of graphics framework and <code>ggplot2</code> to create high quality graphics.</p>
 <p><br></p>
 <section id="objectives" class="level3">
 <h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
 <p>At the end of this unit you will be able to:</p>
 <ul>
-<li><p>Explain the Trichromatic theory of color vision.</p></li>
-<li><p>Explain how to specify colors under the RGB color model.</p></li>
-<li><p>Describe the geometric space associated to the RGB model.</p></li>
-<li><p>Indicate how to use hexadecimal notation to express RGB values.</p></li>
-<li><p>Describe what the alpha value (or alpha channel) is used for.</p></li>
+<li><p>Explain how <code>ggplot2</code> relates to the <code>tidyverse</code></p></li>
+<li><p>Explain how <code>ggplot2</code> utilizes the grammar of graphics to create visuals</p></li>
+<li><p>Create a basic data graphic</p></li>
+<li><p>Access and use datasets from <code>baseR</code></p></li>
 </ul>
 <p><br></p>
 </section>
 <section id="slides" class="level3">
 <h3 class="anchored" data-anchor-id="slides">🌠 Slides</h3>
-<p><a href="https://docs.google.com/presentation/d/1yzU4HQzR0Sh8f2PQQ7oKFN5X93wt0RyqniVNLpNbMpQ/edit?usp=sharing" target="_blank">Trichromatic Theory</a> <small>(google slides)</small></p>
-<p><a href="https://docs.google.com/presentation/d/1q_Rxrn2ldFmeBiZUZ-_YTS3vqZw1g0RndgG348-UniU/edit?usp=sharing" target="_blank">RGB Color Model</a> <small>(google slides)</small></p>
-<p><br></p>
+<p>Find today’s slides <a href="slides.html">here.</a></p>
 </section>
 <section id="code" class="level3">
 <h3 class="anchored" data-anchor-id="code">💻 Code</h3>
-<p>TBA</p>
+<p>Find today’s activity <a href="../../units/4-trichromatic/week4-activity.html">here.</a></p>
 <p><br></p>
 </section>
 <section id="assignment" class="level3">
@@ -360,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
