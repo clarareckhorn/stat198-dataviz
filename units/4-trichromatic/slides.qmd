@@ -4,22 +4,6 @@ subtitle: R Basics (3) - ggplot2
 format: stat198slides-revealjs
 ---
 
-# Introduction
-
-This is a sample deck for DataViz DeCal Slides. The features include:
-
-1. Title slide with background image.
-2. A bunch of yaml defaults.
-3. Clickable logo in lower right that links to the previous page.
-4. No logo or slide number on title slide.
-5. Custom `:::poll` div for poll questions.
-6. A [countdown timer](https://github.com/gadenbuie/countdown/tree/main/quarto) accessible by adding
-
-   `{{< countdown "01:30" >}}`
-   
-   on a new line.
-
-
 ## Agenda
 
 - Reading discussion  
