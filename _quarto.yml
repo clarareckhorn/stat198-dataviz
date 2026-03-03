@@ -25,13 +25,15 @@ website:
           - units/1-intro/unit01.qmd
           - units/2-grammar-graphics/unit02.qmd
           - units/3-data-types/unit03.qmd
-          - units/4-trichromatic/unit04.qmd
-          - units/5-opponent/unit05.qmd
-          - units/6-using-color/unit06.qmd
-          - units/7-design1/unit07.qmd
-          - units/8-design2/unit08.qmd
-          - units/9-maps1/unit09.qmd
-          - units/10-maps2/unit10.qmd
+          - units/4-eda-ggplot/unit04.qmd
+          - units/5-color1/unit05.qmd
+          - units/6-color2/unit06.qmd
+          - units/7-color3/unit07.qmd
+          - units/8-spatial1/unit08.qmd
+          - units/9-spatial2/unit09.qmd
+          - units/10-final1/unit10.qmd
+          - units/11-final2/unit11.qmd
+          - units/12-final-pres/unit12.qmd
 
 format:
   html:

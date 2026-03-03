@@ -1,0 +1,55 @@
+---
+title: "7) Color 3 - Design Considerations"
+---
+
+
+## This Week: 
+
+In this week, we'll talk about good data viz practices and you will take a quiz during lecture.
+
+What things should you pay attention when looking at a graphic?
+
+How can you make a graphic less distracting from the data being represented?
+
+In this unit we talk about the so-called __Data-Ink ratio__ (proposed by Edward 
+Tufte) which is the proportion of ink (or pixels) that is used to present actual 
+data compared to the total amount of ink (or pixels) used in the entire display.
+
+
+<br>
+
+
+### 🎯 Objectives
+
+At the end of this unit you will be able to:
+
+- Explain the concept of Data-to-Ink ratio
+- Be able to suggest modifications for increasing the data-ink ratio in a graphic
+
+
+<br>
+
+
+### 🌠 Slides
+
+<a href="https://docs.google.com/presentation/d/14kjCDK5e2dEYO7HT4eJy7f6CNXXlY43a3DMLopcqdzE/edit?usp=sharing" target="_blank">Data-Ink Ratio</a> <small>(google slides)</small>
+
+
+<br>
+
+
+### 💻 Code
+
+TBA
+
+
+<br>
+
+
+### 📖 Assignment
+
+__Reading__: _How unusual has this hurricane season been? (BBC)_
+
+<a href="https://www.bbc.com/news/articles/cden551l7kko" target="_blank">https://www.bbc.com/news/articles/cden551l7kko</a>
+
+__Homework__: Homework #5 is due Monday, 3/30 at 11:59pm. You can find the assignment and turn in your work on BCourses.
