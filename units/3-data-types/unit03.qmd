@@ -1,5 +1,5 @@
 ---
-title: "3) Data Types, Chart Selection"
+title: "3) R Basics 2 - Data Types and Data Cleaning"
 ---
 
 ## This Week: 

@@ -1,5 +1,5 @@
 ---
-title: "4) Color I"
+title: "4) R Basics 3 - EDA and ggplot2"
 ---
 
 ## This Week: 

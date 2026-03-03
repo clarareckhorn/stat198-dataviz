@@ -1,5 +1,5 @@
 ---
-title: "2) Grammar of Graphics I"
+title: "2) R Basics 1 - GG"
 ---
 
 ## This Week:
