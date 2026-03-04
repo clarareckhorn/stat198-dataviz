@@ -1,0 +1,341 @@
+---
+title: Week 4 Activity - Solutions
+subtitle: R Basics (3) - EDA and ggplot2
+format: 
+    html:
+        echo: true
+        embed-resources: true
+---
+
+## Introduction
+
+This activity puts to practice the concepts introduced in lecture today, including functions like:
+
+:::::: columns
+::: column
+-   `dim()`
+-   `sapply()`
+-   `is.na()`
+-   `sum()`
+-   `summarize()`
+-   `across()`
+-   `group_by()`
+-   `count()`
+-   `theme_*()`
+:::
+
+::: column
+-   `ggplot()`
+-   `aes()`
+-   `geom_point()`
+-   `geom_bar()`
+-   `geom_col()`
+-   `geom_histogram()`
+-   `geom_boxplot()`
+-   `geom_violin()`
+-   `geom_density()`
+:::
+::::::
+
+This activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses, \
+
+- *Render your QMD* (Render button in RStudio and Preview button in Positron) \ 
+
+- Your HTML file will be created and can be found in the same folder on your computer that the QMD is stored in. \ 
+
+- Submit both the HTML and QMD files to the 'Week 4 Activity' assignment in BCourses. \
+
+*If any of these functions are unfamiliar to you, you can access the help documentation by typing `?function_name` into your R console. Alternatively, you can review R basics in the following [textbook](https://www.gastonsanchez.com/R-coding-basics/).*
+
+**1.  Load the required packages.**
+
+```{r}
+#| output: false
+library(tidyverse)
+library(palmerpenguins)
+```
+
+*Hint: if you have not yet installed one of these packages, you must first run `install.packages("package_name")` in your R console.*
+
+We will use the `penguins` dataset from the `palmerpenguins` package for most questions and `mtcars` at the end.
+
+## Part 1: Understanding the Data (EDA Basics)
+
+**2.  What are the dimensions of `penguins`? How many rows? How many columns?**\
+
+*Hint: Use `dim()`.*
+
+```{r}
+dim(penguins)
+# 344 rows, 8 columns
+```
+
+**3.  What are the data types of each column?**
+
+```{r}
+sapply(penguins, class)
+# species = factor, island = factor, bill_length = numeric, bill_depth = numeric
+# flipper_length_mm = integer, body_mass = integer, sex = factor, year = integer
+```
+
+**4.  How many total missing values are in the dataset?**
+
+```{r}
+sum(is.na(penguins))
+# 19 missing values
+```
+
+**5.  What proportion of missing values are in each column? Which variable has the most missingness?**
+
+```{r}
+penguins |>
+  summarize(across(everything(), ~ mean(is.na(.))))
+# species = 0
+# island = 0
+# bill_length = 0.00581
+# bill_depth = 0.00581
+# flipper_length = 0.00581
+# body_mass =  0.00581
+# hides other 2 for sex and year (there is a way to fix this but don't worry about it)
+```
+
+## Part 2: Single Variable Distributions
+
+**6.  Create a bar plot of `species`.**\
+
+-   Use `geom_bar()`.\
+
+-   Does this geom require you to count manually?\
+
+```{r}
+penguins |>
+  ggplot(aes(x = species)) +
+  geom_bar()
+```
+
+*Written answer here:* no, this geom automatically counts the species up
+
+**7.  Create a bar plot of `island`.**\
+
+-   Which island appears most common?
+
+```{r}
+penguins |>
+  ggplot(aes(x = island)) +
+  geom_bar()
+```
+
+*Written answer here:* Biscoe appears most often.
+
+**8.  Create a histogram of `bill_length_mm`.**\
+
+-   Does the distribution look symmetric, skewed left, or skewed right?
+
+```{r}
+penguins |>
+    ggplot(aes(x= bill_length_mm)) +
+    geom_histogram()
+```
+
+*Written answer here:* The distribution is mostly symmetric with an obvious dip in the middle range 
+
+**9.  Create a density plot of `bill_length_mm`.**\
+
+-   Use `geom_density()`.\
+
+-   How does it compare to the histogram?\
+
+```{r}
+penguins |>
+    ggplot(aes(x= bill_length_mm)) +
+    geom_density()
+```
+
+*Written answer here:* The density plot mostly maintains the same structure, but represents the density through a smooth line rather than through bars
+
+**10. Create a boxplot of `body_mass_g`.**\
+
+-   Are there potential outliers?
+
+```{r}
+penguins |>
+    ggplot(aes(x= body_mass_g)) +
+    geom_boxplot()
+```
+
+*Written answer here:* Most values seem centered around 3500 to 4800. There is a large range, so there are potentially a lot of outliers.
+
+## Part 3: Grouped Summaries + `geom_col()`
+
+**11. Count the number of penguins in each species using `count()`. Store the result.**
+
+```{r}
+species_count <- penguins |>
+  group_by(species) |>
+  summarize(count = n())
+# Adelie has most penguins
+```
+
+**12. Use `geom_col()` to recreate the species counts.**\
+
+-   Why must we use `geom_col()` instead of `geom_bar()` here?\
+
+```{r}
+penguins |>
+    count(species) |>
+    ggplot(aes(y = species, x = n)) +
+    geom_col()
+```
+
+*Written answer here:* We must use geom col because it is able to draw up the lines to a pre-defined count, whereas using geom_bar is used for raw data. ggplot would try to count the rows of the summarized data, which would give each species a count of 1 (because each appears once after count()).
+
+**13. Count the number of penguins by `species` and `island`.**\
+
+-   Which combination is most common?\
+
+```{r}
+penguins |>
+  count(species, island) |>
+  arrange(desc(n))
+```
+
+*Written answer here:* The most common combination is Gentoo penguins on Biscoe Island
+
+## Part 4: Two Variable Relationships
+
+**14. Create a scatterplot of:**\
+
+-   `bill_length_mm` (x)
+-   `flipper_length_mm` (y)
+-   What kind of relationship do you see?
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = flipper_length_mm)) +
+  geom_point()
+```
+
+*Written answer here:* It looks like, as bill length increases, so does flipper length. There is a positive correlation between the two variables. 
+
+**15. Modify the scatterplot:**\
+
+-   Add `color = species`.\
+-   Does separating by species clarify the relationship?
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, 
+             y = flipper_length_mm, 
+             color = species)) +
+  geom_point()
+```
+
+*Written answer here:* Yes, it makes the relationship very clear now because it separates the clouds of points. It becomes very obvious that the species that the penguin is has some sort of impact or causal effect on the flipper and bill length.
+
+**16. Change the same scatterplot to:** 
+
+-   `shape = species` instead of color.\
+-   When might shape be preferable to color?
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, 
+             y = flipper_length_mm, 
+             shape = species)) +
+  geom_point()
+```
+
+*Written answer here:* Shape might be preferable to color in black-white printing, if someone is color blind, if you want to use color for another variable (like sex), etc
+
+**17. Create a boxplot of: `body_mass_g` by species.** 
+
+-   Which species tends to be heaviest?
+
+```{r}
+penguins |>
+  ggplot(aes(x = species, y = body_mass_g)) +
+  geom_boxplot()
+```
+
+*Written answer here:* Gentoo tends to be heaviest.
+
+## Part 5: Reflection (Short Discussion)
+
+**18. What is the difference between geom_bar() and geom_col()?**\
+
+*Written answer here:* Geom_bar is for when raw data needs summarizing because the default is count, whereas col is better for pre-summarized data. 
+
+**19. What is the unit of observation in:**\
+
+-   penguins?
+
+-   mtcars?
+
+*Written answer here:* In penguins, each row is a penguin on the island. In mtcars, each row is a car model from a specific brand.
+
+**20. Which plots felt more exploratory vs explanatory?**
+
+*Written answer here:* up to interpretation, but generally plots where we summarize or highlight a message are explanatory, while plots that let us probe and investigate patterns are exploratory. 15, 16, 17 are examples of explanatory charts, and 6-10 are examples of exploratory plots. 
+
+**21. Next level**
+
+Let's practice making some graphs with `ggplot2`!
+
+a. Load the `mpg` dataset (which is inside tidyverse package).
+
+```{r}
+mpg
+```
+
+b. Take a look at the data: what is easy column representing? What does each row represent? *(Hint: if you are not sure, type `?mpg` into your console to launch the help panel)*
+
+```{r}
+?mpg
+# Each row is a car model
+# each column is a parameter about that car
+# manufacturer = manufacturer name
+# model = model name
+# displ = engine displacement, in litres
+# year = year of manufacture
+# cyl = number of cylinders
+# trans = type of transmission
+# drv = the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+# cty = city miles per gallon
+# hwy = highway miles per gallon
+# fl = fuel type
+# class = "type" of car
+```
+
+c. Create a scatter plot of `model` vs `cty`, colored by `year`.
+
+```{r}
+mpg |>
+    ggplot(aes(x = model, y = cty, color = year)) +
+    geom_point()
+```
+
+d. Experiment with different `geom_()` functions to visualize the data
+```{r}
+mpg |>
+    ggplot(aes(x = model, color = year)) +
+    geom_bar()
+```
+
+e. Customize your plots with themes and labels.
+
+```{r}
+mpg |>
+  ggplot(aes(x = model, fill = factor(year))) +
+  geom_bar(position = "dodge") +
+  labs(
+    title = "Number of Car Models by Year",
+    x = "Car Model",
+    y = "Count",
+    fill = "Year"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(face = "bold")
+  )
+```

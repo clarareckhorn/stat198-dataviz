@@ -1,15 +1,14 @@
 ---
-title: Week 4 Activity
+title: Week 4 Activity - Written Components
 subtitle: R Basics (3) - EDA and ggplot2
-format: html
+format: typst
 ---
 
 ## Introduction
 
 This activity puts to practice the concepts introduced in lecture today, including functions like:
 
-:::::: columns
-::: column
+
 -   `dim()`
 -   `sapply()`
 -   `is.na()`
@@ -19,9 +18,6 @@ This activity puts to practice the concepts introduced in lecture today, includi
 -   `group_by()`
 -   `count()`
 -   `theme_*()`
-:::
-
-::: column
 -   `ggplot()`
 -   `aes()`
 -   `geom_point()`
@@ -31,8 +27,7 @@ This activity puts to practice the concepts introduced in lecture today, includi
 -   `geom_boxplot()`
 -   `geom_violin()`
 -   `geom_density()`
-:::
-::::::
+
 
 This activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses, \
 
@@ -44,79 +39,41 @@ This activity is intended to be finished during classtime. In the case that we r
 
 *If any of these functions are unfamiliar to you, you can access the help documentation by typing `?function_name` into your R console. Alternatively, you can review R basics in the following [textbook](https://www.gastonsanchez.com/R-coding-basics/).*
 
-**1.  Load the required packages.**
-
-```{r}
-#| output: false
-library(tidyverse)
-library(palmerpenguins)
-```
-
-*Hint: if you have not yet installed one of these packages, you must first run `install.packages("package_name")` in your R console.*
-
-We will use the `penguins` dataset from the `palmerpenguins` package for most questions and `mtcars` at the end.
-
-## Part 1: Understanding the Data (EDA Basics)
-
-**2.  What are the dimensions of `penguins`? How many rows? How many columns?**\
-
-*Hint: Use `dim()`.*
-
-```{r}
-
-```
-
-**3.  What are the data types of each column?**
-
-```{r}
-
-```
-
-**4.  How many total missing values are in the dataset?**
-
-```{r}
-
-```
-
-**5.  What proportion of missing values are in each column? Which variable has the most missingness?**
-
-```{r}
-
-```
-
-## Part 2: Single Variable Distributions
-
 **6.  Create a bar plot of `species`.**\
 
 -   Use `geom_bar()`.\
 
 -   Does this geom require you to count manually?\
 
-```{r}
-
-```
-
 *Written answer here:*
+
+\ 
+\ 
+\ 
+\ 
 
 **7.  Create a bar plot of `island`.**\
 
 -   Which island appears most common?
 
-```{r}
-
-```
-
 *Written answer here:*
+
+\ 
+\ 
+\ 
+\ 
+
 
 **8.  Create a histogram of `bill_length_mm`.**\
 
--   Does the distribution look symmetric, skewed left, or skewed right?
-
-```{r}
-
-```
+-   Does the distribution look symmetric, skewed left, or skewed right? \ 
 
 *Written answer here:*
+
+\ 
+\ 
+\ 
+\ 
 
 **9.  Create a density plot of `bill_length_mm`.**\
 
@@ -124,49 +81,48 @@ We will use the `penguins` dataset from the `palmerpenguins` package for most qu
 
 -   How does it compare to the histogram?\
 
-```{r}
-
-```
-
 *Written answer here:*
+
+\ 
+\ 
+\ 
+\ 
 
 **10. Create a boxplot of `body_mass_g`.**\
 
 -   Are there potential outliers?
 
-```{r}
-
-```
-
 *Written answer here:*
 
+\ 
+\ 
+\ 
+\ 
+
 ## Part 3: Grouped Summaries + `geom_col()`
-
-**11. Count the number of penguins in each species using `count()`. Store the result.**
-
-```{r}
-
-```
 
 **12. Use `geom_col()` to recreate the species counts.**\
 
 -   Why must we use `geom_col()` instead of `geom_bar()` here?\
 
-```{r}
-
-```
-
 *Written answer here:*
+
+\ 
+\ 
+\ 
+\ 
 
 **13. Count the number of penguins by `species` and `island`.**\
 
 -   Which combination is most common?\
 
-```{r}
-
-```
-
 *Written answer here:*
+
+
+\ 
+\ 
+\ 
+\ 
 
 ## Part 4: Two Variable Relationships
 
@@ -174,94 +130,81 @@ We will use the `penguins` dataset from the `palmerpenguins` package for most qu
 
 -   `bill_length_mm` (x)
 -   `flipper_length_mm` (y)
--   What kind of relationship do you see?
+-   What kind of relationship do you see?\
 
-```{r}
+*Written answer here:*\
 
-```
 
-*Written answer here:*
+\ 
+\ 
+\ 
+\ 
 
 **15. Modify the scatterplot:**\
 
 -   Add `color = species`.\
--   Does separating by species clarify the relationship?
-
-```{r}
-
-```
+-   Does separating by species clarify the relationship?\ 
 
 *Written answer here:*
+
+\ 
+\ 
+\ 
+\ 
 
 **16. Change the same scatterplot to:** 
 
 -   `shape = species` instead of color.\
--   When might shape be preferable to color?
+-   When might shape be preferable to color?\
 
-```{r}
+*Written answer here:*\ 
 
-```
-
-*Written answer here:*
+\ 
+\ 
+\ 
+\ 
 
 **17. Create a boxplot of: `body_mass_g` by species.** 
 
--   Which species tends to be heaviest?
+-   Which species tends to be heaviest? \
 
-```{r}
+*Written answer here:*\ 
 
-```
 
-*Written answer here:*
+\ 
+\ 
+\ 
+\ 
 
 ## Part 5: Reflection (Short Discussion)
 
 **18. What is the difference between geom_bar() and geom_col()?**\
 
-*Written answer here:*
+*Written answer here:* \ 
+
+\ 
+\ 
+\ 
+\ 
 
 **19. What is the unit of observation in:**\
 
--   penguins?
+-   penguins? \
 
--   mtcars?
+-   mtcars? \
 
-*Written answer here:*
+*Written answer here:*\ 
+
+\ 
+\ 
+\ 
+\ 
 
 **20. Which plots felt more exploratory vs explanatory?**
 
-*Written answer here:*
+*Written answer here:* \ 
 
-**21. Next level**
-
-Let's practice making some graphs with `ggplot2`!
-
-a. Load the `mpg` dataset (which is inside tidyverse package). \ 
-
-```{r}
-
-```
-
-b. Take a look at the data: what is easy column representing? What does each row represent? *(Hint: if you are not sure, type `?mpg` into your console to launch the help panel)* \ 
-
-```{r}
-
-```
-
-3. Create a scatter plot of `model` vs `cty`, colored by `year`. \ 
-
-```{r}
-
-```
-
-4. Experiment with different `geom_()` functions to visualize the data \ 
-
-```{r}
-
-```
-
-5. Customize your plots with themes and labels. \ 
-
-```{r}
-
-```
+\ 
+\ 
+\ 
+\ 

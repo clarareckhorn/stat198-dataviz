@@ -329,13 +329,3 @@ penguins |>
 # Activity: Coding Practice
 Go to BCourses and download the `week4-activity.qmd` file to work on today's coding activity.
 
-# Next level
-
-Let's practice making some graphs with `ggplot2`!
-
-1. Open RStudio and create a new Quarto document.
-2. Load the `palmerpenguins` package and the `penguins` dataset.
-3. Create a scatter plot of `bill_length_mm` vs `flipper_length_mm`, colored by `species`.
-4. Experiment with different `geom_()` functions to visualize the data
-5. Customize your plots with themes and labels.
-
