@@ -1,0 +1,113 @@
+---
+title: "quiz1copy"
+format: typst
+---
+
+# Data Types & Chart Selection
+
+## Types of Variables
+
+ Assign the right number to the each sentence:
+
+@.) Binary 
+@.) Ordinal 
+@.) Nominal 
+@.) Continuous 
+@.) Discrete 
+
+___ Can take any countable value represented as an integer
+
+___ Categories have no clear order, and are mutually exclusive
+
+___ Only takes two possible values, and are typically represented as 1 or 0.
+
+___ Have a clear ordering of the categories
+
+___ Can take any measurable value within a given range, including fractions and decimals 
+
+
+## Analytical Goals and Chart Selection
+
+
+
+# Grammar of Graphics
+
+## Concepts
+@. Why is grammar of graphics useful?
+
+a)
+b) 
+c)
+d)
+
+@. Who came up with the grammar of graphics 
+
+a)
+b) 
+c)
+d)
+
+@. Which of these components **isn't** part of GG
+
+a) 
+b) 
+c)
+d)
+
+@. Aesthetic mapping is to...
+
+a)
+b) 
+c)
+d)
+
+
+# Data Cleaning
+
+## Open ended
+
+@. Why is data cleaning important?
+
+## Multiple Choice
+
+A dataset contains the following column:
+
+|Transfer Students|
+|-----------------|
+| Transfer|
+| transfer|
+| T |
+| non transfer|
+| NT |
+| Non-transfer |
+
+@. What is the main data cleaning issue here?
+
+a) Missing values
+b) Duplicate rows
+c) Inconsistent categorical labels
+d) Incorrect numerical values
+
+@. Why is data cleaning necessary before running statistical analysis?
+
+a) Because statistical models understand the meaning of messy data
+b) Because computers automatically interpret inconsistent labels correctly
+c) Because computers require structured, consistent inputs to produce valid results
+
+
+@. If a company does not properly clean its sales data before building a predictive model, what is the most likely outcome?
+
+a) The model will run faster
+b) The model will automatically fix errors
+c) The results may be biased or misleading
+d) The model will become more accurate
+
+# EDA
+
+theoretical questions and multiple choice
+
+# ggplot2
+
+theoretical questions
+
+what is ggplot2 based on
