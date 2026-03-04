@@ -1,5 +1,5 @@
 ---
-title: "quiz1copy"
+title: Practice Quiz 1
 format: typst
 ---
 
@@ -33,34 +33,27 @@ ___ Can take any measurable value within a given range, including fractions and 
 # Grammar of Graphics
 
 ## Concepts
-@. Why is grammar of graphics useful?
 
-a)
-b) 
-c)
-d)
+@. GG allows creation of graphs to be _________, __________, and ________ 
 
-@. Who came up with the grammar of graphics 
+@. What is aesthetic mapping?
 
-a)
-b) 
-c)
-d)
 
-@. Which of these components **isn't** part of GG
+@. Who formalized the grammar of graphics?
 
-a) 
-b) 
-c)
-d)
+a) Clara Reckhorn
+b) Leland Wilkinson
+c) Stephen Few
+d) Kieran Healy
 
-@. Aesthetic mapping is to...
+@. Which of these  **isn't** part of the GG framework
 
-a)
-b) 
-c)
-d)
+a) Statistics
+b) Theme
+c) Analysis 
+d) Coordinates
 
+## 
 
 # Data Cleaning
 
