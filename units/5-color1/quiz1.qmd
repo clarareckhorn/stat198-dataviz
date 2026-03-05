@@ -28,11 +28,32 @@ ___ Can take any measurable value within a given range, including fractions and 
 
 ## Analytical Goals and Chart Selection
 
+For the following datasets, **1)** come up with an analytical  goal, **2)** sate the variables you will use--and what type it is--to achieve it, and **3)** identify what chart will facilitate your observations.
+
+```{r}
+library(hce)
+
+dataset1 = hce::ADLB
+
+dataset1
+```
+
+
+
+@. You are given a dataset of laboratory measurements of kidney function over time. There are 8 variables: patient ID numbers, treatment values (1 = Active, 2 = Placebo), measurement value, measurement day in study
+
+@. You are given a dataset of
+
+@. You are given a dataset of
+
+@. You are given a dataset of
+
+@. You are given a dataset of
 
 
 # Grammar of Graphics
 
-## Concepts
+## Understandig GG
 
 @. GG allows creation of graphs to be _________, __________, and ________ 
 
@@ -53,7 +74,23 @@ b) Theme
 c) Analysis 
 d) Coordinates
 
-## 
+## Application
+
+The
+
+```{r echo=FALSE}
+library(tidyverse)
+library(ppgm)
+
+fossil_dataset = ppgm::scel_fossils
+
+fossil_dataset |>
+  ggplot(aes(x =))
+
+```
+
+
+@. 
 
 # Data Cleaning
 
