@@ -9,11 +9,11 @@ format: typst
 
  Assign the right number to the each sentence:
 
-@.) Binary 
-@.) Ordinal 
-@.) Nominal 
-@.) Continuous 
-@.) Discrete 
+@. ) Binary 
+@. ) Ordinal 
+@. ) Nominal 
+@. ) Continuous 
+@. ) Discrete 
 
 ___ Can take any countable value represented as an integer
 
@@ -30,26 +30,97 @@ ___ Can take any measurable value within a given range, including fractions and 
 
 For the following datasets, **1)** come up with an analytical  goal, **2)** sate the variables you will use--and what type it is--to achieve it, and **3)** identify what chart will facilitate your observations.
 
+@. A dataset of laboratory measurements of kidney function over time for the 1500 patients with the following variables:
+
+-   **ID**: patient identifiers
+-   **TRTPN**: treatment values, 1 Active or 2 Placebo
+-   **AVAL**: measurement value
+-   **ADAY**: measurement day in the study
+-   **AVISITN**: hospital visit number
+-   **PARAM**: name of the event, GFR measurement
+-   **PARAMCD**: coded name of the event, GFR
+-   **PARAMN**: type of the event is set to 7 for all measurements
+
 ```{r}
+#| echo: false
+
+
 library(hce)
 
 dataset1 = hce::ADLB
 
-dataset1
+head(dataset1)
+
 ```
 
 
 
-@. You are given a dataset of laboratory measurements of kidney function over time. There are 8 variables: patient ID numbers, treatment values (1 = Active, 2 = Placebo), measurement value, measurement day in study
+@. A data frame providing taxonomic information for  species with the following variables:
 
-@. You are given a dataset of
+-   **species_id**: The species_id given in xue_microbiome_sample
+-   **kingdom, phylum, class, order, family, genus, species**: The corresponding taxonomic category for each species
+-   **species_id_number**: The numeric code associated with each species, as used in xue_species_tree
 
-@. You are given a dataset of
+```{r}
+#| echo: false
 
-@. You are given a dataset of
+library(FAVA)
+library(tidyverse)
 
-@. You are given a dataset of
+dataset2 =  FAVA::xue_species_info
 
+dataset2 |>
+  group_by(species_id) |>
+  filter(!is.na(kingdom))|>
+  head(10)
+
+
+``` 
+
+
+@. A data frame where each row is a single fossil with the following variables:
+
+-   **MinAge**: Minimum age of fossil
+-   **MaxAge**: Maximum age of fossil
+-   **Longitude**: Longitude of occurrence
+-   **Latitude**: Latitude of occurrence
+
+```{r}
+#| echo: false
+
+
+library(ppgm)
+
+
+head(ppgm::scel_fossils,10)
+
+```
+
+
+
+
+
+
+@. Database of twig radii by tree species data with the following variables:
+
+-   **scientific_name**: The tree's genus and species
+-   **radius_mm**: The average twig radius in millimeters
+-   **n**: The twig measurement sample size
+-   **min**: The minimum twig radii from the samples
+-   **max**: The maximum twig radii from the samples
+-   **std**: The standard deviation of twig radii
+-   **cv**: The coefficient of variation of twig radii
+
+```{r}
+#| echo: false
+
+
+library(tidyverse)
+library(rTwig)
+
+head(rTwig::twigs,10)
+
+```
 
 # Grammar of Graphics
 
@@ -58,6 +129,9 @@ dataset1
 @. GG allows creation of graphs to be _________, __________, and ________ 
 
 @. What is aesthetic mapping?
+
+
+
 
 
 @. Who formalized the grammar of graphics?
@@ -78,15 +152,14 @@ d) Coordinates
 
 The
 
-```{r echo=FALSE}
+```{r}
+#| echo: false
+
+
 library(tidyverse)
-library(ppgm)
+library(rTwig)
 
-fossil_dataset = ppgm::scel_fossils
-
-fossil_dataset |>
-  ggplot(aes(x =))
-
+head(rTwig::twigs)
 ```
 
 
@@ -97,6 +170,10 @@ fossil_dataset |>
 ## Open ended
 
 @. Why is data cleaning important?
+
+
+
+blocking that outttt
 
 ## Multiple Choice
 
