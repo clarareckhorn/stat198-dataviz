@@ -213,7 +213,14 @@ d) The model will become more accurate
 
 # EDA
 
-theoretical questions and multiple choice
+@. Which of the following is the MOST accurate description of what EDA helps a data analyst accomplish?
+
+a) It proves that a hypothesis is correct.
+b) It replaces the need for statistical tests.
+c) It helps identify patterns, anomalies, and variable relationships before formal analysis.
+d) It converts categorical variables to continuous ones.
+
+@. True or False: EDA is only necessary when a researcher suspects there are errors in the dataset.
 
 # ggplot2
 
