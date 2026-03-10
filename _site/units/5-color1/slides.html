@@ -145,8 +145,8 @@
 <h1>Agenda</h1>
 <ul>
 <li class="fragment">Quiz covering week 2 to week 4</li>
-<li class="fragment">RGB Model: effective use of color in graphs</li>
-<li class="fragment">Activity</li>
+<li class="fragment">RGB Model: building a foundation of color</li>
+<li class="fragment">Coding activity:</li>
 </ul>
 </section>
 
@@ -155,11 +155,58 @@
 <p>You will have 35 minutes to complete the quiz. Good luck (and may the odds be ever in your favor)!!</p>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_30001dad" minutes="35" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_f6dda1c5" minutes="35" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;"></countdown-timer>
 </div>
 </div>
 </section>
 
+<section>
+<section id="introduction-to-color" class="title-slide slide level1 center">
+<h1>Introduction to Color</h1>
+<div class="fragment">
+<p>The use of color is a big aspect in any visual display for two main reasons:</p>
+<ul>
+<li class="fragment">We need to make decisions about what colors to use and for what purpose</li>
+<li class="fragment">We must tell a computer those colors.</li>
+</ul>
+</div>
+</section>
+<section id="common-purposes-for-color-usage" class="slide level2">
+<h2>Common purposes for color usage</h2>
+<p>. . . - <strong>Data encoding:</strong></p>
+<ul>
+<li class="fragment"><strong>Design aspects:</strong></li>
+</ul>
+<aside class="notes">
+<p>Data encoding: A main use of color (although not the only one) is to encode data. This encoding chiefly depends on the type of variables we are working with (e.g.&nbsp;qualitative or quantitative, discrete or continuous). Design aspects: Another important use of color has to do with design considerations such as psychology of color, decorative purposes, harmony, and things like that.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-do-we-specify-color-in-a-computational-sense" class="slide level2">
+<h2>How do we specify color in a computational sense?</h2>
+<aside class="notes">
+<p>How do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section>
 <section id="rgb-model" class="title-slide slide level1 center">
 <h1>RGB Model</h1>
@@ -203,17 +250,20 @@
 <section id="rgb-decimal-notation" class="title-slide slide level1 center">
 <h1>RGB Decimal Notation</h1>
 <div class="fragment">
-<p>Any number from 0 to 255 <img data-src="images/decimal-notation.png" data-fig-alig="center"> Where - 0: minimum value (off) - 255: maximum value (full intensity)</p>
+<p><img data-src="images/min-max-values.png" data-fig-alig="center"></p>
 </div>
 </section>
 <section id="rgb-reference-colors" class="slide level2">
 <h2>RGB Reference Colors</h2>
 <div class="fragment">
-<p><img data-src="images/reference-colors.png" data-fig-alig="center"> <strong>Example notations:</strong> - <span style="color:yellow;">Yellow</span>: (255,255,0) -</p>
+<p><img data-src="images/reference-colors.png" data-fig-alig="center"></p>
+<p><strong>Example notations:</strong> - <span style="color:yellow;">Yellow</span>: (255,255,0) -</p>
 </div>
 </section></section>
-<section id="why-do-rgb" class="title-slide slide level1 center">
-<h1>Why do RGB</h1>
+<section id="why-do-rgb-values-range-from-0-to-255" class="title-slide slide level1 center">
+<h1>Why do RGB values range from 0 to 255?</h1>
+<p>There are 256 numbers from 0 to 255</p>
+<p>256 = 2<sup>8</sup></p>
 
 
 </section>
