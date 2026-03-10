@@ -4,3 +4,8 @@ subtitle:  Use of Color
 format: stat198slides-revealjs
 ---
 
+# Agenda
+
+-   Quiz covering week 2 to week 4
+-   Discussion 
+-     
