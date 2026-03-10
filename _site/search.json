@@ -1700,5 +1700,26 @@
     "crumbs": [
       "About"
     ]
+  },
+  {
+    "objectID": "units/5-color1/slides.html#rgb",
+    "href": "units/5-color1/slides.html#rgb",
+    "title": "Week 5",
+    "section": "RGB",
+    "text": "RGB\nRed, Green, and Blue light sources are combined to display colors on televisions and computer monitors."
+  },
+  {
+    "objectID": "units/5-color1/slides.html#rgb-1",
+    "href": "units/5-color1/slides.html#rgb-1",
+    "title": "Week 5",
+    "section": "RGB",
+    "text": "RGB\nTherefore, any color you see on a monitor can be described by a series of 3 values (in the following order):\n\nRed value\nBlue value\nGreen value"
+  },
+  {
+    "objectID": "units/5-color1/slides.html#rgb-reference-colors",
+    "href": "units/5-color1/slides.html#rgb-reference-colors",
+    "title": "Week 5",
+    "section": "RGB Reference Colors",
+    "text": "RGB Reference Colors\n\n Example notations: - Yellow: (255,255,0) -"
   }
 ]
