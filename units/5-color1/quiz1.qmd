@@ -223,7 +223,3 @@ d) It converts categorical variables to continuous ones.
 @. True or False: EDA is only necessary when a researcher suspects there are errors in the dataset.
 
 # ggplot2
-
-theoretical questions
-
-what is ggplot2 based on
