@@ -28,7 +28,7 @@ ___ Can take any measurable value within a given range, including fractions and 
 
 ## Analytical Goals and Chart Selection
 
-For the following datasets, **1)** come up with an analytical  goal, **2)** sate the variables you will use--and what type it is--to achieve it, and **3)** identify what chart will facilitate your observations.
+For the following datasets, **1)** come up with an analytical  goal, **2)** state what variables you will use and identify its type, and **3)** identify what chart will facilitate your observations.
 
 @. A dataset of laboratory measurements of kidney function over time for the 1500 patients with the following variables:
 
@@ -43,39 +43,11 @@ For the following datasets, **1)** come up with an analytical  goal, **2)** sate
 
 ```{r}
 #| echo: false
-
-
-library(hce)
-
+suppressWarnings(library(hce))
 dataset1 = hce::ADLB
-
 head(dataset1)
-
 ```
 
-
-
-@. A data frame providing taxonomic information for  species with the following variables:
-
--   **species_id**: The species_id given in xue_microbiome_sample
--   **kingdom, phylum, class, order, family, genus, species**: The corresponding taxonomic category for each species
--   **species_id_number**: The numeric code associated with each species, as used in xue_species_tree
-
-```{r}
-#| echo: false
-
-library(FAVA)
-library(tidyverse)
-
-dataset2 =  FAVA::xue_species_info
-
-dataset2 |>
-  group_by(species_id) |>
-  filter(!is.na(kingdom))|>
-  head(10)
-
-
-``` 
 
 
 @. A data frame where each row is a single fossil with the following variables:
@@ -87,11 +59,7 @@ dataset2 |>
 
 ```{r}
 #| echo: false
-
-
-library(ppgm)
-
-
+suppressWarnings(library(ppgm))
 head(ppgm::scel_fossils,10)
 
 ```
@@ -113,11 +81,8 @@ head(ppgm::scel_fossils,10)
 
 ```{r}
 #| echo: false
-
-
 library(tidyverse)
-library(rTwig)
-
+suppressWarnings(library(rTwig))
 head(rTwig::twigs,10)
 
 ```
@@ -135,6 +100,8 @@ head(rTwig::twigs,10)
 
 
 
+
+
 @. Who formalized the grammar of graphics?
 
 a) Clara Reckhorn
@@ -142,7 +109,7 @@ b) Leland Wilkinson
 c) Stephen Few
 d) Kieran Healy
 
-@. Which of these  **isn't** part of the GG framework
+@. Which of these **isn't** part of the GG elements
 
 a) Statistics
 b) Theme
@@ -151,20 +118,26 @@ d) Coordinates
 
 ## Application
 
-
-
 ```{r}
 #| echo: false
-
-
 library(tidyverse)
-library(rTwig)
+suppressWarnings(library(palmerpenguins))
+palmers = palmerpenguins::penguins
 
-head(rTwig::twigs)
+plot1 = palmers |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_col() +
+  labs(title = "Body Mass in Relation to Penguins' Sex",
+       x = "Sex",
+       y = "Body Mass (grams)") +
+  theme_minimal()
+
+suppressWarnings(plot1)
+  
 ```
 
-
-@. 
+@. Identify the following GG elements for the plot above:
+dataset, aesthetic mapping, and geometry
 
 # Data Cleaning
 

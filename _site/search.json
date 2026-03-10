@@ -1700,5 +1700,40 @@
     "crumbs": [
       "About"
     ]
+  },
+  {
+    "objectID": "units/5-color1/slides.html#rgb",
+    "href": "units/5-color1/slides.html#rgb",
+    "title": "Week 5",
+    "section": "RGB",
+    "text": "RGB\nRed, Green, and Blue light sources are combined to display colors on televisions and computer monitors."
+  },
+  {
+    "objectID": "units/5-color1/slides.html#rgb-1",
+    "href": "units/5-color1/slides.html#rgb-1",
+    "title": "Week 5",
+    "section": "RGB",
+    "text": "RGB\nTherefore, any color you see on a monitor can be described by a series of 3 values (in the following order):\n\nRed value\nBlue value\nGreen value"
+  },
+  {
+    "objectID": "units/5-color1/slides.html#rgb-reference-colors",
+    "href": "units/5-color1/slides.html#rgb-reference-colors",
+    "title": "Week 5",
+    "section": "RGB Reference Colors",
+    "text": "RGB Reference Colors\n\n\nExample notations: - Yellow: (255,255,0) -"
+  },
+  {
+    "objectID": "units/5-color1/slides.html#common-purposes-for-color-usage",
+    "href": "units/5-color1/slides.html#common-purposes-for-color-usage",
+    "title": "Week 5",
+    "section": "Common purposes for color usage",
+    "text": "Common purposes for color usage\n. . . - Data encoding:\n\nDesign aspects:\n\n\nData encoding: A main use of color (although not the only one) is to encode data. This encoding chiefly depends on the type of variables we are working with (e.g. qualitative or quantitative, discrete or continuous). Design aspects: Another important use of color has to do with design considerations such as psychology of color, decorative purposes, harmony, and things like that."
+  },
+  {
+    "objectID": "units/5-color1/slides.html#how-do-we-specify-color-in-a-computational-sense",
+    "href": "units/5-color1/slides.html#how-do-we-specify-color-in-a-computational-sense",
+    "title": "Week 5",
+    "section": "How do we specify color in a computational sense?",
+    "text": "How do we specify color in a computational sense?\n\nHow do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes)."
   }
 ]
