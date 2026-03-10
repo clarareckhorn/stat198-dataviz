@@ -119,24 +119,25 @@ d) Coordinates
 ## Application
 
 ```{r}
-help("group_by")
-```
-
-
-```{r}
 #| echo: false
 library(tidyverse)
 suppressWarnings(library(palmerpenguins))
 palmers = palmerpenguins::penguins
 
-palmers |>
-  group_by(island) |>
-  summarize(Avg_Bill_Length_mm = mean(!is.na(bill_length_mm)))
+plot1 = palmers |>
+  ggplot(aes(x = sex, y = body_mass_g)) +
+  geom_col() +
+  labs(title = "Body Mass in Relation to Penguins' Sex",
+       x = "Sex",
+       y = "Body Mass (grams)") +
+  theme_minimal()
+
+suppressWarnings(plot1)
   
 ```
 
-
-@. 
+@. Identify the following GG elements for the plot above:
+dataset, aesthetic mapping, and geometry
 
 # Data Cleaning
 
