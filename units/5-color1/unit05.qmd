@@ -4,30 +4,12 @@ title: "5) Color 1 - Quiz and RBG Model"
 
 ## This Week: 
 
-In this week, we'll continue talking about color, specifically about the opponent color theory and cylindrical models, and you will turn in HW3 (Friday 11:59pm).
+In this week, we'll start talking about color, specifically about the RGB color models, and you will work on an in-class activity (due at the end of the day today at 11:59PM).
 
-Last time we learned about the Trichromatic theory for color vision, and the
-associated RGB color model and its cubic geometric representation. While the
-RGB model has very interesting mathematical properties, it does not provide a
-natural/intuitive way to think about color.
+We will learn about the RGB color model and its cubic geometric representation, which has very interesting mathematical properties
 
-In this unit, we discuss another theory for color vision: the so-called 
-__Color-Opponent__ theory. This alternative framework was originally proposed by 
-Karl Ewald Hering in 1892, based on evidence from color-adaptation experiments
-and the linguistic observation of certain color names.
 
-The opponent-color theory suggests that the way we perceive color is controlled
-by 3 opposing systems (or channels) in our vision:
-
-- Red-Green
-- Blue-Yellow
-- Black-White
-
-Interestingly, the color models associated with the opponent-color theory have 
-a cylindrical geometry instead of the cubic space of RGB.
-
-More important, the main practical tools that emanate from this color theory
-are 1) the famous __color wheel__, and 2) the __color-picker__ devices. 
+More important, the main practical tools that emanate from this color theory are the __color-picker__ devices. 
 
 
 <br>
@@ -37,14 +19,13 @@ are 1) the famous __color wheel__, and 2) the __color-picker__ devices.
 
 At the end of this unit you will be able to:
 
-- Explain the Color-Opponent theory of color vision.
+- Explain the RBG theory of color vision.
 
 - Describe what color models are typically used in color-picker tools.
 
 - Explain the color wheel.
 
-- Name at least three different color schemes derived from the color wheel, and 
-what characterizes them.
+- Use the RBG color picker tool in R.
 
 
 <br>
@@ -52,18 +33,12 @@ what characterizes them.
 
 ### 🌠 Slides
 
-<a href="https://docs.google.com/presentation/d/1RVY141ubZ8QtVf5EE6eBnfwplJKMdJd7K0Zs840aa6g/edit?usp=sharing" target="_blank">Opponent-Color Theory</a> <small>(google slides)</small>
-
-<a href="https://docs.google.com/presentation/d/1TPqZEHxUW43Gw5R22in9cGQ4QTLxFrXH8d0FGh1ilhc/edit?usp=sharing" target="_blank">Cylindric Color Modelx</a> <small>(google slides)</small>
-
-
-<br>
+Find today's slides [here.](slides.html)
 
 
 ### 💻 Code
 
-TBA
-
+Found on BCourses under Week 5
 
 <br>
 
@@ -74,4 +49,4 @@ __Reading__: _Age of US Presidents (Pew Research Center)_
 
 <a href="https://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/" target="_blank">https://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/</a>
 
-__Homework__: Homework #3 is due Monday, 3/16 at 11:59pm. You can find the assignment and turn in your work on BCourses.
+__Homework__: Today's in-class activity is due tonight, 3/10 at 11:59pm. You can find the assignment and turn in your work on BCourses.

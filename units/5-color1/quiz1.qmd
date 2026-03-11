@@ -1,5 +1,6 @@
 ---
-title: Practice Quiz 1
+title: Quiz 1
+author: "Name: _________________________________________ SID#: ____________________"
 format: typst
 ---
 
@@ -7,13 +8,13 @@ format: typst
 
 ## Types of Variables
 
- Assign the right number to the each sentence:
+ Assign the right number to each sentence:
 
 @. ) Binary 
 @. ) Ordinal 
 @. ) Nominal 
 @. ) Continuous 
-@. ) Discrete 
+@. ) Discrete
 
 ___ Can take any countable value represented as an integer
 
@@ -28,7 +29,7 @@ ___ Can take any measurable value within a given range, including fractions and 
 
 ## Analytical Goals and Chart Selection
 
-For the following datasets, **1)** come up with an analytical  goal, **2)** state what variables you will use and identify its type, and **3)** identify what chart will facilitate your observations.
+For the following datasets (6-8), **1)** come up with an analytical  goal, **2)** state what variables you will use and identify its type, and **3)** identify what chart will facilitate your observations.
 
 @. A dataset of laboratory measurements of kidney function over time for the 1500 patients with the following variables:
 
@@ -41,12 +42,22 @@ For the following datasets, **1)** come up with an analytical  goal, **2)** stat
 -   **PARAMCD**: coded name of the event, GFR
 -   **PARAMN**: type of the event is set to 7 for all measurements
 
+\ 
+\ 
+\ 
+
+
 ```{r}
 #| echo: false
 suppressWarnings(library(hce))
 dataset1 = hce::ADLB
 head(dataset1)
 ```
+
+#### Your Answer:
+
+![](images/answer-box.png){fig-align="center" width=600px}
+
 
 
 
@@ -57,15 +68,24 @@ head(dataset1)
 -   **Longitude**: Longitude of occurrence
 -   **Latitude**: Latitude of occurrence
 
+![](images/ppgm-tibble.png)
+
 ```{r}
 #| echo: false
+#| eval: false
+#| output: false
 suppressWarnings(library(ppgm))
+suppressWarnings(library(ggplot2))
+suppressWarnings(library(readr))
+suppressWarnings(library(tidyverse))
 head(ppgm::scel_fossils,10)
 
 ```
 
 
+#### Your Answer:
 
+![](images/answer-box.png){fig-align="center" width=600px}
 
 
 
@@ -79,13 +99,21 @@ head(ppgm::scel_fossils,10)
 -   **std**: The standard deviation of twig radii
 -   **cv**: The coefficient of variation of twig radii
 
+![](images/rtwig-tibble.png)
+
 ```{r}
 #| echo: false
+#| eval: false
+#| output: false
 library(tidyverse)
 suppressWarnings(library(rTwig))
 head(rTwig::twigs,10)
 
 ```
+
+#### Your Answer:
+
+![](images/answer-box.png){fig-align="center" width=600px}
 
 # Grammar of Graphics
 
@@ -96,7 +124,9 @@ head(rTwig::twigs,10)
 @. What is aesthetic mapping?
 
 
+#### Your Answer:
 
+![](images/answer-box.png){fig-align="center" width=600px}
 
 
 
@@ -120,6 +150,8 @@ d) Coordinates
 
 ```{r}
 #| echo: false
+#| output: false
+#| eval: false
 library(tidyverse)
 suppressWarnings(library(palmerpenguins))
 palmers = palmerpenguins::penguins
@@ -136,6 +168,8 @@ suppressWarnings(plot1)
   
 ```
 
+![](images/body-mass-graph.png)
+
 @. Identify the following GG elements for the plot above:
 dataset, aesthetic mapping, and geometry
 
@@ -146,11 +180,24 @@ dataset, aesthetic mapping, and geometry
 @. Why is data cleaning important?
 
 
+#### Your Answer:
 
+![](images/answer-box.png){fig-align="center" width=600px}
 
+\ 
+\ 
+\ 
 
+\ 
+\ 
+\ 
+\ 
 
 ## Multiple Choice
+\
+ \ 
+ \ 
+ \ 
 
 A dataset contains the following column:
 
@@ -199,7 +246,9 @@ d) It converts categorical variables to continuous ones.
 
 @. In ggplot2, what is the purpose of aes()?
 
+#### Your Answer:
 
+![](images/answer-box.png){fig-align="center" width=600px}
 
 
 @. Which function do you use to initialize a plot in ggplot2?
