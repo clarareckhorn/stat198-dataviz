@@ -28,10 +28,10 @@ The use of color is a big aspect in any visual display for two main reasons:
 -   We must tell a computer those colors.
 
 ## Common purposes for color usage
-. . .
--   **Data encoding:** 
 
--   **Design aspects:**
+-   **Data encoding** 
+
+-   **Design aspects**
 
 ::: {.notes}
 Data encoding: A main use of color (although not the only one) is to encode data. This encoding chiefly depends on the type of variables we are working with (e.g. qualitative or quantitative, discrete or continuous).
@@ -71,17 +71,19 @@ Therefore, any color you see on a monitor can be described by a series of 3 valu
 # RGB Decimal Notation
 . . .
 
-![](images/min-max-values.png){fig-alig="center"}
+![](images/min-max-values.png){fig-align="center"}
 
 
 ## RGB Reference Colors
 . . .
 
-![](images/reference-colors.png){fig-alig="center"}
+![](images/reference-colors.png){fig-align="center"}
 
 ## Model and its (cubic) geometric space
 
-![](images/RGB-cube.png)
+![](images/RGB-cube.png){fig-alig="center"}
+
+You can play around with this cube [here](https://www.infinityinsight.com/product.php?id=91)!
 
 # Why do RGB values range from 0 to 255?
 
@@ -89,11 +91,47 @@ There are 256 numbers from 0 to 255
 
 256 = 2<sup>8</sup>
 
-![](images/bytes.png){fig-alig="center"}
+![](images/bytes.png){fig-align="center"}
 
 ## Hexadecimal Notation
 
 Hexadecimal representation uses 16 different symbols:
+
+-   First 10 digits (0-9)
+
+-   First 6 letters (A-F) which represent  values 10 to 15
+
+This allows computers to store more information in less  digits
+
+::: {.notes}
+In a picture, a computer takes each pixel and stores its RGB number, so it would need many numbers if it were to use decimal notation.
+:::
+
+![](images/hex-symbols.png){fig-align="center"}
+
+## Hexadecimal Color: #85A0F2
+
+-   **#** is the universal notation for a "hex number"
+-   Each pair of symbols represents one pair of primary color
+
+
+## From HEX to RGB (in R)
+
+![](images/HEX-RGB.png){fig-align="center"}
+
+
+# Coding Activity
+
+1. Go into your console and type: install.packages("colourpicker")
+
+2. In a code chunk, try to come up with interesting colors using the `rgb()` function.
+
+3. In a different code chunk, access the colorpicker widget as follows: `colourpicker::colourWidget()`
+
+
+# Reading for next week
+
+[Age of US Presidents](https://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/)
 
 
 

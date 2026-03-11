@@ -144,14 +144,14 @@
     "href": "units/2-grammar-graphics/slides.html#categorical",
     "title": "Week 2",
     "section": "Categorical",
-    "text": "Categorical\nType of variable that represents categories or groups. It takes one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or nominal category on the basis of some qualitative property.\nExamples:\n\nBinary: Only takes two possible values, and are typically represented as 1 or 0.\nNominal: Categories have no clear order, and are mutually exclusive\nOrdinal: Have a clear ordering of the categories"
+    "text": "Categorical\nType of variable that represents categories or groups. It takes one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or nominal category on the basis of some qualitative property.\n\nExamples:\n\nBinary: Only takes two possible values, and are typically represented as 1 or 0.\nNominal: Categories have no clear order, and are mutually exclusive\nOrdinal: Have a clear ordering of the categories"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#quantitative",
     "href": "units/2-grammar-graphics/slides.html#quantitative",
     "title": "Week 2",
     "section": "Quantitative",
-    "text": "Quantitative\nNumerical data point (AKA numerical variable) that can be measured or counted, allowing for mathematical operations to be applied.\nExamples:\n\nDiscrete: Can take any countable value represented as an integer (whole number),\nContinuous: Can take any measurable value within a given range, including fractions and decimals."
+    "text": "Quantitative\nNumerical data point (AKA numerical variable) that can be measured or counted, allowing for mathematical operations to be applied.\n\nExamples:\n\nDiscrete: Can take any countable value represented as an integer (whole number),\nContinuous: Can take any measurable value within a given range, including fractions and decimals."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#right-graph-for-the-right-analytical-task",
@@ -200,7 +200,7 @@
     "href": "units/2-grammar-graphics/slides.html#why-do-we-need-grammar-of-graphics-gg",
     "title": "Week 2",
     "section": "Why do we need Grammar of Graphics (GG)?",
-    "text": "Why do we need Grammar of Graphics (GG)?\n\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable\nmodular"
+    "text": "Why do we need Grammar of Graphics (GG)?\n. . .\nWe believe that the GG is a good starting point that gives us a framework (mental map) and a vocabulary to create graphics.\nThis grammar allows creation of graphics to be:\n\nconsistent\nreusable\nmodular"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section",
@@ -221,56 +221,56 @@
     "href": "units/2-grammar-graphics/slides.html#aesthetic-mapping",
     "title": "Week 2",
     "section": "Aesthetic Mapping",
-    "text": "Aesthetic Mapping\n\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n\n\nChannels for ordered variables\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+    "text": "Aesthetic Mapping\n. . .\nAn aesthetic mapping links a variable in the data to a visual channel that can encode its variation.\n. . .\n\nChannels for ordered variables\n\n\n\nFrom “Data Visualization” by Kieran Healy."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section-1",
     "href": "units/2-grammar-graphics/slides.html#section-1",
     "title": "Week 2",
     "section": "",
-    "text": "Channels for unordered variables\n\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
+    "text": ". . .\n\nChannels for unordered variables\n\n\n\n\n\n\n\nFrom “Data Visualization” by Kieran Healy."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#geometry",
     "href": "units/2-grammar-graphics/slides.html#geometry",
     "title": "Week 2",
     "section": "Geometry",
-    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n\nExamples\n\nPoint\nLine\nBar"
+    "text": "Geometry\nThe geometry describes how to translate the observations into marks on the page.\n. . .\n\nExamples\n\nPoint\nLine\nBar"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#ggplot2-1",
     "href": "units/2-grammar-graphics/slides.html#ggplot2-1",
     "title": "Week 2",
     "section": "ggplot2()",
-    "text": "ggplot2()\n\nA plot can be decomposed into three primary elements:\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
+    "text": "ggplot2()\n. . .\nA plot can be decomposed into three primary elements:\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
     "href": "units/2-grammar-graphics/slides.html#meet-the-palmer-penguins",
     "title": "Week 2",
     "section": "Meet the Palmer Penguins",
-    "text": "Meet the Palmer Penguins\n\nlibrary(palmerpenguins)\npenguins\n\n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+    "text": "Meet the Palmer Penguins\n\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.5.2\n\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw\n\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section-8",
     "href": "units/2-grammar-graphics/slides.html#section-8",
     "title": "Week 2",
     "section": "",
-    "text": "Question: In terms of the way they are constructed…\n\nWhat do these plots have in common? How do they differ?\n\n  \n    −\n    +\n \n 01:20"
+    "text": "Question: In terms of the way they are constructed…\n\n\nWarning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.1.0     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nWarning: package 'patchwork' was built under R version 4.5.2\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_density()`).\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\nWhat do these plots have in common? How do they differ?\n{{&lt; countdown \"1:20\" &gt;}}"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section-9",
     "href": "units/2-grammar-graphics/slides.html#section-9",
     "title": "Week 2",
     "section": "",
-    "text": "Question: What do these plots have in common? How do they differ?\n\n\n  \n    −\n    +\n \n 01:20"
+    "text": "Question: What do these plots have in common? How do they differ?\n\n\n\n\n\n\n\n\n\n{{&lt; countdown \"1:20\" &gt;}}"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#section-10",
     "href": "units/2-grammar-graphics/slides.html#section-10",
     "title": "Week 2",
     "section": "",
-    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\n  \n    −\n    +\n \n 01:30"
+    "text": "Question: What are the aesthetic mappings and geometries used here?\n\n\nWarning: Removed 11 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n{{&lt; countdown \"1:30\" &gt;}}"
   },
   {
     "objectID": "units/2-grammar-graphics/slides.html#summary",
@@ -352,29 +352,29 @@
     "objectID": "units/3-data-types/data2.html#agenda",
     "href": "units/3-data-types/data2.html#agenda",
     "title": "Data Wrangling II",
-    "section": "Agenda",
-    "text": "Agenda\nTwo big ideas today:\n\nData Pipelines\nGrouped Operations\n\n\nBefore class, sketch out the effect that the different dplyr verbs from last class have on the shape of a data frame."
+    "section": "",
+    "text": "Two big ideas today:\n\nData Pipelines\nGrouped Operations\n\n\nBefore class, sketch out the effect that the different dplyr verbs from last class have on the shape of a data frame."
   },
   {
     "objectID": "units/3-data-types/data2.html#section",
     "href": "units/3-data-types/data2.html#section",
     "title": "Data Wrangling II",
     "section": "",
-    "text": "library(dplyr)\nstar_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe average height of characters from Tatooine\n\n\n\nLet’s look at three ways to solve this."
+    "text": "library(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nstar_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\n\nThe average height of characters from Tatooine\n\n\n. . .\n\nLet’s look at three ways to solve this."
   },
   {
     "objectID": "units/3-data-types/data2.html#nesting",
     "href": "units/3-data-types/data2.html#nesting",
     "title": "Data Wrangling II",
     "section": "Nesting",
-    "text": "Nesting\n\nsummarize(filter(star_wars, homeworld == \"Tatooine\"), mean(height))\n\n\n\n  mean(height)\n1         1.75\n\n\n\n\n\n\nMust be read from the inside out 👎\nHard to keep track of arguments 👎\n\n\n\nAll in one line of code 👍\nOnly refer to one data frame 👍"
+    "text": "Nesting\n\nsummarize(filter(star_wars, homeworld == \"Tatooine\"), mean(height))\n\n  mean(height)\n1         1.75\n\n\n. . .\n\n\n\nMust be read from the inside out 👎\nHard to keep track of arguments 👎\n\n\n\nAll in one line of code 👍\nOnly refer to one data frame 👍"
   },
   {
     "objectID": "units/3-data-types/data2.html#step-by-step",
     "href": "units/3-data-types/data2.html#step-by-step",
     "title": "Data Wrangling II",
     "section": "Step-by-step",
-    "text": "Step-by-step\n\nstar_wars2 &lt;- filter(star_wars, homeworld == \"Tatooine\")\nsummarize(star_wars2, mean(height))\n\n\n\n  mean(height)\n1         1.75\n\n\n\n\n\n\nHave to repeaet data frame names 👎\nCreates unnecessary objects 👎\n\n\n\nStores intermediate objects 👍\nCan be read from top to bottom 👍"
+    "text": "Step-by-step\n\nstar_wars2 &lt;- filter(star_wars, homeworld == \"Tatooine\")\nsummarize(star_wars2, mean(height))\n\n  mean(height)\n1         1.75\n\n\n. . .\n\n\n\nHave to repeaet data frame names 👎\nCreates unnecessary objects 👎\n\n\n\nStores intermediate objects 👍\nCan be read from top to bottom 👍"
   },
   {
     "objectID": "units/3-data-types/data2.html#data-pipelines-in-r",
@@ -402,49 +402,49 @@
     "href": "units/3-data-types/data2.html#using-the-pipe-operator-2",
     "title": "Data Wrangling II",
     "section": "Using the Pipe Operator",
-    "text": "Using the Pipe Operator\n\nstar_wars |&gt;\n    filter(homeworld == \"Tatooine\") |&gt;\n    summarize(mean(height))\n\n\n\n  mean(height)\n1         1.75\n\n\n\n\n\n\n🤷‍♂️\n\n\n\nCan be read like an english paragraph 👍\nOnly type the data once 👍\nNo leftover objects 👍"
+    "text": "Using the Pipe Operator\n\nstar_wars |&gt;\n    filter(homeworld == \"Tatooine\") |&gt;\n    summarize(mean(height))\n\n  mean(height)\n1         1.75\n\n\n. . .\n\n\n\n🤷‍♂️\n\n\n\nCan be read like an english paragraph 👍\nOnly type the data once 👍\nNo leftover objects 👍"
   },
   {
     "objectID": "units/3-data-types/data2.html#understanding-your-pipeline",
     "href": "units/3-data-types/data2.html#understanding-your-pipeline",
     "title": "Data Wrangling II",
     "section": "Understanding your pipeline",
-    "text": "Understanding your pipeline\nIt’s good practice to understand the output of each line by breaking the pipe.\n\n\n\n\nstar_wars |&gt;\n    select(homeworld) |&gt;\n    filter(mean(height))\n\n\n\nError in `filter()`:\nℹ In argument: `mean(height)`.\nCaused by error:\n! object 'height' not found\n\n\n\n\nstar_wars |&gt;\n    select(homeworld)\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
+    "text": "Understanding your pipeline\nIt’s good practice to understand the output of each line by breaking the pipe.\n. . .\n\n\n\nstar_wars |&gt;\n    select(homeworld) |&gt;\n    filter(mean(height))\n\nError in `filter()`:\nℹ In argument: `mean(height)`.\nCaused by error:\n! object 'height' not found\n\n\n\n\nstar_wars |&gt;\n    select(homeworld)\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
     "objectID": "units/3-data-types/data2.html#section-2",
     "href": "units/3-data-types/data2.html#section-2",
     "title": "Data Wrangling II",
     "section": "",
-    "text": "star_wars |&gt; # A #&lt;&lt;\n    filter(homeworld == \"Naboo\",\n           name %in% c(\"Padme\", \"JarJar\")) |&gt; # B #&lt;&lt;\n    select(height, weight) |&gt; # C #&lt;&lt;\n    summarize(mean(height), sd(height),\n              mean(weight), sd(weight)) # D #&lt;&lt;\n\n\n\n\nQuestion: What are the dimensions of the data frame at each stage of the pipe: A, B, C, and D?\n\n  \n    −\n    +\n \n 02:00\n \n\nShow answer in drop by breaking the pipe"
+    "text": "star_wars |&gt; # A #&lt;&lt;\n    filter(homeworld == \"Naboo\",\n           name %in% c(\"Padme\", \"JarJar\")) |&gt; # B #&lt;&lt;\n    select(height, weight) |&gt; # C #&lt;&lt;\n    summarize(mean(height), sd(height),\n              mean(weight), sd(weight)) # D #&lt;&lt;\n\nQuestion: What are the dimensions of the data frame at each stage of the pipe: A, B, C, and D?\n{{&lt; countdown \"2:00\" &gt;}}\n\nShow answer in drop by breaking the pipe"
   },
   {
     "objectID": "units/3-data-types/data2.html#works-everywhere",
     "href": "units/3-data-types/data2.html#works-everywhere",
     "title": "Data Wrangling II",
     "section": "|> works everywhere",
-    "text": "|&gt; works everywhere\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.\n\n\n\nfactor(c(\"cat\", \"cat\", \"dog\")) |&gt; summary()\n\n\n\ncat dog \n  2   1"
+    "text": "|&gt; works everywhere\n\nR now provides a simple native forward pipe syntax |&gt;. The simple form of the forward pipe inserts the left-hand side as the first argument in the right-hand side call.\n\n. . .\n\nfactor(c(\"cat\", \"cat\", \"dog\")) |&gt; summary()\n\ncat dog \n  2   1"
   },
   {
     "objectID": "units/3-data-types/data2.html#section-4",
     "href": "units/3-data-types/data2.html#section-4",
     "title": "Data Wrangling II",
     "section": "",
-    "text": "library(dplyr)\nstar_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe average height of characters from Tatooine across each planet\n\n\n\nYou could set up two pipelines with different filters. But there’s a better way."
+    "text": "library(dplyr)\nstar_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe average height of characters from Tatooine across each planet\n\n. . .\n\nYou could set up two pipelines with different filters. But there’s a better way."
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by",
     "href": "units/3-data-types/data2.html#group_by",
     "title": "Data Wrangling II",
     "section": "group_by()",
-    "text": "group_by()\nFlag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.\n\n\nstar_wars |&gt;\n    group_by(homeworld)\n\n\n\n# A tibble: 4 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84\n2 Padme  Naboo        1.6     45\n3 Luke   Tatooine     1.7     77\n4 JarJar Naboo        1.9     90"
+    "text": "group_by()\nFlag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.\n. . .\n\nstar_wars |&gt;\n    group_by(homeworld)\n\n# A tibble: 4 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84\n2 Padme  Naboo        1.6     45\n3 Luke   Tatooine     1.7     77\n4 JarJar Naboo        1.9     90"
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-1",
     "href": "units/3-data-types/data2.html#group_by-1",
     "title": "Data Wrangling II",
     "section": "group_by()",
-    "text": "group_by()\nFlag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    summarize(mean(height))\n\n\n\n# A tibble: 2 × 2\n  homeworld `mean(height)`\n  &lt;chr&gt;              &lt;dbl&gt;\n1 Naboo               1.75\n2 Tatooine            1.75"
+    "text": "group_by()\nFlag the rows of a dataframe as belong to a group defined by a factor. For use in downstream operations.\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    summarize(mean(height))\n\n# A tibble: 2 × 2\n  homeworld `mean(height)`\n  &lt;chr&gt;              &lt;dbl&gt;\n1 Naboo               1.75\n2 Tatooine            1.75"
   },
   {
     "objectID": "units/3-data-types/data2.html#section-5",
@@ -458,105 +458,105 @@
     "href": "units/3-data-types/data2.html#group_by-with-summarize",
     "title": "Data Wrangling II",
     "section": "group_by() with summarize()",
-    "text": "group_by() with summarize()\n\n\nstar_wars |&gt;\n    summarize(mean(height))\n\n\n\n  mean(height)\n1         1.75"
+    "text": "group_by() with summarize()\n. . .\n\nstar_wars |&gt;\n    summarize(mean(height))\n\n  mean(height)\n1         1.75"
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-summarize-1",
     "href": "units/3-data-types/data2.html#group_by-with-summarize-1",
     "title": "Data Wrangling II",
     "section": "group_by() with summarize()",
-    "text": "group_by() with summarize()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    summarize(mean(height))\n\n\n\n# A tibble: 2 × 2\n  homeworld `mean(height)`\n  &lt;chr&gt;              &lt;dbl&gt;\n1 Naboo               1.75\n2 Tatooine            1.75\n\n\n\n\nMakes a summary row for each group."
+    "text": "group_by() with summarize()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    summarize(mean(height))\n\n# A tibble: 2 × 2\n  homeworld `mean(height)`\n  &lt;chr&gt;              &lt;dbl&gt;\n1 Naboo               1.75\n2 Tatooine            1.75\n\n\n. . .\n\nMakes a summary row for each group."
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-filter",
     "href": "units/3-data-types/data2.html#group_by-with-filter",
     "title": "Data Wrangling II",
     "section": "group_by() with filter()",
-    "text": "group_by() with filter()\n\n\nstar_wars |&gt;\n    filter(height == max(height))\n\n\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90"
+    "text": "group_by() with filter()\n. . .\n\nstar_wars |&gt;\n    filter(height == max(height))\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90"
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-filter-1",
     "href": "units/3-data-types/data2.html#group_by-with-filter-1",
     "title": "Data Wrangling II",
     "section": "group_by() with filter()",
-    "text": "group_by() with filter()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    filter(height == max(height))\n\n\n\n# A tibble: 2 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84\n2 JarJar Naboo        1.9     90\n\n\n\n\nChanges the scope of functions inside filter() to operate within groups.\n\n\nCan bring up drop to demonstrate how a condition like height &gt; 1.7 will operate the same with or without the grouping."
+    "text": "group_by() with filter()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    filter(height == max(height))\n\n# A tibble: 2 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84\n2 JarJar Naboo        1.9     90\n\n\n. . .\n\nChanges the scope of functions inside filter() to operate within groups.\n\n\nCan bring up drop to demonstrate how a condition like height &gt; 1.7 will operate the same with or without the grouping."
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-arrange",
     "href": "units/3-data-types/data2.html#group_by-with-arrange",
     "title": "Data Wrangling II",
     "section": "group_by() with arrange()",
-    "text": "group_by() with arrange()\n\n\nstar_wars |&gt;\n    arrange(desc(height))\n\n\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90\n2 Anakin  Tatooine    1.8     84\n3   Luke  Tatooine    1.7     77\n4  Padme     Naboo    1.6     45"
+    "text": "group_by() with arrange()\n. . .\n\nstar_wars |&gt;\n    arrange(desc(height))\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90\n2 Anakin  Tatooine    1.8     84\n3   Luke  Tatooine    1.7     77\n4  Padme     Naboo    1.6     45"
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-arrange-1",
     "href": "units/3-data-types/data2.html#group_by-with-arrange-1",
     "title": "Data Wrangling II",
     "section": "group_by() with arrange()",
-    "text": "group_by() with arrange()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    arrange(desc(height))\n\n\n\n# A tibble: 4 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 JarJar Naboo        1.9     90\n2 Anakin Tatooine     1.8     84\n3 Luke   Tatooine     1.7     77\n4 Padme  Naboo        1.6     45\n\n\n\n\nArrange ignores group_by() and is always global\n\nWhy???"
+    "text": "group_by() with arrange()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    arrange(desc(height))\n\n# A tibble: 4 × 4\n# Groups:   homeworld [2]\n  name   homeworld height weight\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1 JarJar Naboo        1.9     90\n2 Anakin Tatooine     1.8     84\n3 Luke   Tatooine     1.7     77\n4 Padme  Naboo        1.6     45\n\n\n. . .\n\nArrange ignores group_by() and is always global\n\nWhy???"
   },
   {
     "objectID": "units/3-data-types/data2.html#section-6",
     "href": "units/3-data-types/data2.html#section-6",
     "title": "Data Wrangling II",
     "section": "",
-    "text": "star_wars |&gt;\n    arrange(homeworld, height)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3   Luke  Tatooine    1.7     77\n4 Anakin  Tatooine    1.8     84"
+    "text": "star_wars |&gt;\n    arrange(homeworld, height)\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3   Luke  Tatooine    1.7     77\n4 Anakin  Tatooine    1.8     84"
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-mutate",
     "href": "units/3-data-types/data2.html#group_by-with-mutate",
     "title": "Data Wrangling II",
     "section": "group_by() with mutate()",
-    "text": "group_by() with mutate()\n\n\nstar_wars |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height))\n\n\n\n    name homeworld height weight   height_z\n1 Anakin  Tatooine    1.8     84  0.3872983\n2  Padme     Naboo    1.6     45 -1.1618950\n3   Luke  Tatooine    1.7     77 -0.3872983\n4 JarJar     Naboo    1.9     90  1.1618950"
+    "text": "group_by() with mutate()\n. . .\n\nstar_wars |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height))\n\n    name homeworld height weight   height_z\n1 Anakin  Tatooine    1.8     84  0.3872983\n2  Padme     Naboo    1.6     45 -1.1618950\n3   Luke  Tatooine    1.7     77 -0.3872983\n4 JarJar     Naboo    1.9     90  1.1618950"
   },
   {
     "objectID": "units/3-data-types/data2.html#group_by-with-mutate-1",
     "href": "units/3-data-types/data2.html#group_by-with-mutate-1",
     "title": "Data Wrangling II",
     "section": "group_by() with mutate()",
-    "text": "group_by() with mutate()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height))\n\n\n\n# A tibble: 4 × 5\n# Groups:   homeworld [2]\n  name   homeworld height weight height_z\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84    0.707\n2 Padme  Naboo        1.6     45   -0.707\n3 Luke   Tatooine     1.7     77   -0.707\n4 JarJar Naboo        1.9     90    0.707\n\n\n\n\nChanges the scope of functions inside mutate() to operate within groups."
+    "text": "group_by() with mutate()\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height))\n\n# A tibble: 4 × 5\n# Groups:   homeworld [2]\n  name   homeworld height weight height_z\n  &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1 Anakin Tatooine     1.8     84    0.707\n2 Padme  Naboo        1.6     45   -0.707\n3 Luke   Tatooine     1.7     77   -0.707\n4 JarJar Naboo        1.9     90    0.707\n\n\n. . .\n\nChanges the scope of functions inside mutate() to operate within groups."
   },
   {
     "objectID": "units/3-data-types/data2.html#statefulness",
     "href": "units/3-data-types/data2.html#statefulness",
     "title": "Data Wrangling II",
     "section": "Statefulness",
-    "text": "Statefulness\nWhat will this produce?\n\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height)) |&gt;\n    summarize(mean(height_z))\n\n\n\n# A tibble: 2 × 2\n  homeworld `mean(height_z)`\n  &lt;chr&gt;                &lt;dbl&gt;\n1 Naboo                    0\n2 Tatooine                 0\n\n\n\n\n\nOnce grouped, a data frame stays grouped until reduced to one-row-per group or it is ungrouped.\n\n\ncan break the pipe after mutate to show it is still grouped"
+    "text": "Statefulness\nWhat will this produce?\n. . .\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height)) |&gt;\n    summarize(mean(height_z))\n\n# A tibble: 2 × 2\n  homeworld `mean(height_z)`\n  &lt;chr&gt;                &lt;dbl&gt;\n1 Naboo                    0\n2 Tatooine                 0\n\n\n. . .\n\nOnce grouped, a data frame stays grouped until reduced to one-row-per group or it is ungrouped.\n\n\ncan break the pipe after mutate to show it is still grouped"
   },
   {
     "objectID": "units/3-data-types/data2.html#statefulness-1",
     "href": "units/3-data-types/data2.html#statefulness-1",
     "title": "Data Wrangling II",
     "section": "Statefulness",
-    "text": "Statefulness\nWhat will this produce?\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height)) |&gt;\n    ungroup() |&gt;\n    summarize(mean(height_z))\n\n\n\n# A tibble: 1 × 1\n  `mean(height_z)`\n             &lt;dbl&gt;\n1                0"
+    "text": "Statefulness\nWhat will this produce?\n\nstar_wars |&gt;\n    group_by(homeworld) |&gt;\n    mutate(height_z = (height - mean(height)) / sd(height)) |&gt;\n    ungroup() |&gt;\n    summarize(mean(height_z))\n\n# A tibble: 1 × 1\n  `mean(height_z)`\n             &lt;dbl&gt;\n1                0"
   },
   {
     "objectID": "units/3-data-types/data2.html#shortcut-.by",
     "href": "units/3-data-types/data2.html#shortcut-.by",
     "title": "Data Wrangling II",
     "section": "Shortcut: .by",
-    "text": "Shortcut: .by\nMost dplyr functions have a .by argument to apply the function to the groups of another variable.\n\nNot stateful\nGood for single line operations\n\n\n\nstar_wars |&gt;\n    summarize(mean(height), .by = homeworld)\n\n\n\n  homeworld mean(height)\n1  Tatooine         1.75\n2     Naboo         1.75"
+    "text": "Shortcut: .by\nMost dplyr functions have a .by argument to apply the function to the groups of another variable.\n\nNot stateful\nGood for single line operations\n\n. . .\n\nstar_wars |&gt;\n    summarize(mean(height), .by = homeworld)\n\n  homeworld mean(height)\n1  Tatooine         1.75\n2     Naboo         1.75"
   },
   {
     "objectID": "units/3-data-types/unit03.html",
     "href": "units/3-data-types/unit03.html",
-    "title": "3) Data Types, Chart Selection",
+    "title": "3) R Basics 2 - Data Types and Data Cleaning",
     "section": "",
     "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nBasic data cleaning with dplyr and exploratory data analysis.\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
-      "3) Data Types, Chart Selection"
+      "3) R Basics 2 - Data Types and Data Cleaning"
     ]
   },
   {
     "objectID": "units/3-data-types/unit03.html#this-week",
     "href": "units/3-data-types/unit03.html#this-week",
-    "title": "3) Data Types, Chart Selection",
+    "title": "3) R Basics 2 - Data Types and Data Cleaning",
     "section": "",
     "text": "In this week, we’ll get a further introduction to the \"ggplot2\" package for making graphics and you will turn in HW2 (Friday 11:59pm).\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nBasic data cleaning with dplyr and exploratory data analysis.\n\nqmd notebook file\nhtml file\n\n\n\n\n\nReading: Price of Eggs\nhttps://www.nytimes.com/2023/02/03/briefing/why-eggs-cost-so-much.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
-      "3) Data Types, Chart Selection"
+      "3) R Basics 2 - Data Types and Data Cleaning"
     ]
   },
   {
@@ -606,28 +606,28 @@
     "href": "units/4-eda-ggplot/week4-activity.html#part-5-reflection-short-discussion",
     "title": "Week 4 Activity",
     "section": "Part 5: Reflection (Short Discussion)",
-    "text": "Part 5: Reflection (Short Discussion)\n18. What is the difference between geom_bar() and geom_col()?\n\nWritten answer here:\n19. What is the unit of observation in:\n\n\npenguins?\nmtcars?\n\nWritten answer here:\n20. Which plots felt more exploratory vs explanatory?\nWritten answer here:"
+    "text": "Part 5: Reflection (Short Discussion)\n18. What is the difference between geom_bar() and geom_col()?\n\nWritten answer here:\n19. What is the unit of observation in:\n\n\npenguins?\nmtcars?\n\nWritten answer here:\n20. Which plots felt more exploratory vs explanatory?\nWritten answer here:\n21. Next level\nLet’s practice making some graphs with ggplot2!\n\nLoad the mpg dataset (which is inside tidyverse package).  \n\n\nTake a look at the data: what is easy column representing? What does each row represent? (Hint: if you are not sure, type ?mpg into your console to launch the help panel)  \n\n\nCreate a scatter plot of model vs cty, colored by year.  \n\n\nExperiment with different geom_() functions to visualize the data  \n\n\nCustomize your plots with themes and labels."
   },
   {
     "objectID": "units/4-eda-ggplot/unit04.html",
     "href": "units/4-eda-ggplot/unit04.html",
-    "title": "4) Color I",
+    "title": "4) R Basics 3 - EDA and ggplot2",
     "section": "",
     "text": "In this week, we’ll continue talking about coding in R, using the grammar of graphics framework and ggplot2 to create high quality graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain how ggplot2 relates to the tidyverse\nExplain how ggplot2 utilizes the grammar of graphics to create visuals\nCreate a basic data graphic\nAccess and use datasets from baseR\n\n\n\n\n\nFind today’s slides here.\n\n\n\nFind today’s activity here. Please download the week4-activity.qmd file from BCourses and open in it your IDE of choice (Positron or RStudio). Once finished, please upload your completed .qmd and .html files to BCourses.\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
     "crumbs": [
       "Units",
-      "4) Color I"
+      "4) R Basics 3 - EDA and ggplot2"
     ]
   },
   {
     "objectID": "units/4-eda-ggplot/unit04.html#this-week",
     "href": "units/4-eda-ggplot/unit04.html#this-week",
-    "title": "4) Color I",
+    "title": "4) R Basics 3 - EDA and ggplot2",
     "section": "",
     "text": "In this week, we’ll continue talking about coding in R, using the grammar of graphics framework and ggplot2 to create high quality graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nExplain how ggplot2 relates to the tidyverse\nExplain how ggplot2 utilizes the grammar of graphics to create visuals\nCreate a basic data graphic\nAccess and use datasets from baseR\n\n\n\n\n\nFind today’s slides here.\n\n\n\nFind today’s activity here. Please download the week4-activity.qmd file from BCourses and open in it your IDE of choice (Positron or RStudio). Once finished, please upload your completed .qmd and .html files to BCourses.\n\n\n\n\nReading: No reading this week!\nHomework: No HW this week! Study for Quiz 1.",
     "crumbs": [
       "Units",
-      "4) Color I"
+      "4) R Basics 3 - EDA and ggplot2"
     ]
   },
   {
@@ -668,21 +668,21 @@
     "href": "units/1-intro/slides.html#montse",
     "title": "Week 1",
     "section": "Montse",
-    "text": "Montse\n\nSophomore Stats Major\nHometown: Mexicali, Baja California + Calexico, California\nFun fact: I have a dog named Shakira!\nCourse reader for Stat133, Stat 33B, now tutor for Stat133\n\n\n\n\n\n\n\nNote\n\n\nEmail me at montserrat_ibarra@berkeley.edu"
+    "text": "Montse\n\n\nSophomore Stats Major\nHometown: Mexicali, Baja California + Calexico, California\nFun fact: I have a dog named Shakira!\nCourse reader for Stat133, Stat 33B, now tutor for Stat133\n\n\n\n\n\n\n\n\nNote\n\n\n\nEmail me at montserrat_ibarra@berkeley.edu"
   },
   {
     "objectID": "units/1-intro/slides.html#clara",
     "href": "units/1-intro/slides.html#clara",
     "title": "Week 1",
     "section": "Clara",
-    "text": "Clara\n\nSenior Stats Major\nHometown: Palos Verdes, CA + Osnabrück, Germany\nFun fact: Pursuing masters in Europe!\nGSI for Stat133 + led HelloWorld\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\nEmail me at clara_reckhorn@berkeley.edu"
+    "text": "Clara\n\n\nSenior Stats Major\nHometown: Palos Verdes, CA + Osnabrück, Germany\nFun fact: Pursuing masters in Europe!\nGSI for Stat133 + led HelloWorld\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\n\nEmail me at clara_reckhorn@berkeley.edu"
   },
   {
     "objectID": "units/1-intro/slides.html#jocelyne",
     "href": "units/1-intro/slides.html#jocelyne",
     "title": "Week 1",
     "section": "Jocelyne",
-    "text": "Jocelyne\n\nSenior Stats Major\nHometown: San Mateo, CA\nFun fact: I did middle and high school in La Paz, Mexico!\nCourse reader for Stat133\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\nEmail me at jocelyneperez@berkeley.edu"
+    "text": "Jocelyne\n\n\nSenior Stats Major\nHometown: San Mateo, CA\nFun fact: I did middle and high school in La Paz, Mexico!\nCourse reader for Stat133\nTransfer student\n\n\n\n\n\n\n\nNote\n\n\n\nEmail me at jocelyneperez@berkeley.edu"
   },
   {
     "objectID": "units/1-intro/slides.html#montse-1",
@@ -710,7 +710,7 @@
     "href": "units/1-intro/slides.html#some-of-our-favorite-data-visualizations",
     "title": "Week 1",
     "section": "Some of our favorite Data Visualizations",
-    "text": "Some of our favorite Data Visualizations\n\nGun Deaths Viz\n\nWind Map Viz\n\nEn-ROADS Temperature Increase Dashboard\n\nThere is data all around us if you know where to look!"
+    "text": "Some of our favorite Data Visualizations\n\n\nGun Deaths Viz\n\nWind Map Viz\n\nEn-ROADS Temperature Increase Dashboard\n\n\n\nThere is data all around us if you know where to look!"
   },
   {
     "objectID": "units/1-intro/slides.html#surrounded-by-graphics",
@@ -724,14 +724,14 @@
     "href": "units/1-intro/slides.html#activity-introduce-yourself",
     "title": "Week 1",
     "section": "Activity: Introduce yourself!",
-    "text": "Activity: Introduce yourself!\nBefore course logistics, we would like to get to know a bit about you.\n\n\nGrab a “Hello My Name Is” sticker from the front table\n\nTell us:\n\nYour name\nYour major/area of study\nWhy are you taking this class?\nYour favorite data vizualization (if you have one!) or the last graphic you saw in the last week\n\n\n  \n    −\n    +\n \n 05:00"
+    "text": "Activity: Introduce yourself!\n\nBefore course logistics, we would like to get to know a bit about you.\n\n\nGrab a “Hello My Name Is” sticker from the front table\n\n\nTell us:\n\nYour name\nYour major/area of study\nWhy are you taking this class?\nYour favorite data vizualization (if you have one!) or the last graphic you saw in the last week\n\n{{&lt; countdown \"5:00\" &gt;}}"
   },
   {
     "objectID": "units/1-intro/slides.html#activity-two-truths-and-a-lie",
     "href": "units/1-intro/slides.html#activity-two-truths-and-a-lie",
     "title": "Week 1",
     "section": "Activity: Two truths and a lie",
-    "text": "Activity: Two truths and a lie\n\nThink of two truths and one lie about yourself\nShare with a partner and have them guess which one is the lie\n\n\n  \n    −\n    +\n \n 05:00"
+    "text": "Activity: Two truths and a lie\n\n\nThink of two truths and one lie about yourself\nShare with a partner and have them guess which one is the lie\n\n{{&lt; countdown \"5:00\" &gt;}}"
   },
   {
     "objectID": "units/1-intro/slides.html#what-is-the-typical-dataviz-process",
@@ -745,42 +745,42 @@
     "href": "units/1-intro/slides.html#define-the-goal",
     "title": "Week 1",
     "section": "1. Define the goal",
-    "text": "1. Define the goal\nWant to find out:\nWhat factors influence the amount of sleep a Berkeley student gets on weekdays?"
+    "text": "1. Define the goal\n\nWant to find out:\nWhat factors influence the amount of sleep a Berkeley student gets on weekdays?"
   },
   {
     "objectID": "units/1-intro/slides.html#collect-the-data",
     "href": "units/1-intro/slides.html#collect-the-data",
     "title": "Week 1",
     "section": "2. Collect the Data",
-    "text": "2. Collect the Data\n\nOn a piece of paper:\n\n\nAverage amount of sleep on weekdays (Number)\n\nTransfer T/F\n\nGrad student T/F\n\nCommute to campus (in minutes)\n\nFavorite drink (water, tea, coffee, etc)\n\nMajor\n\nNumber of enrolled units you are taking\n\n\n\n\n  \n    −\n    +\n \n 03:00"
+    "text": "2. Collect the Data\n\n\nOn a piece of paper:\n\n\nAverage amount of sleep on weekdays (Number)\n\nTransfer T/F\n\nGrad student T/F\n\nCommute to campus (in minutes)\n\nFavorite drink (water, tea, coffee, etc)\n\nMajor\n\nNumber of enrolled units you are taking\n\n\n\n{{&lt; countdown \"3:00\" &gt;}}"
   },
   {
     "objectID": "units/1-intro/slides.html#data-cleaning",
     "href": "units/1-intro/slides.html#data-cleaning",
     "title": "Week 1",
     "section": "3. Data Cleaning",
-    "text": "3. Data Cleaning\nAssume our data is cleaned and ready to go… we will save the actual data cleaning for later units!\n\n\nlibrary(tidyverse)\n\n# toy dataset\nsleep_data &lt;- tibble(\n  student_id = 1:10,\n  sleep_hours = c(6.5, 7, 5.5, 8, 6, 7.5, 6, 5, 8.5, 7),\n  transfer = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),\n  grad_student = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE),\n  commute_min = c(45, 10, 60, 15, 20, 50, 5, 70, 25, 30),\n  favorite_drink = c(\"Coffee\", \"Water\", \"Coffee\", \"Tea\", \"Tea\",\n                     \"Coffee\", \"Water\", \"Coffee\", \"Tea\", \"Water\"),\n  major = c(\"Econ\", \"Stats\", \"CS\", \"Psych\", \"Public Health\",\n            \"Econ\", \"Stats\", \"CS\", \"Bio\", \"Psych\"),\n  units = c(16, 13, 18, 14, 12, 17, 15, 19, 11, 16)\n)"
+    "text": "3. Data Cleaning\nAssume our data is cleaned and ready to go… we will save the actual data cleaning for later units!\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# toy dataset\nsleep_data &lt;- tibble(\n  student_id = 1:10,\n  sleep_hours = c(6.5, 7, 5.5, 8, 6, 7.5, 6, 5, 8.5, 7),\n  transfer = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE),\n  grad_student = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE),\n  commute_min = c(45, 10, 60, 15, 20, 50, 5, 70, 25, 30),\n  favorite_drink = c(\"Coffee\", \"Water\", \"Coffee\", \"Tea\", \"Tea\",\n                     \"Coffee\", \"Water\", \"Coffee\", \"Tea\", \"Water\"),\n  major = c(\"Econ\", \"Stats\", \"CS\", \"Psych\", \"Public Health\",\n            \"Econ\", \"Stats\", \"CS\", \"Bio\", \"Psych\"),\n  units = c(16, 13, 18, 14, 12, 17, 15, 19, 11, 16)\n)"
   },
   {
     "objectID": "units/1-intro/slides.html#data-cleaning-1",
     "href": "units/1-intro/slides.html#data-cleaning-1",
     "title": "Week 1",
     "section": "3. Data Cleaning",
-    "text": "3. Data Cleaning\nThat code will result in:\n\nsleep_data\n\n\n\n# A tibble: 10 × 8\n   student_id sleep_hours transfer grad_student commute_min favorite_drink major\n        &lt;int&gt;       &lt;dbl&gt; &lt;lgl&gt;    &lt;lgl&gt;              &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;\n 1          1         6.5 TRUE     FALSE                 45 Coffee         Econ \n 2          2         7   FALSE    FALSE                 10 Water          Stats\n 3          3         5.5 TRUE     FALSE                 60 Coffee         CS   \n 4          4         8   FALSE    FALSE                 15 Tea            Psych\n 5          5         6   FALSE    TRUE                  20 Tea            Publ…\n 6          6         7.5 TRUE     FALSE                 50 Coffee         Econ \n 7          7         6   FALSE    FALSE                  5 Water          Stats\n 8          8         5   TRUE     FALSE                 70 Coffee         CS   \n 9          9         8.5 FALSE    TRUE                  25 Tea            Bio  \n10         10         7   FALSE    FALSE                 30 Water          Psych\n# ℹ 1 more variable: units &lt;dbl&gt;"
+    "text": "3. Data Cleaning\nThat code will result in:\n\nsleep_data\n\n# A tibble: 10 × 8\n   student_id sleep_hours transfer grad_student commute_min favorite_drink major\n        &lt;int&gt;       &lt;dbl&gt; &lt;lgl&gt;    &lt;lgl&gt;              &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;\n 1          1         6.5 TRUE     FALSE                 45 Coffee         Econ \n 2          2         7   FALSE    FALSE                 10 Water          Stats\n 3          3         5.5 TRUE     FALSE                 60 Coffee         CS   \n 4          4         8   FALSE    FALSE                 15 Tea            Psych\n 5          5         6   FALSE    TRUE                  20 Tea            Publ…\n 6          6         7.5 TRUE     FALSE                 50 Coffee         Econ \n 7          7         6   FALSE    FALSE                  5 Water          Stats\n 8          8         5   TRUE     FALSE                 70 Coffee         CS   \n 9          9         8.5 FALSE    TRUE                  25 Tea            Bio  \n10         10         7   FALSE    FALSE                 30 Water          Psych\n# ℹ 1 more variable: units &lt;dbl&gt;"
   },
   {
     "objectID": "units/1-intro/slides.html#select-the-data-visuals",
     "href": "units/1-intro/slides.html#select-the-data-visuals",
     "title": "Week 1",
     "section": "4. Select the data visuals",
-    "text": "4. Select the data visuals\n\nIn a group (3-4 people):\n\nBrainstorm how you could visualize a primary (hours of sleep) vs secondary variables (transfer, drink, major, commute, units)\nChoose a chart type, e.g. Bar chart, Pie chart, Scatter plot, Line graph, etc.\nHow could you combine all variables (or at least three) in one graph?\n\n\n\n  \n    −\n    +\n \n 05:00"
+    "text": "4. Select the data visuals\n\n\nIn a group (3-4 people):\n\nBrainstorm how you could visualize a primary (hours of sleep) vs secondary variables (transfer, drink, major, commute, units)\nChoose a chart type, e.g. Bar chart, Pie chart, Scatter plot, Line graph, etc.\nHow could you combine all variables (or at least three) in one graph?\n\n\n{{&lt; countdown \"5:00\" &gt;}}"
   },
   {
     "objectID": "units/1-intro/slides.html#create-the-data-visuals",
     "href": "units/1-intro/slides.html#create-the-data-visuals",
     "title": "Week 1",
     "section": "5. Create the data visuals",
-    "text": "5. Create the data visuals\n\nOn a poster:\n\n\nMake 4 graphs to visualize your thoughts on these categories\n\nOne should use 3 of the variables in one graph\n\n\n\n  \n    −\n    +\n \n 10:00"
+    "text": "5. Create the data visuals\n\n\nOn a poster:\n\n\nMake 4 graphs to visualize your thoughts on these categories\n\nOne should use 3 of the variables in one graph\n\n\n{{&lt; countdown \"10:00\" &gt;}}"
   },
   {
     "objectID": "units/1-intro/slides.html#some-example-graphs",
@@ -794,7 +794,7 @@
     "href": "units/1-intro/slides.html#some-example-graphs-contd",
     "title": "Week 1",
     "section": "Some example graphs (cont’d)",
-    "text": "Some example graphs (cont’d)\n\n# Print the graphs\ngraph1"
+    "text": "Some example graphs (cont’d)\n\n# Print the graphs\ngraph1\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "units/1-intro/slides.html#some-example-graphs-contd-1",
@@ -829,7 +829,7 @@
     "href": "units/1-intro/slides.html#attendance",
     "title": "Week 1",
     "section": "Attendance",
-    "text": "Attendance\nOn a piece of paper, please write your name and answer the following:\n- One thing you are excited to learn in this course\n- One thing you are nervous about in this course\n- If you have any questions, feel free to ask them here\nThank you!"
+    "text": "Attendance\nOn a piece of paper, please write your name and answer the following:\n- One thing you are excited to learn in this course\n- One thing you are nervous about in this course\n- If you have any questions, feel free to ask them here\n\nThank you!"
   },
   {
     "objectID": "index.html",
@@ -1015,21 +1015,21 @@
     "href": "units/6-color2/slides.html#demo-dataset",
     "title": "Lecture 6",
     "section": "Demo Dataset",
-    "text": "Demo Dataset\nLet’s create a small data frame with several variable types.\n\n\n\nCode\nlibrary(ggplot2)\nset.seed(123)\n\ndemo_df &lt;- data.frame(\n  x = rnorm(20),\n  y = rnorm(20),\n  logical_var = sample(c(TRUE, FALSE), 20, replace = TRUE),\n  integer_var = sample(1:5, 20, replace = TRUE),\n  double_var = runif(20, 0, 10),\n  factor_var = factor(sample(letters[1:3], 20, replace = TRUE)),\n  char_var = sample(c(\"cat\", \"dog\", \"bird\"), 20, replace = TRUE)\n)\n\nhead(demo_df)\n\n\n\n            x          y logical_var integer_var double_var factor_var char_var\n1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog\n2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog\n3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat\n4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird\n5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog\n6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat"
+    "text": "Demo Dataset\nLet’s create a small data frame with several variable types.\n\n\nCode\nlibrary(ggplot2)\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nCode\nset.seed(123)\n\ndemo_df &lt;- data.frame(\n  x = rnorm(20),\n  y = rnorm(20),\n  logical_var = sample(c(TRUE, FALSE), 20, replace = TRUE),\n  integer_var = sample(1:5, 20, replace = TRUE),\n  double_var = runif(20, 0, 10),\n  factor_var = factor(sample(letters[1:3], 20, replace = TRUE)),\n  char_var = sample(c(\"cat\", \"dog\", \"bird\"), 20, replace = TRUE)\n)\n\nhead(demo_df)\n\n\n            x          y logical_var integer_var double_var factor_var char_var\n1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog\n2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog\n3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat\n4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird\n5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog\n6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat"
   },
   {
     "objectID": "units/6-color2/slides.html#default-behavior-example",
     "href": "units/6-color2/slides.html#default-behavior-example",
     "title": "Lecture 6",
     "section": "Default Behavior Example",
-    "text": "Default Behavior Example\nMapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")\n\n\n\n\n\n\n\n\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")\n\n\n\n\n\n\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
+    "text": "Default Behavior Example\nMapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")\n\n\n\n\n\n\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")\n\n\n\n\n\n\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
   },
   {
     "objectID": "units/6-color2/slides.html#activity-customize-the-color-scales",
     "href": "units/6-color2/slides.html#activity-customize-the-color-scales",
     "title": "Lecture 6",
     "section": "Activity: Customize the Color Scales",
-    "text": "Activity: Customize the Color Scales\nRecreate one of the above plots, but use a color scale function to control the palette.\nExperiment with both discrete and continuous color scales.\n\n# Discrete manual colors for factor or character variables\nggplot(demo_df, aes(x, y, color = char_var)) +\n  geom_point(size = 4) +\n  scale_color_manual(values = c(\"cat\" = \"orange\", \"dog\" = \"steelblue\", \"bird\" = \"forestgreen\")) +\n  labs(title = \"Custom Discrete Colors\")\n\n\n\n\n\n\n\n\n\n# Continuous gradient for numeric variable\nggplot(demo_df, aes(x, y, color = double_var)) +\n  geom_point(size = 4) +\n  scale_color_continuous(low = \"lightblue\", high = \"darkblue\") +\n  labs(title = \"Custom Continuous Scale\")\n\n\n\n\n\n\n\n# Using scale_fill_discrete() with filled geoms\nggplot(demo_df, aes(x = factor_var, fill = char_var)) +\n  geom_bar() +\n  scale_fill_discrete() +\n  labs(title = \"Bar Plot with Discrete Fill\")"
+    "text": "Activity: Customize the Color Scales\nRecreate one of the above plots, but use a color scale function to control the palette.\nExperiment with both discrete and continuous color scales.\n\n# Discrete manual colors for factor or character variables\nggplot(demo_df, aes(x, y, color = char_var)) +\n  geom_point(size = 4) +\n  scale_color_manual(values = c(\"cat\" = \"orange\", \"dog\" = \"steelblue\", \"bird\" = \"forestgreen\")) +\n  labs(title = \"Custom Discrete Colors\")\n\n\n\n\n\n\n\n# Continuous gradient for numeric variable\nggplot(demo_df, aes(x, y, color = double_var)) +\n  geom_point(size = 4) +\n  scale_color_continuous(low = \"lightblue\", high = \"darkblue\") +\n  labs(title = \"Custom Continuous Scale\")\n\n\n\n\n\n\n\n# Using scale_fill_discrete() with filled geoms\nggplot(demo_df, aes(x = factor_var, fill = char_var)) +\n  geom_bar() +\n  scale_fill_discrete() +\n  labs(title = \"Bar Plot with Discrete Fill\")"
   },
   {
     "objectID": "units/6-color2/slides.html#discussion",
@@ -1063,8 +1063,8 @@
     "objectID": "units/4-eda-ggplot/slides.html#agenda",
     "href": "units/4-eda-ggplot/slides.html#agenda",
     "title": "Week 4",
-    "section": "Agenda",
-    "text": "Agenda\n\nReading discussion\n\nEDA: preparing data for graphics\nggplot2: why do we use it?\nActivity: coding practice"
+    "section": "",
+    "text": "Reading discussion\n\nEDA: preparing data for graphics\nggplot2: why do we use it?\nActivity: coding practice"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#reminder-of-dataviz-workflow-1",
@@ -1078,35 +1078,35 @@
     "href": "units/4-eda-ggplot/slides.html#q1-what-are-the-cols-and-rows",
     "title": "Week 4",
     "section": "Q1: What are the cols and rows?",
-    "text": "Q1: What are the cols and rows?\n\n\ndim(farm_data)\n\n\n\n[1] 10  8\n\n\n\n\n\nsapply(farm_data, class)\n\n\n\n     employee_id     hours_worked  seasonal_worker       supervisor \n       \"integer\"        \"numeric\"        \"logical\"        \"logical\" \n     commute_min     primary_crop years_experience      hourly_wage \n       \"numeric\"      \"character\"        \"numeric\"        \"numeric\""
+    "text": "Q1: What are the cols and rows?\n. . .\n\ndim(farm_data)\n\n[1] 10  8\n\n\n. . .\n\nsapply(farm_data, class)\n\n     employee_id     hours_worked  seasonal_worker       supervisor \n       \"integer\"        \"numeric\"        \"logical\"        \"logical\" \n     commute_min     primary_crop years_experience      hourly_wage \n       \"numeric\"      \"character\"        \"numeric\"        \"numeric\""
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#q1-what-are-the-cols-and-rows-1",
     "href": "units/4-eda-ggplot/slides.html#q1-what-are-the-cols-and-rows-1",
     "title": "Week 4",
     "section": "Q1: What are the cols and rows?",
-    "text": "Q1: What are the cols and rows?\n\nfarm_data\n\n\n\n# A tibble: 10 × 8\n   employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n         &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n 1           1           40 TRUE            FALSE               15 Corn        \n 2           2           55 TRUE            FALSE               35 Wheat       \n 3           3           38 FALSE           TRUE                20 Corn        \n 4           4           60 TRUE            FALSE               50 Soy         \n 5           5           45 FALSE           TRUE                10 Soy         \n 6           6           50 TRUE            FALSE               40 Wheat       \n 7           7           42 FALSE           TRUE                25 Corn        \n 8           8           65 TRUE            FALSE               60 Soy         \n 9           9           37 FALSE           TRUE                12 Corn        \n10          10           48 FALSE           FALSE               30 Wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+    "text": "Q1: What are the cols and rows?\n\nfarm_data\n\n# A tibble: 10 × 8\n   employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n         &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n 1           1           40 TRUE            FALSE               15 Corn        \n 2           2           55 TRUE            FALSE               35 Wheat       \n 3           3           38 FALSE           TRUE                20 Corn        \n 4           4           60 TRUE            FALSE               50 Soy         \n 5           5           45 FALSE           TRUE                10 Soy         \n 6           6           50 TRUE            FALSE               40 Wheat       \n 7           7           42 FALSE           TRUE                25 Corn        \n 8           8           65 TRUE            FALSE               60 Soy         \n 9           9           37 FALSE           TRUE                12 Corn        \n10          10           48 FALSE           FALSE               30 Wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#q1-what-are-the-cols-and-rows-2",
     "href": "units/4-eda-ggplot/slides.html#q1-what-are-the-cols-and-rows-2",
     "title": "Week 4",
     "section": "Q1: What are the cols and rows?",
-    "text": "Q1: What are the cols and rows?\n\nUnit of observation: an individual farm worker\nVariables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)\n\n\n\nA description of the variables is often stored in a separate file called a data dictionary."
+    "text": "Q1: What are the cols and rows?\n\nUnit of observation: an individual farm worker\nVariables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)\n\n. . .\n\nA description of the variables is often stored in a separate file called a data dictionary."
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#q2-is-there-any-missing-data",
     "href": "units/4-eda-ggplot/slides.html#q2-is-there-any-missing-data",
     "title": "Week 4",
     "section": "Q2: Is there any missing data?",
-    "text": "Q2: Is there any missing data?\n\nOption 1: Total missing values\n\nlibrary(dplyr)\nsum(is.na(farm_data))\n\n\n\n[1] 0\n\n\n\n\nOption 2: Proportion missing counts\n\nfarm_data |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n\n\n# A tibble: 1 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1           0            0               0          0           0            0\n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+    "text": "Q2: Is there any missing data?\n. . .\nOption 1: Total missing values\n\nlibrary(dplyr)\nsum(is.na(farm_data))\n\n[1] 0\n\n\n. . .\nOption 2: Proportion missing counts\n\nfarm_data |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n# A tibble: 1 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1           0            0               0          0           0            0\n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#q3-what-is-the-distribution-of-years_experience",
     "href": "units/4-eda-ggplot/slides.html#q3-what-is-the-distribution-of-years_experience",
     "title": "Week 4",
     "section": "Q3: What is the distribution of years_experience?",
-    "text": "Q3: What is the distribution of years_experience?\n\n\nlibrary(ggplot2)\nfarm_data |&gt;\n  ggplot(aes(x = years_experience)) +\n  geom_bar()"
+    "text": "Q3: What is the distribution of years_experience?\n. . .\n\nlibrary(ggplot2)\nfarm_data |&gt;\n  ggplot(aes(x = years_experience)) +\n  geom_bar()"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#q3-what-is-the-distribution-of-years_experience-1",
@@ -1120,28 +1120,28 @@
     "href": "units/4-eda-ggplot/slides.html#geom_bar",
     "title": "Week 4",
     "section": "geom_bar()",
-    "text": "geom_bar()\n\ngeom_bar() counts up the number of observations in each level of a single variable, then draws bars up to that height."
+    "text": "geom_bar()\n. . .\ngeom_bar() counts up the number of observations in each level of a single variable, then draws bars up to that height."
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#summarizing-with-counts",
     "href": "units/4-eda-ggplot/slides.html#summarizing-with-counts",
     "title": "Week 4",
     "section": "Summarizing with counts",
-    "text": "Summarizing with counts\n\n\nfarm_data |&gt;\n  group_by(primary_crop) |&gt;\n  summarize(count = n())\n\n\n\n# A tibble: 3 × 2\n  primary_crop count\n  &lt;chr&gt;        &lt;int&gt;\n1 Corn             4\n2 Soy              3\n3 Wheat            3"
+    "text": "Summarizing with counts\n. . .\n\nfarm_data |&gt;\n  group_by(primary_crop) |&gt;\n  summarize(count = n())\n\n# A tibble: 3 × 2\n  primary_crop count\n  &lt;chr&gt;        &lt;int&gt;\n1 Corn             4\n2 Soy              3\n3 Wheat            3"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#geom_col",
     "href": "units/4-eda-ggplot/slides.html#geom_col",
     "title": "Week 4",
     "section": "geom_col()",
-    "text": "geom_col()\n\ngeom_col() takes one column of categories and draws a bar for each up to the height of a second column of counts.\n\n\n\nfarm_data |&gt;\n  count(primary_crop) |&gt;\n  ggplot(aes(y = primary_crop, x = n)) +\n  geom_col()"
+    "text": "geom_col()\n. . .\ngeom_col() takes one column of categories and draws a bar for each up to the height of a second column of counts.\n. . .\n\nfarm_data |&gt;\n  count(primary_crop) |&gt;\n  ggplot(aes(y = primary_crop, x = n)) +\n  geom_col()"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#two-types-of-viz",
     "href": "units/4-eda-ggplot/slides.html#two-types-of-viz",
     "title": "Week 4",
     "section": "Two types of Viz",
-    "text": "Two types of Viz\n\n\nExploratory Data Analysis (EDA)\n\nExplanatory Data Analysis\n\n\nAdd notes to each:\nExploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation\nExplanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic"
+    "text": "Two types of Viz\n\n\n\nExploratory Data Analysis (EDA)\n\n\n\nExplanatory Data Analysis\n\n\n\n\nAdd notes to each:\nExploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation\nExplanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#reminder-of-dataviz-workflow-2",
@@ -1162,28 +1162,28 @@
     "href": "units/4-eda-ggplot/slides.html#ggplot2",
     "title": "Week 4",
     "section": "ggplot2()",
-    "text": "ggplot2()\n\nA plot can be decomposed into three primary elements (according to grammar of graphics):\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
+    "text": "ggplot2()\n. . .\nA plot can be decomposed into three primary elements (according to grammar of graphics):\n\nthe data,\nthe aesthetic mapping of the variables in the data to visual channels, and\nthe geometry used to translate the observations into marks on the plot."
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#section-2",
     "href": "units/4-eda-ggplot/slides.html#section-2",
     "title": "Week 4",
     "section": "",
-    "text": "library(tidyverse)\nlibrary(dplyr)\nlibrary(palmerpenguins)\n#| label: \"hi mom\"\npenguins |&gt;\n  select(bill_length_mm,\n         flipper_length_mm,\n         species)\n\n\n\n# A tibble: 344 × 3\n   bill_length_mm flipper_length_mm species\n            &lt;dbl&gt;             &lt;int&gt; &lt;fct&gt;  \n 1           39.1               181 Adelie \n 2           39.5               186 Adelie \n 3           40.3               195 Adelie \n 4           NA                  NA Adelie \n 5           36.7               193 Adelie \n 6           39.3               190 Adelie \n 7           38.9               181 Adelie \n 8           39.2               195 Adelie \n 9           34.1               193 Adelie \n10           42                 190 Adelie \n# ℹ 334 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDraw arrows mapping variables to visual cues"
+    "text": "library(tidyverse)\nlibrary(dplyr)\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.5.2\n\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw\n\n#| label: \"hi mom\"\npenguins |&gt;\n  select(bill_length_mm,\n         flipper_length_mm,\n         species)\n\n# A tibble: 344 × 3\n   bill_length_mm flipper_length_mm species\n            &lt;dbl&gt;             &lt;int&gt; &lt;fct&gt;  \n 1           39.1               181 Adelie \n 2           39.5               186 Adelie \n 3           40.3               195 Adelie \n 4           NA                  NA Adelie \n 5           36.7               193 Adelie \n 6           39.3               190 Adelie \n 7           38.9               181 Adelie \n 8           39.2               195 Adelie \n 9           34.1               193 Adelie \n10           42                 190 Adelie \n# ℹ 334 more rows\n\n\n\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\nDraw arrows mapping variables to visual cues"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#section-3",
     "href": "units/4-eda-ggplot/slides.html#section-3",
     "title": "Week 4",
     "section": "",
-    "text": "penguins |&gt;\n  ggplot(aes(x = bill_length_mm,\n             y = flipper_length_mm,\n             color = species)) +\n  geom_point()"
+    "text": "penguins |&gt;\n  ggplot(aes(x = bill_length_mm,\n             y = flipper_length_mm,\n             color = species)) +\n  geom_point()\n\n\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#ggplot2-syntax",
     "href": "units/4-eda-ggplot/slides.html#ggplot2-syntax",
     "title": "Week 4",
     "section": "ggplot2() syntax",
-    "text": "ggplot2() syntax\n\nggplot2() builds a plot layer by layer, each one added on top of one another with + (not |&gt;).\n\n\n\nggplot(df) creates canvas\naes() creates mappings, called inside ggplot() or a geom()\ngeom_() puts down marks using declared geometry"
+    "text": "ggplot2() syntax\n. . .\nggplot2() builds a plot layer by layer, each one added on top of one another with + (not |&gt;).\n. . .\n\nggplot(df) creates canvas\naes() creates mappings, called inside ggplot() or a geom()\ngeom_() puts down marks using declared geometry"
   },
   {
     "objectID": "units/4-eda-ggplot/slides.html#layer-by-layer",
@@ -1233,14 +1233,14 @@
     "href": "units/3-data-types/slides.html#data-frames-in-r",
     "title": "Week 3",
     "section": "Data Frames in R",
-    "text": "Data Frames in R\nA data frame is like a table or spreadsheet — it has rows and columns, and each column can have its own type (numbers, words, etc.).\n\n\n# Create a data frame\nstudents &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Charlie\"),\n  age = c(20, 21, 19),\n  major = c(\"Math\", \"Physics\", \"Biology\")\n)\n\n# Print the data frame\nprint(students)\n\n\n     name age   major\n1   Alice  20    Math\n2     Bob  21 Physics\n3 Charlie  19 Biology"
+    "text": "Data Frames in R\nA data frame is like a table or spreadsheet — it has rows and columns, and each column can have its own type (numbers, words, etc.).\n\n# Create a data frame\nstudents &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Charlie\"),\n  age = c(20, 21, 19),\n  major = c(\"Math\", \"Physics\", \"Biology\")\n)\n\n# Print the data frame\nprint(students)\n\n     name age   major\n1   Alice  20    Math\n2     Bob  21 Physics\n3 Charlie  19 Biology"
   },
   {
     "objectID": "units/3-data-types/slides.html#data-types-in-r",
     "href": "units/3-data-types/slides.html#data-types-in-r",
     "title": "Week 3",
     "section": "Data types in R",
-    "text": "Data types in R\nData Types: A data type tells you what kind of data something is, like a number, a word (string), or a TRUE/FALSE value (logical).\n\n\n# Numeric (numbers)\nnum &lt;- 42\n\n# Character (text)\ntext &lt;- \"Hello, R!\"\n\n# Logical (TRUE/FALSE)\nlogic &lt;- TRUE\n\n# Print the values and their types\nprint(num)      # 42\n\n\n[1] 42\n\nprint(text)     # \"Hello, R!\"\n\n[1] \"Hello, R!\"\n\nprint(logic)    # TRUE\n\n[1] TRUE\n\n# Check the data type using class()\nclass(num)   # \"numeric\"\n\n[1] \"numeric\"\n\nclass(text)  # \"character\"\n\n[1] \"character\"\n\nclass(logic) # \"logical\"\n\n[1] \"logical\""
+    "text": "Data types in R\nData Types: A data type tells you what kind of data something is, like a number, a word (string), or a TRUE/FALSE value (logical).\n\n# Numeric (numbers)\nnum &lt;- 42\n\n# Character (text)\ntext &lt;- \"Hello, R!\"\n\n# Logical (TRUE/FALSE)\nlogic &lt;- TRUE\n\n# Print the values and their types\nprint(num)      # 42\n\n[1] 42\n\nprint(text)     # \"Hello, R!\"\n\n[1] \"Hello, R!\"\n\nprint(logic)    # TRUE\n\n[1] TRUE\n\n# Check the data type using class()\nclass(num)   # \"numeric\"\n\n[1] \"numeric\"\n\nclass(text)  # \"character\"\n\n[1] \"character\"\n\nclass(logic) # \"logical\"\n\n[1] \"logical\""
   },
   {
     "objectID": "units/3-data-types/slides.html#functions-we-use-to-clean-data",
@@ -1275,28 +1275,28 @@
     "href": "units/3-data-types/slides.html#csvs",
     "title": "Week 3",
     "section": "CSVs",
-    "text": "CSVs\nA comma separate value (CSV) file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.\n\n\n\nReading into R (base R)\n\ndata &lt;- read.csv(\"data/week1_survey.csv\")\ndata"
+    "text": "CSVs\nA comma separate value (CSV) file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.\n. . .\n\n\n\nReading into R (base R)\n\ndata &lt;- read.csv(\"data/week1_survey.csv\")\ndata"
   },
   {
     "objectID": "units/3-data-types/slides.html#csvs-1",
     "href": "units/3-data-types/slides.html#csvs-1",
     "title": "Week 3",
     "section": "CSVs",
-    "text": "CSVs\nA comma separate value (CSV) file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.\n\n\nReading into R (readr)\n\nlibrary(readr)\n# library(tidyverse) # easy alternative\n# read_csv: modern tidyverse approach, faster, safer, more predictable\ndata &lt;- read_csv(\"data/week1_survey.csv\")\ndata\n\n\n\n# A tibble: 19 × 7\n   hours           transfer gradstudent commute   drink             major  units\n   &lt;chr&gt;           &lt;lgl&gt;    &lt;lgl&gt;       &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;  &lt;chr&gt;\n 1 7               FALSE    FALSE       20        water             Rheto… 6    \n 2 8               FALSE    FALSE       10 min    water             Env.E… 15   \n 3 7 hours         TRUE     TRUE        20 mins   coffee            Busin… 13   \n 4 6 hrs           TRUE     FALSE       5 min     champagne         appli… 13 u…\n 5 4 hours/5 hours FALSE    FALSE       10 min    sprite            Econo… 16   \n 6 9hrs            TRUE     FALSE       45 min    coffee            DATA … 13 u…\n 7 7 hours         FALSE    FALSE       7 mins    water             Data … 14   \n 8 6 hrs           FALSE    FALSE       ~10       Peach Iced tea    CB     18   \n 9 8h              TRUE     FALSE       5m        water             Data … 14   \n10 7h30            FALSE    FALSE       20 min    water             Molec… 15   \n11 8h              TRUE     FALSE       60        tea               stati… 20   \n12 8hours/wd       FALSE    FALSE       2 minutes coffee/liquid     legal… 17 u…\n13 7.5h            FALSE    FALSE       30 min    tea               poli.… 20u  \n14 7h avg          NA       TRUE        20 minute sparkling water   Buisi… 15   \n15 7.5h            FALSE    TRUE        35 min    gin and tonic     stati… 13   \n16 6               TRUE     FALSE       10        Tea               compu… 11   \n17 8 hours         TRUE     FALSE       45 min    water             Data … 17 u…\n18 6               FALSE    FALSE       20        tea               math   20   \n19 6               FALSE    FALSE       10 min    Iced Matcha Latte Socio… 12"
+    "text": "CSVs\nA comma separate value (CSV) file stores tabular data with each row on a new line and each column delimited by a comma. Good for storing R data frames in your file system.\n\n\n\nReading into R (readr)\n\nlibrary(readr)\n\nWarning: package 'readr' was built under R version 4.5.1\n\n# library(tidyverse) # easy alternative\n# read_csv: modern tidyverse approach, faster, safer, more predictable\ndata &lt;- read_csv(\"data/week1_survey.csv\")\n\nRows: 19 Columns: 7\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (5): hours, commute, drink, major, units\nlgl (2): transfer, gradstudent\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndata\n\n# A tibble: 19 × 7\n   hours           transfer gradstudent commute   drink             major  units\n   &lt;chr&gt;           &lt;lgl&gt;    &lt;lgl&gt;       &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;  &lt;chr&gt;\n 1 7               FALSE    FALSE       20        water             Rheto… 6    \n 2 8               FALSE    FALSE       10 min    water             Env.E… 15   \n 3 7 hours         TRUE     TRUE        20 mins   coffee            Busin… 13   \n 4 6 hrs           TRUE     FALSE       5 min     champagne         appli… 13 u…\n 5 4 hours/5 hours FALSE    FALSE       10 min    sprite            Econo… 16   \n 6 9hrs            TRUE     FALSE       45 min    coffee            DATA … 13 u…\n 7 7 hours         FALSE    FALSE       7 mins    water             Data … 14   \n 8 6 hrs           FALSE    FALSE       ~10       Peach Iced tea    CB     18   \n 9 8h              TRUE     FALSE       5m        water             Data … 14   \n10 7h30            FALSE    FALSE       20 min    water             Molec… 15   \n11 8h              TRUE     FALSE       60        tea               stati… 20   \n12 8hours/wd       FALSE    FALSE       2 minutes coffee/liquid     legal… 17 u…\n13 7.5h            FALSE    FALSE       30 min    tea               poli.… 20u  \n14 7h avg          NA       TRUE        20 minute sparkling water   Buisi… 15   \n15 7.5h            FALSE    TRUE        35 min    gin and tonic     stati… 13   \n16 6               TRUE     FALSE       10        Tea               compu… 11   \n17 8 hours         TRUE     FALSE       45 min    water             Data … 17 u…\n18 6               FALSE    FALSE       20        tea               math   20   \n19 6               FALSE    FALSE       10 min    Iced Matcha Latte Socio… 12"
   },
   {
     "objectID": "units/3-data-types/slides.html#data-cleaning-continued",
     "href": "units/3-data-types/slides.html#data-cleaning-continued",
     "title": "Week 3",
     "section": "Data Cleaning (Continued)",
-    "text": "Data Cleaning (Continued)\n\n#Preview the first few rows of the dataset\nhead(data)\n\n\n\n# A tibble: 6 × 7\n  hours           transfer gradstudent commute drink     major             units\n  &lt;chr&gt;           &lt;lgl&gt;    &lt;lgl&gt;       &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;\n1 7               FALSE    FALSE       20      water     Rhetoric          6    \n2 8               FALSE    FALSE       10 min  water     Env.Econ          15   \n3 7 hours         TRUE     TRUE        20 mins coffee    Business managem… 13   \n4 6 hrs           TRUE     FALSE       5 min   champagne applied math      13 u…\n5 4 hours/5 hours FALSE    FALSE       10 min  sprite    Economics         16   \n6 9hrs            TRUE     FALSE       45 min  coffee    DATA SCIENCE      13 u…"
+    "text": "Data Cleaning (Continued)\n\n#Preview the first few rows of the dataset\nhead(data)\n\n# A tibble: 6 × 7\n  hours           transfer gradstudent commute drink     major             units\n  &lt;chr&gt;           &lt;lgl&gt;    &lt;lgl&gt;       &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;\n1 7               FALSE    FALSE       20      water     Rhetoric          6    \n2 8               FALSE    FALSE       10 min  water     Env.Econ          15   \n3 7 hours         TRUE     TRUE        20 mins coffee    Business managem… 13   \n4 6 hrs           TRUE     FALSE       5 min   champagne applied math      13 u…\n5 4 hours/5 hours FALSE    FALSE       10 min  sprite    Economics         16   \n6 9hrs            TRUE     FALSE       45 min  coffee    DATA SCIENCE      13 u…"
   },
   {
     "objectID": "units/3-data-types/slides.html#dplyr-verbs",
     "href": "units/3-data-types/slides.html#dplyr-verbs",
     "title": "Week 3",
     "section": "dplyr verbs",
-    "text": "dplyr verbs\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
+    "text": "dplyr verbs\n\n\n\n\nslice()\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\ngroup_by()\n\n\n\nAll of these have a data frame as the first argument.\nAll of these produce a data frame as output.\nWithin the function, you can simply refer to column names unquoted."
   },
   {
     "objectID": "units/3-data-types/slides.html#data-pipelines-in-r",
@@ -1310,7 +1310,7 @@
     "href": "units/3-data-types/slides.html#using-pipeline-with-our-data",
     "title": "Week 3",
     "section": "Using pipeline with our data",
-    "text": "Using pipeline with our data\nWithout the pipeline, we would have to apply each function one at a time:\n\nsummarize(\n  filter(data, major == \"statistics\"),\n  mean(sleep_hours, na.rm = TRUE)\n)\n# results in nested function which can be very messy\n\n\n\n\nUsing the pipeline, this becomes very clean:\n\ndata |&gt;\n  filter(major == \"statistics\") |&gt;\n  summarise(mean(sleep_hours, na.rm = TRUE))"
+    "text": "Using pipeline with our data\nWithout the pipeline, we would have to apply each function one at a time:\n\nsummarize(\n  filter(data, major == \"statistics\"),\n  mean(sleep_hours, na.rm = TRUE)\n)\n# results in nested function which can be very messy\n\nUsing the pipeline, this becomes very clean:\n\ndata |&gt;\n  filter(major == \"statistics\") |&gt;\n  summarise(mean(sleep_hours, na.rm = TRUE))"
   },
   {
     "objectID": "units/3-data-types/slides.html#reality-with-data",
@@ -1324,7 +1324,7 @@
     "href": "units/3-data-types/slides.html#data-cleaning-example",
     "title": "Week 3",
     "section": "Data Cleaning Example:",
-    "text": "Data Cleaning Example:\n\nlibrary(tidyverse)\n\nfarm_clean &lt;- farm_raw |&gt;\n  mutate(\n    # numeric columns\n    hours_worked = parse_number(hours_worked),\n    commute_min = parse_number(commute_min),\n    years_experience = parse_number(years_experience),\n    hourly_wage = parse_number(hourly_wage),\n\n    # yes/no variables\n    seasonal_worker = case_when(\n      str_to_lower(str_trim(seasonal_worker)) %in% c(\"yes\", \"true\") ~ TRUE,\n      str_to_lower(str_trim(seasonal_worker)) %in% c(\"no\", \"false\") ~ FALSE,\n      TRUE ~ NA\n    ),\n\n    supervisor = case_when(\n      str_to_lower(str_trim(supervisor)) %in% c(\"yes\", \"true\") ~ TRUE,\n      str_to_lower(str_trim(supervisor)) %in% c(\"no\", \"false\") ~ FALSE,\n      TRUE ~ NA\n    ),\n\n    # categorical cleanup\n    primary_crop =\n      primary_crop |&gt;\n      str_trim() |&gt;\n      str_to_lower()\n  )\n\nfarm_clean\n\n\n\n# A tibble: 6 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n1           1           40 TRUE            FALSE               15 corn        \n2           2           55 TRUE            FALSE               35 wheat       \n3           3           38 FALSE           TRUE                20 corn        \n4           4           60 TRUE            FALSE               50 soy         \n5           5           45 FALSE           TRUE                10 soy         \n6           6           50 TRUE            FALSE               40 wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+    "text": "Data Cleaning Example:\n\nlibrary(tidyverse)\n\nfarm_clean &lt;- farm_raw |&gt;\n  mutate(\n    # numeric columns\n    hours_worked = parse_number(hours_worked),\n    commute_min = parse_number(commute_min),\n    years_experience = parse_number(years_experience),\n    hourly_wage = parse_number(hourly_wage),\n\n    # yes/no variables\n    seasonal_worker = case_when(\n      str_to_lower(str_trim(seasonal_worker)) %in% c(\"yes\", \"true\") ~ TRUE,\n      str_to_lower(str_trim(seasonal_worker)) %in% c(\"no\", \"false\") ~ FALSE,\n      TRUE ~ NA\n    ),\n\n    supervisor = case_when(\n      str_to_lower(str_trim(supervisor)) %in% c(\"yes\", \"true\") ~ TRUE,\n      str_to_lower(str_trim(supervisor)) %in% c(\"no\", \"false\") ~ FALSE,\n      TRUE ~ NA\n    ),\n\n    # categorical cleanup\n    primary_crop =\n      primary_crop |&gt;\n      str_trim() |&gt;\n      str_to_lower()\n  )\n\nfarm_clean\n\n# A tibble: 6 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n1           1           40 TRUE            FALSE               15 corn        \n2           2           55 TRUE            FALSE               35 wheat       \n3           3           38 FALSE           TRUE                20 corn        \n4           4           60 TRUE            FALSE               50 soy         \n5           5           45 FALSE           TRUE                10 soy         \n6           6           50 TRUE            FALSE               40 wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
     "objectID": "units/3-data-types/slides.html#exploratory-data-analysis",
@@ -1338,35 +1338,35 @@
     "href": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows",
     "title": "Week 3",
     "section": "Q1: What are the cols and rows?",
-    "text": "Q1: What are the cols and rows?\n\n\ndim(farm_data)\n\n\n\n[1] 10  8\n\n\n\n\n\nsapply(farm_data, class)\n\n\n\n     employee_id     hours_worked  seasonal_worker       supervisor \n       \"integer\"        \"numeric\"        \"logical\"        \"logical\" \n     commute_min     primary_crop years_experience      hourly_wage \n       \"numeric\"      \"character\"        \"numeric\"        \"numeric\""
+    "text": "Q1: What are the cols and rows?\n. . .\n\ndim(farm_data)\n\n[1] 10  8\n\n\n. . .\n\nsapply(farm_data, class)\n\n     employee_id     hours_worked  seasonal_worker       supervisor \n       \"integer\"        \"numeric\"        \"logical\"        \"logical\" \n     commute_min     primary_crop years_experience      hourly_wage \n       \"numeric\"      \"character\"        \"numeric\"        \"numeric\""
   },
   {
     "objectID": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-1",
     "href": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-1",
     "title": "Week 3",
     "section": "Q1: What are the cols and rows?",
-    "text": "Q1: What are the cols and rows?\n\nfarm_data\n\n\n\n# A tibble: 10 × 8\n   employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n         &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n 1           1           40 TRUE            FALSE               15 Corn        \n 2           2           55 TRUE            FALSE               35 Wheat       \n 3           3           38 FALSE           TRUE                20 Corn        \n 4           4           60 TRUE            FALSE               50 Soy         \n 5           5           45 FALSE           TRUE                10 Soy         \n 6           6           50 TRUE            FALSE               40 Wheat       \n 7           7           42 FALSE           TRUE                25 Corn        \n 8           8           65 TRUE            FALSE               60 Soy         \n 9           9           37 FALSE           TRUE                12 Corn        \n10          10           48 FALSE           FALSE               30 Wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+    "text": "Q1: What are the cols and rows?\n\nfarm_data\n\n# A tibble: 10 × 8\n   employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n         &lt;int&gt;        &lt;dbl&gt; &lt;lgl&gt;           &lt;lgl&gt;            &lt;dbl&gt; &lt;chr&gt;       \n 1           1           40 TRUE            FALSE               15 Corn        \n 2           2           55 TRUE            FALSE               35 Wheat       \n 3           3           38 FALSE           TRUE                20 Corn        \n 4           4           60 TRUE            FALSE               50 Soy         \n 5           5           45 FALSE           TRUE                10 Soy         \n 6           6           50 TRUE            FALSE               40 Wheat       \n 7           7           42 FALSE           TRUE                25 Corn        \n 8           8           65 TRUE            FALSE               60 Soy         \n 9           9           37 FALSE           TRUE                12 Corn        \n10          10           48 FALSE           FALSE               30 Wheat       \n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
     "objectID": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-2",
     "href": "units/3-data-types/slides.html#q1-what-are-the-cols-and-rows-2",
     "title": "Week 3",
     "section": "Q1: What are the cols and rows?",
-    "text": "Q1: What are the cols and rows?\n\nUnit of observation: an individual farm worker\nVariables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)\n\n\n\nA description of the variables is often stored in a separate file called a data dictionary."
+    "text": "Q1: What are the cols and rows?\n\nUnit of observation: an individual farm worker\nVariables: employee ID (integer), hours worked (numeric), seasonal worker (logical), supervisor (logical), commute in minutes (numeric), primary crop (character), years of experience (numeric), hourly wage (numeric)\n\n. . .\n\nA description of the variables is often stored in a separate file called a data dictionary."
   },
   {
     "objectID": "units/3-data-types/slides.html#q2-is-there-any-missing-data",
     "href": "units/3-data-types/slides.html#q2-is-there-any-missing-data",
     "title": "Week 3",
     "section": "Q2: Is there any missing data?",
-    "text": "Q2: Is there any missing data?\n\nOption 1: Total missing values\n\nlibrary(dplyr)\nsum(is.na(farm_data))\n\n\n\n[1] 0\n\n\n\n\nOption 2: Proportion missing counts\n\nfarm_data |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n\n\n# A tibble: 1 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1           0            0               0          0           0            0\n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
+    "text": "Q2: Is there any missing data?\n. . .\nOption 1: Total missing values\n\nlibrary(dplyr)\nsum(is.na(farm_data))\n\n[1] 0\n\n\n. . .\nOption 2: Proportion missing counts\n\nfarm_data |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n# A tibble: 1 × 8\n  employee_id hours_worked seasonal_worker supervisor commute_min primary_crop\n        &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;\n1           0            0               0          0           0            0\n# ℹ 2 more variables: years_experience &lt;dbl&gt;, hourly_wage &lt;dbl&gt;"
   },
   {
     "objectID": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience",
     "href": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience",
     "title": "Week 3",
     "section": "Q3: What is the distribution of years_experience?",
-    "text": "Q3: What is the distribution of years_experience?\n\n\nlibrary(ggplot2)\nfarm_data |&gt;\n  ggplot(aes(x = years_experience)) +\n  geom_bar()"
+    "text": "Q3: What is the distribution of years_experience?\n. . .\n\nlibrary(ggplot2)\nfarm_data |&gt;\n  ggplot(aes(x = years_experience)) +\n  geom_bar()"
   },
   {
     "objectID": "units/3-data-types/slides.html#q3-what-is-the-distribution-of-years_experience-1",
@@ -1380,70 +1380,70 @@
     "href": "units/3-data-types/slides.html#geom_bar",
     "title": "Week 3",
     "section": "geom_bar()",
-    "text": "geom_bar()\n\ngeom_bar() counts up the number of observations in each level of a single variable, then draws bars up to that height."
+    "text": "geom_bar()\n. . .\ngeom_bar() counts up the number of observations in each level of a single variable, then draws bars up to that height."
   },
   {
     "objectID": "units/3-data-types/slides.html#summarizing-with-counts",
     "href": "units/3-data-types/slides.html#summarizing-with-counts",
     "title": "Week 3",
     "section": "Summarizing with counts",
-    "text": "Summarizing with counts\n\n\nfarm_data |&gt;\n  group_by(primary_crop) |&gt;\n  summarize(count = n())\n\n\n\n# A tibble: 3 × 2\n  primary_crop count\n  &lt;chr&gt;        &lt;int&gt;\n1 Corn             4\n2 Soy              3\n3 Wheat            3"
+    "text": "Summarizing with counts\n. . .\n\nfarm_data |&gt;\n  group_by(primary_crop) |&gt;\n  summarize(count = n())\n\n# A tibble: 3 × 2\n  primary_crop count\n  &lt;chr&gt;        &lt;int&gt;\n1 Corn             4\n2 Soy              3\n3 Wheat            3"
   },
   {
     "objectID": "units/3-data-types/slides.html#geom_col",
     "href": "units/3-data-types/slides.html#geom_col",
     "title": "Week 3",
     "section": "geom_col()",
-    "text": "geom_col()\n\ngeom_col() takes one column of categories and draws a bar for each up to the height of a second column of counts.\n\n\n\nfarm_data |&gt;\n  count(primary_crop) |&gt;\n  ggplot(aes(y = primary_crop, x = n)) +\n  geom_col()"
+    "text": "geom_col()\n. . .\ngeom_col() takes one column of categories and draws a bar for each up to the height of a second column of counts.\n. . .\n\nfarm_data |&gt;\n  count(primary_crop) |&gt;\n  ggplot(aes(y = primary_crop, x = n)) +\n  geom_col()"
   },
   {
     "objectID": "units/3-data-types/slides.html#two-types-of-viz",
     "href": "units/3-data-types/slides.html#two-types-of-viz",
     "title": "Week 3",
     "section": "Two types of Viz",
-    "text": "Two types of Viz\n\n\nExploratory Data Analysis (EDA)\n\nExplanatory Data Analysis\n\n\nAdd notes to each:\nExploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation\nExplanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic"
+    "text": "Two types of Viz\n\n\n\nExploratory Data Analysis (EDA)\n\n\n\nExplanatory Data Analysis\n\n\n\n\nAdd notes to each:\nExploratory: - consumer: the analyst - goal: uncover structure for further analysis - follow templates - prioritize quick and accurate interpretation\nExplanatory: - consumer: stakeholder - goal: tell a specific story - customized - polished aesthetic"
   },
   {
     "objectID": "units/3-data-types/data1.html#section",
     "href": "units/3-data-types/data1.html#section",
     "title": "Data Wrangling I",
     "section": "",
-    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n\n  \n    −\n    +\n \n 02:30"
+    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n{{&lt; countdown \"2:30\" &gt;}}"
   },
   {
     "objectID": "units/3-data-types/data1.html#whats-going-on-here",
     "href": "units/3-data-types/data1.html#whats-going-on-here",
     "title": "Data Wrangling I",
-    "section": "What’s going on here?",
-    "text": "What’s going on here?\n\nstar_wars[star_wars$height &lt; 1.75, ]\n\n\n\n   name homeworld height weight\n2 Padme     Naboo    1.6     45\n3  Luke  Tatooine    1.7     77\n\n\n\n\nstar_wars$height\n\n\n\n[1] 1.8 1.6 1.7 1.9\n\n\n\n\n\nstar_wars$height &lt; 1.75\n\n\n\n[1] FALSE  TRUE  TRUE FALSE"
+    "section": "",
+    "text": "star_wars[star_wars$height &lt; 1.75, ]\n\n   name homeworld height weight\n2 Padme     Naboo    1.6     45\n3  Luke  Tatooine    1.7     77\n\n\n. . .\n\nstar_wars$height\n\n[1] 1.8 1.6 1.7 1.9\n\n\n. . .\n\nstar_wars$height &lt; 1.75\n\n[1] FALSE  TRUE  TRUE FALSE"
   },
   {
     "objectID": "units/3-data-types/data1.html#comparison-operators",
     "href": "units/3-data-types/data1.html#comparison-operators",
     "title": "Data Wrangling I",
-    "section": "Comparison operators",
-    "text": "Comparison operators\nYou can form a logical vector through a logical comparison:\n\n\n\n&lt;\n&gt;\n&lt;=\n&gt;=\n\n\n==\n!=\n%in%"
+    "section": "",
+    "text": "You can form a logical vector through a logical comparison:\n\n\n\n&lt;\n&gt;\n&lt;=\n&gt;=\n\n\n==\n!=\n%in%"
   },
   {
     "objectID": "units/3-data-types/data1.html#examples",
     "href": "units/3-data-types/data1.html#examples",
     "title": "Data Wrangling I",
-    "section": "Examples",
-    "text": "Examples\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") == \"apple\"\n\n\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n\n\n\"apple\" == c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n\n\n\n\"apple\" %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n\n\n[1] TRUE\n\n\n\n\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% \"apple\"\n\n\n\n[1]  TRUE FALSE  TRUE FALSE"
+    "section": "",
+    "text": "c(\"apple\", \"orange\", \"apple\", \"kiwi\") == \"apple\"\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n. . .\n\n\"apple\" == c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n. . .\n\n\"apple\" %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n[1] TRUE\n\n\n. . .\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% \"apple\"\n\n[1]  TRUE FALSE  TRUE FALSE"
   },
   {
     "objectID": "units/3-data-types/data1.html#examples-1",
     "href": "units/3-data-types/data1.html#examples-1",
     "title": "Data Wrangling I",
-    "section": "Examples",
-    "text": "Examples\n\nc(\"apple\", \"kiwi\") %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n\n\n[1] TRUE TRUE\n\n\n\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% c(\"apple\", \"kiwi\")\n\n\n\n[1]  TRUE FALSE  TRUE  TRUE"
+    "section": "",
+    "text": "c(\"apple\", \"kiwi\") %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n[1] TRUE TRUE\n\n\n. . .\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% c(\"apple\", \"kiwi\")\n\n[1]  TRUE FALSE  TRUE  TRUE"
   },
   {
     "objectID": "units/3-data-types/data1.html#lets-make-this-better",
     "href": "units/3-data-types/data1.html#lets-make-this-better",
     "title": "Data Wrangling I",
-    "section": "Let’s make this better",
-    "text": "Let’s make this better\n\n\nstar_wars[star_wars$height &lt; 1.75, ]\n\n\n\n\n\n\n\n\nstar_wars$height_in &lt;- star_wars$height * 39.3701\n\n\n\n\n\n\n\n\n\nmean(star_wars$height[star_wars$homeworld == \"Tatooine\"])"
+    "section": "",
+    "text": "star_wars[star_wars$height &lt; 1.75, ]\n\n\n. . .\n\n\n\n\n\nstar_wars$height_in &lt;- star_wars$height * 39.3701\n\n\n. . .\n\n\n\n\n\nmean(star_wars$height[star_wars$homeworld == \"Tatooine\"])"
   },
   {
     "objectID": "units/3-data-types/data1.html#section-1",
@@ -1464,161 +1464,161 @@
     "href": "units/3-data-types/data1.html#section-4",
     "title": "Data Wrangling I",
     "section": "",
-    "text": "Load the package.\n\nlibrary(dplyr)\n\n\n\n\n\nOur example data set.\n\nstar_wars\n\n\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90"
+    "text": "Load the package.\n\nlibrary(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n. . .\nOur example data set.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90"
   },
   {
     "objectID": "units/3-data-types/data1.html#slice",
     "href": "units/3-data-types/data1.html#slice",
     "title": "Data Wrangling I",
     "section": "slice()",
-    "text": "slice()\n\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, 2)\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45"
+    "text": "slice()\n. . .\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, 2)\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45"
   },
   {
     "objectID": "units/3-data-types/data1.html#slice-1",
     "href": "units/3-data-types/data1.html#slice-1",
     "title": "Data Wrangling I",
     "section": "slice()",
-    "text": "slice()\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, 2:4)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2   Luke  Tatooine    1.7     77\n3 JarJar     Naboo    1.9     90"
+    "text": "slice()\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, 2:4)\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2   Luke  Tatooine    1.7     77\n3 JarJar     Naboo    1.9     90"
   },
   {
     "objectID": "units/3-data-types/data1.html#slice-2",
     "href": "units/3-data-types/data1.html#slice-2",
     "title": "Data Wrangling I",
     "section": "slice()",
-    "text": "slice()\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, -3)\n\n\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3 JarJar     Naboo    1.9     90"
+    "text": "slice()\nIsolates particular rows of a data frame by row number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nslice(star_wars, -3)\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3 JarJar     Naboo    1.9     90"
   },
   {
     "objectID": "units/3-data-types/data1.html#select",
     "href": "units/3-data-types/data1.html#select",
     "title": "Data Wrangling I",
     "section": "select()",
-    "text": "select()\n\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\n\nselect(star_wars, homeworld)\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
+    "text": "select()\n. . .\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n. . .\n\nselect(star_wars, homeworld)\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
     "objectID": "units/3-data-types/data1.html#select-1",
     "href": "units/3-data-types/data1.html#select-1",
     "title": "Data Wrangling I",
     "section": "select()",
-    "text": "select()\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nselect(star_wars, 2)\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
+    "text": "select()\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nselect(star_wars, 2)\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
     "objectID": "units/3-data-types/data1.html#select-2",
     "href": "units/3-data-types/data1.html#select-2",
     "title": "Data Wrangling I",
     "section": "select()",
-    "text": "select()\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nselect(star_wars, homeworld, name)\n\n\n\n  homeworld   name\n1  Tatooine Anakin\n2     Naboo  Padme\n3  Tatooine   Luke\n4     Naboo JarJar"
+    "text": "select()\nSelects variables by name or number.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nselect(star_wars, homeworld, name)\n\n  homeworld   name\n1  Tatooine Anakin\n2     Naboo  Padme\n3  Tatooine   Luke\n4     Naboo JarJar"
   },
   {
     "objectID": "units/3-data-types/data1.html#filter",
     "href": "units/3-data-types/data1.html#filter",
     "title": "Data Wrangling I",
     "section": "filter()",
-    "text": "filter()\n\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, homeworld == \"Naboo\")\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90"
+    "text": "filter()\n. . .\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, homeworld == \"Naboo\")\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90"
   },
   {
     "objectID": "units/3-data-types/data1.html#filter-1",
     "href": "units/3-data-types/data1.html#filter-1",
     "title": "Data Wrangling I",
     "section": "filter()",
-    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, weight &lt; 50)\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45"
+    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, weight &lt; 50)\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45"
   },
   {
     "objectID": "units/3-data-types/data1.html#filter-2",
     "href": "units/3-data-types/data1.html#filter-2",
     "title": "Data Wrangling I",
     "section": "filter()",
-    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, name %in% c(\"Padme\", \"Luke\"))\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45\n2  Luke  Tatooine    1.7     77"
+    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars, name %in% c(\"Padme\", \"Luke\"))\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45\n2  Luke  Tatooine    1.7     77"
   },
   {
     "objectID": "units/3-data-types/data1.html#filter-3",
     "href": "units/3-data-types/data1.html#filter-3",
     "title": "Data Wrangling I",
     "section": "filter()",
-    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars,\n       name %in% c(\"Padme\", \"Luke\"),\n       weight &lt; 50)\n\n\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45\n\n\n\n\n\nYou can add multiple conditions separated by ,"
+    "text": "filter()\nReturns rows that meet certain criteria.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nfilter(star_wars,\n       name %in% c(\"Padme\", \"Luke\"),\n       weight &lt; 50)\n\n   name homeworld height weight\n1 Padme     Naboo    1.6     45\n\n\n\n\n. . .\n\nYou can add multiple conditions separated by ,"
   },
   {
     "objectID": "units/3-data-types/data1.html#mutate",
     "href": "units/3-data-types/data1.html#mutate",
     "title": "Data Wrangling I",
     "section": "mutate()",
-    "text": "mutate()\n\nAdds a new variable that can be a function of previous variables.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\n\nmutate(star_wars, weight_g = weight * 1000)\n\n\n\n    name homeworld height weight weight_g\n1 Anakin  Tatooine    1.8     84    84000\n2  Padme     Naboo    1.6     45    45000\n3   Luke  Tatooine    1.7     77    77000\n4 JarJar     Naboo    1.9     90    90000"
+    "text": "mutate()\n. . .\nAdds a new variable that can be a function of previous variables.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n. . .\n\nmutate(star_wars, weight_g = weight * 1000)\n\n    name homeworld height weight weight_g\n1 Anakin  Tatooine    1.8     84    84000\n2  Padme     Naboo    1.6     45    45000\n3   Luke  Tatooine    1.7     77    77000\n4 JarJar     Naboo    1.9     90    90000"
   },
   {
     "objectID": "units/3-data-types/data1.html#arrange",
     "href": "units/3-data-types/data1.html#arrange",
     "title": "Data Wrangling I",
     "section": "arrange()",
-    "text": "arrange()\n\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, height)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2   Luke  Tatooine    1.7     77\n3 Anakin  Tatooine    1.8     84\n4 JarJar     Naboo    1.9     90"
+    "text": "arrange()\n. . .\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, height)\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2   Luke  Tatooine    1.7     77\n3 Anakin  Tatooine    1.8     84\n4 JarJar     Naboo    1.9     90"
   },
   {
     "objectID": "units/3-data-types/data1.html#arrange-1",
     "href": "units/3-data-types/data1.html#arrange-1",
     "title": "Data Wrangling I",
     "section": "arrange()",
-    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, desc(height))\n\n\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90\n2 Anakin  Tatooine    1.8     84\n3   Luke  Tatooine    1.7     77\n4  Padme     Naboo    1.6     45"
+    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, desc(height))\n\n    name homeworld height weight\n1 JarJar     Naboo    1.9     90\n2 Anakin  Tatooine    1.8     84\n3   Luke  Tatooine    1.7     77\n4  Padme     Naboo    1.6     45"
   },
   {
     "objectID": "units/3-data-types/data1.html#arrange-2",
     "href": "units/3-data-types/data1.html#arrange-2",
     "title": "Data Wrangling I",
     "section": "arrange()",
-    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, homeworld)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3 Anakin  Tatooine    1.8     84\n4   Luke  Tatooine    1.7     77"
+    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, homeworld)\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3 Anakin  Tatooine    1.8     84\n4   Luke  Tatooine    1.7     77"
   },
   {
     "objectID": "units/3-data-types/data1.html#arrange-3",
     "href": "units/3-data-types/data1.html#arrange-3",
     "title": "Data Wrangling I",
     "section": "arrange()",
-    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, homeworld, height)\n\n\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3   Luke  Tatooine    1.7     77\n4 Anakin  Tatooine    1.8     84"
+    "text": "arrange()\nSort the rows of a data frame by the values of variables.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\narrange(star_wars, homeworld, height)\n\n    name homeworld height weight\n1  Padme     Naboo    1.6     45\n2 JarJar     Naboo    1.9     90\n3   Luke  Tatooine    1.7     77\n4 Anakin  Tatooine    1.8     84"
   },
   {
     "objectID": "units/3-data-types/data1.html#summarize",
     "href": "units/3-data-types/data1.html#summarize",
     "title": "Data Wrangling I",
     "section": "summarize()",
-    "text": "summarize()\n\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\n\nsummarize(star_wars,\n          mean(height))\n\n\n\n  mean(height)\n1         1.75"
+    "text": "summarize()\n. . .\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n. . .\n\nsummarize(star_wars,\n          mean(height))\n\n  mean(height)\n1         1.75"
   },
   {
     "objectID": "units/3-data-types/data1.html#summarize-1",
     "href": "units/3-data-types/data1.html#summarize-1",
     "title": "Data Wrangling I",
     "section": "summarize()",
-    "text": "summarize()\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nsummarize(star_wars,\n          avg_height = mean(height))\n\n\n\n  avg_height\n1       1.75"
+    "text": "summarize()\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nsummarize(star_wars,\n          avg_height = mean(height))\n\n  avg_height\n1       1.75"
   },
   {
     "objectID": "units/3-data-types/data1.html#summarize-2",
     "href": "units/3-data-types/data1.html#summarize-2",
     "title": "Data Wrangling I",
     "section": "summarize()",
-    "text": "summarize()\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nsummarize(star_wars,\n          avg_height = mean(height),\n          sd_height  = sd(height))\n\n\n\n  avg_height sd_height\n1       1.75 0.1290994\n\n\n\n\nCan calculate multiple statistics separated by ,"
+    "text": "summarize()\nSummarize a variable with a statistic.\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\nsummarize(star_wars,\n          avg_height = mean(height),\n          sd_height  = sd(height))\n\n  avg_height sd_height\n1       1.75 0.1290994\n\n\n. . .\n\nCan calculate multiple statistics separated by ,"
   },
   {
     "objectID": "units/3-data-types/data1.html#section-5",
     "href": "units/3-data-types/data1.html#section-5",
     "title": "Data Wrangling I",
     "section": "",
-    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing dplyr, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n\n  \n    −\n    +\n \n 03:00"
+    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing dplyr, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n{{&lt; countdown \"3:00\" &gt;}}"
   },
   {
     "objectID": "units/3-data-types/data1.html#select-3",
     "href": "units/3-data-types/data1.html#select-3",
     "title": "Data Wrangling I",
     "section": "select()",
-    "text": "select()\nSelects variables by name or number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nselect(star_wars, name:height)\n\n\n\n    name homeworld height\n1 Anakin  Tatooine    1.8\n2  Padme     Naboo    1.6\n3   Luke  Tatooine    1.7\n4 JarJar     Naboo    1.9"
+    "text": "select()\nSelects variables by name or number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nselect(star_wars, name:height)\n\n    name homeworld height\n1 Anakin  Tatooine    1.8\n2  Padme     Naboo    1.6\n3   Luke  Tatooine    1.7\n4 JarJar     Naboo    1.9"
   },
   {
     "objectID": "units/3-data-types/data1.html#select-4",
     "href": "units/3-data-types/data1.html#select-4",
     "title": "Data Wrangling I",
     "section": "select()",
-    "text": "select()\nSelects variables by name or number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nselect(star_wars, contains(\"world\"))\n\n\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
+    "text": "select()\nSelects variables by name or number.\n\n\n\nstar_wars\n\n    name homeworld height weight\n1 Anakin  Tatooine    1.8     84\n2  Padme     Naboo    1.6     45\n3   Luke  Tatooine    1.7     77\n4 JarJar     Naboo    1.9     90\n\n\n\n\nselect(star_wars, contains(\"world\"))\n\n  homeworld\n1  Tatooine\n2     Naboo\n3  Tatooine\n4     Naboo"
   },
   {
     "objectID": "units/3-data-types/data1.html#practice-data-frame",
     "href": "units/3-data-types/data1.html#practice-data-frame",
     "title": "Data Wrangling I",
     "section": "Practice Data Frame",
-    "text": "Practice Data Frame\n\nlibrary(tibble)\n\nday_at_cal &lt;- tibble(\n  weekday    = factor(c(\"Mon\",\"Mon\",\"Tue\",\"Tue\",\"Wed\",\"Wed\"),\n                      levels = c(\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\"), ordered = TRUE),\n  study_spot = factor(c(\"Moffitt\",\"Doe\",\"Cory\",\"MLK\",\"CITRIS\",\"Soda\")),\n  ai_hours   = c(1.2, 0.4, 2.1, 1.0, 0.8, 1.6),\n  steps_k    = c(8.5, 6.2, 9.1, 7.0, 5.8, 10.3))"
+    "text": "Practice Data Frame\n\nlibrary(tibble)\n\nWarning: package 'tibble' was built under R version 4.5.1\n\nday_at_cal &lt;- tibble(\n  weekday    = factor(c(\"Mon\",\"Mon\",\"Tue\",\"Tue\",\"Wed\",\"Wed\"),\n                      levels = c(\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\"), ordered = TRUE),\n  study_spot = factor(c(\"Moffitt\",\"Doe\",\"Cory\",\"MLK\",\"CITRIS\",\"Soda\")),\n  ai_hours   = c(1.2, 0.4, 2.1, 1.0, 0.8, 1.6),\n  steps_k    = c(8.5, 6.2, 9.1, 7.0, 5.8, 10.3))"
   },
   {
     "objectID": "units/10-final1/unit10.html",
@@ -1662,23 +1662,23 @@
   {
     "objectID": "units/2-grammar-graphics/unit02.html",
     "href": "units/2-grammar-graphics/unit02.html",
-    "title": "2) Grammar of Graphics I",
+    "title": "2) R Basics 1 - GG",
     "section": "",
     "text": "In this week, we’ll get an introduction to the Grammar of Graphics and R’s \"ggplot2\" package for making graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
-      "2) Grammar of Graphics I"
+      "2) R Basics 1 - GG"
     ]
   },
   {
     "objectID": "units/2-grammar-graphics/unit02.html#this-week",
     "href": "units/2-grammar-graphics/unit02.html#this-week",
-    "title": "2) Grammar of Graphics I",
+    "title": "2) R Basics 1 - GG",
     "section": "",
     "text": "In this week, we’ll get an introduction to the Grammar of Graphics and R’s \"ggplot2\" package for making graphics.\n\n\n\nAt the end of this unit you will be able to:\n\nProduce simple exploratory graphics with functions from \"ggplot2\".\nDescribe the notion of “layers” and how to use them for making a graphic with \"ggplot2\".\nExplain the difference between mappings and settings.\nDescribe the purpose of the aesthetic mapping function aes().\n\n\n\n\n\nFind today’s slides here.\n\n\n\n\nReading: The Persistent Grip of Social Class on College Admissions\nhttps://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html\nHomework: Homework #1 is due Monday, 3/2 at 11:59pm. You can find the assignment and turn in your work on BCourses.",
     "crumbs": [
       "Units",
-      "2) Grammar of Graphics I"
+      "2) R Basics 1 - GG"
     ]
   },
   {
@@ -1720,14 +1720,14 @@
     "href": "units/5-color1/slides.html#rgb-reference-colors",
     "title": "Week 5",
     "section": "RGB Reference Colors",
-    "text": "RGB Reference Colors\n\n\nExample notations: - Yellow: (255,255,0) -"
+    "text": "RGB Reference Colors\n. . ."
   },
   {
     "objectID": "units/5-color1/slides.html#common-purposes-for-color-usage",
     "href": "units/5-color1/slides.html#common-purposes-for-color-usage",
     "title": "Week 5",
     "section": "Common purposes for color usage",
-    "text": "Common purposes for color usage\n. . . - Data encoding:\n\nDesign aspects:\n\n\nData encoding: A main use of color (although not the only one) is to encode data. This encoding chiefly depends on the type of variables we are working with (e.g. qualitative or quantitative, discrete or continuous). Design aspects: Another important use of color has to do with design considerations such as psychology of color, decorative purposes, harmony, and things like that."
+    "text": "Common purposes for color usage\n\nData encoding\nDesign aspects\n\n\nData encoding: A main use of color (although not the only one) is to encode data. This encoding chiefly depends on the type of variables we are working with (e.g. qualitative or quantitative, discrete or continuous). Design aspects: Another important use of color has to do with design considerations such as psychology of color, decorative purposes, harmony, and things like that."
   },
   {
     "objectID": "units/5-color1/slides.html#how-do-we-specify-color-in-a-computational-sense",
@@ -1735,5 +1735,236 @@
     "title": "Week 5",
     "section": "How do we specify color in a computational sense?",
     "text": "How do we specify color in a computational sense?\n\nHow do we tell a computer program what kind of color we want to use? The answer to this question is given by Color Models, and their associated color spaces (or geometric volumes)."
+  },
+  {
+    "objectID": "units/5-color1/slides.html#model-and-its-cubic-geometric-space",
+    "href": "units/5-color1/slides.html#model-and-its-cubic-geometric-space",
+    "title": "Week 5",
+    "section": "Model and its (cubic) geometric space",
+    "text": "Model and its (cubic) geometric space\n\nYou can play around with this cube here!"
+  },
+  {
+    "objectID": "units/5-color1/slides.html#hexadecimal-notation",
+    "href": "units/5-color1/slides.html#hexadecimal-notation",
+    "title": "Week 5",
+    "section": "Hexadecimal Notation",
+    "text": "Hexadecimal Notation\nHexadecimal representation uses 16 different symbols:\n\nFirst 10 digits (0-9)\nFirst 6 letters (A-F) which represent values 10 to 15\n\nThis allows computers to store more information in less digits\n\nIn a picture, a computer takes each pixel and stores its RGB number, so it would need many numbers if it were to use decimal notation."
+  },
+  {
+    "objectID": "units/5-color1/slides.html#hexadecimal-notation-1",
+    "href": "units/5-color1/slides.html#hexadecimal-notation-1",
+    "title": "Week 5",
+    "section": "Hexadecimal Notation",
+    "text": "Hexadecimal Notation\nHexadecimal Color: #85A0F2\n\n# is the universal notation for a “hex number”\nEach pair of symbols represents one pair of primary color"
+  },
+  {
+    "objectID": "units/5-color1/slides.html#from-hex-to-rgb-in-r",
+    "href": "units/5-color1/slides.html#from-hex-to-rgb-in-r",
+    "title": "Week 5",
+    "section": "From HEX to RGB (in R)",
+    "text": "From HEX to RGB (in R)"
+  },
+  {
+    "objectID": "units/5-color1/activity.html",
+    "href": "units/5-color1/activity.html",
+    "title": "Color picker activity",
+    "section": "",
+    "text": "Use rgb() to play around with different color combinations. This function takes 4 arguments, each separated by a comma: - Red value - Green value - Blue value - maxColorValue= transparency value\n\n# Example; just run this cell\nrgb(165, 34, 200, maxColorValue = 255)\n\n[1] \"#A522C8\"\n\n\n\n# Your turn!\n\n\n\nYour guess:"
+  },
+  {
+    "objectID": "units/5-color1/activity.html#try-to-guess-what-color-that-hex-number-represents",
+    "href": "units/5-color1/activity.html#try-to-guess-what-color-that-hex-number-represents",
+    "title": "Color picker activity",
+    "section": "",
+    "text": "Your guess:"
+  },
+  {
+    "objectID": "units/5-color1/activity.html#compare-your-guess-to-the-actual-color",
+    "href": "units/5-color1/activity.html#compare-your-guess-to-the-actual-color",
+    "title": "Color picker activity",
+    "section": "Compare your guess to the actual color",
+    "text": "Compare your guess to the actual color\nHow close/far were you?"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html",
+    "href": "units/5-color1/quiz1.html",
+    "title": "Practice Quiz 1",
+    "section": "",
+    "text": "Assign the right number to the each sentence:\n\n) Binary\n) Ordinal\n) Nominal\n) Continuous\n) Discrete\n\n___ Can take any countable value represented as an integer\n___ Categories have no clear order, and are mutually exclusive\n___ Only takes two possible values, and are typically represented as 1 or 0.\n___ Have a clear ordering of the categories\n___ Can take any measurable value within a given range, including fractions and decimals\n\n\n\nFor the following datasets, 1) come up with an analytical goal, 2) state what variables you will use and identify its type, and 3) identify what chart will facilitate your observations.\n\nA dataset of laboratory measurements of kidney function over time for the 1500 patients with the following variables:\n\n\nID: patient identifiers\nTRTPN: treatment values, 1 Active or 2 Placebo\nAVAL: measurement value\nADAY: measurement day in the study\nAVISITN: hospital visit number\nPARAM: name of the event, GFR measurement\nPARAMCD: coded name of the event, GFR\nPARAMN: type of the event is set to 7 for all measurements\n\n\n\n  ID TRTPN AVAL ADAY AVISITN             PARAM PARAMCD PARAMN\n1  1     1   40  357       7 eGFR measurements    eGFR      7\n2  1     1   49  119       5 eGFR measurements    eGFR      7\n3  1     1   41  238       6 eGFR measurements    eGFR      7\n4  1     1   36  469       8 eGFR measurements    eGFR      7\n5  1     1   40  721      10 eGFR measurements    eGFR      7\n6  1     1   34  602       9 eGFR measurements    eGFR      7\n\n\n\nA data frame where each row is a single fossil with the following variables:\n\n\nMinAge: Minimum age of fossil\nMaxAge: Maximum age of fossil\nLongitude: Longitude of occurrence\nLatitude: Latitude of occurrence\n\n\n\nLoading required package: sp\n\n\nLoading required package: sf\n\n\nLinking to GEOS 3.13.1, GDAL 3.11.4, PROJ 9.7.0; sf_use_s2() is TRUE\n\n\n       MinAge MaxAge Longitude Latitude\n [1,] 13.6000 15.970 -100.0333 42.78333\n [2,] 13.6000 15.970  -97.6500 42.60000\n [3,] 15.9700 20.430 -103.3177 42.37400\n [4,] 15.9700 20.430 -103.1000 41.70000\n [5,] 13.6000 15.970 -100.0505 42.80610\n [6,]  0.1260  0.781 -105.7500 37.36667\n [7,]  0.1260  0.781 -105.7500 37.36667\n [8,]  0.1260  0.781 -105.7500 37.36667\n [9,]  0.1260  0.781 -105.7500 37.36667\n[10,]  0.0117  2.588  -84.8000 34.20000\n\n\n\nDatabase of twig radii by tree species data with the following variables:\n\n\nscientific_name: The tree’s genus and species\nradius_mm: The average twig radius in millimeters\nn: The twig measurement sample size\nmin: The minimum twig radii from the samples\nmax: The maximum twig radii from the samples\nstd: The standard deviation of twig radii\ncv: The coefficient of variation of twig radii\n\n\n\nWarning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nPackage 'rTwig' version 1.4.0\nType 'citation(\"rTwig\")' for citing this R package in publications.\n\n\n# A tibble: 10 × 7\n   scientific_name  radius_mm     n   min   max   std    cv\n   &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 Abies concolor        1.43    21  0.89  1.9   0.28  0.19\n 2 Abies spp.            1.43    21  0.89  1.9   0.28  0.19\n 3 Acer platanoides      1.39    30  0.89  2.03  0.3   0.21\n 4 Acer rubrum           1.18    30  0.89  1.52  0.16  0.14\n 5 Acer saccharinum      1.41    14  0.89  1.9   0.27  0.2 \n 6 Acer saccharum        1.2     30  0.89  1.65  0.23  0.19\n 7 Acer spp.             1.29   104  0.89  2.03  0.23  0.18\n 8 Aesculus flava        2.96    14  2.29  4.44  0.58  0.19\n 9 Aesculus spp.         2.96    14  2.29  4.44  0.58  0.19\n10 Betula nigra          0.85    30  0.51  1.52  0.23  0.27"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html#types-of-variables",
+    "href": "units/5-color1/quiz1.html#types-of-variables",
+    "title": "Practice Quiz 1",
+    "section": "",
+    "text": "Assign the right number to the each sentence:\n\n) Binary\n) Ordinal\n) Nominal\n) Continuous\n) Discrete\n\n___ Can take any countable value represented as an integer\n___ Categories have no clear order, and are mutually exclusive\n___ Only takes two possible values, and are typically represented as 1 or 0.\n___ Have a clear ordering of the categories\n___ Can take any measurable value within a given range, including fractions and decimals"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html#analytical-goals-and-chart-selection",
+    "href": "units/5-color1/quiz1.html#analytical-goals-and-chart-selection",
+    "title": "Practice Quiz 1",
+    "section": "",
+    "text": "For the following datasets, 1) come up with an analytical goal, 2) state what variables you will use and identify its type, and 3) identify what chart will facilitate your observations.\n\nA dataset of laboratory measurements of kidney function over time for the 1500 patients with the following variables:\n\n\nID: patient identifiers\nTRTPN: treatment values, 1 Active or 2 Placebo\nAVAL: measurement value\nADAY: measurement day in the study\nAVISITN: hospital visit number\nPARAM: name of the event, GFR measurement\nPARAMCD: coded name of the event, GFR\nPARAMN: type of the event is set to 7 for all measurements\n\n\n\n  ID TRTPN AVAL ADAY AVISITN             PARAM PARAMCD PARAMN\n1  1     1   40  357       7 eGFR measurements    eGFR      7\n2  1     1   49  119       5 eGFR measurements    eGFR      7\n3  1     1   41  238       6 eGFR measurements    eGFR      7\n4  1     1   36  469       8 eGFR measurements    eGFR      7\n5  1     1   40  721      10 eGFR measurements    eGFR      7\n6  1     1   34  602       9 eGFR measurements    eGFR      7\n\n\n\nA data frame where each row is a single fossil with the following variables:\n\n\nMinAge: Minimum age of fossil\nMaxAge: Maximum age of fossil\nLongitude: Longitude of occurrence\nLatitude: Latitude of occurrence\n\n\n\nLoading required package: sp\n\n\nLoading required package: sf\n\n\nLinking to GEOS 3.13.1, GDAL 3.11.4, PROJ 9.7.0; sf_use_s2() is TRUE\n\n\n       MinAge MaxAge Longitude Latitude\n [1,] 13.6000 15.970 -100.0333 42.78333\n [2,] 13.6000 15.970  -97.6500 42.60000\n [3,] 15.9700 20.430 -103.3177 42.37400\n [4,] 15.9700 20.430 -103.1000 41.70000\n [5,] 13.6000 15.970 -100.0505 42.80610\n [6,]  0.1260  0.781 -105.7500 37.36667\n [7,]  0.1260  0.781 -105.7500 37.36667\n [8,]  0.1260  0.781 -105.7500 37.36667\n [9,]  0.1260  0.781 -105.7500 37.36667\n[10,]  0.0117  2.588  -84.8000 34.20000\n\n\n\nDatabase of twig radii by tree species data with the following variables:\n\n\nscientific_name: The tree’s genus and species\nradius_mm: The average twig radius in millimeters\nn: The twig measurement sample size\nmin: The minimum twig radii from the samples\nmax: The maximum twig radii from the samples\nstd: The standard deviation of twig radii\ncv: The coefficient of variation of twig radii\n\n\n\nWarning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nPackage 'rTwig' version 1.4.0\nType 'citation(\"rTwig\")' for citing this R package in publications.\n\n\n# A tibble: 10 × 7\n   scientific_name  radius_mm     n   min   max   std    cv\n   &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 Abies concolor        1.43    21  0.89  1.9   0.28  0.19\n 2 Abies spp.            1.43    21  0.89  1.9   0.28  0.19\n 3 Acer platanoides      1.39    30  0.89  2.03  0.3   0.21\n 4 Acer rubrum           1.18    30  0.89  1.52  0.16  0.14\n 5 Acer saccharinum      1.41    14  0.89  1.9   0.27  0.2 \n 6 Acer saccharum        1.2     30  0.89  1.65  0.23  0.19\n 7 Acer spp.             1.29   104  0.89  2.03  0.23  0.18\n 8 Aesculus flava        2.96    14  2.29  4.44  0.58  0.19\n 9 Aesculus spp.         2.96    14  2.29  4.44  0.58  0.19\n10 Betula nigra          0.85    30  0.51  1.52  0.23  0.27"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html#understandig-gg",
+    "href": "units/5-color1/quiz1.html#understandig-gg",
+    "title": "Practice Quiz 1",
+    "section": "Understandig GG",
+    "text": "Understandig GG\n\nGG allows creation of graphs to be _________, __________, and ________\nWhat is aesthetic mapping?\nWho formalized the grammar of graphics?\n\n\nClara Reckhorn\nLeland Wilkinson\nStephen Few\nKieran Healy\n\n\nWhich of these isn’t part of the GG elements\n\n\nStatistics\nTheme\nAnalysis\nCoordinates"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html#application",
+    "href": "units/5-color1/quiz1.html#application",
+    "title": "Practice Quiz 1",
+    "section": "Application",
+    "text": "Application\n\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_col()`).\n\n\n\n\n\n\n\n\n\n\nIdentify the following GG elements for the plot above: dataset, aesthetic mapping, and geometry"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html#open-ended",
+    "href": "units/5-color1/quiz1.html#open-ended",
+    "title": "Practice Quiz 1",
+    "section": "Open ended",
+    "text": "Open ended\n\nWhy is data cleaning important?"
+  },
+  {
+    "objectID": "units/5-color1/quiz1.html#multiple-choice",
+    "href": "units/5-color1/quiz1.html#multiple-choice",
+    "title": "Practice Quiz 1",
+    "section": "Multiple Choice",
+    "text": "Multiple Choice\nA dataset contains the following column:\n\n\n\nTransfer Students\n\n\n\n\nTransfer\n\n\ntransfer\n\n\nT\n\n\nnon transfer\n\n\nNT\n\n\nNon-transfer\n\n\n\n\nWhat is the main data cleaning issue here?\n\n\nMissing values\nDuplicate rows\nInconsistent categorical labels\nIncorrect numerical values\n\n\nWhy is data cleaning necessary before running statistical analysis?\n\n\nBecause statistical models understand the meaning of messy data\nBecause computers automatically interpret inconsistent labels correctly\nBecause computers require structured, consistent inputs to produce valid results\n\n\nIf a company does not properly clean its sales data before building a predictive model, what is the most likely outcome?\n\n\nThe model will run faster\nThe model will automatically fix errors\nThe results may be biased or misleading\nThe model will become more accurate"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/slides.html",
+    "href": "units/4-eda-ggplot/slides.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Reading discussion\n\nEDA: preparing data for graphics\nggplot2: why do we use it?\nActivity: coding practice"
+  },
+  {
+    "objectID": "units/3-data-types/data2.html",
+    "href": "units/3-data-types/data2.html",
+    "title": "Data Wrangling II",
+    "section": "",
+    "text": "Two big ideas today:\n\nData Pipelines\nGrouped Operations\n\n\nBefore class, sketch out the effect that the different dplyr verbs from last class have on the shape of a data frame."
+  },
+  {
+    "objectID": "units/2-grammar-graphics/slides.html",
+    "href": "units/2-grammar-graphics/slides.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Understand different types of variables and how they influence chart selection.\nUnderstand how different purposes or analytical tasks influence chart selection\nUnderstand the theoretical framework of the Grammar of Graphics\nBreak down key components of a graphic: data, aesthetics, geoms, stats, scales, facets, themes\nLearn how ggplot2 implements this grammar in practice"
+  },
+  {
+    "objectID": "units/3-data-types/data1.html",
+    "href": "units/3-data-types/data1.html",
+    "title": "Data Wrangling I",
+    "section": "",
+    "text": "star_wars &lt;- data.frame(\n    name = c(\"Anakin\", \"Padme\", \"Luke\", \"JarJar\"),\n    homeworld = c(\"Tatooine\", \"Naboo\", \"Tatooine\", \"Naboo\"),\n    height = c(1.8, 1.6, 1.7, 1.9),\n    weight = c(84, 45, 77, 90)\n)\n\nUsing base R data frame subsetting, create from star_wars…\n\nThe vector of heights.\nA data frame that contains only the characters shorter than 1.75.\nA data frame that contains the four original cols plus the one with the height in inches.\nThe average height of characters from Tatooine\n\n{{&lt; countdown \"2:30\" &gt;}}\n\n\n\n\nstar_wars[star_wars$height &lt; 1.75, ]\n\n   name homeworld height weight\n2 Padme     Naboo    1.6     45\n3  Luke  Tatooine    1.7     77\n\n\n. . .\n\nstar_wars$height\n\n[1] 1.8 1.6 1.7 1.9\n\n\n. . .\n\nstar_wars$height &lt; 1.75\n\n[1] FALSE  TRUE  TRUE FALSE\n\n\n\n\n\nYou can form a logical vector through a logical comparison:\n\n\n\n&lt;\n&gt;\n&lt;=\n&gt;=\n\n\n==\n!=\n%in%\n\n\n\n\n\n\n\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") == \"apple\"\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n. . .\n\n\"apple\" == c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n. . .\n\n\"apple\" %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n[1] TRUE\n\n\n. . .\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% \"apple\"\n\n[1]  TRUE FALSE  TRUE FALSE\n\n\n\n\n\n\nc(\"apple\", \"kiwi\") %in% c(\"apple\", \"orange\", \"apple\", \"kiwi\")\n\n[1] TRUE TRUE\n\n\n. . .\n\nc(\"apple\", \"orange\", \"apple\", \"kiwi\") %in% c(\"apple\", \"kiwi\")\n\n[1]  TRUE FALSE  TRUE  TRUE\n\n\n\n\n\n\n\nstar_wars[star_wars$height &lt; 1.75, ]\n\n\n. . .\n\n\n\n\n\nstar_wars$height_in &lt;- star_wars$height * 39.3701\n\n\n. . .\n\n\n\n\n\nmean(star_wars$height[star_wars$homeworld == \"Tatooine\"])\n\n\n\n\n\n\n\n\n\nFour Principles:\n\nReuse existing data structures.\n\nThe Data Frame\n\nCompose simple functions with the pipe.\n\n|&gt;\n\nEmbrace functional programming.\n\nClear separate of data structure and functions.\n\nDesign for humans.\n\nIt should be readable!"
+  },
+  {
+    "objectID": "units/3-data-types/slides.html",
+    "href": "units/3-data-types/slides.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Discussion of Assigned Reading\n\nIntro to R and Data Cleaning\nActivity\nExploratory Data Analysis"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html",
+    "href": "units/4-eda-ggplot/activity-solns.html",
+    "title": "Week 4 Activity - Solutions",
+    "section": "",
+    "text": "This activity puts to practice the concepts introduced in lecture today, including functions like:\n\n\n\ndim()\nsapply()\nis.na()\nsum()\nsummarize()\nacross()\ngroup_by()\ncount()\ntheme_*()\n\n\n\nggplot()\naes()\ngeom_point()\ngeom_bar()\ngeom_col()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\n\n\nThis activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses,\n\n\nRender your QMD (Render button in RStudio and Preview button in Positron)  \nYour HTML file will be created and can be found in the same folder on your computer that the QMD is stored in.  \nSubmit both the HTML and QMD files to the ‘Week 4 Activity’ assignment in BCourses.\n\n\nIf any of these functions are unfamiliar to you, you can access the help documentation by typing ?function_name into your R console. Alternatively, you can review R basics in the following textbook.\n1. Load the required packages.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nHint: if you have not yet installed one of these packages, you must first run install.packages(\"package_name\") in your R console.\nWe will use the penguins dataset from the palmerpenguins package for most questions and mtcars at the end."
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html#introduction",
+    "href": "units/4-eda-ggplot/activity-solns.html#introduction",
+    "title": "Week 4 Activity - Solutions",
+    "section": "",
+    "text": "This activity puts to practice the concepts introduced in lecture today, including functions like:\n\n\n\ndim()\nsapply()\nis.na()\nsum()\nsummarize()\nacross()\ngroup_by()\ncount()\ntheme_*()\n\n\n\nggplot()\naes()\ngeom_point()\ngeom_bar()\ngeom_col()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\n\n\nThis activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses,\n\n\nRender your QMD (Render button in RStudio and Preview button in Positron)  \nYour HTML file will be created and can be found in the same folder on your computer that the QMD is stored in.  \nSubmit both the HTML and QMD files to the ‘Week 4 Activity’ assignment in BCourses.\n\n\nIf any of these functions are unfamiliar to you, you can access the help documentation by typing ?function_name into your R console. Alternatively, you can review R basics in the following textbook.\n1. Load the required packages.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\nHint: if you have not yet installed one of these packages, you must first run install.packages(\"package_name\") in your R console.\nWe will use the penguins dataset from the palmerpenguins package for most questions and mtcars at the end."
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html#part-1-understanding-the-data-eda-basics",
+    "href": "units/4-eda-ggplot/activity-solns.html#part-1-understanding-the-data-eda-basics",
+    "title": "Week 4 Activity - Solutions",
+    "section": "Part 1: Understanding the Data (EDA Basics)",
+    "text": "Part 1: Understanding the Data (EDA Basics)\n2. What are the dimensions of penguins? How many rows? How many columns?\n\nHint: Use dim().\n\ndim(penguins)\n\n[1] 344   8\n\n# 344 rows, 8 columns\n\n3. What are the data types of each column?\n\nsapply(penguins, class)\n\n          species            island    bill_length_mm     bill_depth_mm \n         \"factor\"          \"factor\"         \"numeric\"         \"numeric\" \nflipper_length_mm       body_mass_g               sex              year \n        \"integer\"         \"integer\"          \"factor\"         \"integer\" \n\n# species = factor, island = factor, bill_length = numeric, bill_depth = numeric\n# flipper_length_mm = integer, body_mass = integer, sex = factor, year = integer\n\n4. How many total missing values are in the dataset?\n\nsum(is.na(penguins))\n\n[1] 19\n\n# 19 missing values\n\n5. What proportion of missing values are in each column? Which variable has the most missingness?\n\npenguins |&gt;\n  summarize(across(everything(), ~ mean(is.na(.))))\n\n# A tibble: 1 × 8\n  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n    &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;\n1       0      0        0.00581       0.00581           0.00581     0.00581\n# ℹ 2 more variables: sex &lt;dbl&gt;, year &lt;dbl&gt;\n\n# species = 0\n# island = 0\n# bill_length = 0.00581\n# bill_depth = 0.00581\n# flipper_length = 0.00581\n# body_mass =  0.00581\n# hides other 2 for sex and year (there is a way to fix this but don't worry about it)"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html#part-2-single-variable-distributions",
+    "href": "units/4-eda-ggplot/activity-solns.html#part-2-single-variable-distributions",
+    "title": "Week 4 Activity - Solutions",
+    "section": "Part 2: Single Variable Distributions",
+    "text": "Part 2: Single Variable Distributions\n6. Create a bar plot of species.\n\n\nUse geom_bar().\n\nDoes this geom require you to count manually?\n\n\n\npenguins |&gt;\n  ggplot(aes(x = species)) +\n  geom_bar()\n\n\n\n\n\n\n\n\nWritten answer here: no, this geom automatically counts the species up\n7. Create a bar plot of island.\n\n\nWhich island appears most common?\n\n\npenguins |&gt;\n  ggplot(aes(x = island)) +\n  geom_bar()\n\n\n\n\n\n\n\n\nWritten answer here: Biscoe appears most often.\n8. Create a histogram of bill_length_mm.\n\n\nDoes the distribution look symmetric, skewed left, or skewed right?\n\n\npenguins |&gt;\n    ggplot(aes(x= bill_length_mm)) +\n    geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_bin()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: The distribution is mostly symmetric with an obvious dip in the middle range\n9. Create a density plot of bill_length_mm.\n\n\nUse geom_density().\n\nHow does it compare to the histogram?\n\n\n\npenguins |&gt;\n    ggplot(aes(x= bill_length_mm)) +\n    geom_density()\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_density()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: The density plot mostly maintains the same structure, but represents the density through a smooth line rather than through bars\n10. Create a boxplot of body_mass_g.\n\n\nAre there potential outliers?\n\n\npenguins |&gt;\n    ggplot(aes(x= body_mass_g)) +\n    geom_boxplot()\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: Most values seem centered around 3500 to 4800. There is a large range, so there are potentially a lot of outliers."
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html#part-3-grouped-summaries-geom_col",
+    "href": "units/4-eda-ggplot/activity-solns.html#part-3-grouped-summaries-geom_col",
+    "title": "Week 4 Activity - Solutions",
+    "section": "Part 3: Grouped Summaries + geom_col()",
+    "text": "Part 3: Grouped Summaries + geom_col()\n11. Count the number of penguins in each species using count(). Store the result.\n\nspecies_count &lt;- penguins |&gt;\n  group_by(species) |&gt;\n  summarize(count = n())\n# Adelie has most penguins\n\n12. Use geom_col() to recreate the species counts.\n\n\nWhy must we use geom_col() instead of geom_bar() here?\n\n\n\npenguins |&gt;\n    count(species) |&gt;\n    ggplot(aes(y = species, x = n)) +\n    geom_col()\n\n\n\n\n\n\n\n\nWritten answer here: We must use geom col because it is able to draw up the lines to a pre-defined count, whereas using geom_bar is used for raw data. ggplot would try to count the rows of the summarized data, which would give each species a count of 1 (because each appears once after count()).\n13. Count the number of penguins by species and island.\n\n\nWhich combination is most common?\n\n\n\npenguins |&gt;\n  count(species, island) |&gt;\n  arrange(desc(n))\n\n# A tibble: 5 × 3\n  species   island        n\n  &lt;fct&gt;     &lt;fct&gt;     &lt;int&gt;\n1 Gentoo    Biscoe      124\n2 Chinstrap Dream        68\n3 Adelie    Dream        56\n4 Adelie    Torgersen    52\n5 Adelie    Biscoe       44\n\n\nWritten answer here: The most common combination is Gentoo penguins on Biscoe Island"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html#part-4-two-variable-relationships",
+    "href": "units/4-eda-ggplot/activity-solns.html#part-4-two-variable-relationships",
+    "title": "Week 4 Activity - Solutions",
+    "section": "Part 4: Two Variable Relationships",
+    "text": "Part 4: Two Variable Relationships\n14. Create a scatterplot of:\n\n\nbill_length_mm (x)\nflipper_length_mm (y)\nWhat kind of relationship do you see?\n\n\npenguins |&gt;\n  ggplot(aes(x = bill_length_mm, y = flipper_length_mm)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: It looks like, as bill length increases, so does flipper length. There is a positive correlation between the two variables.\n15. Modify the scatterplot:\n\n\nAdd color = species.\n\nDoes separating by species clarify the relationship?\n\n\npenguins |&gt;\n  ggplot(aes(x = bill_length_mm, \n             y = flipper_length_mm, \n             color = species)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: Yes, it makes the relationship very clear now because it separates the clouds of points. It becomes very obvious that the species that the penguin is has some sort of impact or causal effect on the flipper and bill length.\n16. Change the same scatterplot to: \n\nshape = species instead of color.\n\nWhen might shape be preferable to color?\n\n\npenguins |&gt;\n  ggplot(aes(x = bill_length_mm, \n             y = flipper_length_mm, \n             shape = species)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: Shape might be preferable to color in black-white printing, if someone is color blind, if you want to use color for another variable (like sex), etc\n17. Create a boxplot of: body_mass_g by species. \n\nWhich species tends to be heaviest?\n\n\npenguins |&gt;\n  ggplot(aes(x = species, y = body_mass_g)) +\n  geom_boxplot()\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_boxplot()`).\n\n\n\n\n\n\n\n\n\nWritten answer here: Gentoo tends to be heaviest."
+  },
+  {
+    "objectID": "units/4-eda-ggplot/activity-solns.html#part-5-reflection-short-discussion",
+    "href": "units/4-eda-ggplot/activity-solns.html#part-5-reflection-short-discussion",
+    "title": "Week 4 Activity - Solutions",
+    "section": "Part 5: Reflection (Short Discussion)",
+    "text": "Part 5: Reflection (Short Discussion)\n18. What is the difference between geom_bar() and geom_col()?\n\nWritten answer here: Geom_bar is for when raw data needs summarizing because the default is count, whereas col is better for pre-summarized data.\n19. What is the unit of observation in:\n\n\npenguins?\nmtcars?\n\nWritten answer here: In penguins, each row is a penguin on the island. In mtcars, each row is a car model from a specific brand.\n20. Which plots felt more exploratory vs explanatory?\nWritten answer here: up to interpretation, but generally plots where we summarize or highlight a message are explanatory, while plots that let us probe and investigate patterns are exploratory. 15, 16, 17 are examples of explanatory charts, and 6-10 are examples of exploratory plots.\n21. Next level\nLet’s practice making some graphs with ggplot2!\n\nLoad the mpg dataset (which is inside tidyverse package).\n\n\nmpg\n\n# A tibble: 234 × 11\n   manufacturer model      displ  year   cyl trans drv     cty   hwy fl    class\n   &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;\n 1 audi         a4           1.8  1999     4 auto… f        18    29 p     comp…\n 2 audi         a4           1.8  1999     4 manu… f        21    29 p     comp…\n 3 audi         a4           2    2008     4 manu… f        20    31 p     comp…\n 4 audi         a4           2    2008     4 auto… f        21    30 p     comp…\n 5 audi         a4           2.8  1999     6 auto… f        16    26 p     comp…\n 6 audi         a4           2.8  1999     6 manu… f        18    26 p     comp…\n 7 audi         a4           3.1  2008     6 auto… f        18    27 p     comp…\n 8 audi         a4 quattro   1.8  1999     4 manu… 4        18    26 p     comp…\n 9 audi         a4 quattro   1.8  1999     4 auto… 4        16    25 p     comp…\n10 audi         a4 quattro   2    2008     4 manu… 4        20    28 p     comp…\n# ℹ 224 more rows\n\n\n\nTake a look at the data: what is easy column representing? What does each row represent? (Hint: if you are not sure, type ?mpg into your console to launch the help panel)\n\n\n?mpg\n\nstarting httpd help server ... done\n\n# Each row is a car model\n# each column is a parameter about that car\n# manufacturer = manufacturer name\n# model = model name\n# displ = engine displacement, in litres\n# year = year of manufacture\n# cyl = number of cylinders\n# trans = type of transmission\n# drv = the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd\n# cty = city miles per gallon\n# hwy = highway miles per gallon\n# fl = fuel type\n# class = \"type\" of car\n\n\nCreate a scatter plot of model vs cty, colored by year.\n\n\nmpg |&gt;\n    ggplot(aes(x = model, y = cty, color = year)) +\n    geom_point()\n\n\n\n\n\n\n\n\n\nExperiment with different geom_() functions to visualize the data\n\n\nmpg |&gt;\n    ggplot(aes(x = model, color = year)) +\n    geom_bar()\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?\n\n\n\n\n\n\n\n\n\n\nCustomize your plots with themes and labels.\n\n\nmpg |&gt;\n  ggplot(aes(x = model, fill = factor(year))) +\n  geom_bar(position = \"dodge\") +\n  labs(\n    title = \"Number of Car Models by Year\",\n    x = \"Car Model\",\n    y = \"Count\",\n    fill = \"Year\"\n  ) +\n  theme_minimal() +\n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1),\n    plot.title = element_text(face = \"bold\")\n  )"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/week4-written.html",
+    "href": "units/4-eda-ggplot/week4-written.html",
+    "title": "Week 4 Activity - Written Components",
+    "section": "",
+    "text": "This activity puts to practice the concepts introduced in lecture today, including functions like:\n\ndim()\nsapply()\nis.na()\nsum()\nsummarize()\nacross()\ngroup_by()\ncount()\ntheme_*()\nggplot()\naes()\ngeom_point()\ngeom_bar()\ngeom_col()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\nThis activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses,\n\n\nRender your QMD (Render button in RStudio and Preview button in Positron)  \nYour HTML file will be created and can be found in the same folder on your computer that the QMD is stored in.  \nSubmit both the HTML and QMD files to the ‘Week 4 Activity’ assignment in BCourses.\n\n\nIf any of these functions are unfamiliar to you, you can access the help documentation by typing ?function_name into your R console. Alternatively, you can review R basics in the following textbook.\n6. Create a bar plot of species.\n\n\nUse geom_bar().\n\nDoes this geom require you to count manually?\n\n\nWritten answer here:\n       \n7. Create a bar plot of island.\n\n\nWhich island appears most common?\n\nWritten answer here:\n       \n8. Create a histogram of bill_length_mm.\n\n\nDoes the distribution look symmetric, skewed left, or skewed right?  \n\nWritten answer here:\n       \n9. Create a density plot of bill_length_mm.\n\n\nUse geom_density().\n\nHow does it compare to the histogram?\n\n\nWritten answer here:\n       \n10. Create a boxplot of body_mass_g.\n\n\nAre there potential outliers?\n\nWritten answer here:"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/week4-written.html#introduction",
+    "href": "units/4-eda-ggplot/week4-written.html#introduction",
+    "title": "Week 4 Activity - Written Components",
+    "section": "",
+    "text": "This activity puts to practice the concepts introduced in lecture today, including functions like:\n\ndim()\nsapply()\nis.na()\nsum()\nsummarize()\nacross()\ngroup_by()\ncount()\ntheme_*()\nggplot()\naes()\ngeom_point()\ngeom_bar()\ngeom_col()\ngeom_histogram()\ngeom_boxplot()\ngeom_violin()\ngeom_density()\n\nThis activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by Friday at 11:59PM. To submit to BCourses,\n\n\nRender your QMD (Render button in RStudio and Preview button in Positron)  \nYour HTML file will be created and can be found in the same folder on your computer that the QMD is stored in.  \nSubmit both the HTML and QMD files to the ‘Week 4 Activity’ assignment in BCourses.\n\n\nIf any of these functions are unfamiliar to you, you can access the help documentation by typing ?function_name into your R console. Alternatively, you can review R basics in the following textbook.\n6. Create a bar plot of species.\n\n\nUse geom_bar().\n\nDoes this geom require you to count manually?\n\n\nWritten answer here:\n       \n7. Create a bar plot of island.\n\n\nWhich island appears most common?\n\nWritten answer here:\n       \n8. Create a histogram of bill_length_mm.\n\n\nDoes the distribution look symmetric, skewed left, or skewed right?  \n\nWritten answer here:\n       \n9. Create a density plot of bill_length_mm.\n\n\nUse geom_density().\n\nHow does it compare to the histogram?\n\n\nWritten answer here:\n       \n10. Create a boxplot of body_mass_g.\n\n\nAre there potential outliers?\n\nWritten answer here:"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/week4-written.html#part-3-grouped-summaries-geom_col",
+    "href": "units/4-eda-ggplot/week4-written.html#part-3-grouped-summaries-geom_col",
+    "title": "Week 4 Activity - Written Components",
+    "section": "Part 3: Grouped Summaries + geom_col()",
+    "text": "Part 3: Grouped Summaries + geom_col()\n12. Use geom_col() to recreate the species counts.\n\n\nWhy must we use geom_col() instead of geom_bar() here?\n\n\nWritten answer here:\n       \n13. Count the number of penguins by species and island.\n\n\nWhich combination is most common?\n\n\nWritten answer here:"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/week4-written.html#part-4-two-variable-relationships",
+    "href": "units/4-eda-ggplot/week4-written.html#part-4-two-variable-relationships",
+    "title": "Week 4 Activity - Written Components",
+    "section": "Part 4: Two Variable Relationships",
+    "text": "Part 4: Two Variable Relationships\n14. Create a scatterplot of:\n\n\nbill_length_mm (x)\nflipper_length_mm (y)\nWhat kind of relationship do you see?\n\n\nWritten answer here:\n\n       \n15. Modify the scatterplot:\n\n\nAdd color = species.\n\nDoes separating by species clarify the relationship? \n\nWritten answer here:\n       \n16. Change the same scatterplot to: \n\nshape = species instead of color.\n\nWhen might shape be preferable to color?\n\n\nWritten answer here: \n       \n17. Create a boxplot of: body_mass_g by species. \n\nWhich species tends to be heaviest?\n\n\nWritten answer here:"
+  },
+  {
+    "objectID": "units/4-eda-ggplot/week4-written.html#part-5-reflection-short-discussion",
+    "href": "units/4-eda-ggplot/week4-written.html#part-5-reflection-short-discussion",
+    "title": "Week 4 Activity - Written Components",
+    "section": "Part 5: Reflection (Short Discussion)",
+    "text": "Part 5: Reflection (Short Discussion)\n18. What is the difference between geom_bar() and geom_col()?\n\nWritten answer here:  \n       \n19. What is the unit of observation in:\n\n\npenguins?\n\nmtcars?\n\n\nWritten answer here: \n       \n20. Which plots felt more exploratory vs explanatory?\nWritten answer here:"
+  },
+  {
+    "objectID": "units/5-color1/slides.html",
+    "href": "units/5-color1/slides.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Quiz covering week 2 to week 4\nRGB Model: building a foundation of color\nCoding activity:"
+  },
+  {
+    "objectID": "units/5-color1/slides.html#hexadecimal-color-85a0f2",
+    "href": "units/5-color1/slides.html#hexadecimal-color-85a0f2",
+    "title": "Week 5",
+    "section": "Hexadecimal Color: #85A0F2",
+    "text": "Hexadecimal Color: #85A0F2\n\n# is the universal notation for a “hex number”\nEach pair of symbols represents one pair of primary color"
   }
 ]

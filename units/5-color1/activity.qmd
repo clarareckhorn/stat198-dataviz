@@ -1,0 +1,46 @@
+---
+title: "Color picker activity"
+format: html
+---
+
+# 1. Come up with interesting combinations
+
+Use `rgb()` to play around with different color combinations.
+This function takes 4 arguments, each separated by a comma:
+-   Red value
+-   Green value
+-   Blue value
+-   `maxColorValue=` transparency value
+
+```{r}
+# Example; just run this cell
+rgb(165, 34, 200, maxColorValue = 255)
+
+```
+
+```{r}
+# Your turn!
+
+
+```
+
+
+## Try to guess what color that HEX number represents:
+
+Your guess:
+
+
+# 2. Visualize that color
+
+
+After installing the package "colourpicker," plug in the HEX notation that the `rgb()` function outputted into the widget.
+
+```{r}
+# Don't edit this code, just run it
+colourpicker::colourWidget()
+```
+
+## Compare your guess to the actual color
+How close/far were you?
+
+
