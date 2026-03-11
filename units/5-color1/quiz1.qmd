@@ -186,7 +186,7 @@ d) The model will become more accurate
 
 # EDA
 
-@. Which of the following is the MOST accurate description of what EDA helps a data analyst accomplish?
+@. Which of the following is the MOST accurate description of what EDA helps a data analyst accomplish? (only one option)
 
 a) It proves that a hypothesis is correct.
 b) It replaces the need for statistical tests.
@@ -197,6 +197,25 @@ d) It converts categorical variables to continuous ones.
 
 # ggplot2
 
-theoretical questions
+@. In ggplot2, what is the purpose of aes()?
 
-what is ggplot2 based on
+
+
+
+@. Which function do you use to initialize a plot in ggplot2?
+
+a) plot()
+b) ggplot()
+c) graph()
+d) draw()
+
+Fill in the blanks with either + or |> in the correct places:
+```{r}
+#| echo: true
+#| eval: false
+data _____ 
+  filter(year == 2020) _____ 
+  ggplot(aes(x = age, y = income)) _____ 
+  geom_point() _____ 
+  theme_minimal()
+```
