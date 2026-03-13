@@ -25,10 +25,7 @@ At the end of this unit you will be able to:
 
 ### 🌠 Slides
 
-<a href="" target="_blank">TBA</a> <small>(google slides)</small>
-
-
-<br>
+Find today's slides [here.](slides.html)
 
 
 ### 💻 Code

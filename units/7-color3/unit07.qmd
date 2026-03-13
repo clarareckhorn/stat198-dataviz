@@ -32,10 +32,7 @@ At the end of this unit you will be able to:
 
 ### 🌠 Slides
 
-<a href="https://docs.google.com/presentation/d/14kjCDK5e2dEYO7HT4eJy7f6CNXXlY43a3DMLopcqdzE/edit?usp=sharing" target="_blank">Data-Ink Ratio</a> <small>(google slides)</small>
-
-
-<br>
+Find today's slides [here.](slides.html)
 
 
 ### 💻 Code

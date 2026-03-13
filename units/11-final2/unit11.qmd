@@ -8,7 +8,9 @@ title: "11) Final Project Prep 2 - Dashboards"
 TBD
 
 
-<br>
+## Slides
+
+Find today's slides [here.](slides.html)
 
 ### 📖 Assignment
 

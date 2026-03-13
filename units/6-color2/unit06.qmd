@@ -42,10 +42,7 @@ a color attribute.
 
 ### 🌠 Slides
 
-<a href="https://docs.google.com/presentation/d/1HMdqqhhmmyd8OYQvEHxIE2eBKzoV-1eeL7We-J7NeF8/edit?usp=sharing" target="_blank">Color Pickers, Color Wheel, and Color Schemes</a> <small>(google slides)</small>
-
-
-<br>
+Find today's slides [here.](slides.html)
 
 
 ### 💻 Code

@@ -26,10 +26,7 @@ At the end of this unit you will be able to:
 
 ### 🌠 Slides
 
-<a href="https://docs.google.com/presentation/d/1JrEp4TnB4M73CHz_1PTQAhlj2rD6lMuBfu7mC1gV9hM/edit?usp=sharing" target="_blank">Analytical Patterns</a> <small>(google slides)</small>
-
-
-<br>
+Find today's slides [here.](slides.html)
 
 
 ### 💻 Code
