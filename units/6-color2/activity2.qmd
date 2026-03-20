@@ -1,0 +1,144 @@
+---
+title: Week 6 Activity 2
+subtitle: Use of Color in Graphs 
+format: html
+---
+## Activity: Visualizing the Iris Dataset
+The iris dataset contains measurements for 150 iris flowers from three different species.\
+- Variables include: \
+
+- Sepal.Length \
+
+- Sepal.Width \ 
+
+- Petal.Length \ 
+
+- Petal.Width \ 
+
+- Species \
+
+- Your task is to recreate the plots described below using functions from ggplot2 \
+
+This activity is intended to be finished during classtime. In the case that we run out of time, please complete it indepedently and submit it via BCourses by tonight (Tuesday) at 11:59PM. To submit to BCourses, \
+
+- *Render your QMD* (Render button in RStudio and Preview button in Positron) \ 
+
+- Your HTML file will be created and can be found in the same folder on your computer that the QMD is stored in. \ 
+
+- Submit both the HTML and QMD files to the 'Week 6 Activity' assignment in BCourses. \
+
+*If any of these functions are unfamiliar to you, you can access the help documentation by typing `?function_name` into your R console. Alternatively, you can review R basics in the following [textbook](https://www.gastonsanchez.com/R-coding-basics/).* \
+**1.  Load the required packages and demo code.**
+
+```{r}
+#| eval: false
+library(tidyverse)  # ecosystem of data science packages
+```
+ 
+**2. Scatterplot by Species.**
+PScatterplot by Species\
+- Create a scatterplot showing the relationship between: \ 
+
+- Sepal.Length (x-axis) \
+
+- Sepal.Width (y-axis) \
+
+- Color the points by species. \
+
+- Make the points size 3.\
+
+*Hint: Try all options: 
+- `scale_color_manual()` \ 
+
+- `scale_color_continuous()`\ 
+
+- `scale_fill_manual()`.* \
+
+```{r}
+#| eval: false
+ggplot(________, aes(x = __________, y = __________, color = __________)) +
+  geom_point(size = ________)
+```
+
+*Hint: The categorical variable identifying flower type is:
+-`Species`.*
+
+**3. Customize the Color Palette.**
+Now recreate the same plot but manually control the colors: \
+- `setosa` → purple \
+- `versicolor` → orange \
+- `virginica`  → forestgreen \ 
+
+```{r}
+#| eval: false
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(size = 3) +
+  __________________(
+    values = c(
+      "setosa" = "________",
+      "versicolor" = "________",
+      "virginica" = "________"
+    )
+  )
+```
+
+*Hint: You need the scale used for manual categorical colors.*
+
+**4. Continuous Color Gradient.**
+Create a scatterplot where color represents petal length instead of species. \ 
+Requirements: \
+- x-axis → `Sepal.Length` \ 
+
+- y-axis → `Sepal.Width` \
+
+- color → `Petal.Length` \
+
+Use a gradient from: \
+
+- lightblue (low values) \ 
+
+- darkblue (high values) \ 
+```{r}
+#| eval: false
+
+ggplot(iris, aes(x = __________, y = __________, color = __________)) +
+  geom_point(size = 3) +
+  __________________(
+    low = "________",
+    high = "________"
+  )
+```
+
+*Hint:Use a scale designed for numeric color gradients.*
+ 
+**5. Fill Instead of Color.**
+Create a boxplot showing the distribution of Petal.Length for each species. \
+Requirements: \
+- x-axis → `Species` \
+
+- y-axis → `Petal.Length` \
+
+- fill by `Species` \
+```{r}
+#| eval: false
+
+ggplot(iris, aes(x = __________, y = __________, fill = __________)) +
+  geom_boxplot()
+```
+
+**6. Reflection Question.**
+Answer in one sentence: \ 
+What is the difference between these two steps? \ 
+
+```{r}
+#| eval: false
+aes(color = Species)
+```
+
+vs \ 
+
+```{r}
+#| eval: false
+scale_color_manual()
+```

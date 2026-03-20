@@ -47,12 +47,6 @@ For the following datasets (6-8), **1)** come up with an analytical  goal, **2)*
 \ 
 
 
-```{r}
-#| echo: false
-suppressWarnings(library(hce))
-dataset1 = hce::ADLB
-head(dataset1)
-```
 
 #### Your Answer:
 
@@ -69,18 +63,6 @@ head(dataset1)
 -   **Latitude**: Latitude of occurrence
 
 ![](images/ppgm-tibble.png)
-
-```{r}
-#| echo: false
-#| eval: false
-#| output: false
-suppressWarnings(library(ppgm))
-suppressWarnings(library(ggplot2))
-suppressWarnings(library(readr))
-suppressWarnings(library(tidyverse))
-head(ppgm::scel_fossils,10)
-
-```
 
 
 #### Your Answer:
@@ -101,15 +83,7 @@ head(ppgm::scel_fossils,10)
 
 ![](images/rtwig-tibble.png)
 
-```{r}
-#| echo: false
-#| eval: false
-#| output: false
-library(tidyverse)
-suppressWarnings(library(rTwig))
-head(rTwig::twigs,10)
 
-```
 
 #### Your Answer:
 

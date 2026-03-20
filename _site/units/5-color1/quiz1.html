@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Name: _________________________________________ SID#: ____________________">
 
-<title>Practice Quiz 1 – dataviz-spring-2026</title>
+<title>Quiz 1 – dataviz-spring-2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9ef3e3a7e39149ab2887ba4975bc67a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-50d1610890b3f18a65e78ab443d1a716.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -146,13 +147,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Practice Quiz 1</h1>
+<h1 class="title">Quiz 1</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Name: _________________________________________ SID#: ____________________ </p>
+          </div>
+  </div>
     
   
     
@@ -167,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Data Types &amp; Chart Selection</h1>
 <section id="types-of-variables" class="level2">
 <h2 class="anchored" data-anchor-id="types-of-variables">Types of Variables</h2>
-<p>Assign the right number to the each sentence:</p>
+<p>Assign the right number to each sentence:</p>
 <ol class="example" type="1">
 <li>) Binary</li>
 <li>) Ordinal</li>
@@ -183,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="analytical-goals-and-chart-selection" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-goals-and-chart-selection">Analytical Goals and Chart Selection</h2>
-<p>For the following datasets, <strong>1)</strong> come up with an analytical goal, <strong>2)</strong> state what variables you will use and identify its type, and <strong>3)</strong> identify what chart will facilitate your observations.</p>
+<p>For the following datasets (6-8), <strong>1)</strong> come up with an analytical goal, <strong>2)</strong> state what variables you will use and identify its type, and <strong>3)</strong> identify what chart will facilitate your observations.</p>
 <ol start="6" class="example" type="1">
 <li>A dataset of laboratory measurements of kidney function over time for the 1500 patients with the following variables:</li>
 </ol>
@@ -197,16 +204,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>PARAMCD</strong>: coded name of the event, GFR</li>
 <li><strong>PARAMN</strong>: type of the event is set to 7 for all measurements</li>
 </ul>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>  ID TRTPN AVAL ADAY AVISITN             PARAM PARAMCD PARAMN
-1  1     1   40  357       7 eGFR measurements    eGFR      7
-2  1     1   49  119       5 eGFR measurements    eGFR      7
-3  1     1   41  238       6 eGFR measurements    eGFR      7
-4  1     1   36  469       8 eGFR measurements    eGFR      7
-5  1     1   40  721      10 eGFR measurements    eGFR      7
-6  1     1   34  602       9 eGFR measurements    eGFR      7</code></pre>
-</div>
+<p>&nbsp; &nbsp; &nbsp;</p>
+<section id="your-answer" class="level4">
+<h4 class="anchored" data-anchor-id="your-answer">Your Answer:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/answer-box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
 </div>
 <ol start="7" class="example" type="1">
 <li>A data frame where each row is a single fossil with the following variables:</li>
@@ -217,29 +221,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Longitude</strong>: Longitude of occurrence</li>
 <li><strong>Latitude</strong>: Latitude of occurrence</li>
 </ul>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: sp</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: sf</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Linking to GEOS 3.13.1, GDAL 3.11.4, PROJ 9.7.0; sf_use_s2() is TRUE</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       MinAge MaxAge Longitude Latitude
- [1,] 13.6000 15.970 -100.0333 42.78333
- [2,] 13.6000 15.970  -97.6500 42.60000
- [3,] 15.9700 20.430 -103.3177 42.37400
- [4,] 15.9700 20.430 -103.1000 41.70000
- [5,] 13.6000 15.970 -100.0505 42.80610
- [6,]  0.1260  0.781 -105.7500 37.36667
- [7,]  0.1260  0.781 -105.7500 37.36667
- [8,]  0.1260  0.781 -105.7500 37.36667
- [9,]  0.1260  0.781 -105.7500 37.36667
-[10,]  0.0117  2.588  -84.8000 34.20000</code></pre>
-</div>
+<p><img src="images/ppgm-tibble.png" class="img-fluid"></p>
+</section>
+<section id="your-answer-1" class="level4">
+<h4 class="anchored" data-anchor-id="your-answer-1">Your Answer:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/answer-box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
 </div>
 <ol start="8" class="example" type="1">
 <li>Database of twig radii by tree species data with the following variables:</li>
@@ -253,67 +242,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>std</strong>: The standard deviation of twig radii</li>
 <li><strong>cv</strong>: The coefficient of variation of twig radii</li>
 </ul>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyverse' was built under R version 4.5.1</code></pre>
+<p><img src="images/rtwig-tibble.png" class="img-fluid"></p>
+</section>
+<section id="your-answer-2" class="level4">
+<h4 class="anchored" data-anchor-id="your-answer-2">Your Answer:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/answer-box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tibble' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'dplyr' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'stringr' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'forcats' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'lubridate' was built under R version 4.5.1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.1     ✔ stringr   1.5.2
-✔ ggplot2   4.0.0     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
-Package 'rTwig' version 1.4.0
-Type 'citation("rTwig")' for citing this R package in publications.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 7
-   scientific_name  radius_mm     n   min   max   std    cv
-   &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 Abies concolor        1.43    21  0.89  1.9   0.28  0.19
- 2 Abies spp.            1.43    21  0.89  1.9   0.28  0.19
- 3 Acer platanoides      1.39    30  0.89  2.03  0.3   0.21
- 4 Acer rubrum           1.18    30  0.89  1.52  0.16  0.14
- 5 Acer saccharinum      1.41    14  0.89  1.9   0.27  0.2 
- 6 Acer saccharum        1.2     30  0.89  1.65  0.23  0.19
- 7 Acer spp.             1.29   104  0.89  2.03  0.23  0.18
- 8 Aesculus flava        2.96    14  2.29  4.44  0.58  0.19
- 9 Aesculus spp.         2.96    14  2.29  4.44  0.58  0.19
-10 Betula nigra          0.85    30  0.51  1.52  0.23  0.27</code></pre>
-</div>
-</div>
+</section>
 </section>
 </section>
 <section id="grammar-of-graphics" class="level1">
@@ -323,7 +261,16 @@ Type 'citation("rTwig")' for citing this R package in publications.</code></pre>
 <ol start="9" class="example" type="1">
 <li><p>GG allows creation of graphs to be _________, __________, and ________</p></li>
 <li><p>What is aesthetic mapping?</p></li>
-<li><p>Who formalized the grammar of graphics?</p></li>
+</ol>
+<section id="your-answer-3" class="level4">
+<h4 class="anchored" data-anchor-id="your-answer-3">Your Answer:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/answer-box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<ol start="11" class="example" type="1">
+<li>Who formalized the grammar of graphics?</li>
 </ol>
 <ol type="a">
 <li>Clara Reckhorn</li>
@@ -341,30 +288,10 @@ Type 'citation("rTwig")' for citing this R package in publications.</code></pre>
 <li>Coordinates</li>
 </ol>
 </section>
+</section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">Application</h2>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'palmerpenguins'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:datasets':
-
-    penguins, penguins_raw</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_col()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="quiz1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p><img src="images/body-mass-graph.png" class="img-fluid"></p>
 <ol start="13" class="example" type="1">
 <li>Identify the following GG elements for the plot above: dataset, aesthetic mapping, and geometry</li>
 </ol>
@@ -377,9 +304,21 @@ Attaching package: 'palmerpenguins'</code></pre>
 <ol start="14" class="example" type="1">
 <li>Why is data cleaning important?</li>
 </ol>
+<section id="your-answer-4" class="level4">
+<h4 class="anchored" data-anchor-id="your-answer-4">Your Answer:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/answer-box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<p>&nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+</section>
 </section>
 <section id="multiple-choice" class="level2">
 <h2 class="anchored" data-anchor-id="multiple-choice">Multiple Choice</h2>
+<p><br>
+&nbsp; &nbsp; &nbsp;</p>
 <p>A dataset contains the following column:</p>
 <table class="caption-top table">
 <thead>
@@ -454,8 +393,17 @@ Attaching package: 'palmerpenguins'</code></pre>
 <section id="ggplot2" class="level1">
 <h1>ggplot2</h1>
 <ol start="20" class="example" type="1">
-<li><p>In ggplot2, what is the purpose of aes()?</p></li>
-<li><p>Which function do you use to initialize a plot in ggplot2?</p></li>
+<li>In ggplot2, what is the purpose of aes()?</li>
+</ol>
+<section id="your-answer-5" class="level4">
+<h4 class="anchored" data-anchor-id="your-answer-5">Your Answer:</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/answer-box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+<ol start="21" class="example" type="1">
+<li>Which function do you use to initialize a plot in ggplot2?</li>
 </ol>
 <ol type="a">
 <li>plot()</li>
@@ -465,14 +413,15 @@ Attaching package: 'palmerpenguins'</code></pre>
 </ol>
 <p>Fill in the blanks with either + or |&gt; in the correct places:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data _____ </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) _____ </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> income)) _____ </span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() _____ </span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data _____ </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>) _____ </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> income)) _____ </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() _____ </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

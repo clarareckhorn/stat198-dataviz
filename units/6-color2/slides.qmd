@@ -4,52 +4,84 @@ subtitle: Color 3 - Use of Color in Dataviz
 format: stat198slides-revealjs
 ---
 
-## Icebreaker
-
 ## Agenda
 
 1.  Discussion of Reading
 
-2.  Use of Colors
+2.  Why Color Matters
 
-3.  Activity - Identify Color Scale
+3.  Demo - Adelson checker shadow illusion
 
-4.  Demo - Adelson checker shadow illusion
+4.  Lecture on Color Packages
 
-5.  Coding Activity + Homework Overview
+5.  Activity no.1 + discussion + Activity no.2
+
+
+
+
 
 ## Discussion of Reading
 
-Reading: What Data Shows About Vaccine Supply and Demand in the Most Vulnerable Places\
+**Reading:** [What Data Shows About Vaccine Supply and Demand in the Most Vulnerable Places](https://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html)
 
 1.  What role does the subtitle of the visuals play? What would you add/remove?\
-2.  How does the notes enhance your understanding of the visual?\
+2.  How do the labels, captions, or notes help you interpret the graph?\
 3.  In what ways do the graphs differ? Consider the context, data, subtitles, description, etc.\
 
-## Brief Lecture: Use of Colors
+## Why Color Matters in Data Visualization
 
-In addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics. Recall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties.
+Color is one of the most powerful visual tools in a graphic.\
 
-## Use of Colors:
+It helps us distinguish groups, highlight patterns, and encode information.\
+But before deciding how to use color, we need to understand what type of data we are visualizing.\
+In visualization, data typically falls into two main categories: 
 
-One important property is color. Consequently we need to spend time talking about encoding data with color. To be more precise, by “data” we refer to variables which can be divided into 2 major classes: 1) categorical (qualitative), and 2) quantitative.\
-Categorical variables, in turn, can be classified into\
-1. binary\
-2. nominal\
-3. ordinal\
-Quantitative variables can be classified into 1) discrete, and 2) continuous.
+## Main categories
+1. Categorical (Qualitative) – represents groups or labels\
+- Binary (two categories)\
+- Nominal (categories with no order)\
+- Ordinal (categories with a meaningful order)\
+2. Quantitative (Numerical) – represents measurable values\
+- Discrete (countable values)\
+- Continuous (values on a continuous scale)\
+
+## Is A and B the same color?
+
+![](aandb.png){fig-alig="center"}
+
+
+## Why Color Perception Matters
+[Demo](https://en.wikipedia.org/wiki/Checker_shadow_illusion)\
+This famous illusion demonstrates that our perception of color is influenced by surrounding context.
+Even when two squares are the exact same color, our brain interprets them differently because of lighting and shadow.
+\
+
+
+If color is not chosen carefully, viewers may misinterpret differences in the data.
+
+## Why Color Choice Matters
+Human color perception is relative and context-dependent.\
+The Adelson Checker Shadow Illusion shows that the same color can appear different depending on its surroundings.\
+In visualizations, non-uniform color scales (like rainbow) can distort patterns:\
+
+- Some transitions appear more dramatic than others\
+
+- Middle values may seem more important due to bright colors\
+
+Choosing the right color scale is critical for accurate data interpretation.
+
 
 ## Let's Look at ColorBrewer
-
+We will use ColorBrewer as a tool to explore different color palettes designed specifically for visualizing different types of data.\
 [ColorBrewer Website](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+ColorBrewer organizes color palettes into three main types:\
 
 -   **Qualitative**: categorical variables (unordered)
 
 -   **Sequential**: ordered categorical, numeric variables (single direction)
 
--   **Diverging**: numeric variables (numeric variables with meaningful midpoint)
+-   **Diverging**: numeric variables (numeric variables with meaningful midpoint) \ 
 
-## Activity
 
 ## Some R Packages for Color Palettes
 
@@ -69,39 +101,36 @@ Quantitative variables can be classified into 1) discrete, and 2) continuous.
 
 *Warning: not all palettes are perceptually uniform!*
 
-## Adelson Checker Shadow Illusion Demo
+## Perceptually Uniform Color Scales
+Perceptually uniform scales ensure that equal changes in data correspond to equal visual differences in color.\
+Benefits:\
+- Accurate data interpretation: patterns are represented faithfully\
+- Avoids visual misrepresentation: no unintended emphasis on certain ranges\
+- Inclusivity & accessibility: many scales are colorblind-friendly, greyscale-printable, and intuitive\
 
-This is a famous illusion that showcases the relative and context-dependent nature of human color perception.
+If a color scale isn’t uniform, it might make some values look more important than they actually are, or hide patterns that are there. So you end up telling a misleading story with your graph—even if the data is correct.
 
-[Demo](https://en.wikipedia.org/wiki/Checker_shadow_illusion)
+## In ggplot2, color palettes are applied using `scale_color_*()` functions.
+These functions control how values in a variable are mapped to colors in a plot.\
 
-## Perceptually Uniform Color Scale
+Important points:
+-  `scale_color_*()` is where palettes are applied\
+-  Different palettes come from different R packages\
+-  Changing the palette does not change the data or the plot structure\
+-  It only changes the visual style of the graphic\
 
-Using perceptually uniform color scales in data visualization is important because it ensures that color differences in your data are interpreted consistently and accurately by viewers. A perceptually uniform color scale is one in which: Equal steps in data correspond to equal perceptual differences in color The progression of colors feels smooth and balanced to the human eye across the entire scale. Slide with comparison between “viridis” scale versus “rainbow” scale.
+## Example using packages 
+```{r}
+#| eval: false
+#Simple example, don't forget to install packages :)
+ggplot(data, aes(x, y, color = group)) +
+  geom_point() +
+  scale_color_viridis_d()
+```
 
-## Why It Matters:
 
-Accurate Data Interpretation:\
-In non-uniform scales (like “rainbow”), some color transitions appear more dramatic than others, even when the underlying data changes linearly.\
-This can lead viewers to overestimate or underestimate the importance of certain regions in your plot. Example: a heatmap using the rainbow palette might make middle values seem more important simply because they transition through yellow–a perceptually “bright” color.
 
-## Why It Matters:
-
-Avoiding Visual Misrepresentation:\
-Color scales that are not perceptually uniform can distort patterns. Also, they introduce unintended emphasis and can mislead viewers.\
-Example: In a choropleth map, two regions with only a small difference in values might look drastically different if the color gradient is poorly designed.
-
-## Why It Matters:
-
-Inclusivity and Accessibility:\
-Many perceptually uniform color scales are also:\
-Colorblind-friendly\
-Greyscale-printable\
-Accessible to more viewers, including those with visual impairments\
-Example: Viridis scale is designed to be uniform, intuitive, and accessible\
-
-## Coding Activity 1 - Use/Treatment of color with ggplot functions
-
+## How ggplot assignes color 
 When you map a variable to the **color aesthetic**, ggplot automatically chooses colors depending on the **data type** of that variable:
 
 | Data Type            | Default Color Behavior |
@@ -117,7 +146,6 @@ Let’s create a small data frame with several variable types.
 
 ```{r}
 #| echo: true
-#| code-fold: true
 #| output-location: column-fragment
 library(ggplot2)
 set.seed(123)
@@ -136,31 +164,37 @@ head(demo_df)
 
 ```
 
-## Default Behavior Example
-
-Mapping color to each variable:
+## Mapping color to each variable:
 
 ```{r}
 # Logical (two-color discrete)
 ggplot(demo_df, aes(x, y, color = logical_var)) +
   geom_point(size = 4) +
   labs(title = "Logical Variable")
+```
 
+## Mapping color to each variable:
+```{r}
 # Integer (continuous gradient)
 ggplot(demo_df, aes(x, y, color = integer_var)) +
   geom_point(size = 4) +
   labs(title = "Integer Variable")
+```
 
+## Mapping color to each variable:
+```{r}
 # Factor (discrete palette)
 ggplot(demo_df, aes(x, y, color = factor_var)) +
   geom_point(size = 4) +
-  labs(title = "Factor Variable")
+  labs(title = "Factor Variable") 
 
 ```
 
+
+
 ## Activity: Customize the Color Scales
 
-Recreate one of the above plots, but use a color scale function to control the palette.
+Recreate the plots, but use a color scale function to control the palette.
 
 Experiment with both discrete and continuous color scales.
 
@@ -193,21 +227,8 @@ How can you **control or standardize** color use across plots?\
 
 When should you **manually define colors** rather than relying on defaults?\
 
-## Best Practices
 
--   Use **sequential** color scales for ordered data (low to high values).
-
--   Use **diverging** scales for data centered around a meaningful midpoint (e.g., zero).
-
--   Always **test color scales in grayscale** and/or use simulators for color vision deficiencies.
-
--   Prefer palettes like:
-
-    -   scale_fill_viridis_c() or scale_color-viridis() for continuous data.
-
-    -   scale_fill_brewer() with perceptual schemes like “Blues”, “BuPu”, etc.
-
-## Activity - Recreating
+## HW6 - Recreating
 
 -   **Article**: Data About Covid Vaccine Supply and Demand (NYT)
 
@@ -220,21 +241,3 @@ When should you **manually define colors** rather than relying on defaults?\
     -   We have the data to replicate this animation in the next lecture; this would require introducing a couple of functions from the package “gganimate”
 
     -   CSV data file: vaccination-gdp-countries-2021.csv
-
-## HW 6 Assignment
-
--   **Reading**: How unusual has this hurricane season been?
-
--   <https://www.bbc.com/news/articles/cden551l7kko>
-
-    -   The graphic of interest is the stacked bar chart of Named storms in the Atlantic by type and year, 1990-2024
-
-    -   It uses an analogous+neutral color scheme; we can also say that it uses a sequential color scale
-
-    -   This bar chart can be replicated in the next class “Use of Color”
-
-    -   We can use the “storms” data (from “dplyr”) although this only goes to year 2022
-
-    -   There are some data manipulation steps, but we can provide sample code or detailed instructions on how to get it
-
-    -   The interesting part is in the color specification, and the use of scale functions in ggplot2 such as scale_fill_manual()

@@ -924,21 +924,21 @@
     "href": "units/6-color2/slides.html#agenda",
     "title": "Lecture 6",
     "section": "Agenda",
-    "text": "Agenda\n\nDiscussion of Reading\nUse of Colors\nActivity - Identify Color Scale\nDemo - Adelson checker shadow illusion\nCoding Activity + Homework Overview"
+    "text": "Agenda\n\nDiscussion of Reading\nWhy Color Matters\nDemo - Adelson checker shadow illusion\nLecture on Color Packages\nActivity no.1 + discussion + Activity no.2"
   },
   {
     "objectID": "units/6-color2/slides.html#discussion-of-reading",
     "href": "units/6-color2/slides.html#discussion-of-reading",
     "title": "Lecture 6",
     "section": "Discussion of Reading",
-    "text": "Discussion of Reading\nReading: What Data Shows About Vaccine Supply and Demand in the Most Vulnerable Places\n\n\nWhat role does the subtitle of the visuals play? What would you add/remove?\n\nHow does the notes enhance your understanding of the visual?\n\nIn what ways do the graphs differ? Consider the context, data, subtitles, description, etc."
+    "text": "Discussion of Reading\nReading: What Data Shows About Vaccine Supply and Demand in the Most Vulnerable Places\n\nWhat role does the subtitle of the visuals play? What would you add/remove?\n\nHow do the labels, captions, or notes help you interpret the graph?\n\nIn what ways do the graphs differ? Consider the context, data, subtitles, description, etc."
   },
   {
     "objectID": "units/6-color2/slides.html#brief-lecture-use-of-colors",
     "href": "units/6-color2/slides.html#brief-lecture-use-of-colors",
     "title": "Lecture 6",
     "section": "Brief Lecture: Use of Colors",
-    "text": "Brief Lecture: Use of Colors\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics. Recall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties."
+    "text": "Brief Lecture: Use of Colors\nIn addition to color models (and their spaces), another important aspect of color has to do with its actual use when making graphics. Recall that making graphics, conceptually speaking, is basically mapping data to geometric objects and their visual properties.\nSo the visualization process is: data → geometric objects → visual properties"
   },
   {
     "objectID": "units/6-color2/slides.html#use-of-colors",
@@ -952,7 +952,7 @@
     "href": "units/6-color2/slides.html#lets-look-at-colorbrewer",
     "title": "Lecture 6",
     "section": "Let’s Look at ColorBrewer",
-    "text": "Let’s Look at ColorBrewer\nColorBrewer Website\n\nQualitative: categorical variables (unordered)\nSequential: ordered categorical, numeric variables (single direction)\nDiverging: numeric variables (numeric variables with meaningful midpoint)"
+    "text": "Let’s Look at ColorBrewer\nWe will use ColorBrewer as a tool to explore different color palettes designed specifically for visualizing different types of data.\nColorBrewer Website ColorBrewer organizes color palettes into three main types:\n\n\nQualitative: categorical variables (unordered)\nSequential: ordered categorical, numeric variables (single direction)\nDiverging: numeric variables (numeric variables with meaningful midpoint)"
   },
   {
     "objectID": "units/6-color2/slides.html#activity",
@@ -1015,21 +1015,21 @@
     "href": "units/6-color2/slides.html#demo-dataset",
     "title": "Lecture 6",
     "section": "Demo Dataset",
-    "text": "Demo Dataset\nLet’s create a small data frame with several variable types.\n\n\nCode\nlibrary(ggplot2)\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nCode\nset.seed(123)\n\ndemo_df &lt;- data.frame(\n  x = rnorm(20),\n  y = rnorm(20),\n  logical_var = sample(c(TRUE, FALSE), 20, replace = TRUE),\n  integer_var = sample(1:5, 20, replace = TRUE),\n  double_var = runif(20, 0, 10),\n  factor_var = factor(sample(letters[1:3], 20, replace = TRUE)),\n  char_var = sample(c(\"cat\", \"dog\", \"bird\"), 20, replace = TRUE)\n)\n\nhead(demo_df)\n\n\n            x          y logical_var integer_var double_var factor_var char_var\n1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog\n2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog\n3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat\n4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird\n5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog\n6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat"
+    "text": "Demo Dataset\nLet’s create a small data frame with several variable types.\n\n\nlibrary(ggplot2)\nset.seed(123)\n\ndemo_df &lt;- data.frame(\n  x = rnorm(20),\n  y = rnorm(20),\n  logical_var = sample(c(TRUE, FALSE), 20, replace = TRUE),\n  integer_var = sample(1:5, 20, replace = TRUE),\n  double_var = runif(20, 0, 10),\n  factor_var = factor(sample(letters[1:3], 20, replace = TRUE)),\n  char_var = sample(c(\"cat\", \"dog\", \"bird\"), 20, replace = TRUE)\n)\n\nhead(demo_df)\n\n\n            x          y logical_var integer_var double_var factor_var char_var\n1 -0.56047565 -1.0678237       FALSE           1  9.7982192          a      dog\n2 -0.23017749 -0.2179749       FALSE           4  4.3943154          c      dog\n3  1.55870831 -1.0260044        TRUE           1  3.1170220          c      cat\n4  0.07050839 -0.7288912       FALSE           1  4.0947495          b     bird\n5  0.12928774 -0.6250393       FALSE           3  0.1046711          b      dog\n6  1.71506499 -1.6866933       FALSE           4  1.8384952          b      cat"
   },
   {
     "objectID": "units/6-color2/slides.html#default-behavior-example",
     "href": "units/6-color2/slides.html#default-behavior-example",
     "title": "Lecture 6",
     "section": "Default Behavior Example",
-    "text": "Default Behavior Example\nMapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")\n\n\n\n\n\n\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")\n\n\n\n\n\n\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
+    "text": "Default Behavior Example\nMapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")\n\n\n\n\n\n\n\n\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")\n\n\n\n\n\n\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
   },
   {
     "objectID": "units/6-color2/slides.html#activity-customize-the-color-scales",
     "href": "units/6-color2/slides.html#activity-customize-the-color-scales",
     "title": "Lecture 6",
     "section": "Activity: Customize the Color Scales",
-    "text": "Activity: Customize the Color Scales\nRecreate one of the above plots, but use a color scale function to control the palette.\nExperiment with both discrete and continuous color scales.\n\n# Discrete manual colors for factor or character variables\nggplot(demo_df, aes(x, y, color = char_var)) +\n  geom_point(size = 4) +\n  scale_color_manual(values = c(\"cat\" = \"orange\", \"dog\" = \"steelblue\", \"bird\" = \"forestgreen\")) +\n  labs(title = \"Custom Discrete Colors\")\n\n\n\n\n\n\n\n# Continuous gradient for numeric variable\nggplot(demo_df, aes(x, y, color = double_var)) +\n  geom_point(size = 4) +\n  scale_color_continuous(low = \"lightblue\", high = \"darkblue\") +\n  labs(title = \"Custom Continuous Scale\")\n\n\n\n\n\n\n\n# Using scale_fill_discrete() with filled geoms\nggplot(demo_df, aes(x = factor_var, fill = char_var)) +\n  geom_bar() +\n  scale_fill_discrete() +\n  labs(title = \"Bar Plot with Discrete Fill\")"
+    "text": "Activity: Customize the Color Scales\nRecreate the plots, but use a color scale function to control the palette.\nExperiment with both discrete and continuous color scales.\n\n# Discrete manual colors for factor or character variables\nggplot(demo_df, aes(x, y, color = char_var)) +\n  geom_point(size = 4) +\n  scale_color_manual(values = c(\"cat\" = \"orange\", \"dog\" = \"steelblue\", \"bird\" = \"forestgreen\")) +\n  labs(title = \"Custom Discrete Colors\")\n\n\n\n\n\n\n\n\n\n# Continuous gradient for numeric variable\nggplot(demo_df, aes(x, y, color = double_var)) +\n  geom_point(size = 4) +\n  scale_color_continuous(low = \"lightblue\", high = \"darkblue\") +\n  labs(title = \"Custom Continuous Scale\")\n\n\n\n\n\n\n\n# Using scale_fill_discrete() with filled geoms\nggplot(demo_df, aes(x = factor_var, fill = char_var)) +\n  geom_bar() +\n  scale_fill_discrete() +\n  labs(title = \"Bar Plot with Discrete Fill\")"
   },
   {
     "objectID": "units/6-color2/slides.html#discussion",
@@ -1043,7 +1043,7 @@
     "href": "units/6-color2/slides.html#best-practices",
     "title": "Lecture 6",
     "section": "Best Practices",
-    "text": "Best Practices\n\nUse sequential color scales for ordered data (low to high values).\nUse diverging scales for data centered around a meaningful midpoint (e.g., zero).\nAlways test color scales in grayscale and/or use simulators for color vision deficiencies.\nPrefer palettes like:\n\nscale_fill_viridis_c() or scale_color-viridis() for continuous data.\nscale_fill_brewer() with perceptual schemes like “Blues”, “BuPu”, etc."
+    "text": "Best Practices\n\nUse sequential color scales for ordered data (low to high values).\nPrefer palettes like:\n\nscale_fill_viridis_c() or scale_color-viridis() for continuous data.\nscale_fill_brewer() with perceptual schemes like “Blues”, “BuPu”, etc."
   },
   {
     "objectID": "units/6-color2/slides.html#activity---recreating",
@@ -1966,5 +1966,117 @@
     "title": "Week 5",
     "section": "Hexadecimal Color: #85A0F2",
     "text": "Hexadecimal Color: #85A0F2\n\n# is the universal notation for a “hex number”\nEach pair of symbols represents one pair of primary color"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#why-color-matters-in-data-visualization",
+    "href": "units/6-color2/slides.html#why-color-matters-in-data-visualization",
+    "title": "Lecture 6",
+    "section": "Why Color Matters in Data Visualization",
+    "text": "Why Color Matters in Data Visualization\nColor is one of the most powerful visual tools in a graphic.\n\nIt helps us distinguish groups, highlight patterns, and encode information.\nBut before deciding how to use color, we need to understand what type of data we are visualizing.\nIn visualization, data typically falls into two main categories:"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#main-categories",
+    "href": "units/6-color2/slides.html#main-categories",
+    "title": "Lecture 6",
+    "section": "Main categories",
+    "text": "Main categories\n\nCategorical (Qualitative) – represents groups or labels\n\n\n\nBinary (two categories)\n\nNominal (categories with no order)\n\nOrdinal (categories with a meaningful order)\n\n\n\nQuantitative (Numerical) – represents measurable values\n\n\n\nDiscrete (countable values)\n\nContinuous (values on a continuous scale)"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#section",
+    "href": "units/6-color2/slides.html#section",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "ggplot(data, aes(x, y, color = group)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#example-using-packages",
+    "href": "units/6-color2/slides.html#example-using-packages",
+    "title": "Lecture 6",
+    "section": "Example using packages",
+    "text": "Example using packages\n\n#Simple example, don't forget to install packages :)\nggplot(data, aes(x, y, color = group)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#why-color-perception-matters",
+    "href": "units/6-color2/slides.html#why-color-perception-matters",
+    "title": "Lecture 6",
+    "section": "Why Color Perception Matters",
+    "text": "Why Color Perception Matters\nDemo\nThis famous illusion demonstrates that our perception of color is influenced by surrounding context. Even when two squares are the exact same color, our brain interprets them differently because of lighting and shadow.\n\nIf color is not chosen carefully, viewers may misinterpret differences in the data."
+  },
+  {
+    "objectID": "units/6-color2/slides.html#why-color-choice-matters",
+    "href": "units/6-color2/slides.html#why-color-choice-matters",
+    "title": "Lecture 6",
+    "section": "Why Color Choice Matters",
+    "text": "Why Color Choice Matters\nHuman color perception is relative and context-dependent.\nThe Adelson Checker Shadow Illusion shows that the same color can appear different depending on its surroundings.\nIn visualizations, non-uniform color scales (like rainbow) can distort patterns:\n\n\nSome transitions appear more dramatic than others\n\nMiddle values may seem more important due to bright colors\n\n\nChoosing the right color scale is critical for accurate data interpretation."
+  },
+  {
+    "objectID": "units/6-color2/slides.html#perceptually-uniform-color-scales",
+    "href": "units/6-color2/slides.html#perceptually-uniform-color-scales",
+    "title": "Lecture 6",
+    "section": "Perceptually Uniform Color Scales",
+    "text": "Perceptually Uniform Color Scales\nPerceptually uniform scales ensure that equal changes in data correspond to equal visual differences in color.\nBenefits:\n- Accurate data interpretation: patterns are represented faithfully\n- Avoids visual misrepresentation: no unintended emphasis on certain ranges\n- Inclusivity & accessibility: many scales are colorblind-friendly, greyscale-printable, and intuitive\n\nIf a color scale isn’t uniform, it might make some values look more important than they actually are, or hide patterns that are there. So you end up telling a misleading story with your graph—even if the data is correct."
+  },
+  {
+    "objectID": "units/6-color2/slides.html#how-ggplot-assignes-color",
+    "href": "units/6-color2/slides.html#how-ggplot-assignes-color",
+    "title": "Lecture 6",
+    "section": "How ggplot assignes color",
+    "text": "How ggplot assignes color\nWhen you map a variable to the color aesthetic, ggplot automatically chooses colors depending on the data type of that variable:\n\n\n\nData Type\nDefault Color Behavior\n\n\n\n\nLogical (TRUE/FALSE)\nTwo colors (discrete)\n\n\nInteger / Double\nGradient (continuous)\n\n\nFactor\nDiscrete palette\n\n\nCharacter\nDiscrete palette"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#mapping-color-to-each-variable",
+    "href": "units/6-color2/slides.html#mapping-color-to-each-variable",
+    "title": "Lecture 6",
+    "section": "Mapping color to each variable:",
+    "text": "Mapping color to each variable:\n\n# Logical (two-color discrete)\nggplot(demo_df, aes(x, y, color = logical_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Logical Variable\")"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#mapping-color-to-each-variable-1",
+    "href": "units/6-color2/slides.html#mapping-color-to-each-variable-1",
+    "title": "Lecture 6",
+    "section": "Mapping color to each variable:",
+    "text": "Mapping color to each variable:\n\n# Integer (continuous gradient)\nggplot(demo_df, aes(x, y, color = integer_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Integer Variable\")"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#mapping-color-to-each-variable-2",
+    "href": "units/6-color2/slides.html#mapping-color-to-each-variable-2",
+    "title": "Lecture 6",
+    "section": "Mapping color to each variable:",
+    "text": "Mapping color to each variable:\n\n# Factor (discrete palette)\nggplot(demo_df, aes(x, y, color = factor_var)) +\n  geom_point(size = 4) +\n  labs(title = \"Factor Variable\")"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#in-ggplot2-color-palettes-are-applied-using-scale_color_-functions.",
+    "href": "units/6-color2/slides.html#in-ggplot2-color-palettes-are-applied-using-scale_color_-functions.",
+    "title": "Lecture 6",
+    "section": "In ggplot2, color palettes are applied using scale_color_*() functions.",
+    "text": "In ggplot2, color palettes are applied using scale_color_*() functions.\nThese functions control how values in a variable are mapped to colors in a plot.\n\nImportant points: - scale_color_*() is where palettes are applied\n- Different palettes come from different R packages\n- Changing the palette does not change the data or the plot structure\n- It only changes the visual style of the graphic"
+  },
+  {
+    "objectID": "units/6-color2/activity.html",
+    "href": "units/6-color2/activity.html",
+    "title": "Week 6 Activity",
+    "section": "",
+    "text": "this activity gives you practice applying the concepts we just learned about color mapping and scales in data visualization. You will recreate several plots while learning how to control the appearance of colors using scale functions in ggplot2. You will work with functions that help map variables to visual properties and customize color palettes in your plots. ::: ::: ggplot() aes() geom_point() geom_bar() geom_col() color fill ::: ::: scale_color_manual() scale_color_gradient() scale_color_continuous() scale_fill_manual() scale_fill_discrete() labs() theme_*() ::: :::"
+  },
+  {
+    "objectID": "units/6-color2/activity.html#introduction",
+    "href": "units/6-color2/activity.html#introduction",
+    "title": "Week 6 Activity",
+    "section": "",
+    "text": "this activity gives you practice applying the concepts we just learned about color mapping and scales in data visualization. You will recreate several plots while learning how to control the appearance of colors using scale functions in ggplot2. You will work with functions that help map variables to visual properties and customize color palettes in your plots. ::: ::: ggplot() aes() geom_point() geom_bar() geom_col() color fill ::: ::: scale_color_manual() scale_color_gradient() scale_color_continuous() scale_fill_manual() scale_fill_discrete() labs() theme_*() ::: :::"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#is-a-and-b-the-same-color",
+    "href": "units/6-color2/slides.html#is-a-and-b-the-same-color",
+    "title": "Lecture 6",
+    "section": "Is A and B the same color?",
+    "text": "Is A and B the same color?"
+  },
+  {
+    "objectID": "units/6-color2/slides.html#hw6---recreating",
+    "href": "units/6-color2/slides.html#hw6---recreating",
+    "title": "Lecture 6",
+    "section": "HW6 - Recreating",
+    "text": "HW6 - Recreating\n\nArticle: Data About Covid Vaccine Supply and Demand (NYT)\nhttps://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html\n\nThe graphic of interest is the animated scatterplot\nThis article involves the use of a complementary-and-adjacent color scheme, orange-teal\nWe have the data to replicate this animation in the next lecture; this would require introducing a couple of functions from the package “gganimate”\nCSV data file: vaccination-gdp-countries-2021.csv"
   }
 ]
