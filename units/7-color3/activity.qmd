@@ -1,0 +1,8 @@
+---
+title: "Activity: Data Visualization"
+subtitle: "Stat 198, Spring 2026"
+fontsize: 12pt
+urlcolor: blue
+output: typst
+---
+

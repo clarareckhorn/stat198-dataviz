@@ -1,6 +1,6 @@
 ---
 title: Lecture 7
-subtitle: Color Part 3 - Use of Color in Dataviz
+subtitle: Color Part 3 - Design Considerations
 format: stat198slides-revealjs
 ---
 
@@ -18,17 +18,335 @@ format: stat198slides-revealjs
 
 5.  Gestalt Principles of Perception + Activity
 
-6. Explain Homework
+6.  Explain Homework
+
+## ICEBREAKER
+
+Most recent life-hack or life-skill you learned
+
+## Looking Ahead
+
+4/7: Maps, pt 1
+
+4/14: Maps, pt 2
+
+4/21: Final Project Preparation
+
+## Final Project Description
+
+Description: For the final project you will create a report in a similar style to the NYT articles we have viewed in class. Using data of your choosing, your report will include at least 3 different kinds graphics (scatterplot, histogram, map, etc.).
+
+For each visualization there should be:
+
+1.  A description of what the graphic reveals about the data
+
+2.  A description of certain design decisions you made in order to produce the graphic(i.e. type of plot, color scheme, theme elements, etc.)
+
+DURING class on Tuesday 4/28 you will give a brief 3-5 minute presentation of your report via google slides.
+
+## Final Project Elements
+
+-   Final Project Proposal
+
+    -   Type: Google doc pdf
+    -   To: BCourses
+    -   Due: 4/20, 11:59 PM
+
+-   Presentation:
+
+    -   Type: google slides
+    -   Due: BCourses
+    -   Due: 4/27, 11:59 PM
+
+-   Coding Materials:
+
+    -   Type: QMD file + csv of your data
+    -   To: BCourses
+    -   Due: 4/27, 11:59 PM
+
+## Dataset Guidelines
+
+Make sure your data falls within the project guidelines:\
+
+-   You **may not** use a data set that has already been used in the course:
+
+    -   Ex: Iris, mtcars, storms, etc.
+
+-   You **may** use multiple data sets if they are related:
+
+    -   Ex. If you are looking at wealth across the world you could use a data set for country GDP, and a separate dataset for poverty rates. 
+
+-   You **may** use your own data from an app, device, or website
+
+Suggestions for Finding Data Sets:
+
+-   [Github repository](https://github.com/awesomedata/awesome-public-datasets)
+
+-   [Microsoft Tableau Suggestions](https://www.tableau.com/learn/articles/free-public-data-sets)
+
+## Datasets Continued
+
+-   Contact us by 4/14 if you need help finding a data set!
+
+-   Note: You may need to manipulate the data set you download before using it
+
+If your data is not in a format you can easily work with **contact us by 4/14** so we can help you.
+
+## Final Project Proposal
+
+**Due:** 11/20
+
+**Description:** In 4-5 sentences provide a brief overview of your project. You should include the topic of your project, what dataset(s) you are using, and a rough plan of the three different visualizations you will create. You should also let us know if you would like additional resources for certain aspects of your project. (Ex. You want to include a visualization that we have not covered in class such as an interactive map).
+
+**File type:** Google doc pdf
+
+**Submit to:** BCourses
+
+## Questions?
 
 ## Discussion of Reading
 
-## Spot the Difference
+::::: columns
+::: column
+In groups of 2-3, discuss the reading:
 
+1.  Review: What data is used in this graphic? How is color used to portray ordinal/binary/nominal data?
+2.  What's one thing you liked about how the graphic portrays the data?
+3.  What's one thing you would change about the graphic to make it better?
+:::
+
+::: column
+![](images/ny.png)
+:::
+:::::
+
+<!-- end columns -->
+
+`{{< countdown "3:00" >}}`
+
+## Today's Learning Goals
+
+1.  Explain the importance of using pre-attentive attributes to guide the user.
+
+2.  Apply Gestalt principles to design good visualizations.
+
+# Visual Perception: Gestalt Principles, Preattentive Attributes
+
+# Find the difference in the following photos
+
+## Ron Rensink’s examples
+
+![](images/1.png)
+
+## Ron Rensink’s examples
+
+![](images/2.png)
+
+## Ron Rensink’s examples
+
+![](images/3.png)
+
+## Prof Sanchez’s example
+
+![](images/4.png)
+
+## How does your brain process the images? What makes it easy or difficult to see the solution?
+
+::: incremental
+-   This demonstrates the power and limitations of the human eye and brain
+:::
+
+# Visual Processing
+
+## 2 processes: Sensory and Perception
+
+::::: columns
+::: column
+![](images/visual-process.png)
+:::
+
+::: column
+The visual system consists of 2 parts:
+
+-   Eyes
+-   Brain
+
+The **eyes** act as image receptors.
+
+The **brain** acts as an image processing and interpretation unit.
+:::
+:::::
+
+<!-- end columns -->
+
+## Visual Perception
+
+Visual perception is a cognitive process.
+
+Neuroscientists and psychologists have developed an extensive theoretical body of knowledge for how we process information.
+
+We’ll provide a somewhat simplified version of such theories. This requires thinking about **the Brain as a computer.**
+
+## Information Processing and Visual Memory
+
+::: {.columns}
+::: {.column}
+![](images/brain.png)
+:::
+::: {.column}
+
+Types of memory for processing visual information:
+
+- Iconic memory (visual sensory register) like the buffer or temporary
+
+- Short-term memory (working memory) like the random access memory (RAM)
+
+- Long-term memory (“permanent” storage) like the hard disk
+
+:::
+:::
+<!-- end columns -->
+
+## Iconic Memory (aka Preattentive Processing)
+
+The iconic memory is a sort of waiting room where each snapshot of input waits to be passed on to short-term memory.
+
+Rapid processing: almost automatic (lasts less than half a second), parallel, and “unconscious”.
+
+This occurs almost automatically and relies on contrast between features in an image.
+
+## How many sixes can you count?
+
+![](images/6.png)
+
+## How many sixes can you count?
+
+Without any visual cue, counting 6s requires attentive processing - slow, serial, exhausting
+
+![](images/6-1.png)
+
+## 2 Types of Vision
+
+
+![](images/2-types.png)
+
+
+
+
+
+# Preattentive features
 
 Take advantage of preattentive features to make your audience not have to work too hard
 
-Bar chart democrats vs republicans 
-- What variables are behind this plot?
-V1 - Dem, Rep
-V2 - Religion
-V3 - Race
+## Memory and Visual Perception
+
+Understanding how our brains pay attention to things, and how our memory system deals with information coming at us from the world, can go a long way toward producing better data visualizations
+
+# Gestalt principles
+
+## Let's Review Some Graphics
+
+We will show you several examples of charts published in media outlets like FiveThirtyEight. We’ll comment on the charts, identifying the application of conceptual elements from the theory of data visualization, as well as from the Gestalt theory of Form Processing.
+
+## About Gestalt Theory
+
+One of the theories of **Form Processing**
+
+**Gestalt**: german for “whole” or “form”
+
+Founded in Germany (1920’s)
+
+**Idea**: people organize visual sensations into meaningful wholes or forms, and the whole is different from the sum of its parts
+
+## Main Gestalt Principles
+
+-   Continuation
+
+-   Connectivity
+
+-   Closure
+
+-   Similarity
+
+-   Proximity
+
+-   Symmetry
+
+-   Figure & Ground
+
+-   Enclosure
+
+## Why Democrats Struggle to Mobilize a Religious Left
+
+![](images/538-1.png)
+
+## Gestalt principle: Connection or Connectivity
+
+![](images/gestalt-1.png)
+
+## Gestalt principle: Proximity
+
+![](images/gestalt-2.png)
+
+## Gestalt Principle: Similarity
+
+![](images/gestalt-3.png)
+
+##
+
+![](images/538-2.png)
+
+## Bryce Harper May Already Be Past His Prime
+
+::: {.columns}
+::: {.column}
+![](images/538-3.png)
+:::
+::: {.column}
+Gestalt Principle: Continuity 
+
+![](images/gestalt-4.png)
+:::
+:::
+<!-- end columns -->
+
+## How Unpopular is Donald Trump?
+
+![](images/538-4.png)
+
+## Chunking
+
+Chunking is a process by which individual pieces of an information set are broken down and then grouped together in a meaningful whole. 
+The chunks by which the information is grouped is meant to improve short-term retention of the material, thus bypassing the limited capacity of working memory.
+
+## The 5 Corners Of The 2020 Democratic Primary
+
+![](images/538-5.png)
+
+## Gestalt principle: Enclosure
+
+![](images/gestalt-5.png)
+
+
+## Gestalt principle: Figure & Ground
+
+![](images/gestalt.png)
+
+# In-Class Activity 
+
+This will serve as your attendance so please turn it in by the end of class
+
+With a partner, identify the Gestalt principles of the graphics on the worksheet.
+
+`{{< countdown "15:00" >}}`
+
+# Homework
+
+-   HW 4: Recreating Screen Time Use
+
+- Article for next week: We Still Don’t Believe How Much Things Cost”
+https://www.wsj.com/economy/consumers/grocery-prices-inflation-coffee-milk-903aead6
+
+-   Start looking for potential data sets for your final project and turn in your final project proposal (due 4/20).
+
+    -   Email us if you need help!
