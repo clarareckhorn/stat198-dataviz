@@ -5,15 +5,11 @@ title: "7) Color 3 - Design Considerations"
 
 ## This Week: 
 
-In this week, we'll talk about good data viz practices and you will take a quiz during lecture.
+In this week, we'll talk about good data viz practices.
 
 What things should you pay attention when looking at a graphic?
 
 How can you make a graphic less distracting from the data being represented?
-
-In this unit we talk about the so-called __Data-Ink ratio__ (proposed by Edward 
-Tufte) which is the proportion of ink (or pixels) that is used to present actual 
-data compared to the total amount of ink (or pixels) used in the entire display.
 
 
 <br>
@@ -23,8 +19,9 @@ data compared to the total amount of ink (or pixels) used in the entire display.
 
 At the end of this unit you will be able to:
 
-- Explain the concept of Data-to-Ink ratio
-- Be able to suggest modifications for increasing the data-ink ratio in a graphic
+1.  Explain the importance of using pre-attentive attributes to guide the user.
+
+2.  Apply Gestalt principles to design good visualizations.
 
 
 <br>
@@ -45,8 +42,9 @@ TBA
 
 ### 📖 Assignment
 
-__Reading__: _How unusual has this hurricane season been? (BBC)_
+__Reading__: _We Still Don’t Believe How Much Things Cost (WSJ)_
 
-<a href="https://www.bbc.com/news/articles/cden551l7kko" target="_blank">https://www.bbc.com/news/articles/cden551l7kko</a>
+<a href="https://www.wsj.com/economy/consumers/grocery-prices-inflation-coffee-milk-903aead6" target="_blank">https://www.wsj.com/economy/consumers/grocery-prices-inflation-coffee-milk-903aead6</a>
 
-__Homework__: Homework #5 is due Monday, 3/30 at 11:59pm. You can find the assignment and turn in your work on BCourses.
+__Homework__: Homework #4 is due Monday, 4/6 at 11:59pm. You can find the assignment and turn in your work on BCourses. Start looking for potential data sets for your final project and turn in your final project proposal (due 4/20).
+
