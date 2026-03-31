@@ -4,8 +4,6 @@ subtitle: Color Part 3 - Design Considerations
 format: stat198slides-revealjs
 ---
 
-## Icebreaker
-
 ## Agenda
 
 1.  Discussion of Reading
@@ -34,17 +32,17 @@ Most recent life-hack or life-skill you learned
 
 ## Final Project Description
 
-Description: For the final project you will create a report in a similar style to the NYT articles we have viewed in class. Using data of your choosing, your report will include at least 3 different kinds graphics (scatterplot, histogram, map, etc.).
+> *Description:* For the final project you will create a report in a similar style to the NYT articles we have viewed in class. Using data of your choosing, your report will include at least 3 different kinds graphics (scatterplot, histogram, map, etc.).
 
-For each visualization there should be:
+*For each visualization there should be:*
 
 1.  A description of what the graphic reveals about the data
 
 2.  A description of certain design decisions you made in order to produce the graphic(i.e. type of plot, color scheme, theme elements, etc.)
 
-DURING class on Tuesday 4/28 you will give a brief 3-5 minute presentation of your report via google slides.
+*DURING* class on Tuesday 4/28 you will give a brief 3-5 minute presentation of your report via google slides.
 
-## Final Project Elements
+## Final Project Elements {.smaller}
 
 -   Final Project Proposal
 
@@ -94,221 +92,322 @@ If your data is not in a format you can easily work with **contact us by 4/14** 
 
 ## Final Project Proposal
 
-**Due:** 11/20
+* *Due:* 11/20
 
-**Description:** In 4-5 sentences provide a brief overview of your project. You should include the topic of your project, what dataset(s) you are using, and a rough plan of the three different visualizations you will create. You should also let us know if you would like additional resources for certain aspects of your project. (Ex. You want to include a visualization that we have not covered in class such as an interactive map).
+* *Description:* In 4-5 sentences provide a brief overview of your project. You should include the topic of your project, what dataset(s) you are using, and a rough plan of the three different visualizations you will create. You should also let us know if you would like additional resources for certain aspects of your project. (Ex. You want to include a visualization that we have not covered in class such as an interactive map).
 
-**File type:** Google doc pdf
+* *File type:* Google doc pdf
 
-**Submit to:** BCourses
+* o*Submit to:* BCourses
 
 ## Questions?
 
-## Discussion of Reading
+# Discussion of Reading
 
-::::: columns
-::: column
-In groups of 2-3, discuss the reading:
+## Discuss in Groups of 2–3
 
-1.  Review: What data is used in this graphic? How is color used to portray ordinal/binary/nominal data?
-2.  What's one thing you liked about how the graphic portrays the data?
-3.  What's one thing you would change about the graphic to make it better?
-:::
+::: {.columns}
+::: {.column width="55%"}
+Discuss the reading graphic:
 
-::: column
-![](images/ny.png)
-:::
-:::::
+1. **Review:** What data is shown? How is color used to encode ordinal, binary, or nominal data?
 
-<!-- end columns -->
+2. **Praise:** What's one thing you liked about how the graphic portrays data?
+
+3. **Critique:** What's one change that would make it better?
 
 `{{< countdown "3:00" >}}`
+:::
+::: {.column width="45%"}
+![](images/ny.png)
+:::
+:::
 
-## Today's Learning Goals
 
-1.  Explain the importance of using pre-attentive attributes to guide the user.
+# Today's Learning Goals
 
-2.  Apply Gestalt principles to design good visualizations.
+::: {.incremental}
+1. **Explain** why preattentive attributes guide the viewer's eye before conscious thought
+2. **Apply** Gestalt principles to design cleaner, more effective visualizations
+:::
 
-# Visual Perception: Gestalt Principles, Preattentive Attributes
 
-# Find the difference in the following photos
+# Part 1: Visual Processing
 
-## Ron Rensink’s examples
+## Find the Difference
+
+*Look at each pair of images. What makes it easy or hard to spot the change?*
+
+## Ron Rensink's Examples
 
 ![](images/1.png)
 
-## Ron Rensink’s examples
+## Ron Rensink's Examples
 
 ![](images/2.png)
 
-## Ron Rensink’s examples
+## Ron Rensink's Examples
 
 ![](images/3.png)
 
-## Prof Sanchez’s example
+## Prof. Sanchez's Example
 
 ![](images/4.png)
 
-## How does your brain process the images? What makes it easy or difficult to see the solution?
 
-::: incremental
--   This demonstrates the power and limitations of the human eye and brain
+## What Just Happened?
+
+::: {.incremental}
+- **Change blindness:** our brains don't store a perfect snapshot of the world
+- We only process what we're **focused on** or what **jumps out**
+- Small changes in unattended regions are completely invisible
+- This demonstrates the **power and limits** of human visual perception
 :::
 
-# Visual Processing
-
-## 2 processes: Sensory and Perception
-
-::::: columns
-::: column
-![](images/visual-process.png)
+::: {.callout-tip}
+**Takeaway for dataviz:** If something is important, you can't rely on your audience to *find* it. You must *direct* their attention to it.
 :::
 
-::: column
-The visual system consists of 2 parts:
 
--   Eyes
--   Brain
-
-The **eyes** act as image receptors.
-
-The **brain** acts as an image processing and interpretation unit.
-:::
-:::::
-
-<!-- end columns -->
-
-## Visual Perception
-
-Visual perception is a cognitive process.
-
-Neuroscientists and psychologists have developed an extensive theoretical body of knowledge for how we process information.
-
-We’ll provide a somewhat simplified version of such theories. This requires thinking about **the Brain as a computer.**
-
-## Information Processing and Visual Memory
+## How the Visual System Works
 
 ::: {.columns}
-::: {.column}
+::: {.column width="40%"}
+![](images/visual-process.png)
+:::
+::: {.column width="60%"}
+Visual processing has **two components:**
+
+**Eyes** — image receptors
+
+- Capture raw pixel information
+- No interpretation yet
+
+**Brain** — image processor + interpreter
+
+- Imposes structure and meaning
+- Fills in gaps, groups objects, detects patterns
+- Decides what to pay attention to
+
+:::
+:::
+
+
+## Visual Memory: Three Stages
+
+::: {.columns}
+::: {.column width="45%"}
 ![](images/brain.png)
 :::
-::: {.column}
+::: {.column width="55%"}
 
-Types of memory for processing visual information:
+| Memory Type | Analogy | Duration |
+|-------------|---------|----------|
+| **Iconic memory** | Buffer / temp storage | < 0.5 sec |
+| **Short-term (working)** | RAM | ~20 sec |
+| **Long-term** | Hard disk | Permanent |
 
-- Iconic memory (visual sensory register) like the buffer or temporary
-
-- Short-term memory (working memory) like the random access memory (RAM)
-
-- Long-term memory (“permanent” storage) like the hard disk
+Good visualizations work *with* these limits — not against them.
 
 :::
 :::
-<!-- end columns -->
 
-## Iconic Memory (aka Preattentive Processing)
 
-The iconic memory is a sort of waiting room where each snapshot of input waits to be passed on to short-term memory.
+# Part 2: Preattentive Processing
 
-Rapid processing: almost automatic (lasts less than half a second), parallel, and “unconscious”.
+## Iconic Memory = Preattentive Processing
 
-This occurs almost automatically and relies on contrast between features in an image.
+> Iconic memory is a **waiting room** where each snapshot waits to be passed to short-term memory.
 
-## How many sixes can you count?
+::: {.incremental}
+- Processing is **rapid** (under 250ms)
+- It is **parallel** so you see the whole image at once, not pixel by pixel
+- It is **unconscious**, happens before you "decide" to look
+- It relies on **contrast** between features
+:::
+
+## The Power of Preattentive Processing
+
+Can you count the 6s?
 
 ![](images/6.png)
 
-## How many sixes can you count?
 
-Without any visual cue, counting 6s requires attentive processing - slow, serial, exhausting
+
+## The Power of Preattentive Processing
+
+Now try:
 
 ![](images/6-1.png)
 
-## 2 Types of Vision
+::: {.fragment}
+**What changed?** A single visual attribute, color, made the target pop out without counting.
+
+This is preattentive processing at work.
+:::
 
 
-![](images/2-types.png)
+## Two Types of Visual Search
+
+| Preattentive (fast) | Attentive (slow) |
+|---------------------|-----------------|
+| Parallel — whole image at once | Serial — scan one element at a time |
+| < 250ms regardless of # items | Time increases with number of items |
+| "Pop-out" effect | Effortful, exhausting |
+
+
+## The Preattentive Attributes
+
+These visual features are processed **before conscious attention:**
+
+::: {.columns}
+::: {.column width="50%"}
+*Form*
+
+- Shape
+- Size
+- Orientation
+- Line length / width
+- Enclosure / grouping
+- Added marks (fill, texture)
+:::
+::: {.column width="50%"}
+*Color*
+
+- Hue (the "color" itself)
+- Intensity / saturation
+- Luminance / brightness
+
+*Spatial*
+
+- 2D position
+- Depth cues (stereoscopic)
+- Motion
+:::
+:::
+
+
+## Activity: Spot the Preattentive Attribute
+
+*Which attribute makes the target pop out instantly? Which requires search?*
+
+Try each example below and think about **why** it's fast or slow.
+
+`{{< countdown "3:00" >}}`
+
+
+## Design Rule #1
+
+::: {.callout-important}
+## Use preattentive attributes to direct attention
+
+If something is the most important part of your chart, an outlier, a threshold, a key category, encode it with a preattentive attribute (usually **color** or **size**) so it pops out without effort.
+
+Don't make your audience search for the point.
+:::
+
+
+## Design Rule #2
+
+::: {.callout-warning}
+## Don't overload the preattentive channels
+
+Using too many colors, sizes, or shapes forces your viewer into **attentive (slow) search mode**, exactly what you were trying to avoid.
+
+Rule of thumb: highlight **one thing** with a strong preattentive signal. Keep everything else neutral (gray is your friend).
+:::
 
 
 
+## Memory and Visualization
+
+Understanding how our brains pay attention, and how our memory system handles incoming information, goes a long way toward making better visualizations.
+
+Key question to ask yourself every time: *"Am I making my audience work harder than necessary?"*
 
 
-# Preattentive features
 
-Take advantage of preattentive features to make your audience not have to work too hard
+# Part 3: Gestalt Principles
 
-## Memory and Visual Perception
+## What is Gestalt Theory?
 
-Understanding how our brains pay attention to things, and how our memory system deals with information coming at us from the world, can go a long way toward producing better data visualizations
+**Gestalt** (German: *"whole"* or *"form"*)
 
-# Gestalt principles
+::: {.incremental}
+- Developed in Germany in the 1920s
+- A theory of *form processing*:how we organize visual input into meaningful wholes
+- **The whole is different from the sum of its parts**
+- We don't see isolated pixels but rather *objects, groups, and relationships*
+:::
 
-## Let's Review Some Graphics
+Good design works with these principles
 
-We will show you several examples of charts published in media outlets like FiveThirtyEight. We’ll comment on the charts, identifying the application of conceptual elements from the theory of data visualization, as well as from the Gestalt theory of Form Processing.
+---
 
-## About Gestalt Theory
+## The 8 Main Gestalt Principles
 
-One of the theories of **Form Processing**
+| Principle | The Brain Assumes… |
+|-----------|-------------------|
+| **Proximity** | Things close together belong together |
+| **Similarity** | Things that look alike are related |
+| **Continuity** | Lines and curves continue in the smoothest path |
+| **Closure** | Incomplete shapes are seen as complete |
+| **Connectivity** | Objects joined by lines are related |
+| **Enclosure** | Objects sharing a boundary form a group |
+| **Symmetry** | Symmetric arrangements feel stable and grouped |
+| **Figure & Ground** | We separate foreground from background |
 
-**Gestalt**: german for “whole” or “form”
 
-Founded in Germany (1920’s)
+## Gestalt in practice: FiveThirtyEight
 
-**Idea**: people organize visual sensations into meaningful wholes or forms, and the whole is different from the sum of its parts
+*We'll walk through several published charts and identify the Gestalt principles at work.*
 
-## Main Gestalt Principles
-
--   Continuation
-
--   Connectivity
-
--   Closure
-
--   Similarity
-
--   Proximity
-
--   Symmetry
-
--   Figure & Ground
-
--   Enclosure
 
 ## Why Democrats Struggle to Mobilize a Religious Left
 
 ![](images/538-1.png)
 
-## Gestalt principle: Connection or Connectivity
+
+## Principle: Connectivity
 
 ![](images/gestalt-1.png)
 
-## Gestalt principle: Proximity
+::: {.fragment}
+**In dataviz:** Lines in a line chart connect points across time. The connection implies continuity and relationship even though the data points are discrete.
+:::
+
+
+## Principle: Proximity
 
 ![](images/gestalt-2.png)
 
-## Gestalt Principle: Similarity
+::: {.fragment}
+**In dataviz:** Grouped bar charts use proximity to show that bars within a group belong together (same time period, same category). Spacing *between* groups signals separation.
+:::
+
+
+## Principle: Similarity
 
 ![](images/gestalt-3.png)
 
-##
-
-![](images/538-2.png)
+::: {.fragment}
+**In dataviz:** A consistent color for "Democrats" across all charts in a report uses similarity to signal the same category.
+:::
 
 ## Bryce Harper May Already Be Past His Prime
 
 ::: {.columns}
-::: {.column}
+::: {.column width="55%"}
 ![](images/538-3.png)
 :::
-::: {.column}
-Gestalt Principle: Continuity 
+::: {.column width="45%"}
+**Principle: Continuity**
 
 ![](images/gestalt-4.png)
+
+The eye follows the smoothest path through a series of points so we perceive a *trend*, not individual values, and this is why line charts are so good at showing trajectories
 :::
 :::
-<!-- end columns -->
 
 ## How Unpopular is Donald Trump?
 
@@ -316,37 +415,85 @@ Gestalt Principle: Continuity
 
 ## Chunking
 
-Chunking is a process by which individual pieces of an information set are broken down and then grouped together in a meaningful whole. 
-The chunks by which the information is grouped is meant to improve short-term retention of the material, thus bypassing the limited capacity of working memory.
+> **Chunking** is the process of grouping individual pieces of information into meaningful wholes to improve retention.
 
-## The 5 Corners Of The 2020 Democratic Primary
+::: {.incremental}
+- Working memory can hold ~4 "chunks" at a time
+- Good charts chunk information visually (through spacing, color, enclosure, or labels)
+:::
+
+
+## The 5 Corners of the 2020 Democratic Primary
 
 ![](images/538-5.png)
 
-## Gestalt principle: Enclosure
+
+## Principle: Enclosure
+
+Objects sharing a common region are perceived as belonging together.
 
 ![](images/gestalt-5.png)
 
+::: {.fragment}
+**In dataviz:** Shaded regions, background panels, and borders create groups without explicit labels. The boundary does the cognitive work for you.
+:::
 
-## Gestalt principle: Figure & Ground
+
+## Principle: Figure & Ground
+
+We instinctively separate a "figure" (foreground object) from its "ground" (background).
 
 ![](images/gestalt.png)
 
-# In-Class Activity 
+::: {.fragment}
+**In dataviz:** A white chart background is the "ground." Your data marks are the "figure." Gridlines should recede into the background, not compete with your data.
 
-This will serve as your attendance so please turn it in by the end of class
+High-contrast accent colors push elements into the foreground.
+:::
 
-With a partner, identify the Gestalt principles of the graphics on the worksheet.
+## Putting It All Together
+
+::: {.callout-tip}
+## A checklist for every chart you make
+
+- [ ] Is the most important element highlighted with a **preattentive attribute**?
+- [ ] Is everything else visually **muted** (gray, thin, light)?
+- [ ] Are related elements **close together** (proximity)?
+- [ ] Are same-category elements **visually consistent** (similarity)?
+- [ ] Are groups **enclosed or separated** with whitespace or borders (enclosure)?
+- [ ] Do your lines create a clear **figure** against a receding background (figure/ground)?
+- [ ] Are you working **with** these principles?
+:::
+
+
+# In-Class Activity
+
+## Gestalt Principles in the Wild
+
+With a partner, identify the Gestalt principles in the graphics on the worksheet.
+
+For each chart, note:
+
+1. **Which principle(s)** are at work
+2. **How** the designer used it (spacing, color, enclosure, etc.)
+3. Whether it **helps or hurts** the visualization
 
 `{{< countdown "15:00" >}}`
 
-# Homework
+# Homework {.smaller}
 
--   HW 4: Recreating Screen Time Use
+**HW 4:** Recreating a Screen Time Bar Chart
 
-- Article for next week: We Still Don’t Believe How Much Things Cost”
-https://www.wsj.com/economy/consumers/grocery-prices-inflation-coffee-milk-903aead6
+- Reshape and plot your own screen time data using `ggplot2`
+- Apply what you know about color and preattentive attributes to make a clean, readable chart
 
--   Start looking for potential data sets for your final project and turn in your final project proposal (due 4/20).
+**Reading for next week:**
 
-    -   Email us if you need help!
+*"We Still Don't Believe How Much Things Cost"* — WSJ
+[Link](https://www.wsj.com/economy/consumers/grocery-prices-inflation-coffee-milk-903aead6)
+
+**Final Project:**
+
+- Start looking for datasets now
+- Proposal due **4/20**
+- Email us if you need help finding or cleaning data

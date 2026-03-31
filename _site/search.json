@@ -2078,5 +2078,320 @@
     "title": "Lecture 6",
     "section": "HW6 - Recreating",
     "text": "HW6 - Recreating\n\nArticle: Data About Covid Vaccine Supply and Demand (NYT)\nhttps://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html\n\nThe graphic of interest is the animated scatterplot\nThis article involves the use of a complementary-and-adjacent color scheme, orange-teal\nWe have the data to replicate this animation in the next lecture; this would require introducing a couple of functions from the package “gganimate”\nCSV data file: vaccination-gdp-countries-2021.csv"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#icebreaker",
+    "href": "units/7-color3/slides copy.html#icebreaker",
+    "title": "Lecture 7",
+    "section": "ICEBREAKER",
+    "text": "ICEBREAKER\nMost recent life-hack or life-skill you learned"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#agenda",
+    "href": "units/7-color3/slides copy.html#agenda",
+    "title": "Lecture 7",
+    "section": "Agenda",
+    "text": "Agenda\n\nDiscussion of Reading\nActivity (Attention)\nVisual Processing\nActivity (Preattentive Attribute)\nGestalt Principles of Perception + Activity\nExplain Homework"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#icebreaker-1",
+    "href": "units/7-color3/slides copy.html#icebreaker-1",
+    "title": "Lecture 7",
+    "section": "ICEBREAKER",
+    "text": "ICEBREAKER\nMost recent life-hack or life-skill you learned"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#looking-ahead",
+    "href": "units/7-color3/slides copy.html#looking-ahead",
+    "title": "Lecture 7",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\n4/7: Maps, pt 1\n4/14: Maps, pt 2\n4/21: Final Project Preparation"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#final-project-description",
+    "href": "units/7-color3/slides copy.html#final-project-description",
+    "title": "Lecture 7",
+    "section": "Final Project Description",
+    "text": "Final Project Description\n\nDescription: For the final project you will create a report in a similar style to the NYT articles we have viewed in class. Using data of your choosing, your report will include at least 3 different kinds graphics (scatterplot, histogram, map, etc.).\n\nFor each visualization there should be:\n\nA description of what the graphic reveals about the data\nA description of certain design decisions you made in order to produce the graphic(i.e. type of plot, color scheme, theme elements, etc.)\n\nDURING class on Tuesday 4/28 you will give a brief 3-5 minute presentation of your report via google slides."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#final-project-elements",
+    "href": "units/7-color3/slides copy.html#final-project-elements",
+    "title": "Lecture 7",
+    "section": "Final Project Elements",
+    "text": "Final Project Elements\n\nFinal Project Proposal\n\nType: Google doc pdf\nTo: BCourses\nDue: 4/20, 11:59 PM\n\nPresentation:\n\nType: google slides\nDue: BCourses\nDue: 4/27, 11:59 PM\n\nCoding Materials:\n\nType: QMD file + csv of your data\nTo: BCourses\nDue: 4/27, 11:59 PM"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#dataset-guidelines",
+    "href": "units/7-color3/slides copy.html#dataset-guidelines",
+    "title": "Lecture 7",
+    "section": "Dataset Guidelines",
+    "text": "Dataset Guidelines\nMake sure your data falls within the project guidelines:\n\n\nYou may not use a data set that has already been used in the course:\n\nEx: Iris, mtcars, storms, etc.\n\nYou may use multiple data sets if they are related:\n\nEx. If you are looking at wealth across the world you could use a data set for country GDP, and a separate dataset for poverty rates. \n\nYou may use your own data from an app, device, or website\n\nSuggestions for Finding Data Sets:\n\nGithub repository\nMicrosoft Tableau Suggestions"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#datasets-continued",
+    "href": "units/7-color3/slides copy.html#datasets-continued",
+    "title": "Lecture 7",
+    "section": "Datasets Continued",
+    "text": "Datasets Continued\n\nContact us by 4/14 if you need help finding a data set!\nNote: You may need to manipulate the data set you download before using it\n\nIf your data is not in a format you can easily work with contact us by 4/14 so we can help you."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#final-project-proposal",
+    "href": "units/7-color3/slides copy.html#final-project-proposal",
+    "title": "Lecture 7",
+    "section": "Final Project Proposal",
+    "text": "Final Project Proposal\n\nDue: 11/20\nDescription: In 4-5 sentences provide a brief overview of your project. You should include the topic of your project, what dataset(s) you are using, and a rough plan of the three different visualizations you will create. You should also let us know if you would like additional resources for certain aspects of your project. (Ex. You want to include a visualization that we have not covered in class such as an interactive map).\nFile type: Google doc pdf\nSubmit to: BCourses"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#questions",
+    "href": "units/7-color3/slides copy.html#questions",
+    "title": "Lecture 7",
+    "section": "Questions?",
+    "text": "Questions?"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#discuss-in-groups-of-23",
+    "href": "units/7-color3/slides copy.html#discuss-in-groups-of-23",
+    "title": "Lecture 7",
+    "section": "Discuss in Groups of 2–3",
+    "text": "Discuss in Groups of 2–3\n\n\nDiscuss the reading graphic:\n\nReview: What data is shown? How is color used to encode ordinal, binary, or nominal data?\nPraise: What’s one thing you liked about how the graphic portrays data?\nCritique: What’s one change that would make it better?"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#find-the-difference",
+    "href": "units/7-color3/slides copy.html#find-the-difference",
+    "title": "Lecture 7",
+    "section": "Find the Difference",
+    "text": "Find the Difference\nLook at each pair of images. What makes it easy — or hard — to spot the change?"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#ron-rensinks-examples",
+    "href": "units/7-color3/slides copy.html#ron-rensinks-examples",
+    "title": "Lecture 7",
+    "section": "Ron Rensink’s Examples",
+    "text": "Ron Rensink’s Examples"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#ron-rensinks-examples-1",
+    "href": "units/7-color3/slides copy.html#ron-rensinks-examples-1",
+    "title": "Lecture 7",
+    "section": "Ron Rensink’s Examples",
+    "text": "Ron Rensink’s Examples"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#ron-rensinks-examples-2",
+    "href": "units/7-color3/slides copy.html#ron-rensinks-examples-2",
+    "title": "Lecture 7",
+    "section": "Ron Rensink’s Examples",
+    "text": "Ron Rensink’s Examples"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#prof.-sanchezs-example",
+    "href": "units/7-color3/slides copy.html#prof.-sanchezs-example",
+    "title": "Lecture 7",
+    "section": "Prof. Sanchez’s Example",
+    "text": "Prof. Sanchez’s Example"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#what-just-happened",
+    "href": "units/7-color3/slides copy.html#what-just-happened",
+    "title": "Lecture 7",
+    "section": "What Just Happened?",
+    "text": "What Just Happened?\n\nChange blindness: our brains don’t store a perfect snapshot of the world\nWe only process what we’re focused on or what jumps out\nSmall changes in unattended regions are completely invisible\nThis demonstrates the power and limits of human visual perception\n\n\n\n\n\n\n\nTip\n\n\nTakeaway for dataviz: If something is important, you can’t rely on your audience to find it. You must direct their attention to it."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#how-the-visual-system-works",
+    "href": "units/7-color3/slides copy.html#how-the-visual-system-works",
+    "title": "Lecture 7",
+    "section": "How the Visual System Works",
+    "text": "How the Visual System Works\n\n\n\n\nVisual processing has two components:\nEyes — image receptors\n\nCapture raw pixel information\nNo interpretation yet\n\nBrain — image processor + interpreter\n\nImposes structure and meaning\nFills in gaps, groups objects, detects patterns\nDecides what to pay attention to"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#visual-memory-three-stages",
+    "href": "units/7-color3/slides copy.html#visual-memory-three-stages",
+    "title": "Lecture 7",
+    "section": "Visual Memory: Three Stages",
+    "text": "Visual Memory: Three Stages\n\n\n\n\n\n\n\nMemory Type\nAnalogy\nDuration\n\n\n\n\nIconic memory\nBuffer / temp storage\n&lt; 0.5 sec\n\n\nShort-term (working)\nRAM\n~20 sec\n\n\nLong-term\nHard disk\nPermanent\n\n\n\nGood visualizations work with these limits — not against them."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#iconic-memory-preattentive-processing",
+    "href": "units/7-color3/slides copy.html#iconic-memory-preattentive-processing",
+    "title": "Lecture 7",
+    "section": "Iconic Memory = Preattentive Processing",
+    "text": "Iconic Memory = Preattentive Processing\n\nIconic memory is a waiting room where each snapshot waits to be passed to short-term memory.\n\n\nProcessing is rapid — under 250ms\nIt is parallel — the whole image at once, not pixel by pixel\nIt is unconscious — happens before you “decide” to look\nIt relies on contrast between features\n\n\n\n\n\n\n\nNote\n\n\nThis is the visual system doing work before you’re aware of it."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#the-power-of-preattentive-processing",
+    "href": "units/7-color3/slides copy.html#the-power-of-preattentive-processing",
+    "title": "Lecture 7",
+    "section": "The Power of Preattentive Processing",
+    "text": "The Power of Preattentive Processing\nCan you count the 6s?"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#the-power-of-preattentive-processing-1",
+    "href": "units/7-color3/slides copy.html#the-power-of-preattentive-processing-1",
+    "title": "Lecture 7",
+    "section": "The Power of Preattentive Processing",
+    "text": "The Power of Preattentive Processing\nNow try:\n\n\nWhat changed? A single visual attribute, color, made the target pop out without counting.\nThis is preattentive processing at work."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#two-types-of-visual-search",
+    "href": "units/7-color3/slides copy.html#two-types-of-visual-search",
+    "title": "Lecture 7",
+    "section": "Two Types of Visual Search",
+    "text": "Two Types of Visual Search\n\n\n\nPreattentive (fast)\nAttentive (slow)\n\n\n\n\nParallel — whole image at once\nSerial — scan one element at a time\n\n\n&lt; 250ms regardless of # items\nTime increases with number of items\n\n\n“Pop-out” effect\nEffortful, exhausting"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#the-preattentive-attributes",
+    "href": "units/7-color3/slides copy.html#the-preattentive-attributes",
+    "title": "Lecture 7",
+    "section": "The Preattentive Attributes",
+    "text": "The Preattentive Attributes\nThese visual features are processed before conscious attention:\n\n\nForm\n\nShape\nSize\nOrientation\nLine length / width\nEnclosure / grouping\nAdded marks (fill, texture)\n\n\nColor\n\nHue (the “color” itself)\nIntensity / saturation\nLuminance / brightness\n\nSpatial\n\n2D position\nDepth cues (stereoscopic)\nMotion"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#activity-spot-the-preattentive-attribute",
+    "href": "units/7-color3/slides copy.html#activity-spot-the-preattentive-attribute",
+    "title": "Lecture 7",
+    "section": "Activity: Spot the Preattentive Attribute",
+    "text": "Activity: Spot the Preattentive Attribute\nWhich attribute makes the target pop out instantly? Which requires search?\nTry each example below and think about why it’s fast or slow."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#design-rule-1",
+    "href": "units/7-color3/slides copy.html#design-rule-1",
+    "title": "Lecture 7",
+    "section": "Design Rule #1",
+    "text": "Design Rule #1\n\n\n\n\n\n\nUse preattentive attributes to direct attention\n\n\nIf something is the most important part of your chart, an outlier, a threshold, a key category, encode it with a preattentive attribute (usually color or size) so it pops out without effort.\nDon’t make your audience search for the point."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#design-rule-2",
+    "href": "units/7-color3/slides copy.html#design-rule-2",
+    "title": "Lecture 7",
+    "section": "Design Rule #2",
+    "text": "Design Rule #2\n\n\n\n\n\n\nDon’t overload the preattentive channels\n\n\nUsing too many colors, sizes, or shapes forces your viewer into attentive (slow) search mode, exactly what you were trying to avoid.\nRule of thumb: highlight one thing with a strong preattentive signal. Keep everything else neutral (gray is your friend)."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#visual-hierarchy-in-practice",
+    "href": "units/7-color3/slides copy.html#visual-hierarchy-in-practice",
+    "title": "Lecture 7",
+    "section": "Visual Hierarchy in Practice",
+    "text": "Visual Hierarchy in Practice\n\n\nNo hierarchy\nEverything is the same color and size. Exhausting to look at.\n\nClear hierarchy\nOne element is highlighted (preattentive). The rest are muted and your eyes are drawn to the focus.\n\n\n\nGray is not boring, it’s helpful It lets your accent color pop out more."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#memory-and-visualization",
+    "href": "units/7-color3/slides copy.html#memory-and-visualization",
+    "title": "Lecture 7",
+    "section": "Memory and Visualization",
+    "text": "Memory and Visualization\n\n\n\n\n\n\nNote\n\n\nUnderstanding how our brains pay attention, and how our memory system handles incoming information, goes a long way toward making better visualizations.\nKey question to ask yourself every time: “Am I making my audience work harder than necessary?”"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#what-is-gestalt-theory",
+    "href": "units/7-color3/slides copy.html#what-is-gestalt-theory",
+    "title": "Lecture 7",
+    "section": "What is Gestalt Theory?",
+    "text": "What is Gestalt Theory?\nGestalt (German: “whole” or “form”)\n\nDeveloped in Germany in the 1920s\nA theory of form processing — how we organize visual input into meaningful wholes\nCore idea: the whole is different from the sum of its parts\nWe don’t see isolated pixels — we see objects, groups, and relationships\n\nGood design works with these principles"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#the-8-main-gestalt-principles",
+    "href": "units/7-color3/slides copy.html#the-8-main-gestalt-principles",
+    "title": "Lecture 7",
+    "section": "The 8 Main Gestalt Principles",
+    "text": "The 8 Main Gestalt Principles\n\n\n\nPrinciple\nThe Brain Assumes…\n\n\n\n\nProximity\nThings close together belong together\n\n\nSimilarity\nThings that look alike are related\n\n\nContinuity\nLines and curves continue in the smoothest path\n\n\nClosure\nIncomplete shapes are seen as complete\n\n\nConnectivity\nObjects joined by lines are related\n\n\nEnclosure\nObjects sharing a boundary form a group\n\n\nSymmetry\nSymmetric arrangements feel stable and grouped\n\n\nFigure & Ground\nWe separate foreground from background"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#gestalt-in-practice-fivethirtyeight",
+    "href": "units/7-color3/slides copy.html#gestalt-in-practice-fivethirtyeight",
+    "title": "Lecture 7",
+    "section": "Gestalt in practice: FiveThirtyEight",
+    "text": "Gestalt in practice: FiveThirtyEight\nWe’ll walk through several published charts and identify the Gestalt principles at work."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#why-democrats-struggle-to-mobilize-a-religious-left",
+    "href": "units/7-color3/slides copy.html#why-democrats-struggle-to-mobilize-a-religious-left",
+    "title": "Lecture 7",
+    "section": "Why Democrats Struggle to Mobilize a Religious Left",
+    "text": "Why Democrats Struggle to Mobilize a Religious Left"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#principle-connectivity",
+    "href": "units/7-color3/slides copy.html#principle-connectivity",
+    "title": "Lecture 7",
+    "section": "Principle: Connectivity",
+    "text": "Principle: Connectivity\n\n\nIn dataviz: Lines in a line chart connect points across time. The connection implies continuity and relationship — even though the data points are discrete."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#principle-proximity",
+    "href": "units/7-color3/slides copy.html#principle-proximity",
+    "title": "Lecture 7",
+    "section": "Principle: Proximity",
+    "text": "Principle: Proximity\n\n\nIn dataviz: Grouped bar charts use proximity to show that bars within a group belong together (same time period, same category). Spacing between groups signals separation."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#principle-similarity",
+    "href": "units/7-color3/slides copy.html#principle-similarity",
+    "title": "Lecture 7",
+    "section": "Principle: Similarity",
+    "text": "Principle: Similarity\n\n\nIn dataviz: A consistent color for “Democrats” across all charts in a report uses similarity to signal the same category — no legend lookup needed."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#bryce-harper-may-already-be-past-his-prime",
+    "href": "units/7-color3/slides copy.html#bryce-harper-may-already-be-past-his-prime",
+    "title": "Lecture 7",
+    "section": "Bryce Harper May Already Be Past His Prime",
+    "text": "Bryce Harper May Already Be Past His Prime\n\n\n\n\nPrinciple: Continuity\n\nThe eye follows the smoothest path through a series of points — we perceive a trend, not individual values.\nThis is why line charts are so good at showing trajectories."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#how-unpopular-is-donald-trump",
+    "href": "units/7-color3/slides copy.html#how-unpopular-is-donald-trump",
+    "title": "Lecture 7",
+    "section": "How Unpopular is Donald Trump?",
+    "text": "How Unpopular is Donald Trump?"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#chunking",
+    "href": "units/7-color3/slides copy.html#chunking",
+    "title": "Lecture 7",
+    "section": "Chunking",
+    "text": "Chunking\n\nChunking is the process of grouping individual pieces of information into meaningful wholes to improve retention.\n\n\nWorking memory can hold ~4 “chunks” at a time\nGood charts chunk information visually (through spacing, color, enclosure, or labels)"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#the-5-corners-of-the-2020-democratic-primary",
+    "href": "units/7-color3/slides copy.html#the-5-corners-of-the-2020-democratic-primary",
+    "title": "Lecture 7",
+    "section": "The 5 Corners of the 2020 Democratic Primary",
+    "text": "The 5 Corners of the 2020 Democratic Primary"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#principle-enclosure",
+    "href": "units/7-color3/slides copy.html#principle-enclosure",
+    "title": "Lecture 7",
+    "section": "Principle: Enclosure",
+    "text": "Principle: Enclosure\nObjects sharing a common region are perceived as belonging together.\n\n\nIn dataviz: Shaded regions, background panels, and borders create groups without explicit labels. The boundary does the cognitive work for you."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#principle-figure-ground",
+    "href": "units/7-color3/slides copy.html#principle-figure-ground",
+    "title": "Lecture 7",
+    "section": "Principle: Figure & Ground",
+    "text": "Principle: Figure & Ground\nWe instinctively separate a “figure” (foreground object) from its “ground” (background).\n\n\nIn dataviz: A white chart background is the “ground.” Your data marks are the “figure.” Gridlines should recede into the background — not compete with your data.\nHigh-contrast accent colors push elements into the foreground."
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#putting-it-all-together",
+    "href": "units/7-color3/slides copy.html#putting-it-all-together",
+    "title": "Lecture 7",
+    "section": "Putting It All Together",
+    "text": "Putting It All Together\n\n\n\n\n\n\nA checklist for every chart you make\n\n\n\nIs the most important element highlighted with a preattentive attribute?\nIs everything else visually muted (gray, thin, light)?\nAre related elements close together (proximity)?\nAre same-category elements visually consistent (similarity)?\nAre groups enclosed or separated with whitespace or borders (enclosure)?\nDo your lines create a clear figure against a receding background (figure/ground)?\nAre you working with these principles — or accidentally fighting them?"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#gestalt-principles-in-the-wild",
+    "href": "units/7-color3/slides copy.html#gestalt-principles-in-the-wild",
+    "title": "Lecture 7",
+    "section": "Gestalt Principles in the Wild",
+    "text": "Gestalt Principles in the Wild\nWith a partner, identify the Gestalt principles in the graphics on the worksheet.\nFor each chart, note:\n\nWhich principle(s) are at work\nHow the designer used it (spacing, color, enclosure, etc.)\nWhether it helps or hurts the visualization"
+  },
+  {
+    "objectID": "units/7-color3/slides copy.html#this-week",
+    "href": "units/7-color3/slides copy.html#this-week",
+    "title": "Lecture 7",
+    "section": "This Week",
+    "text": "This Week\nHW 4: Recreating a Screen Time Bar Chart\n\nReshape and plot your own screen time data using ggplot2\nApply what you know about color and preattentive attributes to make a clean, readable chart\n\nReading for next week:\n“We Still Don’t Believe How Much Things Cost” — WSJ Link\nFinal Project:\n\nStart looking for datasets now\nProposal due 4/20\nEmail us if you need help finding or cleaning data"
   }
 ]
