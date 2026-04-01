@@ -1,6 +1,6 @@
 ---
-title:  Week 8
-subtitle:  Maps Pt.1
+title:  Lecture 8
+subtitle:  Maps Part 1 - 
 format: stat198slides-revealjs
 ---
 
