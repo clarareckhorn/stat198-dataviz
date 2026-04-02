@@ -1,18 +1,68 @@
 ---
 title:  Lecture 8
-subtitle:  Maps Part 1 - 
+subtitle:  Spatial Data Part 1 - 
 format: stat198slides-revealjs
 ---
 
 # Agenda
 
-1. Discussion of reading
+1.  Discussion of reading
 
-2. 
+2.  Geographic Data
 
+3.  Projections and Coordinates
+
+4.  Map Visualizations
+
+5.  Activity: Choropleth Map Recreation
 
 # Icebreaker
 
+Weather app locations
+
+# Reading Discussion
+
+## Discuss in groups of 2-3
+
+::::: columns
+::: {.column width="60%"}
+1.  **Review:** What data is shown? How is color used to encode ordinal, binary, or nominal data?
+
+2.  **Praise:** What's one thing you liked about how the graphic portrays data?
+
+3.  **Critique:** What's one change that would make it better?
+:::
+
+::: {.column width="40%"}
+![](images/reading_graph.png)
+:::
+:::::
+
+# Learning Goals
+
+::: incremental
+1.  **Explain** why preattentive attributes guide the viewer's eye before conscious thought
+2.  **Apply** Gestalt principles to design cleaner, more effective visualizations
+:::
+
+# Types of Geographic Data
 
 
-# Discu
+
+# Projections and Coordinate Systems
+
+
+
+# Common Types of Map Visualizations
+
+:::::: incremental
+::::: columns
+::: column
+-   Choropleth Maps ![](images/choropleth-ex.png)
+:::
+
+::: column
+-   Symbol/Proportional Maps ![](images/proportional-map-ex.png)
+:::
+:::::
+::::::
