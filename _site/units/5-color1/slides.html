@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2f3081a84cd4859604ff54a50474bf31.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -155,7 +221,7 @@
 <p>You will have 35 minutes to complete the quiz. Good luck (and may the odds be ever in your favor)!!</p>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_2fc1a307" minutes="35" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_44a24f5f" minutes="35" seconds="0" update-every="1" tabindex="0" style="top:0;right:0;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -173,9 +239,10 @@
 </section>
 <section id="common-purposes-for-color-usage" class="slide level2">
 <h2>Common purposes for color usage</h2>
+<div class="fragment">
 <ul>
-<li class="fragment"><p><strong>Data encoding</strong></p></li>
-<li class="fragment"><p><strong>Design aspects</strong></p></li>
+<li class="fragment"><p><strong>Data encoding:</strong></p></li>
+<li class="fragment"><p><strong>Design aspects:</strong></p></li>
 </ul>
 <aside class="notes">
 <p>Data encoding: A main use of color (although not the only one) is to encode data. This encoding chiefly depends on the type of variables we are working with (e.g.&nbsp;qualitative or quantitative, discrete or continuous). Design aspects: Another important use of color has to do with design considerations such as psychology of color, decorative purposes, harmony, and things like that.</p>
@@ -190,6 +257,7 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</div>
 </section>
 <section id="how-do-we-specify-color-in-a-computational-sense" class="slide level2">
 <h2>How do we specify color in a computational sense?</h2>
@@ -250,84 +318,37 @@
 <section id="rgb-decimal-notation" class="title-slide slide level1 center">
 <h1>RGB Decimal Notation</h1>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/min-max-values.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
+<p><img data-src="images/min-max-values.png" data-fig-alig="center"> ## RGB Reference Colors . . .</p>
+<p><img data-src="images/reference-colors.png" data-fig-alig="center"></p>
 </div>
-</div>
+</section>
+<section id="why-do-rgb-values-range-from-0-to-255" class="slide level2">
+<h2>Why do RGB values range from 0 to 255?</h2>
+<p>There are 256 numbers from 0 to 255</p>
+<p>256 = 2<sup>8</sup></p>
+</section></section>
+<section>
+<section id="hexadecimal-notation" class="title-slide slide level1 center">
+<h1>Hexadecimal Notation</h1>
+
 </section>
 <section id="rgb-reference-colors" class="slide level2">
 <h2>RGB Reference Colors</h2>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/reference-colors.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
+<p><img data-src="images/reference-colors.png" data-fig-alig="center"></p>
+<p><strong>Example notations:</strong> - <span style="color:yellow;">Yellow</span>: (255,255,0) -</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">rgb</span>(<span class="dv">200</span>, <span class="dv">200</span>, <span class="dv">200</span>, <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "#C8C8C8"</code></pre>
 </div>
 </div>
-</section>
-<section id="model-and-its-cubic-geometric-space" class="slide level2">
-<h2>Model and its (cubic) geometric space</h2>
 
-<img data-src="images/RGB-cube.png" data-fig-alig="center" class="r-stretch"><p>You can play around with this cube <a href="https://www.infinityinsight.com/product.php?id=91">here</a>!</p>
+
+</div>
 </section></section>
-<section>
-<section id="why-do-rgb-values-range-from-0-to-255" class="title-slide slide level1 center">
-<h1>Why do RGB values range from 0 to 255?</h1>
-<p>There are 256 numbers from 0 to 255</p>
-<p>256 = 2<sup>8</sup></p>
-
-<img data-src="images/bytes.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="hexadecimal-notation" class="slide level2">
-<h2>Hexadecimal Notation</h2>
-<p>Hexadecimal representation uses 16 different symbols:</p>
-<ul>
-<li class="fragment"><p>First 10 digits (0-9)</p></li>
-<li class="fragment"><p>First 6 letters (A-F) which represent values 10 to 15</p></li>
-</ul>
-<p>This allows computers to store more information in less digits</p>
-<aside class="notes">
-<p>In a picture, a computer takes each pixel and stores its RGB number, so it would need many numbers if it were to use decimal notation.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-
-<img data-src="images/hex-symbols.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="hexadecimal-color-85a0f2" class="slide level2">
-<h2>Hexadecimal Color: #85A0F2</h2>
-<ul>
-<li class="fragment"><strong>#</strong> is the universal notation for a “hex number”</li>
-<li class="fragment">Each pair of symbols represents one pair of primary color</li>
-</ul>
-</section>
-<section id="from-hex-to-rgb-in-r" class="slide level2">
-<h2>From HEX to RGB (in R)</h2>
-
-<img data-src="images/HEX-RGB.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
-<section id="coding-activity" class="title-slide slide level1 center">
-<h1>Coding Activity</h1>
-<ol type="1">
-<li class="fragment"><p>Go into your console and type: install.packages(“colourpicker”)</p></li>
-<li class="fragment"><p>In a code chunk, try to come up with interesting colors using the <code>rgb()</code> function.</p></li>
-<li class="fragment"><p>In a different code chunk, access the colorpicker widget as follows: <code>colourpicker::colourWidget()</code></p></li>
-</ol>
-</section>
-
-<section id="reading-for-next-week" class="title-slide slide level1 center">
-<h1>Reading for next week</h1>
-<p><a href="https://www.pewresearch.org/short-reads/2023/10/10/most-us-presidents-have-been-in-their-50s-at-inauguration/">Age of US Presidents</a></p>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-logo-vsmall.png" class="slide-logo"></p>
@@ -694,7 +715,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
