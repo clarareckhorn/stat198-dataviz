@@ -2236,5 +2236,320 @@
       "Units",
       "8) Spatial Data 1"
     ]
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#discuss-in-groups-of-2-3",
+    "href": "units/8-spatial1/slides.html#discuss-in-groups-of-2-3",
+    "title": "Lecture 8",
+    "section": "Discuss in groups of 2-3",
+    "text": "Discuss in groups of 2-3\n\n\n\nReview: What data is shown? How many of Gestalt Principles can you identify?\nPraise: How does this graphic help you analyze the data the most?\nCritique: What’s one thing that could potentially create confusion or be misleading? How would you fix that?"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#geospatial-data",
+    "href": "units/8-spatial1/slides.html#geospatial-data",
+    "title": "Lecture 8",
+    "section": "Geospatial data",
+    "text": "Geospatial data\nRefers to information that identifies the location, shape, and relationships of objects on Earth using coordinates, maps, or geometry.\nIt combines location information (latitude/longitude), attribute information (descriptive details), and often temporal data (time-related context) to provide a complete geographic picture."
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#vector-data",
+    "href": "units/8-spatial1/slides.html#vector-data",
+    "title": "Lecture 8",
+    "section": "Vector Data",
+    "text": "Vector Data\n\nRepresents discrete features\nTypes:\n\nPoints (e.g., schools, coordinates)\nLines (e.g., roads, rivers)\nPolygons (e.g., countries, districts)\n\nBest for bounded, discrete data"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#vector-data-examples",
+    "href": "units/8-spatial1/slides.html#vector-data-examples",
+    "title": "Lecture 8",
+    "section": "Vector Data Examples",
+    "text": "Vector Data Examples"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#raster-data",
+    "href": "units/8-spatial1/slides.html#raster-data",
+    "title": "Lecture 8",
+    "section": "Raster Data",
+    "text": "Raster Data\n\nGridded data like satellite imagery or temperature maps"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#what-is-a-projection",
+    "href": "units/8-spatial1/slides.html#what-is-a-projection",
+    "title": "Lecture 8",
+    "section": "What is a Projection?",
+    "text": "What is a Projection?\n\nA mathematical transformation from a globe to a flat map\nDownside: All projections distort something (shape, area, distance, or direction)"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#common-projections",
+    "href": "units/8-spatial1/slides.html#common-projections",
+    "title": "Lecture 8",
+    "section": "Common projections",
+    "text": "Common projections"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#mercator",
+    "href": "units/8-spatial1/slides.html#mercator",
+    "title": "Lecture 8",
+    "section": "Mercator",
+    "text": "Mercator\n\n\nPreserves angles\nDistorts area"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#equal-area-albers-mollweide",
+    "href": "units/8-spatial1/slides.html#equal-area-albers-mollweide",
+    "title": "Lecture 8",
+    "section": "Equal-area (Albers, Mollweide)",
+    "text": "Equal-area (Albers, Mollweide)\n\nAccurate for statistical mapping\n\n\n\nAlbers Equal Area Conic Projection\n\n\nMollweide Projection"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#robinson",
+    "href": "units/8-spatial1/slides.html#robinson",
+    "title": "Lecture 8",
+    "section": "Robinson",
+    "text": "Robinson\n\nVisually appealing world maps"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#section",
+    "href": "units/8-spatial1/slides.html#section",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "library(sf)\n\nWarning: package 'sf' was built under R version 4.5.2\n\n\nLinking to GEOS 3.13.1, GDAL 3.11.4, PROJ 9.7.0; sf_use_s2() is TRUE\n\n# Example: create simple point\npoint &lt;- st_point(c(-122.27, 37.87)) |&gt; st_sfc(crs = 4326)\npoint\n\nGeometry set for 1 feature \nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: -122.27 ymin: 37.87 xmax: -122.27 ymax: 37.87\nGeodetic CRS:  WGS 84\n\n\nPOINT (-122.27 37.87)"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#section-1",
+    "href": "units/8-spatial1/slides.html#section-1",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "# Example: simple line\nline &lt;- st_linestring(matrix(c(0,0, 1,1, 2,1), ncol = 2, byrow = TRUE)) |&gt; \n  st_sfc(crs = 4326)\nline\n\nGeometry set for 1 feature \nGeometry type: LINESTRING\nDimension:     XY\nBounding box:  xmin: 0 ymin: 0 xmax: 2 ymax: 1\nGeodetic CRS:  WGS 84\n\n\nLINESTRING (0 0, 1 1, 2 1)"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#section-2",
+    "href": "units/8-spatial1/slides.html#section-2",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "# Example: simple polygon\npoly &lt;- st_polygon(list(matrix(c(0,0, 1,0, 1,1, 0,1, 0,0), ncol=2, byrow=TRUE))) |&gt; \n  st_sfc(crs = 4326)\nplot(st_geometry(poly))"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html",
+    "title": "Average Salary by State, 2024",
+    "section": "",
+    "text": "Warning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\nWarning: package 'rvest' was built under R version 4.5.1\n\n\nWarning: package 'sf' was built under R version 4.5.2\n\n\nWarning: package 'rnaturalearth' was built under R version 4.5.3\n\n\nWarning: package 'leaflet' was built under R version 4.5.3\n\n\nWarning: package 'usmap' was built under R version 4.5.2\n\n\nWarning: package 'ggiraph' was built under R version 4.5.2"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#details-datasheet",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#details-datasheet",
+    "title": "Average Salary by State, 2024",
+    "section": "1.1 Details (datasheet)",
+    "text": "1.1 Details (datasheet)\n\nTopic(s):\n\nEconomics\nU.S.\nSalaries\n\nData:\n\nSize: small data\nFormat: 2 data sets, one in CSV format, another in HTML\nRequires web scraping, assuming data from HTML\nRequires some cleansing (e.g. regex)\nRequires merging salary-data with map-data\n\nGraphic:\n\nType: choropleth map\nStyles: ggplot, interactive ggiraph, interactive leaflet\nInteractive: yes"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#r-packages",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#r-packages",
+    "title": "Average Salary by State, 2024",
+    "section": "1.2 R Packages",
+    "text": "1.2 R Packages\n\n# packages\nlibrary(tidyverse)     # ecosystem of data science packages\nlibrary(rvest)         # for web scraping\nlibrary(sf)            # \"simple features\" (classes for maps)\nlibrary(rnaturalearth) # maps database\nlibrary(leaflet)       # web interactive maps\nlibrary(usmap)         # map of US states (includes Alaska and Hawaii)\nlibrary(ggiraph)       # make ggplots interactive"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#other-sources",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#other-sources",
+    "title": "Average Salary by State, 2024",
+    "section": "1.3 Other Sources",
+    "text": "1.3 Other Sources\nRelated to the above article, there is a similar one in SoFi’s website titled Average US Salary by State by Jacqueline DeMarco (updated Jan 28, 2025)\nhttps://www.sofi.com/learn/content/average-salary-in-us/"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#data-from-forbes",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#data-from-forbes",
+    "title": "Average Salary by State, 2024",
+    "section": "2.1 Data from Forbes",
+    "text": "2.1 Data from Forbes\nThe data in Forbes is an HTML table. However, this HTML table is not scrapable. This is why are providing a data set (obtained by copy-paste from Forbes’ webpage) in the text file wage.tsv (Tab-Separated Value file). The data can be easily imported with the function read_tsv() as follows:\n\n# import file (all columns as 'character' data)\nwages = read_tsv(\"wage.tsv\", col_types = \"ccc\")\n\nhead(wages)\n\n# A tibble: 6 × 3\n  State      `Annual Average Wage` `Average Hourly Wage`\n  &lt;chr&gt;      &lt;chr&gt;                 &lt;chr&gt;                \n1 Alabama    $50,620               $24.32               \n2 Alaska     $66,130               $31.79               \n3 Arizona    $58,620               $28.18               \n4 Arkansas   $48,570               $23.35               \n5 California $73,220               $35.20               \n6 Colorado   $67,870               $32.63"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#data-from-sofi",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#data-from-sofi",
+    "title": "Average Salary by State, 2024",
+    "section": "2.2 Data from SoFi",
+    "text": "2.2 Data from SoFi\nAlternatively, you can also scrape the HTML table available in the SoFi webpage Average US Salary by State (by Jacqueline DeMarco, 03/28/24)\n\ndownload.file(\n  url = \"https://www.sofi.com/learn/content/average-salary-in-us/\", \n  destfile = \"source/average-salary-in-us.html\")\n\nThe interesting thing is that this table contains not just average salaries but also median salaries.\n\n# import data\ntbls = read_html(\"source/average-salary-in-us.html\") |&gt;\n  html_table()\n\ndat = tbls[[1]]\n\n# data with average and median salaries\ndat = dat |&gt;\n  mutate(Average = as.numeric(str_remove_all(Average, \"[,$]\")),\n         Median = as.numeric(str_remove_all(Median, \"[,$]\")))"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#data-preparation",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#data-preparation",
+    "title": "Average Salary by State, 2024",
+    "section": "2.3 Data Preparation",
+    "text": "2.3 Data Preparation\nThe raw data is not quite ready to be crunched. We need to perform a few manipulations of Annual Average Wage values, dealing with strings:\n\nwages = wages |&gt;\n  mutate(Average = as.numeric(str_remove_all(`Annual Average Wage`, \"[$,]\")))\n\nwages\n\n# A tibble: 50 × 4\n   State       `Annual Average Wage` `Average Hourly Wage` Average\n   &lt;chr&gt;       &lt;chr&gt;                 &lt;chr&gt;                   &lt;dbl&gt;\n 1 Alabama     $50,620               $24.32                  50620\n 2 Alaska      $66,130               $31.79                  66130\n 3 Arizona     $58,620               $28.18                  58620\n 4 Arkansas    $48,570               $23.35                  48570\n 5 California  $73,220               $35.20                  73220\n 6 Colorado    $67,870               $32.63                  67870\n 7 Connecticut $69,310               $33.32                  69310\n 8 Delaware    $62,260               $29.93                  62260\n 9 Florida     $55,980               $26.91                  55980\n10 Georgia     $58,000               $27.88                  58000\n# ℹ 40 more rows"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#map-of-usa-from-rnaturalearth",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#map-of-usa-from-rnaturalearth",
+    "title": "Average Salary by State, 2024",
+    "section": "3.1 Map of USA from \"rnaturalearth\"",
+    "text": "3.1 Map of USA from \"rnaturalearth\"\nWe begin by producing a first map of the U.S. This requires to get map data of the US territory—at the State level—via ne_states(). Notice that the returnclass argument must be set as returnclass = \"sf\" to guarantee that the return map object is of class \"sf\" (simple features).\n\n# map data\nusa_map = ne_states(\n  country = \"united states of america\", \n  returnclass = \"sf\")\n\nThe rnaturalearthhires package needs to be installed.\nInstalling the rnaturalearthhires package.\nthere is no package called 'pak'\n\n\nError in loadNamespace(x): there is no package called 'rnaturalearthhires'\n\nclass(usa_map)\n\nError: object 'usa_map' not found\n\n\nAs you can tell, the object usa_map is an object of class \"sf\". But it is also a data.frame object, i.e. a table. It contains a large number of columns. The most important columns—for our exploratory graphing purposes—are name (name of State), and the latitude-longitude coordinates in geometry.\n\nnames(usa_map)\n\nError: object 'usa_map' not found\n\n\nWith the \"sf' object in place, we can pass it to ggplot() and its layer function geom_sf(). To get a map of the contiguous states, we adjust the latitude-longitude coordinates with coord_sf():\n\n# basic map of USA (contiguous states)\nggplot() +\n  geom_sf(data = usa_map) +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#merging-map-data-with-salary-data",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#merging-map-data-with-salary-data",
+    "title": "Average Salary by State, 2024",
+    "section": "3.2 Merging map-data with salary-data",
+    "text": "3.2 Merging map-data with salary-data\nSo far we have a map of the US States. But what about the salary data? We need to merge (join) the table of the map usa_map with the table of average salary by state wages. This merging operation is done with inner_join(), indicating the names of the columns in both tables that have the States: name from table usa_map, and State from table wages\n\n# merging map and wages data tables\nusa_map_wages = inner_join(usa_map, wages, by = c(\"name\" = \"State\"))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#version-1",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#version-1",
+    "title": "Average Salary by State, 2024",
+    "section": "3.3 Version 1",
+    "text": "3.3 Version 1\nWith the merged data usa_map_wages, we can plot again a map of the US contiguous states, color coding the states with the Average values:\n\n# version 1\nusa_map_wages |&gt;\n  ggplot() +\n  geom_sf(aes(fill = Average)) +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map_wages' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#version-2",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#version-2",
+    "title": "Average Salary by State, 2024",
+    "section": "3.4 Version 2",
+    "text": "3.4 Version 2\nWe need to change the colors in order to follow the scheme used in the choropleth map published in Forbes:\n\n# version 2\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  ggplot() +\n  geom_sf(aes(fill = Average)) +\n  scale_fill_gradient(low = \"#0B057A\", high = \"#E6E6F1\") +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#version-3",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#version-3",
+    "title": "Average Salary by State, 2024",
+    "section": "3.5 Version 3",
+    "text": "3.5 Version 3\nThe next step involves categorizing salary values into different brackets\n\naverage salary greater than or equal to 70,000\naverage salary between 60,000 and 70,000\naverage salary between 50,000 and 60,000\naverage salary less than 50,000\n\nAlso, for sake of practice, we can change the color scheme (to pink):\n\n# version 3\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  mutate(Cutoffs = case_when(\n    Average &gt;= 70000 ~ \"&gt;=70K\",\n    Average &gt;= 60000 ~ \"60K-70K\",\n    Average &gt;= 50000 ~ \"50K-60K\",\n    Average &lt; 50000 ~ \"&lt;50K\")) |&gt;\n  mutate(Color = case_when(\n    Cutoffs == \"&lt;50K\" ~ \"#e6e6f1\",\n    Cutoffs == \"50K-60K\" ~ \"#9D9BC9\",\n    Cutoffs == \"60K-70K\" ~ \"#5450a1\",\n    Cutoffs == \"&gt;=70K\" ~ \"#0b057a\"\n  )) |&gt;\nggplot() +\n  geom_sf(aes(fill = Color)) +\n  # I don't look like this palette\n  scale_fill_manual(values = c(\"#0b057a\", \"#5450a1\", \"#9D9BC9\", \"#e6e6f1\")) +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#map-with-all-states",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#map-with-all-states",
+    "title": "Average Salary by State, 2024",
+    "section": "3.6 Map with all States",
+    "text": "3.6 Map with all States\nWhat if we want to visualize all States (including Alaska and Hawaii) and not just the contiguous territory?\nNo problem! We can use one of the maps from the package \"usmap\", namely the map object returned by the function us_map().\nThe following code chunk starts with the merging operation to join us_map() data with the wages data, and the pipes it to ggplot() and friends. In addition, we are using a Viridis continuous scale color:\n\n# use the data from \"us_map()\" which is already an \"sf\" object\nus_map() |&gt;\n  inner_join(wages, by = c(\"full\" = \"State\")) |&gt;\n  ggplot() +\n  geom_sf(aes(fill = Average), color = \"white\") +\n  scale_fill_viridis_c(direction = -1) +\n  theme_void()\n\n\n\n\n\n\n\n\nWe can make it interactive by using geom_sf_interactive() and activating the tooltip argument inside the aesthetic mappings.\n\n# use the data from \"us_map()\" which is already an \"sf\" object\ngmap = us_map() |&gt;\n  inner_join(wages, by = c(\"full\" = \"State\")) |&gt;\n  ggplot() +\n  geom_sf_interactive(aes(fill = Average, \n                          tooltip = paste0(full, \": \", Average)), \n                      color = \"white\") +\n  scale_fill_viridis_c(direction = -1) +\n  theme_void()\n\ngirafe(ggobj = gmap)"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#interactive-map-with-leaflet",
+    "href": "units/8-spatial1/average-salary-by-state/average-salary-by-state.html#interactive-map-with-leaflet",
+    "title": "Average Salary by State, 2024",
+    "section": "3.7 Interactive Map with Leaflet",
+    "text": "3.7 Interactive Map with Leaflet\nThe previous maps have been produced with ggplot. They are nice but are static visualizations. Interestingly, we can use the \"leaflet\" package that allows us graph interactive web maps.\n\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  mutate(Cutoffs = case_when(\n    Average &gt;= 70000 ~ \"&gt;=70K\",\n    Average &gt;= 60000 ~ \"60K-70K\",\n    Average &gt;= 50000 ~ \"50K-60K\",\n    Average &lt; 50000 ~ \"&lt;50K\")) |&gt;\n  mutate(Color = case_when(\n    Cutoffs == \"&lt;50K\" ~ \"#e6e6f1\",\n    Cutoffs == \"50K-60K\" ~ \"#9D9BC9\",\n    Cutoffs == \"60K-70K\" ~ \"#5450a1\",\n    Cutoffs == \"&gt;=70K\" ~ \"#0b057a\"\n  )) |&gt;\n  mutate(Label = paste0(name, \", $\", Average)) |&gt;\nleaflet() |&gt;\n  addTiles() |&gt;\n  setView(lng = -100, \n          lat = 40, \n          zoom = 4) |&gt;\n  addPolygons(color = ~Color,\n              fillColor = ~Color, \n              fillOpacity = 0.8, \n              label = ~Label,\n              weight = 1,\n              highlight = highlightOptions(\n                weight = 5,\n                color = \"#000000\",\n                fillOpacity = 1))\n\nWarning in structure(list(options = options), leafletData = data): restarting\ninterrupted promise evaluation\n\n\nWarning in derivePolygons(data, lng, lat, missing(lng), missing(lat),\n\"addPolygons\"): restarting interrupted promise evaluation\nWarning in derivePolygons(data, lng, lat, missing(lng), missing(lat),\n\"addPolygons\"): restarting interrupted promise evaluation\n\n\nWarning in getMapData(map): restarting interrupted promise evaluation\n\n\nWarning in structure(list(options = options), leafletData = data): restarting\ninterrupted promise evaluation\n\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html",
+    "href": "units/8-spatial1/slides.html",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Discussion of reading\nGeographic Data\nProjections and Coordinates\nMap Visualizations\nActivity: Choropleth Map Recreation"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#how-choropleth-maps-work",
+    "href": "units/8-spatial1/slides.html#how-choropleth-maps-work",
+    "title": "Lecture 8",
+    "section": "How Choropleth Maps Work",
+    "text": "How Choropleth Maps Work\n\nEach region gets a color\nColor intensity represents magnitude (map data values to color)"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#example",
+    "href": "units/8-spatial1/slides.html#example",
+    "title": "Lecture 8",
+    "section": "Example",
+    "text": "Example\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(maps)\n\nWarning: package 'maps' was built under R version 4.5.2\n\n\n\nAttaching package: 'maps'\n\nThe following object is masked from 'package:purrr':\n\n    map\n\nus_states &lt;- map_data(\"state\")\n\nggplot(us_states, aes(long, lat, group = group, fill = region)) +\n  geom_polygon(color = \"white\") +\n  theme_void() +\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "units/8-spatial1/slides.html#design-principles",
+    "href": "units/8-spatial1/slides.html#design-principles",
+    "title": "Lecture 8",
+    "section": "Design principles",
+    "text": "Design principles\n\n\nUse categorical scales for qualitative variables\nUse sequential or diverging color scales for quantitative variables.\nAvoid categorical color schemes for continuous data.\nColor schemes must be interpretable and colorblind-friendly.\nBeware of area bias: larger regions may dominate visually.\nNormalize data where needed (e.g. per capita, not absolute counts)."
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#details-datasheet",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#details-datasheet",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Details (datasheet)",
+    "text": "Details (datasheet)\n\nTopic(s):\n\nEconomics\nU.S.\nSalaries\n\nData:\n\nSize: small data\nFormat: 2 data sets, one in CSV format, another in HTML\nRequires web scraping, assuming data from HTML\nRequires some cleansing (e.g. regex)\nRequires merging salary-data with map-data\n\nGraphic:\n\nType: choropleth map\nStyles: ggplot, interactive ggiraph, interactive leaflet\nInteractive: yes"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#r-packages",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#r-packages",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "R Packages",
+    "text": "R Packages\n\n# packages\nlibrary(tidyverse)     # ecosystem of data science packages\nlibrary(rvest)         # for web scraping\nlibrary(sf)            # \"simple features\" (classes for maps)\nlibrary(rnaturalearth) # maps database\nlibrary(leaflet)       # web interactive maps\nlibrary(usmap)         # map of US states (includes Alaska and Hawaii)\nlibrary(ggiraph)       # make ggplots interactive"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#other-sources",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#other-sources",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Other Sources",
+    "text": "Other Sources\nRelated to the above article, there is a similar one in SoFi’s website titled Average US Salary by State by Jacqueline DeMarco (updated Jan 28, 2025)\nhttps://www.sofi.com/learn/content/average-salary-in-us/"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#data-from-forbes",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#data-from-forbes",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Data from Forbes",
+    "text": "Data from Forbes\nThe data in Forbes is an HTML table. However, this HTML table is not scrapable. This is why are providing a data set (obtained by copy-paste from Forbes’ webpage) in the text file wage.tsv (Tab-Separated Value file). The data can be easily imported with the function read_tsv() as follows:\n\n# import file (all columns as 'character' data)"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#data-from-sofi",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#data-from-sofi",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Data from SoFi",
+    "text": "Data from SoFi\nAlternatively, you can also scrape the HTML table available in the SoFi webpage Average US Salary by State (by Jacqueline DeMarco, 03/28/24)\n\ndownload.file(\n  url = \"https://www.sofi.com/learn/content/average-salary-in-us/\", \n  destfile = \"source/average-salary-in-us.html\")\n\nThe interesting thing is that this table contains not just average salaries but also median salaries.\n\n# import data"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#data-preparation",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#data-preparation",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Data Preparation",
+    "text": "Data Preparation\nThe raw data is not quite ready to be crunched. We need to perform a few manipulations of Annual Average Wage values, dealing with strings:"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#data-preparation-1",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#data-preparation-1",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Data Preparation",
+    "text": "Data Preparation\nThe raw data is not quite ready to be crunched. We need to perform a few manipulations of Annual Average Wage values, dealing with strings:"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#map-of-usa-from-rnaturalearth",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#map-of-usa-from-rnaturalearth",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Map of USA from \"rnaturalearth\"",
+    "text": "Map of USA from \"rnaturalearth\"\nWe begin by producing a first map of the U.S. This requires to get map data of the US territory—at the State level—via ne_states(). Notice that the returnclass argument must be set as returnclass = \"sf\" to guarantee that the return map object is of class \"sf\" (simple features).\n\n# map data\n\nAs you can tell, the object usa_map is an object of class \"sf\". But it is also a data.frame object, i.e. a table. It contains a large number of columns. The most important columns—for our exploratory graphing purposes—are name (name of State), and the latitude-longitude coordinates in geometry.\n\nnames(usa_map)\n\nError: object 'usa_map' not found\n\n\nWith the \"sf' object in place, we can pass it to ggplot() and its layer function geom_sf(). To get a map of the contiguous states, we adjust the latitude-longitude coordinates with coord_sf():\n\n# basic map of USA (contiguous states)"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#merging-map-data-with-salary-data",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#merging-map-data-with-salary-data",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Merging map-data with salary-data",
+    "text": "Merging map-data with salary-data\nSo far we have a map of the US States. But what about the salary data? We need to merge (join) the table of the map usa_map with the table of average salary by state wages. This merging operation is done with inner_join(), indicating the names of the columns in both tables that have the States: name from table usa_map, and State from table wages\n\n# merging map and wages data tables\nusa_map_wages = inner_join(usa_map, wages, by = c(\"name\" = \"State\"))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#version-1",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#version-1",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Version 1",
+    "text": "Version 1\nWith the merged data usa_map_wages, we can plot again a map of the US contiguous states, color coding the states with the Average values:\n\n# version 1\nusa_map_wages |&gt;\n  ggplot() +\n  geom_sf(aes(fill = Average)) +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map_wages' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#version-2",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#version-2",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Version 2",
+    "text": "Version 2\nWe need to change the colors in order to follow the scheme used in the choropleth map published in Forbes:\n\n# version 2\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  ggplot() +\n  geom_sf(aes(fill = Average)) +\n  scale_fill_gradient(low = \"#0B057A\", high = \"#E6E6F1\") +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#version-3",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#version-3",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Version 3",
+    "text": "Version 3\nThe next step involves categorizing salary values into different brackets\n\naverage salary greater than or equal to 70,000\naverage salary between 60,000 and 70,000\naverage salary between 50,000 and 60,000\naverage salary less than 50,000\n\nAlso, for sake of practice, we can change the color scheme (to pink):\n\n# version 3\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  mutate(Cutoffs = case_when(\n    Average &gt;= 70000 ~ \"&gt;=70K\",\n    Average &gt;= 60000 ~ \"60K-70K\",\n    Average &gt;= 50000 ~ \"50K-60K\",\n    Average &lt; 50000 ~ \"&lt;50K\")) |&gt;\n  mutate(Color = case_when(\n    Cutoffs == \"&lt;50K\" ~ \"#e6e6f1\",\n    Cutoffs == \"50K-60K\" ~ \"#9D9BC9\",\n    Cutoffs == \"60K-70K\" ~ \"#5450a1\",\n    Cutoffs == \"&gt;=70K\" ~ \"#0b057a\"\n  )) |&gt;\nggplot() +\n  geom_sf(aes(fill = Color)) +\n  # I don't look like this palette\n  scale_fill_manual(values = c(\"#0b057a\", \"#5450a1\", \"#9D9BC9\", \"#e6e6f1\")) +\n  coord_sf(xlim = c(-123, -67), ylim = c(25, 50))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#map-with-all-states",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#map-with-all-states",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Map with all States",
+    "text": "Map with all States\nWhat if we want to visualize all States (including Alaska and Hawaii) and not just the contiguous territory?\nNo problem! We can use one of the maps from the package \"usmap\", namely the map object returned by the function us_map().\nThe following code chunk starts with the merging operation to join us_map() data with the wages data, and the pipes it to ggplot() and friends. In addition, we are using a Viridis continuous scale color:\n\n# use the data from \"us_map()\" which is already an \"sf\" object\nus_map() |&gt;\n  inner_join(wages, by = c(\"full\" = \"State\")) |&gt;\n  ggplot() +\n  geom_sf(aes(fill = Average), color = \"white\") +\n  scale_fill_viridis_c(direction = -1) +\n  theme_void()\n\nError: object 'wages' not found\n\n\nWe can make it interactive by using geom_sf_interactive() and activating the tooltip argument inside the aesthetic mappings.\n\n# use the data from \"us_map()\" which is already an \"sf\" object\ngmap = us_map() |&gt;\n  inner_join(wages, by = c(\"full\" = \"State\")) |&gt;\n  ggplot() +\n  geom_sf_interactive(aes(fill = Average, \n                          tooltip = paste0(full, \": \", Average)), \n                      color = \"white\") +\n  scale_fill_viridis_c(direction = -1) +\n  theme_void()\n\nError: object 'wages' not found\n\ngirafe(ggobj = gmap)\n\nError: object 'gmap' not found"
+  },
+  {
+    "objectID": "units/8-spatial1/average-salary-by-state/activity.html#interactive-map-with-leaflet",
+    "href": "units/8-spatial1/average-salary-by-state/activity.html#interactive-map-with-leaflet",
+    "title": "Activity: Choropleth Map of Average Salaries",
+    "section": "Interactive Map with Leaflet",
+    "text": "Interactive Map with Leaflet\nThe previous maps have been produced with ggplot. They are nice but are static visualizations. Interestingly, we can use the \"leaflet\" package that allows us graph interactive web maps.\n\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  mutate(Cutoffs = case_when(\n    Average &gt;= 70000 ~ \"&gt;=70K\",\n    Average &gt;= 60000 ~ \"60K-70K\",\n    Average &gt;= 50000 ~ \"50K-60K\",\n    Average &lt; 50000 ~ \"&lt;50K\")) |&gt;\n  mutate(Color = case_when(\n    Cutoffs == \"&lt;50K\" ~ \"#e6e6f1\",\n    Cutoffs == \"50K-60K\" ~ \"#9D9BC9\",\n    Cutoffs == \"60K-70K\" ~ \"#5450a1\",\n    Cutoffs == \"&gt;=70K\" ~ \"#0b057a\"\n  )) |&gt;\n  mutate(Label = paste0(name, \", $\", Average)) |&gt;\nleaflet() |&gt;\n  addTiles() |&gt;\n  setView(lng = -100, \n          lat = 40, \n          zoom = 4) |&gt;\n  addPolygons(color = ~Color,\n              fillColor = ~Color, \n              fillOpacity = 0.8, \n              label = ~Label,\n              weight = 1,\n              highlight = highlightOptions(\n                weight = 5,\n                color = \"#000000\",\n                fillOpacity = 1))\n\nError: object 'usa_map' not found"
   }
 ]
