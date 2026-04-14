@@ -2277,7 +2277,7 @@
     "href": "units/8-spatial1/slides.html#what-is-a-projection",
     "title": "Lecture 8",
     "section": "What is a Projection?",
-    "text": "What is a Projection?\n\nA mathematical transformation from a globe to a flat map\nDownside: All projections distort something (shape, area, distance, or direction)"
+    "text": "What is a Projection?\nA mathematical transformation from a globe to a flat map\nDownside: All projections distort something (shape, area, distance, or direction)"
   },
   {
     "objectID": "units/8-spatial1/slides.html#common-projections",
@@ -2312,14 +2312,14 @@
     "href": "units/8-spatial1/slides.html#section",
     "title": "Lecture 8",
     "section": "",
-    "text": "library(sf)\n\nWarning: package 'sf' was built under R version 4.5.2\n\n\nLinking to GEOS 3.13.1, GDAL 3.11.4, PROJ 9.7.0; sf_use_s2() is TRUE\n\n# Example: create simple point\npoint &lt;- st_point(c(-122.27, 37.87)) |&gt; st_sfc(crs = 4326)\npoint\n\nGeometry set for 1 feature \nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: -122.27 ymin: 37.87 xmax: -122.27 ymax: 37.87\nGeodetic CRS:  WGS 84\n\n\nPOINT (-122.27 37.87)"
+    "text": "library(sf)\n\n# Example: create simple point\npoint &lt;- st_point(c(-122.27, 37.87)) |&gt; st_sfc(crs = 4326)\npoint\n\n\n\nGeometry set for 1 feature \nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: -122.27 ymin: 37.87 xmax: -122.27 ymax: 37.87\nGeodetic CRS:  WGS 84"
   },
   {
     "objectID": "units/8-spatial1/slides.html#section-1",
     "href": "units/8-spatial1/slides.html#section-1",
     "title": "Lecture 8",
     "section": "",
-    "text": "# Example: simple line\nline &lt;- st_linestring(matrix(c(0,0, 1,1, 2,1), ncol = 2, byrow = TRUE)) |&gt; \n  st_sfc(crs = 4326)\nline\n\nGeometry set for 1 feature \nGeometry type: LINESTRING\nDimension:     XY\nBounding box:  xmin: 0 ymin: 0 xmax: 2 ymax: 1\nGeodetic CRS:  WGS 84\n\n\nLINESTRING (0 0, 1 1, 2 1)"
+    "text": "# Example: simple line\nline &lt;- st_linestring(matrix(c(0,0, 1,1, 2,1), ncol = 2, byrow = TRUE)) |&gt; \n  st_sfc(crs = 4326)\nline\n\n\n\nGeometry set for 1 feature \nGeometry type: LINESTRING\nDimension:     XY\nBounding box:  xmin: 0 ymin: 0 xmax: 2 ymax: 1\nGeodetic CRS:  WGS 84"
   },
   {
     "objectID": "units/8-spatial1/slides.html#section-2",
@@ -2445,14 +2445,14 @@
     "href": "units/8-spatial1/slides.html#example",
     "title": "Lecture 8",
     "section": "Example",
-    "text": "Example\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.5.1\n\n\nWarning: package 'ggplot2' was built under R version 4.5.1\n\n\nWarning: package 'tibble' was built under R version 4.5.1\n\n\nWarning: package 'tidyr' was built under R version 4.5.1\n\n\nWarning: package 'readr' was built under R version 4.5.1\n\n\nWarning: package 'purrr' was built under R version 4.5.1\n\n\nWarning: package 'dplyr' was built under R version 4.5.1\n\n\nWarning: package 'stringr' was built under R version 4.5.1\n\n\nWarning: package 'forcats' was built under R version 4.5.1\n\n\nWarning: package 'lubridate' was built under R version 4.5.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(maps)\n\nWarning: package 'maps' was built under R version 4.5.2\n\n\n\nAttaching package: 'maps'\n\nThe following object is masked from 'package:purrr':\n\n    map\n\nus_states &lt;- map_data(\"state\")\n\nggplot(us_states, aes(long, lat, group = group, fill = region)) +\n  geom_polygon(color = \"white\") +\n  theme_void() +\n  theme(legend.position = \"none\")"
+    "text": "Example\n\nlibrary(tidyverse)\nlibrary(maps)\n\nus_states &lt;- map_data(\"state\")\n\nggplot(us_states, aes(long, lat, group = group, fill = region)) +\n  geom_polygon(color = \"white\") +\n  theme_void() +\n  theme(legend.position = \"none\")"
   },
   {
     "objectID": "units/8-spatial1/slides.html#design-principles",
     "href": "units/8-spatial1/slides.html#design-principles",
     "title": "Lecture 8",
     "section": "Design principles",
-    "text": "Design principles\n\n\nUse categorical scales for qualitative variables\nUse sequential or diverging color scales for quantitative variables.\nAvoid categorical color schemes for continuous data.\nColor schemes must be interpretable and colorblind-friendly.\nBeware of area bias: larger regions may dominate visually.\nNormalize data where needed (e.g. per capita, not absolute counts)."
+    "text": "Design principles\n\nUse categorical scales for qualitative variables\nUse sequential or diverging color scales for quantitative variables.\nAvoid categorical color schemes for continuous data.\nColor schemes must be interpretable and colorblind-friendly.\nBeware of area bias: larger regions may dominate visually.\nNormalize data where needed (e.g. per capita, not absolute counts)."
   },
   {
     "objectID": "units/8-spatial1/average-salary-by-state/activity.html#details-datasheet",
