@@ -1,0 +1,23 @@
+---
+title: Week 9 Activity 1
+subtitle: Exploring Raster Data with terra
+format: html
+---
+
+## Learning goals
+::: {.column}
+By the end of this activity, you will:
+
+- load raster data using terra \ 
+
+- inspect raster structure \
+
+- visualize spatial grids \
+
+- modify raster resolution \
+
+- experiment with color scales \
+
+- interpret raster meaning correctly \ 
+
+:::

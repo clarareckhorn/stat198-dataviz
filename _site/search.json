@@ -2551,5 +2551,33 @@
     "title": "Activity: Choropleth Map of Average Salaries",
     "section": "Interactive Map with Leaflet",
     "text": "Interactive Map with Leaflet\nThe previous maps have been produced with ggplot. They are nice but are static visualizations. Interestingly, we can use the \"leaflet\" package that allows us graph interactive web maps.\n\ninner_join(usa_map, wages, by = c(\"name\" = \"State\")) |&gt;\n  mutate(Cutoffs = case_when(\n    Average &gt;= 70000 ~ \"&gt;=70K\",\n    Average &gt;= 60000 ~ \"60K-70K\",\n    Average &gt;= 50000 ~ \"50K-60K\",\n    Average &lt; 50000 ~ \"&lt;50K\")) |&gt;\n  mutate(Color = case_when(\n    Cutoffs == \"&lt;50K\" ~ \"#e6e6f1\",\n    Cutoffs == \"50K-60K\" ~ \"#9D9BC9\",\n    Cutoffs == \"60K-70K\" ~ \"#5450a1\",\n    Cutoffs == \"&gt;=70K\" ~ \"#0b057a\"\n  )) |&gt;\n  mutate(Label = paste0(name, \", $\", Average)) |&gt;\nleaflet() |&gt;\n  addTiles() |&gt;\n  setView(lng = -100, \n          lat = 40, \n          zoom = 4) |&gt;\n  addPolygons(color = ~Color,\n              fillColor = ~Color, \n              fillOpacity = 0.8, \n              label = ~Label,\n              weight = 1,\n              highlight = highlightOptions(\n                weight = 5,\n                color = \"#000000\",\n                fillOpacity = 1))\n\nError: object 'usa_map' not found"
+  },
+  {
+    "objectID": "units/9-spatial2/slides.html#agenda",
+    "href": "units/9-spatial2/slides.html#agenda",
+    "title": "Lecture 9",
+    "section": "Agenda",
+    "text": "Agenda\n\nDiscussion of Reading\nActivity (Attention)\nRaster Data and Vector Data Cont.\nMaps Introduction\nOpen notes quiz and Collaborative!!"
+  },
+  {
+    "objectID": "units/9-spatial2/slides.html#icebreaker",
+    "href": "units/9-spatial2/slides.html#icebreaker",
+    "title": "Lecture 9",
+    "section": "ICEBREAKER",
+    "text": "ICEBREAKER\nIf your life had a dashboard, what’s one metric that would look concerning?"
+  },
+  {
+    "objectID": "units/9-spatial2/slides.html#raster-vs-vector-which-tool-for-which-job",
+    "href": "units/9-spatial2/slides.html#raster-vs-vector-which-tool-for-which-job",
+    "title": "Lecture 9",
+    "section": "Raster vs Vector — Which Tool For Which Job?",
+    "text": "Raster vs Vector — Which Tool For Which Job?\nThink of it like this:\n\nRaster is like a painting — the whole canvas is covered, every spot has a value.\nVector is like a drawing — you only mark what matters, everything else is empty.\n\n\n\n\n\n\n\n\n\nFeature\nRaster\nVector\n\n\n\n\nStructure\nGrid of pixels\nPoints, lines, polygons\n\n\nBest for\nContinuous things that vary smoothly\nDiscrete things with clear boundaries\n\n\nExamples\nTemperature, elevation, rainfall\nRoads, buildings, country borders\n\n\nQuestion it answers\n“What is the value everywhere?”\n“Where is this specific thing?”"
+  },
+  {
+    "objectID": "units/9-spatial2/slides.html#final-project-elements",
+    "href": "units/9-spatial2/slides.html#final-project-elements",
+    "title": "Lecture 9",
+    "section": "Final Project Elements",
+    "text": "Final Project Elements\n\nFinal Project Proposal\n\nType: Google doc pdf\nTo: BCourses\nDue: 4/20, 11:59 PM\n\nPresentation:\n\nType: google slides\nDue: BCourses\nDue: 4/27, 11:59 PM\n\nCoding Materials:\n\nType: QMD file + csv of your data\nTo: BCourses\nDue: 4/27, 11:59 PM"
   }
 ]
