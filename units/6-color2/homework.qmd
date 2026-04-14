@@ -1,0 +1,319 @@
+---
+title: Week 6 Homework
+subtitle: Use of Color in Graphs 
+format: html
+---
+
+## Introduction
+
+In this assignment, you will recreate your first New York Times Data Visualization independently. The goal is not just to copy a graph, but to practice how we build visualizations step by step using the concepts we've learned in class, especially color mapping, scales, and core `ggplot2` functions. \ 
+
+\ 
+
+You will take a real-world dataset and transform it into a meaningful visualization by thinking carefully about:
+
+- how variables are mapped to visual elements (like position, color, and size) 
+- how color is used to represent different types of data and 
+- how small design choices impact interpretation. 
+
+By the end of this assignment, you should feel more comfortable reading, modifying, and creating layered visualizations in R.
+
+## The Article 
+
+This assignment is inspired by a data visualization from The New York Times that explores global inequalities in COVID-19 vaccine distribution. The graphic compares countries based on wealth (GDP per capita) and vaccination rates, while also incorporating additional context like income groups and population.
+
+\ 
+
+Your task is to recreate a version of this visualization using real data.
+
+
+## The Graphic
+
+The data visualization of this module is based on the following article (by Keith Collins and Josh Holder) of The New York Times (Dec 9, 2021):
+
+__What Data Shows About Vaccine Supply and Demand in the Most Vulnerable Places__
+
+<https://www.nytimes.com/interactive/2021/12/09/world/vaccine-inequity-supply.html>
+
+<https://www.nytimes.com/2022/01/06/learning/whats-going-on-in-this-graph-jan-12-2022.html>
+
+Specifically, we are interested in replicating the following graphic:
+
+![](covid-vaccionation-doses-and-income-gdp.png)
+
+## The Data: 
+
+You will work with multiple real-world datasets from sources such as the World Bank and Our World in Data. These datasets include information on:
+
+- GDP per capita
+
+- COVID-19 vaccination rates
+
+- country income groups
+
+- and population
+
+There are 4 main sources of data:
+
+- __GDP per capita__ from the _World Bank_ <br>
+<https://data.worldbank.org/indicator/NY.GDP.PCAP.CD>
+
+- __Vaccination data__ from _Our World in Data_ <br>
+<https://ourworldindata.org/search?q=vaccine%20doses>
+
+- __World Bank income groups, 1987 to 2022__ from _Our World in Data_ <br>
+<https://ourworldindata.org/grapher/world-bank-income-groups?tab=table>
+
+- __Population by Country__ from the _World Bank_ <br>
+<https://data.worldbank.org/indicator/SP.POP.TOTL>
+
+## Part 1 - Setup
+
+```{r}
+# load the necessary packages
+
+library(tidyverse)
+library(lubridate)
+```
+
+```{r}
+# load GDP data
+# Note: skip = 4 skips the first 4 rows of metadata before the actual data begins
+dat_gdp = read_csv("API_NY.GDP.PCAP.CD_DS2_en_csv_v2_557863.csv", skip = 4)
+
+# load vaccination data
+# Note: skip = 1 skips the default header row so we can assign our own column names
+# col_types ensures Date is parsed correctly for use with lubridate
+dat_vac = read_csv(
+  "covid-vaccination-doses-per-capita.csv",
+  skip = 1,
+  col_names = c("Entity", "Code", "Date", "Vaccinations"),
+  col_types = "ccDd"
+)
+
+# load income group data
+# Note: skip = 1 for the same reason as above
+dat_inc = read_csv(
+  "world-bank-income-groups.csv",
+  col_names = c("Entity", "Code", "Year", "Income"),
+  col_types = "ccdc",
+  skip = 1
+)
+
+# load population data
+# Note: skip = 4 for the same reason as the GDP file
+dat_pop = read_csv("API_SP.POP.TOTL_DS2_en_csv_v2_665226.csv", skip = 4)
+```
+
+## Part 2 - Preparing GDP Data
+
+Select only the columns you need:
+
+- Country Name
+
+- Country Code
+
+- 2021 GDP
+
+```{r}
+dat_gdp_2021 = select(dat_gdp, ________, ________, ________)
+```
+
+*Hint: GDP for 2021 is stored in a column named `2021`. You can reference it with backticks: `` `2021` ``.*
+
+## Part 3 - Filter vaccination data
+
+Filter the vaccination data down to the year in question (2021). We want the most recent recorded value for each country in that year.
+
+```{r}
+dat_vac_2021 = dat_vac |>
+  filter(!is.na(Code)) |>
+  mutate(Year = year(Date),
+         Month = month(Date),
+         Day = day(Date)) |>
+  filter(Year == ________) |>
+  group_by(Entity) |>
+  slice_max(Month) |>
+  slice_max(Day) |>
+  ungroup()
+```
+
+*Hint: `slice_max(Month)` and `slice_max(Day)` keep the latest available entry per country within 2021.*
+
+## Part 4 - Merge GDP and Vaccination datasets
+
+Once we have the GDP data and the vaccination data, the next step involves merging them with `inner_join()`. This step is given to you because we have not covered joins in this course — essentially it combines two datasets into one by matching on a shared column.
+
+```{r}
+gdp_vac = inner_join(dat_gdp_2021, dat_vac_2021, by = c("Country Code" = "Code"))
+
+gdp_vac
+```
+
+## Part 5 - Prepare and merge Income Group data
+
+Now we need to add income group labels to our dataset. The code below filters the income data to 2021, cleans up the labels, and merges it in. This step is also given to you.
+
+```{r}
+# filter to 2021
+dat_inc_2021 = filter(dat_inc, Year == 2021)
+
+# clean up income labels (remove "-income countries" suffix)
+dat_inc_2021$Income = str_remove(dat_inc_2021$Income, "-income countries")
+
+# make Income an ordered factor so it displays correctly in plots
+dat_inc_2021$Income = factor(
+  x = dat_inc_2021$Income,
+  levels = c("Low", "Lower-middle", "Upper-middle", "High"),
+  ordered = TRUE
+)
+
+# merge with gdp_vac
+gdp_vac_inc = inner_join(gdp_vac, dat_inc_2021, by = c("Country Code" = "Code"))
+
+gdp_vac_inc
+```
+
+## Part 6 - Prepare and merge Population data
+
+Finally, we add population data so we can size each point by country population.
+
+```{r}
+# select Country Name, Country Code, and the 2021 population column
+dat_pop_2021 = select(dat_pop, c(1:2, 66))
+colnames(dat_pop_2021) = c("Country Name", "Country Code", "Population")
+
+# merge with gdp_vac_inc
+gdp_vac_inc_pop = inner_join(gdp_vac_inc, dat_pop_2021, by = "Country Code")
+
+gdp_vac_inc_pop
+```
+
+## Part 7 - Graphing
+
+We will go over a series of plotting rounds, starting with a default scatter plot, and then gradually adding more elements, and customizing its appearance to get as close as possible to our target visualization. \ 
+
+a. Create your first scatterplot using GDP and vaccination data \ 
+
+You are mapping: \ 
+
+- GDP (wealth of a country) → x-axis
+
+- Vaccinations → y-axis
+
+
+```{r}
+plot_a <- gdp_vac |> 
+    ggplot(aes(x = ________, y = ________)) +
+  geom_point()
+```
+
+b. Improve the x-axis \ 
+
+Make the plot easier to read by applying a log transformation to GDP, as GDP varies a lot across countries. Log scales help us visualize large differences more clearly.
+
+
+```{r}
+plot_b <- gdp_vac |> 
+    ggplot(aes(x = log(________, base = ________),
+           y = Vaccinations)) +
+  geom_point()
+```
+
+c. Add labels \ 
+
+Make your plot understandable by labeling the axes. 
+
+
+```{r}
+plot_c <- plot_b + labs(
+  x = "________",
+  y = "________"
+)
+```
+
+d. Add income groups (color!) \ 
+
+Add a categorical variable using color to map Income groups. This variable includes categories like Low, High, etc. 
+
+
+```{r}
+plot_d <- gdp_vac_inc |> 
+    ggplot(aes(x = log(`2021`, base = 100),
+           y = Vaccinations,
+           color = ________)) +
+  geom_point()
+```
+
+e. Customize colors \ 
+
+Apply a custom color palette to control how colors appear in the chart. The `income_colors` vector below uses colors inspired by the original NYT graphic — feel free to experiment with ColorBrewer palettes as well!
+
+```{r}
+income_colors = c(
+  rgb(242, 129, 36,  maxColorValue = 255),  # Low
+  rgb(249, 199, 158, maxColorValue = 255),  # Lower-middle
+  rgb(166, 197, 198, maxColorValue = 255),  # Upper-middle
+  rgb(54,  123, 127, maxColorValue = 255)   # High
+)
+
+plot_e <- plot_d + scale_color_manual(values = income_colors)
+```
+
+f. Add population (size) \ 
+
+Add another variable to the plot. You are mapping population to the size of each point.
+
+
+```{r}
+plot_f <- gdp_vac_inc_pop |>
+    ggplot(aes(x = log(`2021`, base = 100),
+           y = Vaccinations,
+           color = Income,
+           size = ________)) +
+  geom_point()
+```
+
+*Hint: The size of each bubble should represent the population of the country.*
+
+g. Adjust point sizes \ 
+
+Make sizes visually reasonable: scale population so the points don't become too large. 
+
+```{r}
+plot_g <- ____
+
+```
+
+*Hint: use `geom_point(size = sqrt(Population / 10000000))` instead of the default `geom_point()`*
+
+h. Final touches \ 
+
+Improve the layout by adjusting where the legend appears. Look at the original NYT graph to identify where the legend should appear. 
+
+```{r}
+plot_h <- _____
+```
+
+*Hint: use `+ theme(legend.position = "________")`*
+
+## Part 8 - Reflection Questions
+
+**1. Why is color used for Income instead of a numeric variable?** \ 
+\ 
+
+Your response:
+
+
+\ 
+**2. Why is GDP shown on a log scale?** \ 
+\ 
+
+Your response:
+
+\ 
+**3. What does the size of each point represent?** \ 
+\ 
+
+Your response:
+

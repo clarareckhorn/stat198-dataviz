@@ -1,0 +1,248 @@
+---
+title: "Quiz 2"
+format: typst
+author: Name \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+---
+
+
+
+# Color in Data Visualization
+
+
+@. Which type of color palette would be most appropriate for visualizing **annual income data across a country**, where you want to show variation from low to high?
+
+A) Qualitative  
+B) Diverging  
+C) Sequential  
+D) Rainbow  
+
+
+
+@. You are visualizing **political leaning data** scored from **−10 (far left) to +10 (far right)**, with **0 being neutral**. Which palette type is most appropriate **and why**?
+ 
+A) Sequential — because the data is ordered  
+B) Diverging — because there is a meaningful midpoint at 0  
+C) Qualitative — because political labels are categories  
+D) Rainbow — because it shows the full spectrum  
+
+
+
+@. What does the **Adelson Checker Shadow illusion** demonstrate about color in data visualization?
+
+A) Computers display color differently than humans see it  
+B) Color perception is absolute and consistent across viewers  
+C) The same color can appear different depending on surrounding context  
+D) Bright colors are always more visible than dark colors  
+
+
+
+@. Which of the following is a key benefit of **perceptually uniform color scales**?
+
+A) They always use the most visually appealing colors  
+B) They ensure equal data changes correspond to equal visual color differences  
+C) They automatically adjust for colorblind viewers  
+D) They reduce the file size of the visualization  
+
+
+
+@. A researcher maps a **factor variable** to color in `ggplot2` but wants to manually assign specific colors to each level. Which function should they use?
+
+A) `scale_color_continuous()`  
+B) `scale_color_viridis_c()`  
+C) `scale_color_manual()`  
+D) `scale_color_gradient()`  
+
+
+
+
+@. You want to show differences between **five unordered categories** — for example, five different bird species. Which palette type from **ColorBrewer** is most appropriate?
+
+A) Sequential  
+B) Diverging  
+C) Qualitative  
+D) Continuous  
+
+
+
+
+Consider the following code:
+
+```{.r}
+library(tidyverse)
+ggplot(demo_df, aes(x, y, color = double_var)) +
+geom_point(size = 4) +
+scale_color_continuous(low = "lightblue", high = "darkblue")
+```
+
+@. What does changing `scale_color_continuous()` affect?
+
+A) The underlying data values  
+B) The position of points on the plot  
+C) Only the visual color mapping, not the data or structure  
+D) The shape of the geom  
+
+
+@. Which of the following **R packages** provides color palettes that are specifically designed to be **perceptually uniform AND colorblind-friendly**?
+
+A) `wesanderson`  
+B) `viridis`  
+C) `ggsci`  
+D) `RColorBrewer`  
+ 
+
+# Preattentive Attributes & Gestalt Principles
+
+
+
+@. A scatterplot contains **200 gray points** and **one red point** representing an outlier. The red point immediately draws attention without effort.
+
+Which concept explains this effect?
+
+A) Chunking  
+B) Preattentive processing  
+C) Closure  
+D) Continuity  
+
+
+
+@. In a grouped bar chart, bars representing the **same year** are placed close together, while bars from different years have extra spacing between them.
+
+Which Gestalt principle is primarily being used?
+
+A) Similarity  
+B) Proximity  
+C) Closure  
+D) Figure & Ground  
+
+
+
+
+A report consistently colors **Republicans red** and **Democrats blue** across all figures.
+
+@. Which Gestalt principle helps viewers interpret this correctly?
+
+A) Continuity  
+B) Similarity  
+C) Enclosure  
+D) Connectivity  
+
+
+
+@. Why are **line charts** especially effective for showing trends over time?
+
+A) They reduce working memory usage by chunking  
+B) They rely on the principle of continuity  
+C) They use enclosure to group observations  
+D) They emphasize symmetry between values  
+
+
+
+@. A visualization surrounds related variables with a **light gray background rectangle** to show they belong to the same category.
+
+Which Gestalt principle is being applied?
+
+A) Proximity  
+B) Similarity  
+C) Enclosure  
+D) Closure  
+
+
+
+@. Why is highlighting **only one important element** with color often recommended?
+
+A) It reduces file size  
+B) It prevents similarity effects  
+C) It keeps viewers in fast preattentive processing mode  
+D) It eliminates the need for labels  
+
+
+
+@. A scatterplot uses **larger point size** to emphasize the most important observations.
+
+Which category of preattentive attribute is being used?
+
+A) Color  
+B) Spatial  
+C) Form  
+D) Motion  
+
+
+# Spatial Data & Choropleth Maps
+
+
+@. Which of the following best describes **geospatial data**?
+
+A) Data that only includes latitude and longitude  
+B) Data describing relationships between variables over time only  
+C) Data that includes location, attributes, and sometimes time information  
+D) Data stored exclusively as satellite images  
+
+
+@. Vector data represents __________ geographic features.
+
+A) continuous  
+B) discrete  
+C) simulated  
+D) interpolated  
+
+
+
+@. Which type of vector geometry would be most appropriate for representing **roads or rivers**?
+
+A) Points  
+B) Lines  
+C) Polygons  
+D) Raster cells  
+
+
+
+@. Which of the following is an example of **raster data**?
+
+A) State boundaries  
+B) River networks  
+C) Satellite temperature grid  
+D) City coordinates  
+
+
+Consider the following R code:
+
+```{.r}
+ggplot(us_states, aes(long, lat, group = group, fill = region)) +
+geom_polygon(color = "white")
+```
+
+@. What role does `group = group` play in this map?
+
+A) Assigns projection coordinates  
+B) Connects polygon boundary points correctly  
+C) Controls legend placement  
+D) Normalizes spatial data  
+
+
+
+@. A map projection is a mathematical transformation from a __________ to a flat surface.
+
+A) dataset  
+B) raster grid  
+C) globe  
+D) coordinate table  
+
+
+
+@. Which projection type is **best suited for statistical comparison across regions**?
+
+A) Mercator  
+B) Equal-area projection  
+C) Robinson projection  
+D) Perspective projection  
+
+
+
+@. Which of the following is a defining characteristic of a **choropleth map**?
+
+A) Uses symbols sized by magnitude  
+B) Displays raster imagery only  
+C) Shades geographic regions according to a quantitative variable  
+D) Connects spatial points using lines  
+
+
