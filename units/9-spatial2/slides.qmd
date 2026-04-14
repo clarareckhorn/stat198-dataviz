@@ -8,13 +8,11 @@ format: stat198slides-revealjs
 
 1.  Discussion of Reading
 
-2.  Activity (Attention)
+2. Maps Introduction
 
-3.  Raster Data and Vector Data Cont.
+3. Activity 
 
-4. Maps Introduction
-
-4.  Open notes quiz and Collaborative!!
+4. Open notes quiz and Collaborative!!
 
 ## Final Project Elements {.smaller}
 
@@ -111,7 +109,7 @@ state_values <- tibble(
   region = unique(us_states$region),
   value = runif(length(unique(us_states$region)), 0, 100)
 )
-
+#Now every shape has a value attached.
 map_df <- left_join(us_states, state_values, by = "region")
 # We created fake data (incomes or rates)
 # Then we JOIN it to map geometry
