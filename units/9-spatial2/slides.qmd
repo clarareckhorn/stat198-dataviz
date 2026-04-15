@@ -8,11 +8,11 @@ format: stat198slides-revealjs
 
 1.  Discussion of Reading
 
-2. Maps Introduction
+2.  Maps Introduction
 
-3. Activity 
+3.  Activity
 
-4. Open notes quiz and Collaborative!!
+4.  Open notes quiz and Collaborative!!
 
 ## Final Project Elements {.smaller}
 
@@ -43,54 +43,52 @@ If your life had a dashboard, what’s one metric that would look concerning?
 Article: [These Maps Tell the Story of Two Americas: One Parched, One Soaked](https://www.nytimes.com/interactive/2021/08/24/climate/warmer-wetter-world.html)
 
 # Why maps matter?
+
 Imagine you have data for all 50 states.
 
 A table looks like this:
 
-- hard to see patterns
-- hard to compare regions
+-   hard to see patterns
+-   hard to compare regions
 
 But a map?
 
-You instantly see:
-- clusters
-- outliers
-- regional patterns
+You instantly see: - clusters - outliers - regional patterns
 
 # Introduction to Maps
 
 We already learned:
 
-- Vector data → shapes (states, counties)
-- Raster data → continuous surfaces
-- Color → preattentive attention
-- Gestalt → grouping patterns
+-   Vector data → shapes (states, counties)
+-   Raster data → continuous surfaces
+-   Color → preattentive attention
+-   Gestalt → grouping patterns
 
 Maps combine ALL of these ideas!
 
 We are not just drawing shapes, we are attaching meaning to space.
 
-
 # Before coding: what are we building?
 
 We need two things:
 
-1. Geometry (where things are)
-2. Data (what we want to show)
+1.  Geometry (where things are)
+2.  Data (what we want to show)
 
 Then we combine them.
 
-
 # What makes NYT maps so powerful?
+
 NYT maps are powerful because they:
 
 ::: incremental
-- Show **clear geographic patterns**
-- Use **simple color scales**
-- Remove visual clutter
-- Focus attention on one variable
+-   Show **clear geographic patterns**
+-   Use **simple color scales**
+-   Remove visual clutter
+-   Focus attention on one variable
 
 # Small Example Maps Code (Loading Data)
+
 ```{r}
 library(tidyverse)
 library(maps)
@@ -102,6 +100,7 @@ head(us_states)
 ```
 
 # Create Data for Map
+
 ```{r}
 set.seed(123)
 
@@ -116,6 +115,7 @@ map_df <- left_join(us_states, state_values, by = "region")
 ```
 
 # First Map (Basic)
+
 ```{r}
 ggplot(map_df, aes(long, lat, group = group, fill = value)) +
   geom_polygon(color = "white") + #draws states
@@ -123,8 +123,8 @@ ggplot(map_df, aes(long, lat, group = group, fill = value)) +
   theme_void()
 ```
 
-
 # Make it NYT-style (Basic)
+
 ```{r}
 ggplot(map_df, aes(long, lat, group = group, fill = value)) +
   geom_polygon(color = "white", linewidth = 0.2) +
@@ -133,24 +133,25 @@ ggplot(map_df, aes(long, lat, group = group, fill = value)) +
   theme_void()
 ```
 
-# Introduction to Plotly 
-Plotly is a package that turns static plots into: 
+# Introduction to Plotly
 
-- interactive plots you can hover, zoom, and explore instead of just looking at a picture, you can interact with the data
+Plotly is a package that turns static plots into:
 
-Why do we use it?
-Traditional plots (ggplot2):
+-   interactive plots you can hover, zoom, and explore instead of just looking at a picture, you can interact with the data
 
-- static image 
-- no interaction 
+Why do we use it? Traditional plots (ggplot2):
+
+-   static image
+-   no interaction
 
 Plotly:
 
-- hover over points 
-- zoom in/out 
-- click and explore 
+-   hover over points
+-   zoom in/out
+-   click and explore
 
 # Example
+
 ```{r}
 library(plotly)
 library(ggplot2)
@@ -160,3 +161,4 @@ p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
 
 ggplotly(p)
 ```
+:::

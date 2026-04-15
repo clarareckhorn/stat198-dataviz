@@ -5,23 +5,20 @@ format: html
 ---
 
 ## Learning goals
-::: {.column}
+
 By the end of this activity, you will:
 
-- load raster data using terra \ 
+-   load raster data using terra
+-   inspect raster structure
+-   visualize spatial grids
+-   modify raster resolution
+-   experiment with color scales
+-   interpret raster meaning correctly
 
-- inspect raster structure \
+------------------------------------------------------------------------
 
-- visualize spatial grids \
+# Part 1
 
-- modify raster resolution \
-
-- experiment with color scales \
-
-- interpret raster meaning correctly \ 
-
-:::
-# Part 1 
 ```{r}
 library(terra)
 #example data included in the package
@@ -29,19 +26,27 @@ r <- rast(system.file("ex/elev.tif", package = "terra"))
 r
 ```
 
-Discuss with your partner \
-## Question 1 
+## Discuss with your partner
 
-@. What type of spatial data is this? \
-A) Vector
-B) Raster
+### Question 1
 
-## Question 2
-@. Each square cell represents:
-A) A polygon boundary
-B) A coordinate pair only
-C) A value on a grid
-D) A connected line segment
+1.  What type of spatial data is this?
+
+<!-- -->
+
+A)  Vector
+B)  Raster
+
+### Question 2
+
+2.  Each square cell represents:
+
+<!-- -->
+
+A)  A polygon boundary
+B)  A coordinate pair only
+C)  A value on a grid
+D)  A connected line segment
 
 # Part 2 — Inspect Raster Properties
 
@@ -52,12 +57,16 @@ res(r)
 crs(r)
 ```
 
-## Question 1 
-@. What does resolution mean here?
-A) Number of polygons
-B) Distance between grid cells
-C) Number of coordinate systems
-D) Map projection accuracy
+### Question 1
+
+3.  What does resolution mean here?
+
+<!-- -->
+
+A)  Number of polygons
+B)  Distance between grid cells
+C)  Number of coordinate systems
+D)  Map projection accuracy
 
 # Part 3 — Plot the Raster
 
@@ -74,10 +83,11 @@ plot(r, col = terrain.colors(50))
 plot(r, col = heat.colors(50))
 ```
 
-# Discuss
-Which palette makes elevation differences easier to interpret? \ 
+## Discuss
 
-Why? \ 
+Which palette makes elevation differences easier to interpret?  
+
+Why?
 
 # Part 4 — Change Raster Resolution
 
@@ -92,44 +102,53 @@ plot(r_lowres)
 plot(r)
 ```
 
-# Discuss
-@. What changed?
-A) Projection
-B) Cell size
-C) Coordinate system
-D) Polygon boundaries
+## Discuss
 
+4.  What changed?
+
+<!-- -->
+
+A)  Projection
+B)  Cell size
+C)  Coordinate system
+D)  Polygon boundaries
 
 Which version shows more detail?
 
-# Part 5- 
+# Part 5 — Crop and Focus the Raster
+
 ```{r}
-ext_small <- ext(r, 6, 6.5, 49.5, 50)
+ext_small <- ext(r, c(6, 6.5, 49.5, 50))
 
 r_crop <- crop(r, ext_small)
 
 plot(r_crop)
 ```
 
-@. Why might cropping raster data be useful?
-Choose the best answer:
-A) Reduces file size and improves focus
-B) Changes projection accuracy
-C) Converts raster to vector
-D) Removes missing values automatically
+5.  Why might cropping raster data be useful? Choose the best answer:
 
-# Part 6 — Compare Raster vs Choropleth Thinking (3 minutes)
+<!-- -->
+
+A)  Reduces file size and improves focus
+B)  Changes projection accuracy
+C)  Converts raster to vector
+D)  Removes missing values automatically
+
+# Part 6 — Compare Raster vs Choropleth Thinking
 
 Discuss with your partner:
-@. When should you use raster instead of polygons? \ 
 
-Choose the best answer: \
+When should you use raster instead of polygons?
 
-A) When mapping temperature or elevation
-B) When mapping election results
-C) When mapping state boundaries
-D) When mapping city locations
+Choose the best answer:
+
+A)  When mapping temperature or elevation
+B)  When mapping election results
+C)  When mapping state boundaries
+D)  When mapping city locations
 
 # Final Reflection Question
-In one sentence: \
-@. What is the biggest difference between raster maps and choropleth maps?
+
+In one sentence:
+
+6.  What is the biggest difference between raster maps and choropleth maps?

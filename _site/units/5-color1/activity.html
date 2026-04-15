@@ -190,8 +190,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>colourpicker<span class="sc">::</span><span class="fu">colourWidget</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>.colourpicker-input-container{ display:inline-block; }</style>
-<input id="htmlwidget-a0da4014f753a8b81056" class="colourWidget html-widget form-control" style="width:300px;height:35px;" type="text">
-<script type="application/json" data-for="htmlwidget-a0da4014f753a8b81056">{"x":{"value":"white","showColour":"both","palette":"square","returnName":false,"allowAlpha":false,"closeOnClick":false},"evals":[],"jsHooks":[]}</script>
+<input id="htmlwidget-74f04fa1dfc029b744a4" class="colourWidget html-widget form-control" style="width:300px;height:35px;" type="text">
+<script type="application/json" data-for="htmlwidget-74f04fa1dfc029b744a4">{"x":{"value":"white","showColour":"both","palette":"square","returnName":false,"allowAlpha":false,"closeOnClick":false},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <section id="compare-your-guess-to-the-actual-color" class="level2">
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
