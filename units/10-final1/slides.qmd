@@ -1,0 +1,8 @@
+---
+title:  Lecture 10
+subtitle:  NYT Graph Recreation - Dashboards
+format: stat198slides-revealjs
+---
+
+# Agenda
+
