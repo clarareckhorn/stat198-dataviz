@@ -197,7 +197,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-slide.png" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Week 3</h1>
   <p class="subtitle">Data Types</p>
 
@@ -223,7 +223,7 @@
 <li class="fragment">What was the design element you liked?</li>
 <li class="fragment">How do you think grammar of graphics was portrayed in the graph?</li>
 </ul>
-<div id="timer_9841bf2069bae7aab0aaf2a9ba4c159a65dc43e1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_c1611947f929dbfcebf995753ea974d1264cf51c" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -669,7 +669,7 @@ Example:</p>
 <li class="fragment">Open the <code>.qmd</code> file in Positron or RStudio</li>
 <li class="fragment">Clean all columns to respective datatype</li>
 </ul>
-<div id="timer_9841bf2069bae7aab0aaf2a9ba4c159a65dc43e1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_c1611947f929dbfcebf995753ea974d1264cf51c" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -901,7 +901,7 @@ Let’s use our <code>farm_data</code> data as an example.</p>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="..\..\site_libs\quarto-contrib\quarto-project\stat198\stat198slides\stat198-logo-vsmall.png" class="slide-logo"></p>
+<p><img src="../../site_libs/quarto-contrib/quarto-project/stat198/stat198slides/stat198-logo-vsmall.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -1120,80 +1120,42 @@ Let’s use our <code>farm_data</code> data as an example.</p>
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

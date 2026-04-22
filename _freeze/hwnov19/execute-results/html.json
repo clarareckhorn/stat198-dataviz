@@ -1,0 +1,17 @@
+{
+  "hash": "efbde3f0fce756e4a9a66828cbc780fe",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Untitled\"\noutput:\n  pdf_document: default\n  html_document: default\ndate: \"2025-11-19\"\n---\n\nLoad Data\n\n\nQQ Plots for each treatment \n\n::: {.cell}\n\n```{.r .cell-code}\npar(mfrow=c(1,3))\nqqnorm(isoflurane, main=\"Isoflurane QQ Plot\"); qqline(isoflurane)\nqqnorm(halothane, main=\"Halothane QQ Plot\"); qqline(halothane)\nqqnorm(cyclopropane, main=\"Cyclopropane QQ Plot\"); qqline(cyclopropane)\n```\n\n::: {.cell-output-display}\n![](hwnov19_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nBoxplots\n\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(concentration ~ treatment, data=df_long,\n        main=\"Boxplots of Epinephrine Levels by Treatment\",\n        ylab=\"Concentration (ng/mL)\")\n```\n\n::: {.cell-output-display}\n![](hwnov19_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\nParametic analysis \n\n::: {.cell}\n\n```{.r .cell-code}\naov_model <- aov(concentration ~ treatment + Error(dog/treatment), data=df_long)\nsummary(aov_model)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\nError: dog\n          Df Sum Sq Mean Sq F value Pr(>F)\nResiduals  9 0.5169 0.05744               \n\nError: dog:treatment\n          Df Sum Sq Mean Sq F value Pr(>F)  \ntreatment  2  1.081  0.5404   4.406 0.0277 *\nResiduals 18  2.208  0.1227                 \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nfriedman.test(as.matrix(df[,2:4]))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\n\tFriedman rank sum test\n\ndata:  as.matrix(df[, 2:4])\nFriedman chi-squared = 1.4, df = 2, p-value = 0.4966\n```\n\n\n:::\n:::\n\nANS:\nthat at least one of the anesthetics has a significantly different effect on plasma epinephrine concentration.\n",
+    "supporting": [
+      "hwnov19_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

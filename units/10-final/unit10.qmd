@@ -1,0 +1,47 @@
+---
+title: "10) Final Project Prep - NYT Graph Recreation/Dashboards"
+---
+
+
+### 📋 About
+
+Today we will cover a NYT Graph Recreation that will help give reference for how you can complete your final projects. We will also cover [Quarto Dashboards](https://quarto.org/docs/dashboards/) as a final way to visualize data, especially in analytics contexts. 
+
+
+<br>
+
+
+### 🎯 Objectives
+
+At the end of this unit you will be able to:
+
+- Recreate a NYT-style data visualization by identifying and replicating its key design and data elements.
+
+- Build and structure a Quarto Dashboard to present data in an analytics-style layout.
+
+- Apply dashboard components, such as cards, value boxes, and tabsets, to organize and display multiple visualizations effectively.
+
+
+<br>
+
+
+### 🌠 Slides
+
+Find today's slides [here.](slides1.html)
+
+
+### 💻 Code
+
+Navigate to today's BCourses assignment to find the `.qmd` file template for today's activities. 
+
+
+<br>
+
+
+### 📖 Assignment
+
+__Reading__: _Sea Surface Temperature Anomaly on July 31, 2023_
+
+<a href="https://www.nytimes.com/interactive/2023/08/03/climate/ocean-temperatures-heat-earth.html" target="_blank">https://www.nytimes.com/interactive/2023/08/03/climate/ocean-temperatures-heat-earth.html</a>
+
+__Homework__: Work on your final project!

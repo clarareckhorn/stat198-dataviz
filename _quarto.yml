@@ -43,4 +43,7 @@ format:
     toc: true
     link-external-newwindow: true # opens links in new tab
 
+execute:
+  freeze: auto
+
 

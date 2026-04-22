@@ -27,12 +27,11 @@ Tentative calendar subject to change.
 |   4    | [4) R Basics 3 - EDA and ggplot2](units/4-eda-ggplot/unit04.html){target="_blank"}      | Finish class activity          |
 |   5    | [5) Color 1 - Quiz and RGB Model](units/5-color1/unit05.html){target="_blank"} | Quiz 1          |
 |   6    | [6) Color 2 - Use of Color](units/6-color2/unit06.html){target="_blank"}           | HW 2          |
-|   7    | [7) Color 3 - Design Considerations](units/7-color3/unit07.html){target="_blank"}                      | Quiz 2          |
+|   7    | [7) Color 3 - Design Considerations](units/7-color3/unit07.html){target="_blank"}                      |           |
 |   8    | [8) Spatial Data 1](units/8-spatial1/unit08.html){target="_blank"}                     | HW 3          |
-|   9    | [9) Spatial Data 2](units/9-spatial2/unit09.html){target="_blank"}                                       | HW 4          |
-|  10    | [10) Final Project Prep 1 - NYT Graphs](units/10-final1/unit10.html){target="_blank"}                                     | Quiz 3          |
-|  11    | [11) Final Project Prep 2 - Dashboards](units/11-final2/unit11.qmd){target="_blank"}                                     | Project          |
-|  12    | [12) Final Project Presentations](units/12-final-pres/unit12.qmd){target="_blank"}                                     | Project          |
+|   9    | [9) Spatial Data 2](units/9-spatial2/unit09.html){target="_blank"}                              | Quiz 2, Final Project Proposal          |
+|  10    | [10) Final Project Prep 1 - NYT Graphs/Dashboards](units/10-final/unit10.html){target="_blank"}                                     | Work on final projects          |
+|  11    | [11) Final Project Presentations](units/11-final-pres/unit11.qmd){target="_blank"}                                     | Project          |
 
 
 ## Demo Slides

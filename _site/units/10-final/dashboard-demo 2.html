@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Recent Earthquakes in Aotearoa New Zealand – dataviz-spring-2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/stat198-corner.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="../../site_libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="../../site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="../../site_libs/quarto-dashboard/components.js"></script>
+
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
+
+</head>
+
+<body class="quarto-dashboard dashboard-fill fullcontent quarto-light">
+
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler hidden" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Recent Earthquakes in Aotearoa New Zealand</a></div>
+        
+        
+      </div>
+    </div>
+</div>
+</nav>
+</header>
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- main -->
+
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="leaflet html-widget html-fill-item html-fill-container" id="htmlwidget-8d32f8bc20e697528f25" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-8d32f8bc20e697528f25">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addCircleMarkers","args":[[-44.139877319,-40.626296997,-41.020122528,-41.625572205,-38.953594208,-37.089759827,-39.834049225,-39.980266571,-40.944789886,-41.409976959,-38.820487976,-39.962673187,-42.731529236,-39.592311859,-38.075008392,-37.951942444,-39.6263237,-40.891536713,-41.628795624,-40.844917297,-40.582221985,-40.694160461,-39.762622833,-37.676651001,-39.635917664,-44.406158447,-40.468486786,-39.528388977,-38.660114288,-39.921447754,-37.94493103,-39.250759125,-40.194015503,-40.301544189,-43.574890137,-40.536594391,-40.387378693,-42.820007324,-44.981998444,-37.930065155,-40.311347961,-44.756072998,-43.555610657,-38.508102417,-40.689865112,-38.503932953,-38.427639008,-38.277362823,-40.366191864,-37.93957901,-40.943569183,-40.028278351,-40.282344818,-42.25711441,-40.242427826,-40.451290131,-41.628704071,-40.593723297,-43.573959351,-40.60382843,-43.578922272,-38.890399933,-39.702571869,-37.889873505,-40.519641876,-40.761058807,-39.626045227,-40.300750732,-38.995563507,-39.020961761,-40.545116425,-40.292030334,-39.886089325,-39.018180847,-40.110294342,-42.952316284,-39.086994171,-43.516654968,-37.826408386,-40.073112488,-40.476436615,-38.789348602,-37.421352386,-39.012931824,-39.013298035,-44.711666107,-39.614456177,-38.465465546,-41.611305237,-38.124088287,-36.942646027,-41.607582092,-41.702999115,-39.183467865,-40.939739227,-39.16065979,-40.942001343,-39.406085968,-42.117134094,-37.328800201],[169.858093262,175.79838562,174.797561646,173.845397949,177.551208496,177.644515991,174.83039856,176.620025635,175.666946411,174.552474976,177.524932861,176.403198242,173.528244019,176.676803589,177.069961548,178.366607666,176.64414978,173.950790405,174.235107422,176.383071899,175.819229126,175.873092651,176.442092896,178.285812378,176.935928345,169.405151367,176.40486145,177.010025024,176.084060669,175.602325439,178.354858398,176.32019043,176.523040771,176.533493042,169.900512695,174.515594482,176.006332397,172.702423096,168.684463501,177.339111328,176.531082153,167.560638428,171.870330811,178.661102295,175.776443481,177.467803955,178.244903564,177.34854126,175.891448975,177.234359741,173.884002686,176.486526489,176.074951172,173.542098999,176.377029419,174.986602783,174.325119019,175.878799438,172.660644531,175.990890503,172.665374756,177.450820923,174.789291382,178.314804077,176.152770996,176.137985229,176.662017822,176.316650391,177.31968689,177.489440918,176.195999146,176.583007812,176.333175659,177.484390259,176.357650757,173.550827026,177.45539856,171.619995117,178.462814331,176.442459106,176.081039429,177.29776001,177.940353394,177.470321655,177.486679077,169.368881226,176.906982422,175.128463745,174.285018921,176.673416138,173.404556274,174.281616211,174.115753174,177.231399536,174.984115601,177.770217896,174.959472656,177.038345337,173.709823608,177.604003906],[6.062195361522755,3.433327166874082,4.848173807577243,6.05253416718216,3.263590448332693,6.056211619731481,2.820625232182122,3.951034365750031,1.091656844535026,3.328675161997317,4.991170742773559,3.316948257003148,4.345725743557016,4.863367798314291,5.610576170421556,4.409922093598863,3.575111117556807,2.645698730270033,2.972580591014716,3.162875362497105,2.532766084782515,4.294595004056398,4.726440150517567,3.609164105736097,4.833499584235209,6.757332421315162,3.639188752435982,3.667695032735136,2.062851696974046,4.108051539534566,1.977305142699619,5.098414688855097,5.797814913920741,1.408169774221963,4.419209092472308,6.818772269997796,3.885679829797329,3.42380875244114,2.059236257316154,4.350723659408183,2.049226220488564,4.429790669360208,4.18883006827105,3.826745163332185,2.197848276142444,2.568728550041673,3.736660677716003,4.615089576165091,3.339923961588191,4.687372158989428,2.286265221795137,2.730556636362328,2.1358844374452,3.252308206428774,3.634162110785025,5.642814873292489,2.737986425430871,3.246393313612661,2.225924711862225,2.741660867060608,1.414412205653558,4.106154952449382,4.412344470233401,3.142626333465907,3.645940849655725,3.977432033014709,4.417402053908733,4.481834571846422,4.826936535654856,3.867530146584439,2.281493603982462,1.980452226512366,3.991066721411469,2.09619583298996,3.188482288747793,3.347840641797333,5.296001991845704,5.334439065627175,3.357265279116818,3.327867239589227,5.016048299915139,5.693880910713179,7.730727614216899,5.477041190918899,3.519456054985639,3.12845048878862,2.626874409207953,2.848854863823029,2.774275331390607,6.346549753506253,10,6.24789776839743,1,4.079043426984308,4.661301053522605,3.645402196198651,4.829769488523107,4.714795222293244,3.590918277843539,6.222033898322994],null,null,{"interactive":true,"className":"","stroke":false,"color":["#DD513A","#932667","#DD513A","#DD513A","#932667","#DD513A","#932667","#DD513A","#932667","#932667","#DD513A","#932667","#DD513A","#DD513A","#DD513A","#DD513A","#932667","#932667","#932667","#932667","#932667","#DD513A","#DD513A","#932667","#DD513A","#FCA50A","#932667","#932667","#932667","#DD513A","#932667","#DD513A","#DD513A","#932667","#DD513A","#FCA50A","#DD513A","#932667","#932667","#DD513A","#932667","#DD513A","#DD513A","#DD513A","#932667","#932667","#DD513A","#DD513A","#932667","#DD513A","#932667","#932667","#932667","#932667","#932667","#DD513A","#932667","#932667","#932667","#932667","#932667","#DD513A","#DD513A","#932667","#932667","#DD513A","#DD513A","#DD513A","#DD513A","#DD513A","#932667","#932667","#DD513A","#932667","#932667","#932667","#DD513A","#DD513A","#932667","#932667","#DD513A","#DD513A","#FCA50A","#DD513A","#932667","#932667","#932667","#932667","#932667","#FCA50A","#FCFFA4","#FCA50A","#932667","#DD513A","#DD513A","#932667","#DD513A","#DD513A","#932667","#FCA50A"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#DD513A","#932667","#DD513A","#DD513A","#932667","#DD513A","#932667","#DD513A","#932667","#932667","#DD513A","#932667","#DD513A","#DD513A","#DD513A","#DD513A","#932667","#932667","#932667","#932667","#932667","#DD513A","#DD513A","#932667","#DD513A","#FCA50A","#932667","#932667","#932667","#DD513A","#932667","#DD513A","#DD513A","#932667","#DD513A","#FCA50A","#DD513A","#932667","#932667","#DD513A","#932667","#DD513A","#DD513A","#DD513A","#932667","#932667","#DD513A","#DD513A","#932667","#DD513A","#932667","#932667","#932667","#932667","#932667","#DD513A","#932667","#932667","#932667","#932667","#932667","#DD513A","#DD513A","#932667","#932667","#DD513A","#DD513A","#DD513A","#DD513A","#DD513A","#932667","#932667","#DD513A","#932667","#932667","#932667","#DD513A","#DD513A","#932667","#932667","#DD513A","#DD513A","#FCA50A","#DD513A","#932667","#932667","#932667","#932667","#932667","#FCA50A","#FCFFA4","#FCA50A","#932667","#DD513A","#DD513A","#932667","#DD513A","#DD513A","#932667","#FCA50A"],"fillOpacity":0.5},null,null,null,null,["2026-04-21 07:41 AM <br/> Magnitude: 4 <br/> Depth: 4  km","2026-04-20 11:16 PM <br/> Magnitude: 2.9 <br/> Depth: 22  km","2026-04-20 05:07 AM <br/> Magnitude: 3.5 <br/> Depth: 45  km","2026-04-20 01:41 AM <br/> Magnitude: 4 <br/> Depth: 34  km","2026-04-20 12:07 AM <br/> Magnitude: 2.8 <br/> Depth: 10  km","2026-04-19 05:22 PM <br/> Magnitude: 4 <br/> Depth: 10  km","2026-04-19 09:57 AM <br/> Magnitude: 2.7 <br/> Depth: 10  km","2026-04-18 10:38 PM <br/> Magnitude: 3.1 <br/> Depth: 5  km","2026-04-18 07:00 PM <br/> Magnitude: 2.1 <br/> Depth: 14  km","2026-04-18 11:43 AM <br/> Magnitude: 2.8 <br/> Depth: 12  km","2026-04-18 11:33 AM <br/> Magnitude: 3.5 <br/> Depth: 5  km","2026-04-18 09:07 AM <br/> Magnitude: 2.8 <br/> Depth: 10  km","2026-04-18 03:53 AM <br/> Magnitude: 3.3 <br/> Depth: 10  km","2026-04-18 03:51 AM <br/> Magnitude: 3.5 <br/> Depth: 10  km","2026-04-18 03:50 AM <br/> Magnitude: 3.8 <br/> Depth: 10  km","2026-04-17 03:45 PM <br/> Magnitude: 3.3 <br/> Depth: 42  km","2026-04-17 09:02 AM <br/> Magnitude: 2.9 <br/> Depth: 22  km","2026-04-17 08:39 AM <br/> Magnitude: 2.6 <br/> Depth: 27  km","2026-04-16 07:20 PM <br/> Magnitude: 2.7 <br/> Depth: 10  km","2026-04-16 12:56 PM <br/> Magnitude: 2.8 <br/> Depth: 10  km","2026-04-16 07:44 AM <br/> Magnitude: 2.6 <br/> Depth: 10  km","2026-04-16 06:34 AM <br/> Magnitude: 3.2 <br/> Depth: 5  km","2026-04-16 06:33 AM <br/> Magnitude: 3.4 <br/> Depth: 10  km","2026-04-16 05:42 AM <br/> Magnitude: 3 <br/> Depth: 5  km","2026-04-15 11:45 PM <br/> Magnitude: 3.5 <br/> Depth: 50  km","2026-04-15 12:18 PM <br/> Magnitude: 4.3 <br/> Depth: 5  km","2026-04-15 03:25 AM <br/> Magnitude: 3 <br/> Depth: 10  km","2026-04-15 03:25 AM <br/> Magnitude: 3 <br/> Depth: 5  km","2026-04-14 10:41 PM <br/> Magnitude: 2.4 <br/> Depth: 5  km","2026-04-14 06:31 PM <br/> Magnitude: 3.2 <br/> Depth: 10  km","2026-04-14 02:26 PM <br/> Magnitude: 2.4 <br/> Depth: 9  km","2026-04-14 07:02 AM <br/> Magnitude: 3.6 <br/> Depth: 58  km","2026-04-14 06:48 AM <br/> Magnitude: 3.9 <br/> Depth: 14  km","2026-04-14 04:14 AM <br/> Magnitude: 2.2 <br/> Depth: 14  km","2026-04-13 03:44 PM <br/> Magnitude: 3.3 <br/> Depth: 5  km","2026-04-13 08:26 AM <br/> Magnitude: 4.4 <br/> Depth: 37  km","2026-04-13 08:19 AM <br/> Magnitude: 3.1 <br/> Depth: 22  km","2026-04-13 01:50 AM <br/> Magnitude: 2.9 <br/> Depth: 9  km","2026-04-13 12:54 AM <br/> Magnitude: 2.4 <br/> Depth: 5  km","2026-04-12 02:30 PM <br/> Magnitude: 3.3 <br/> Depth: 39  km","2026-04-12 01:46 AM <br/> Magnitude: 2.4 <br/> Depth: 12  km","2026-04-11 08:29 AM <br/> Magnitude: 3.3 <br/> Depth: 21  km","2026-04-10 08:01 PM <br/> Magnitude: 3.2 <br/> Depth: 5  km","2026-04-10 02:19 PM <br/> Magnitude: 3 <br/> Depth: 22  km","2026-04-10 05:11 AM <br/> Magnitude: 2.4 <br/> Depth: 10  km","2026-04-10 01:21 AM <br/> Magnitude: 2.6 <br/> Depth: 10  km","2026-04-09 11:46 PM <br/> Magnitude: 3 <br/> Depth: 31  km","2026-04-08 05:32 PM <br/> Magnitude: 3.4 <br/> Depth: 37  km","2026-04-08 05:21 PM <br/> Magnitude: 2.9 <br/> Depth: 10  km","2026-04-08 05:21 PM <br/> Magnitude: 3.4 <br/> Depth: 10  km","2026-04-08 08:02 AM <br/> Magnitude: 2.5 <br/> Depth: 10  km","2026-04-08 08:02 AM <br/> Magnitude: 2.6 <br/> Depth: 5  km","2026-04-07 11:48 PM <br/> Magnitude: 2.4 <br/> Depth: 10  km","2026-04-07 11:12 PM <br/> Magnitude: 2.8 <br/> Depth: 9  km","2026-04-07 12:37 PM <br/> Magnitude: 3 <br/> Depth: 34  km","2026-04-07 07:23 AM <br/> Magnitude: 3.8 <br/> Depth: 20  km","2026-04-07 12:12 AM <br/> Magnitude: 2.6 <br/> Depth: 13  km","2026-04-06 07:40 PM <br/> Magnitude: 2.8 <br/> Depth: 25  km","2026-04-05 11:26 PM <br/> Magnitude: 2.4 <br/> Depth: 4  km","2026-04-05 11:19 PM <br/> Magnitude: 2.6 <br/> Depth: 10  km","2026-04-05 10:30 PM <br/> Magnitude: 2.2 <br/> Depth: 5  km","2026-04-05 05:45 PM <br/> Magnitude: 3.2 <br/> Depth: 10  km","2026-04-05 04:08 PM <br/> Magnitude: 3.3 <br/> Depth: 5  km","2026-04-05 10:29 AM <br/> Magnitude: 2.8 <br/> Depth: 5  km","2026-04-05 10:24 AM <br/> Magnitude: 3 <br/> Depth: 5  km","2026-04-05 10:23 AM <br/> Magnitude: 3.1 <br/> Depth: 5  km","2026-04-05 10:23 AM <br/> Magnitude: 3.3 <br/> Depth: 10  km","2026-04-05 06:29 AM <br/> Magnitude: 3.3 <br/> Depth: 5  km","2026-04-05 06:25 AM <br/> Magnitude: 3.5 <br/> Depth: 10  km","2026-04-05 02:14 AM <br/> Magnitude: 3.1 <br/> Depth: 26  km","2026-04-04 03:35 PM <br/> Magnitude: 2.5 <br/> Depth: 5  km","2026-04-03 11:22 PM <br/> Magnitude: 2.4 <br/> Depth: 17  km","2026-04-03 05:51 PM <br/> Magnitude: 3.1 <br/> Depth: 10  km","2026-04-02 11:43 PM <br/> Magnitude: 2.4 <br/> Depth: 22  km","2026-04-02 10:00 PM <br/> Magnitude: 2.8 <br/> Depth: 19  km","2026-04-02 05:21 AM <br/> Magnitude: 2.9 <br/> Depth: 21  km","2026-04-02 02:22 AM <br/> Magnitude: 3.7 <br/> Depth: 28  km","2026-04-02 12:45 AM <br/> Magnitude: 3.7 <br/> Depth: 9  km","2026-04-01 11:27 PM <br/> Magnitude: 2.9 <br/> Depth: 10  km","2026-04-01 04:03 PM <br/> Magnitude: 2.8 <br/> Depth: 5  km","2026-03-31 09:58 PM <br/> Magnitude: 3.5 <br/> Depth: 5  km","2026-03-31 09:58 PM <br/> Magnitude: 3.8 <br/> Depth: 5  km","2026-03-31 12:28 PM <br/> Magnitude: 4.8 <br/> Depth: 10  km","2026-03-31 03:19 AM <br/> Magnitude: 3.7 <br/> Depth: 23  km","2026-03-30 06:36 PM <br/> Magnitude: 2.9 <br/> Depth: 24  km","2026-03-30 06:11 PM <br/> Magnitude: 2.8 <br/> Depth: 12  km","2026-03-30 12:54 PM <br/> Magnitude: 2.6 <br/> Depth: 23  km","2026-03-30 07:38 AM <br/> Magnitude: 2.7 <br/> Depth: 10  km","2026-03-30 02:18 AM <br/> Magnitude: 2.6 <br/> Depth: 8  km","2026-03-30 01:53 AM <br/> Magnitude: 4.1 <br/> Depth: 35  km","2026-03-30 01:47 AM <br/> Magnitude: 6 <br/> Depth: 750  km","2026-03-29 06:33 PM <br/> Magnitude: 4.1 <br/> Depth: 9  km","2026-03-29 01:28 PM <br/> Magnitude: 2 <br/> Depth: 9  km","2026-03-29 02:43 AM <br/> Magnitude: 3.1 <br/> Depth: 22  km","2026-03-27 06:53 AM <br/> Magnitude: 3.4 <br/> Depth: 26  km","2026-03-26 12:52 PM <br/> Magnitude: 3 <br/> Depth: 23  km","2026-03-25 09:11 PM <br/> Magnitude: 3.5 <br/> Depth: 27  km","2026-03-25 06:14 PM <br/> Magnitude: 3.4 <br/> Depth: 23  km","2026-03-24 11:54 AM <br/> Magnitude: 3 <br/> Depth: 23  km","2026-03-24 08:18 AM <br/> Magnitude: 4.1 <br/> Depth: 90  km"],{"textsize":"15px"},null]},{"method":"addLegend","args":[{"colors":["#000004","#420A68","#932667","#DD513A","#FCA50A","#FCFFA4"],"labels":["<1","1","2","3","4",">5"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"topright","type":"unknown","title":"Magnitude","extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addTiles","args":["http://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",null,null,{"minZoom":5,"maxZoom":10,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]}],"limits":{"lat":[-44.981998444,-36.942646027],"lng":[167.560638428,178.661102295]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
+<pre><code>Simple feature collection with 100 features and 9 fields
+Geometry type: POINT
+Dimension:     XY
+Bounding box:  xmin: 167.5606 ymin: -44.982 xmax: 178.6611 ymax: -36.94265
+Geodetic CRS:  WGS 84
+First 10 features:
+      publicID                time     depth magnitude mmi
+1  2026p298950 2026-04-21 07:41:05  3.628776  3.998867   3
+2  2026p298003 2026-04-20 23:16:00 22.165989  2.889345   3
+3  2026p295958 2026-04-20 05:07:02 45.059391  3.464130   3
+4  2026p295573 2026-04-20 01:41:42 34.273438  3.994460   4
+5  2026p295396 2026-04-20 00:07:29 10.000000  2.823890   3
+6  2026p294636 2026-04-19 17:22:16 10.000000  3.996137   3
+7  2026p293802 2026-04-19 09:57:47 10.000000  2.656602   3
+8  2026p292528 2026-04-18 22:38:55  5.000000  3.093620   4
+9  2026p292118 2026-04-18 19:00:50 13.515539  2.052522   3
+10 2026p291298 2026-04-18 11:43:46 12.000000  2.848899   3
+                         locality quality                   geometry
+1      20 km north-west of Twizel    best POINT (169.8581 -44.13988)
+2          5 km east of Eketahuna    best  POINT (175.7984 -40.6263)
+3          10 km north of Porirua    best POINT (174.7976 -41.02012)
+4    10 km south-west of Blenheim    best POINT (173.8454 -41.62557)
+5      15 km north-east of Wairoa deleted POINT (177.5512 -38.95359)
+6          70 km north of Te Kaha deleted POINT (177.6445 -37.08976)
+7    15 km south-east of Waverley deleted POINT (174.8304 -39.83405)
+8         5 km east of Waipukurau deleted   POINT (176.62 -39.98027)
+9        Within 5 km of Masterton    best POINT (175.6669 -40.94479)
+10 20 km south-west of Wellington    best POINT (174.5525 -41.40998)
+   pretty_time   days_ago
+1     07:41 AM  Yesterday
+2     11:16 PM 2 days ago
+3     05:07 AM 2 days ago
+4     01:41 AM 2 days ago
+5     12:07 AM 2 days ago
+6     05:22 PM 3 days ago
+7     09:57 AM 3 days ago
+8     10:38 PM 4 days ago
+9     07:00 PM 4 days ago
+10    11:43 AM 4 days ago</code></pre>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden">
+
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dataviz\.quarto\.pub\/spring-2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>About</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.qmd">
+<p>License</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>

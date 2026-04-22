@@ -1,0 +1,19 @@
+{
+  "hash": "85b698a831e54c26f2b615d6a283fff1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Color picker activity\"\nformat: html\n---\n\n# 1. Come up with interesting combinations\n\nUse `rgb()` to play around with different color combinations.\nThis function takes 4 arguments, each separated by a comma:\n-   Red value\n-   Green value\n-   Blue value\n-   `maxColorValue=` transparency value\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Example; just run this cell\nrgb(165, 34, 200, maxColorValue = 255)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"#A522C8\"\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Your turn!\n```\n:::\n\n\n\n## Try to guess what color that HEX number represents:\n\nYour guess:\n\n\n# 2. Visualize that color\n\n\nAfter installing the package \"colourpicker,\" plug in the HEX notation that the `rgb()` function outputted into the widget.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Don't edit this code, just run it\ncolourpicker::colourWidget()\n```\n\n::: {.cell-output-display}\n\n```{=html}\n<style>.colourpicker-input-container{ display:inline-block; }</style>\n<input id=\"htmlwidget-3a37973542c738640c3d\" class=\"colourWidget html-widget form-control\" style=\"width:300px;height:35px;\" type=\"text\"/>\n<script type=\"application/json\" data-for=\"htmlwidget-3a37973542c738640c3d\">{\"x\":{\"value\":\"white\",\"showColour\":\"both\",\"palette\":\"square\",\"returnName\":false,\"allowAlpha\":false,\"closeOnClick\":false},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n\n\n## Compare your guess to the actual color\nHow close/far were you?\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<script src=\"../../site_libs/jquery-3.6.1/jquery.min.js\"></script>\n<link href=\"../../site_libs/colourpicker-lib-1.4/css/colourpicker.min.css\" rel=\"stylesheet\" />\n<script src=\"../../site_libs/colourpicker-lib-1.4/js/colourpicker.min.js\"></script>\n<script src=\"../../site_libs/colourWidget-binding-1.3.0/colourWidget.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

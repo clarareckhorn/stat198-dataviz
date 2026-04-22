@@ -89,7 +89,7 @@ NYT maps are powerful because they:
 
 # Small Example Maps Code (Loading Data)
 
-```{r}
+```{.r}
 library(tidyverse)
 library(maps)
 library(viridis)
@@ -101,7 +101,7 @@ head(us_states)
 
 # Create Data for Map
 
-```{r}
+```{.r}
 set.seed(123)
 
 state_values <- tibble(
@@ -116,7 +116,7 @@ map_df <- left_join(us_states, state_values, by = "region")
 
 # First Map (Basic)
 
-```{r}
+```{.r}
 ggplot(map_df, aes(long, lat, group = group, fill = value)) +
   geom_polygon(color = "white") + #draws states
   coord_fixed(1.3) +
@@ -125,7 +125,7 @@ ggplot(map_df, aes(long, lat, group = group, fill = value)) +
 
 # Make it NYT-style (Basic)
 
-```{r}
+```{.r}
 ggplot(map_df, aes(long, lat, group = group, fill = value)) +
   geom_polygon(color = "white", linewidth = 0.2) +
   coord_fixed(1.3) +
@@ -152,7 +152,7 @@ Plotly:
 
 # Example
 
-```{r}
+```{.r}
 library(plotly)
 library(ggplot2)
 #Do heavier cars use more gas?
