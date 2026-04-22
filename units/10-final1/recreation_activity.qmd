@@ -1,0 +1,188 @@
+---
+title: Week 10 Activity 1
+subtitle: NYT Graph Recreation
+format: html
+---
+
+# Data 
+
+Results of the 2020 Presidential Election in the U.S. are available in the *Electoral College* website:
+
+<https://www.archives.gov/electoral-college/2020>
+
+Specifically, we can find data of *Electoral College Certificates and Votes by State*.
+
+As you can tell from the link above, the data is in an HTML table. Because of this, we can import the data in R with the `read_html()` and `html_table()` functions.
+
+```{r}
+url = "https://www.archives.gov/electoral-college/2020"
+
+tbls = read_html(url) |>
+  html_table()
+
+# we want 2nd table (i.e. table of electoral votes)
+tbl = tbls[[2]]
+```
+
+Recall that `html_table()` extracts ALL the html tables in an html document. In this case, the data happens to be in the 2nd table.
+
+## Data Preparation
+
+The data in `tbl` is not quite ready to be crunched. We need to do some adjustments:
+
+```{r}
+# renaming columns
+names(tbl) = 
+
+# getting rid of 1st and last 2 rows
+tbl = tbl[-c(1, 53:54), ]
+
+tail(tbl)
+```
+
+To keep things simple, let's focus only on columns `State`, `Pres_Dem`, and `Pres_Rep`. We'll subset these columns into their own table `dat`. We also need to take care of some strings
+
+```{r}
+dat = select(tbl, c(1, 3, 4))
+
+# replacing dashes to zeroes (and making them numeric)
+
+
+# getting rid of asterisks in State names
+
+```
+
+```{r}
+# clean table
+dat = dat |>
+  
+
+head(dat)
+```
+
+------------------------------------------------------------------------
+
+# Graphs: Choropleth Maps
+
+Let's go over a series of plotting rounds, starting with a basic map, and then gradually adding more elements, and customizing its appearance to get as close as possible to our target visualization.
+
+## Map of USA from `"rnaturalearth"`
+
+We begin by producing a first map of the U.S. This requires to get map data of the US territory---at the State level---via `ne_states()`. Notice that the `returnclass` argument must be set as `returnclass = "sf"` to guarantee that the return map object is of class `"sf"` (simple features).
+
+With the `"sf'` object in place, we can pass it to `ggplot()` and its layer function `geom_sf()`
+
+Run the following cell ONCE by removing all the '#'s' and then putting them back or deleting the cell
+
+```{r}
+# remotes::install_github("ropensci/rnaturalearthhires")
+
+# install.packages(
+  #"rnaturalearthhires",
+  #repos = "https://ropensci.r-universe.dev",
+  #type = "source"
+  #)
+
+```
+
+```{r}
+usa_map = 
+
+ggplot() + 
+  geom_sf(data = usa_map)
+```
+
+As you can tell, we are able to produce a map of the U.S. but it's not the pretiest map.
+
+## Map of Contiguous States
+
+Let's focus on contiguous States only by adjusting the latitude (x-axis) and longitude (y-axis) coordinates with `coord_sf()`. We can also simplify the theme with `theme_void()`
+
+```{r}
+ggplot() + 
+  
+```
+
+## Merging map-data with elections-data
+
+So far we have a map of the US States. But what about the elections data? We need to merge (join) the table of the map `usa_map` with the table of the 2020 election results `dat`. This merging operation is done with `inner_join()`, indicating the names of the columns in both tables that have the States: `name` from table `usa_map`, and `State` from table `dat`
+
+```{r}
+# merging map and votes data tables
+usa_map_2020 = usa_map |>
+  
+```
+
+With the merged data `usa_map_2020`, we can plot again a map of the US contiguous states:
+
+```{r}
+# US contiguous states
+ggplot(data = usa_map_2020) + 
+  
+```
+
+Obviously this map is no different from the preceding map. This is just a sanity check to make sure the map data has not been corrupted.
+
+## Coloring the Map
+
+What characterizes a choropleth map is the use of one or more variables to color code the polygons or areas in the desired map.
+
+We want to color code the states according to the party of the winner candidate. This information is in the variable (or column) `Party` which we can map to the `fill` argument inside `geom_sf()`:
+
+```{r}
+# 1st version
+ggplot(data = usa_map_2020) + 
+  
+```
+
+## Choropleth Map 2
+
+As you may know, the color of the Democratic party is blue, whereas the color of the Republican party is red. To change the `fill` colors we can set new values with `scale_fill_manual()`
+
+```{r}
+# 2nd version: customize colors
+ggplot(data = usa_map_2020) + 
+  
+```
+
+## Choropleth Map 3
+
+If you look at the choropleth map published in the NYT, the color hues that they use are less saturated than the default `blue` and `red` colors in R.
+
+We can inspect the HTML code to see the exact color values (in hexadecimal notation) used by the NYT.
+
+- blue: `"#1375b7"`
+
+- red: `"#c93135"`
+
+Let's update the color scale in our choropleth map:
+
+```{r}
+# 3rd version
+ggplot(data = usa_map_2020) + 
+  
+```
+
+## Choropleth Map 4
+
+The 2-letter abbreviation of the State names are in column `postal`; we can use these to add the state names on the map.
+
+```{r}
+usa_map_2020$postal
+```
+
+```{r}
+# 4th version
+ggplot(data = usa_map_2020) + 
+  
+```
+
+## Choropleth Map 5
+
+The last tweak involves coloring the text of the State abbreviations:
+
+```{r}
+# 5th Attempt
+ggplot(data = usa_map_2020) + 
+  
+```
