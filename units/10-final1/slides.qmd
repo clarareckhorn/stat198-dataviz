@@ -1,0 +1,21 @@
+---
+title:  Lecture 10
+subtitle:  NYT Graph Recreation - Dashboards
+format: stat198slides-revealjs
+---
+
+# Agenda
+
+- NYT Graph Recreation
+- Dashboards lecture
+- Project logistics
+
+# NYT Graph Recreation
+
+Article: [Presidential Election Results 2020: Biden Wins](https://www.nytimes.com/interactive/2020/11/03/us/elections/results-president.html)
+
+## Map
+
+We will recreate a simplified version of this
+![](images/vote-map.png)
+
